@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3 · 2026-09-16
+
+- Added the opening rule to BRAND.md, README.md, index.html and the examples index: **sale or evergreen?** Evergreen follows this system exactly; each named sale gets its own creative identity from a Sale Identity Brief (Ecoy wordmark in the sale lockup, brand palette as sandbox, three switchable phases). Examples re-labelled from "pre-rebrand" to "sale identity" to match.
+
 ## v0.2 · 2026-09-16
 
 - `examples/`: ten real Klaviyo campaigns, images localised and compressed (4.8 MB total), indexed with performance data, brand status (on-brand vs pre-rebrand) and what to copy. Selection: top revenue, revenue per recipient, open rate and click rate over 12 months, plus product launches and colour drops. April Fools excluded on Sam's instruction.

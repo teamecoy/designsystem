@@ -2,6 +2,22 @@
 
 Distilled from the Ecoy Rebrand 2026 V2 brand guide (Version 1.0, 33 pages). Page numbers in brackets. Tokens and classes live in `css/`; this file is the why behind them.
 
+## Start here: is this sale or evergreen?
+
+This is the first question for any Ecoy design, before layout, colour or copy. The answer decides which rulebook applies.
+
+**Evergreen** (everything that is not a named sale: product launches, colour drops, brand content, site, packaging, retention emails, always-on ads) follows this design system exactly. Palette, Malinton and Satoshi, pillar shapes, pill buttons, tag taxonomy, motion. Consistency is the point: the brand should be instantly recognisable across every evergreen touchpoint.
+
+**Sales** (Black Friday, Birthday Sale, Mid Year Sale, EOFY, Spring Sale, flash sales) get their **own creative identity**, briefed per sale in a Sale Identity Brief. Each sale is an event with a name, theme, look and stamped sale logo, so the campaign cuts through and reads as one thing across paid, email, organic and site. The sale identity, not this system, is the source of truth for that sale's look. What stays constant inside a sale:
+
+- The Ecoy wordmark is featured in the sale logo lockup, so spend builds brand equity.
+- The brand palette is the sandbox the sale's designer works within; they define how many colours and how they are used per channel and per phase.
+- Three switchable phases: Hype, Sale Live, End of Sale. Same offer, recoloured announcement bars, headlines and "last chance" callouts.
+- Voice and honesty rules. The offer architecture (headline discount, timed boost, code, proof tiles) is proven and reused.
+- Nothing from a sale identity carries into evergreen afterwards, and no two sales share a look.
+
+Rule of thumb: if the piece would still make sense with the discount removed, it is evergreen and this system applies. If it only exists because of the sale, the Sale Identity Brief applies. The brief is produced with the `ecoy-sale-identity` skill; past briefs are the reference for depth and house style.
+
 ## Who we are (p3–p10)
 
 Ecoy is more than bedding. It's a mindset, a promise of better comfort and sleep. "We make naturally better sleep simple. So every night feels calmer, softer, and made for you." (p4)

@@ -4,6 +4,10 @@ The single source of truth for how Ecoy looks and sounds on screen: colours, typ
 
 Sources: **Ecoy Rebrand 2026 V2** brand guide (33 pages) and **Tag & Chip Spec v0.1**. Every rule here cites the page it came from. Anything the sources left open is marked **TBC** and listed in [CHANGELOG.md](CHANGELOG.md).
 
+## Before you design anything: sale or evergreen?
+
+Evergreen work (launches, colour drops, site, brand content, retention) follows this system exactly. Named sales get their own creative identity from a Sale Identity Brief, with the Ecoy wordmark in the sale logo and the brand palette as the sandbox. Full rule in [BRAND.md](BRAND.md#start-here-is-this-sale-or-evergreen). Ask this first, every time.
+
 ## What's here
 
 | Path | What it is |
@@ -39,6 +43,7 @@ Sources: **Ecoy Rebrand 2026 V2** brand guide (33 pages) and **Tag & Chip Spec v
 
 ## Rules that are not negotiable
 
+- Sale or evergreen is decided first. Evergreen follows this system; a sale follows its Sale Identity Brief.
 - Bright Orange is an accent, never a foundation.
 - One tag category per job: urgency Burgundy, value Orange, newness Deep Green, filter neutral to green.
 - Max one on-image badge per card, max one inline tag per item.
