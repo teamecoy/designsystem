@@ -1,0 +1,54 @@
+<!-- @dsCard group="Components" name="Buttons" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecoy · Buttons</title>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<main class="ds-page">
+  <header class="ds-head">
+    <span class="eyebrow">Components · guide p19, p26</span>
+    <h1>Buttons</h1>
+    <p>Fully rounded pills in Malinton Medium. One primary action per view. Green on light grounds, Off White on dark or photographic grounds. Orange is a campaign accent and appears rarely. Minimum 44px hit target. Every state change eases in and settles, never snaps.</p>
+  </header>
+
+  <section class="ds-section">
+    <h2>On light grounds</h2>
+    <div class="ds-stage bg-off-white" style="border:1px solid #E3DFD4"><div class="ds-row">
+      <a class="btn btn-primary" href="#">Shop Now</a>
+      <a class="btn btn-outline" href="#" style="color: var(--color-deep-green)">Learn more</a>
+      <a class="btn btn-accent" href="#">Stay Updated</a>
+      <a class="btn btn-primary sm" href="#">Add to cart</a>
+    </div></div>
+  </section>
+
+  <section class="ds-section">
+    <h2>On dark grounds</h2>
+    <div class="ds-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      <div class="ds-stage bg-deep-green"><div class="ds-row"><a class="btn btn-light" href="#">Shop Now</a><a class="btn btn-outline" href="#">Learn more</a></div></div>
+      <div class="ds-stage bg-chocolate" style="color: var(--color-light-pink)"><div class="ds-row"><a class="btn" href="#" style="background: var(--color-light-pink); color: var(--color-chocolate)">Scroll &amp; Shop</a><a class="btn btn-outline" href="#">Details</a></div></div>
+      <div class="ds-stage ds-photo" style="color:#fff"><div class="ds-row"><a class="btn btn-light" href="#">Shop Now</a></div></div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <h2>Spec</h2>
+    <table class="ds-table">
+      <tr><th>Class</th><th>Fill</th><th>Text</th><th>Hover</th><th>Use</th></tr>
+      <tr><td class="ds-code">.btn-primary</td><td>Deep Green</td><td>Off White</td><td>Deep Green −8% <span style="color:var(--color-bright-orange);font-weight:700">TBC</span></td><td>Primary CTA on light grounds</td></tr>
+      <tr><td class="ds-code">.btn-light</td><td>Off White</td><td>Charcoal</td><td>White</td><td>Primary CTA on dark or photographic grounds</td></tr>
+      <tr><td class="ds-code">.btn-accent</td><td>Bright Orange</td><td>Off White</td><td>#E85900</td><td>Campaign moments only. Never the default</td></tr>
+      <tr><td class="ds-code">.btn-outline</td><td>Transparent</td><td>currentColor</td><td>6–10% tint</td><td>Secondary action on any ground</td></tr>
+      <tr><td colspan="5" class="ds-note">Shared: Malinton 500 · 16px · tracking −2% · padding 14px 28px (<span class="ds-code">.sm</span>: 10px 20px, 13px) · radius 999px · min-height 44px · transitions 250ms brand ease.</td></tr>
+    </table>
+  </section>
+</main>
+</body>
+</html>

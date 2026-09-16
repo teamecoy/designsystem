@@ -1,0 +1,56 @@
+<!-- @dsCard group="Tags" name="Feature chips" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecoy · Feature chips</title>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="demo.css">
+<style>
+  .chip-stage { border-radius: var(--radius-card); padding: var(--space-6); min-height: 340px; display: flex; align-items: flex-end; }
+  .chip-stage .chip-group { max-width: 520px; }
+</style>
+</head>
+<body>
+<main class="ds-page">
+  <header class="ds-head">
+    <span class="eyebrow">UI elements · guide p26</span>
+    <h1>Feature chips</h1>
+    <p>Product-attribute chips support how the brand shows up in digital and product-led environments. Stack, group or place them contextually over imagery and layouts. They should support the message, not dominate it. Keep copy short and scannable, spacing consistent, and never overcrowd one space.</p>
+  </header>
+
+  <section class="ds-section">
+    <h2>Over imagery</h2>
+    <div class="chip-stage ds-photo">
+      <div class="chip-group">
+        <span class="chip">Ethically Made</span><span class="chip">Lightweight</span><span class="chip">Durable</span><span class="chip">Sustainable</span><span class="chip">Breathable</span><span class="chip">Deep-Fit Corners</span><span class="chip">Cooling</span><span class="chip">Organic Bamboo</span><span class="chip">Eco Friendly</span><span class="chip">Pet Friendly</span><span class="chip">Secure Elastic</span><span class="chip">Skin Friendly</span><span class="chip">Natural Fibers</span><span class="chip">Anti-slip</span>
+      </div>
+    </div>
+    <p class="ds-note" style="margin-top: var(--space-3)">The 14 attribute labels from the guide. Translucent Off White fill with a soft blur so the chip sits on photography without a hard box. Malinton Medium, 14px, full pill.</p>
+  </section>
+
+  <section class="ds-section">
+    <h2>Variants</h2>
+    <div class="ds-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+      <div class="ds-stage bg-off-white" style="border:1px solid #E3DFD4"><div class="chip-group"><span class="chip solid" style="background:#fff">Cooling</span><span class="chip green">Organic Bamboo</span></div><p class="ds-note" style="margin-top: var(--space-3)"><span class="ds-code">.chip.solid</span> and <span class="ds-code">.chip.green</span> on light grounds.</p></div>
+      <div class="ds-stage bg-deep-green"><div class="chip-group"><span class="chip solid">Breathable</span><span class="chip dark">Deep-Fit Corners</span></div><p class="ds-note" style="color:#B9CDBE; margin-top: var(--space-3)"><span class="ds-code" style="color:inherit">.chip.solid</span> and <span class="ds-code" style="color:inherit">.chip.dark</span> on dark grounds.</p></div>
+      <div class="ds-stage ds-photo"><div class="chip-group"><span class="chip">Deep Navy</span><span class="chip">Coming Soon</span></div><p class="ds-note" style="color:#B5B3AC; margin-top: var(--space-3)">Colourway and status chips over a hero image (guide p19, p26).</p></div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <h2>Rules</h2>
+    <ul class="ds-note" style="columns: 2; column-gap: var(--space-6); padding-left: 1.2em;">
+      <li>Keep copy short and scannable, two or three words</li>
+      <li>Maintain consistent styling and spacing within a group</li>
+      <li>Avoid overcrowding or too many chips in one space</li>
+      <li>Chips are descriptive. Urgency, value and newness belong to tags, not chips</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

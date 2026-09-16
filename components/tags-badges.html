@@ -1,0 +1,97 @@
+<!-- @dsCard group="Tags" name="Tags, badges & filter pills" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecoy · Tags, badges and pills</title>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="demo.css">
+<style>
+  .tax { background:#fff; border-radius: var(--radius-card-sm); padding: var(--space-4); }
+  .tax h3 { font-size: 16px; margin-bottom: var(--space-2); }
+  .tax .ds-row { margin-bottom: var(--space-2); }
+  .spec { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-5); background:#fff; border-radius: var(--radius-card-sm); padding: var(--space-5); align-items: start; }
+  .spec dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px var(--space-4); font-family: var(--font-text); font-size: 13px; }
+  .spec dt { color: #6B6A64; } .spec dd { margin: 0; }
+  .card-demo { width: 260px; }
+  .card-demo .media { aspect-ratio: 1; }
+  .pass { color: var(--color-deep-green); font-weight: 700; } .large { color: var(--color-bright-orange); font-weight: 700; }
+  @media (max-width: 700px) { .spec { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main class="ds-page">
+  <header class="ds-head">
+    <span class="eyebrow">Tags, chips and badges · spec v0.1</span>
+    <h1>One colour per job, one spec per placement</h1>
+    <p>Every tag belongs to exactly one category, and the category sets the colour. No exceptions. Three placements, three specs. All tags set in Satoshi (Inter in EDM), tracking −2%, line height 100%. Sentence case everywhere. Values are proposed defaults pending audit against the live site.</p>
+  </header>
+
+  <section class="ds-section">
+    <h2>01 · Taxonomy</h2>
+    <div class="ds-grid" style="grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));">
+      <div class="tax"><h3>Urgency</h3><div class="ds-row"><span class="badge urgency">Last chance</span><span class="badge urgency">Sale</span></div><p class="ds-note">Time-bound. Sale ending, last chance, low stock. Burgundy only.</p></div>
+      <div class="tax"><h3>Value</h3><div class="ds-row"><span class="badge value">30% off</span><span class="badge value">Best seller</span></div><p class="ds-note">Commercial benefit. Discounts, savings, bestseller status. Bright Orange only.</p></div>
+      <div class="tax"><h3>Newness</h3><div class="ds-row"><span class="badge newness">New</span><span class="badge newness">New colours</span></div><p class="ds-note">New products or colourways. Deep Green only. Consolidate from the current orange/burgundy split.</p></div>
+      <div class="tax"><h3>Filter</h3><div class="ds-row"><span class="pill">Sheets</span><span class="pill active">Quilts</span></div><p class="ds-note">Interactive pills for browsing. Neutral at rest, Deep Green when active. Never used as a badge.</p></div>
+    </div>
+  </section>
+
+  <section class="ds-section" style="display:grid; gap: var(--space-4);">
+    <h2 style="margin:0">02 · Anatomy per placement</h2>
+    <div class="spec">
+      <div><h3>On-image badge</h3><p class="ds-note">Sits on product imagery and hero tiles. Highest-contrast job. 8px corners so it reads as a label on the photo, not a button.</p>
+        <div class="card-demo"><div class="media ds-photo"><span class="badge urgency">Last chance</span></div></div></div>
+      <dl><dt>Token</dt><dd class="ds-code">.badge · tag/md</dd><dt>Font</dt><dd>13px Semi Bold</dd><dt>Padding</dt><dd>14px x · 6px y</dd><dt>Radius</dt><dd>8px</dd><dt>Case</dt><dd>Sentence case</dd><dt>Min contrast</dt><dd>4.5:1 on any image</dd><dt>Limit</dt><dd>One badge per card</dd></dl>
+    </div>
+    <div class="spec">
+      <div><h3>Inline tag</h3><p class="ds-note">Sits next to nav links, product names and prices. Smallest of the three. Full pill. Sentence case (nav currently uses caps; pick one rule).</p>
+        <div class="card-demo"><p class="text-h3" style="margin:0 0 4px">Bamboo Sheet Set</p><div class="ds-row" style="gap: var(--space-2)"><span class="text-price">$190.00</span><span class="text-price-was">$240.00</span><span class="tag value">Best seller</span></div></div></div>
+      <dl><dt>Token</dt><dd class="ds-code">.tag · tag/sm</dd><dt>Font</dt><dd>12px Semi Bold</dd><dt>Padding</dt><dd>10px x · 4px y</dd><dt>Radius</dt><dd>Full pill</dd><dt>Case</dt><dd>Sentence case</dd><dt>Limit</dt><dd>One tag per item</dd></dl>
+    </div>
+    <div class="spec">
+      <div><h3>Filter pill</h3><p class="ds-note">Interactive. Neutral at rest, green fill when active. Never carries urgency or value messaging. Hover and focus below.</p>
+        <div class="pill-group"><button class="pill" type="button">All</button><button class="pill active" type="button" aria-pressed="true">Best Sellers</button><button class="pill" type="button">Sheets</button><button class="pill" type="button">Quilt covers</button><button class="pill" type="button">Pillowcases</button></div></div>
+      <dl><dt>Token</dt><dd class="ds-code">.pill · tag/lg</dd><dt>Font</dt><dd>14px Medium</dd><dt>Padding</dt><dd>20px x · 10px y</dd><dt>Radius</dt><dd>Full pill</dd><dt>Rest</dt><dd>Neutral fill #E9E5DB, charcoal text <span class="large">TBC</span></dd><dt>Active</dt><dd>Deep Green fill, white text</dd><dt>Hover</dt><dd>Fill darkened ~8% <span class="large">TBC</span></dd></dl>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <h2>05 · Readability</h2>
+    <p class="ds-note">Functional text on chips targets 4.5:1. White on Bright Orange is the one accepted brand exception (badges only, labels short, minimum 12px Semi Bold, never for functional or body text). Ratios below are computed live from the tokens.</p>
+    <table class="ds-table" id="contrast">
+      <tr><th>Example</th><th>Pairing</th><th>Ratio</th><th>Verdict</th><th>Use</th></tr>
+      <tr data-bg="--color-burgundy" data-fg="--color-white"><td><span class="badge" style="background:var(--color-burgundy);color:#fff">Aa tag</span></td><td>Burgundy + white</td><td class="r"></td><td class="v"></td><td>Default for urgency badges</td></tr>
+      <tr data-bg="--color-deep-green" data-fg="--color-white"><td><span class="badge" style="background:var(--color-deep-green);color:#fff">Aa tag</span></td><td>Deep Green + white</td><td class="r"></td><td class="v"></td><td>Default for newness and active pills</td></tr>
+      <tr data-bg="--color-bright-orange" data-fg="--color-white"><td><span class="badge" style="background:var(--color-bright-orange);color:#fff">Aa tag</span></td><td>Bright Orange + white</td><td class="r"></td><td class="v"></td><td>Allowed: brand accent, badges only</td></tr>
+      <tr data-bg="--color-bright-orange" data-fg="--color-charcoal"><td><span class="badge" style="background:var(--color-bright-orange);color:var(--color-charcoal)">Aa tag</span></td><td>Bright Orange + charcoal</td><td class="r"></td><td class="v"></td><td>Alt where max legibility needed</td></tr>
+      <tr data-bg="--color-neutral-fill" data-fg="--color-charcoal"><td><span class="badge" style="background:var(--color-neutral-fill);color:var(--color-charcoal)">Aa tag</span></td><td>Neutral fill + charcoal</td><td class="r"></td><td class="v"></td><td>Default for filter pills at rest</td></tr>
+    </table>
+  </section>
+
+  <section class="ds-section">
+    <h2>07 · Do and don't</h2>
+    <div class="ds-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      <div class="tax"><h3 style="color: var(--color-deep-green)">Do</h3><ul class="ds-note" style="padding-left:1.2em"><li>Max one on-image badge per card, plus max one inline tag at price level</li><li>Use the category colour, always</li><li>Keep labels to two words max</li><li>Check contrast on imagery before shipping</li></ul></div>
+      <div class="tax"><h3 style="color: var(--color-burgundy)">Don't</h3><ul class="ds-note" style="padding-left:1.2em"><li>Stack Sale + Last chance on the same card (pick one)</li><li>Put newness in burgundy or orange</li><li>Mix caps and sentence case across placements</li><li>Restyle a filter pill as a badge or vice versa</li></ul></div>
+    </div>
+  </section>
+</main>
+<script>
+  // WCAG 2.x relative luminance contrast, read from the live tokens so the table can never drift from tokens.css.
+  const css = getComputedStyle(document.documentElement);
+  const lum = hex => { const c = hex.replace('#','').match(/.{2}/g).map(h => parseInt(h,16)/255).map(v => v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4)); return .2126*c[0] + .7152*c[1] + .0722*c[2]; };
+  document.querySelectorAll('#contrast tr[data-bg]').forEach(tr => {
+    const bg = css.getPropertyValue(tr.dataset.bg).trim(), fg = css.getPropertyValue(tr.dataset.fg).trim();
+    const [a,b] = [lum(bg), lum(fg)].sort((x,y)=>y-x); const ratio = (a+.05)/(b+.05);
+    tr.querySelector('.r').textContent = ratio.toFixed(1) + ':1';
+    const v = tr.querySelector('.v'); const r1 = Math.round(ratio*10)/10; if (r1 >= 4.5) { v.textContent = 'Pass AA'; v.className = 'v pass'; } else if (r1 >= 3) { v.textContent = 'AA Large only'; v.className = 'v large'; } else { v.textContent = 'Fail'; v.style.color = 'var(--color-burgundy)'; }
+  });
+  document.querySelectorAll('.pill-group .pill').forEach(p => p.addEventListener('click', () => { p.parentElement.querySelectorAll('.pill').forEach(x => { x.classList.remove('active'); x.setAttribute('aria-pressed','false'); }); p.classList.add('active'); p.setAttribute('aria-pressed','true'); }));
+</script>
+</body>
+</html>

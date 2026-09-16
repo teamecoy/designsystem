@@ -1,0 +1,73 @@
+<!-- @dsCard group="Brand" name="Pillar shapes" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecoy · Pillar shapes</title>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="demo.css">
+<style>
+  .shape-card { text-align: center; }
+  .shape-card .pillar { width: 100%; max-width: 180px; }
+  .shape-card .ds-code { display: block; margin-top: var(--space-2); }
+  .statement { position: relative; width: 100%; max-width: 360px; aspect-ratio: 1; display: grid; place-items: center; color: #fff; background: var(--color-burgundy); -webkit-mask: url('../shapes/pillar-flower-8.svg') center / contain no-repeat; mask: url('../shapes/pillar-flower-8.svg') center / contain no-repeat; }
+  .statement p { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 22px; text-align: center; max-width: 60%; line-height: 1.2; }
+  .inline-shape { display: inline-block; width: .9em; height: .9em; vertical-align: -0.1em; margin-right: .1em; }
+</style>
+</head>
+<body>
+<main class="ds-page">
+  <header class="ds-head">
+    <span class="eyebrow">Pillar shapes · guide p24</span>
+    <h1>The visual foundation of the brand</h1>
+    <p>Five scalloped shapes that translate the sleep pillars (Climate, Comfort, Light, Function) into a flexible, recognisable system. They frame content, support layouts or act as bold visual moments. Scale, crop, stack or gently distort them, as long as the core form stays recognisable.</p>
+  </header>
+
+  <section class="ds-section">
+    <h2>The set</h2>
+    <div class="ds-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
+      <div class="shape-card"><span class="pillar" style="--shape:url('../shapes/pillar-flower-8.svg'); color: var(--color-deep-green)"></span><span class="ds-code">pillar-flower-8.svg</span></div>
+      <div class="shape-card"><span class="pillar" style="--shape:url('../shapes/pillar-clover.svg'); color: var(--color-burgundy)"></span><span class="ds-code">pillar-clover.svg</span></div>
+      <div class="shape-card"><span class="pillar" style="--shape:url('../shapes/pillar-cross-blob.svg'); color: var(--color-bright-orange)"></span><span class="ds-code">pillar-cross-blob.svg</span></div>
+      <div class="shape-card"><span class="pillar" style="--shape:url('../shapes/pillar-pinched.svg'); color: var(--color-deep-blue)"></span><span class="ds-code">pillar-pinched.svg</span></div>
+      <div class="shape-card"><span class="pillar" style="--shape:url('../shapes/pillar-lobed.svg'); color: var(--color-chocolate)"></span><span class="ds-code">pillar-lobed.svg</span></div>
+    </div>
+    <p class="ds-note" style="margin-top: var(--space-4)">Use as a CSS mask: <span class="ds-code">.pillar { --shape: url('shapes/pillar-clover.svg'); color: var(--color-deep-green); }</span>. Fill comes from <span class="ds-code">currentColor</span>, so any palette colour works.</p>
+  </section>
+
+  <section class="ds-section">
+    <h2>Three ways to use them</h2>
+    <div class="ds-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: stretch;">
+      <div class="ds-stage bg-charcoal" style="display:grid; place-items:center;">
+        <div class="statement"><p>Make every night of sleep count</p></div>
+        <p class="ds-note" style="color:#B5B3AC; margin-top: var(--space-4)">Statement container. A short headline inside a solid shape.</p>
+      </div>
+      <div class="ds-stage bg-light-pink" style="display:grid; place-items:center;">
+        <div class="pillar-img ds-photo" style="--shape:url('../shapes/pillar-lobed.svg'); max-width: 300px;"></div>
+        <p class="ds-note" style="color: var(--color-burgundy); margin-top: var(--space-4)">Image mask. Photography cropped into a shape, over a soft ground.</p>
+      </div>
+      <div class="ds-stage pillar-pattern" style="--shape:url('../shapes/pillar-flower-8.svg'); background-color: var(--color-light-green); color: var(--color-deep-green); min-height: 260px; display:flex; align-items:flex-end;">
+        <p class="ds-note" style="color: var(--color-deep-green); background: rgba(246,242,232,.85); padding: 6px 10px; border-radius: 8px;">Repeating pattern. Packaging and section backgrounds (guide p29).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <h2>Inline pillar markers</h2>
+    <div class="card" style="background:#DEDEDE; max-width: 520px;">
+      <p class="text-h3" style="color: var(--color-charcoal); margin:0 0 var(--space-4)">Sign up for sleep tips on
+        <span class="inline-shape pillar" style="--shape:url('../shapes/pillar-flower-8.svg'); color: var(--color-deep-green)"></span>Climate,
+        <span class="inline-shape pillar" style="--shape:url('../shapes/pillar-clover.svg'); color: var(--color-burgundy)"></span>Comfort,
+        <span class="inline-shape pillar" style="--shape:url('../shapes/pillar-cross-blob.svg'); color: var(--color-bright-orange)"></span>Light, and
+        <span class="inline-shape pillar" style="--shape:url('../shapes/pillar-pinched.svg'); color: var(--color-deep-blue)"></span>Function</p>
+      <div class="ds-row" style="gap: var(--space-2)"><span style="flex:1; background:#fff; border-radius: 10px; padding: 12px 14px; font-family: var(--font-text); font-size: 14px; color:#8A8A85;">Your Email</span><span class="btn btn-primary" style="background: var(--color-charcoal); min-width: 44px; padding: 0 14px;">→</span></div>
+    </div>
+    <p class="ds-note" style="margin-top: var(--space-3)">Each pillar has a shape and a colour, as on guide p24: Climate green, Comfort burgundy, Light orange, Function blue.</p>
+  </section>
+</main>
+</body>
+</html>

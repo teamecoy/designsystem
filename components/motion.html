@@ -1,0 +1,81 @@
+<!-- @dsCard group="Motion" name="Motion principles" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecoy · Motion</title>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="demo.css">
+<style>
+  .principle { background:#fff; border-radius: var(--radius-card-sm); padding: var(--space-4); }
+  .principle h3 { font-size: 16px; }
+  .principle .g { display:block; margin-top: var(--space-2); font-family: var(--font-text); font-size: 13px; color: var(--color-deep-green); }
+  .track { position: relative; height: 56px; background:#fff; border-radius: 12px; overflow: hidden; }
+  .dot { position: absolute; top: 12px; left: 12px; width: 32px; height: 32px; border-radius: 50%; background: var(--color-deep-green); }
+  .track[data-ease="linear"] .dot { transition: left 1200ms linear; }
+  .track[data-ease="brand"]  .dot { transition: left 1200ms var(--motion-ease); }
+  .track.go .dot { left: calc(100% - 44px); }
+  .stagger .chip { opacity: 0; transform: translateY(8px); transition: opacity var(--motion-duration-slow) var(--motion-ease-out), transform var(--motion-duration-slow) var(--motion-ease-out); }
+  .stagger.in .chip { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+<main class="ds-page">
+  <header class="ds-head">
+    <span class="eyebrow">Motion design thinking · guide p32–p33</span>
+    <h1>Calm, considered, human</h1>
+    <p>Motion is an extension of the brand, not decoration. It reinforces meaning, guides attention and creates moments that feel natural rather than mechanical. Every movement is purposeful, soft and intuitive. Never rushed, never rigid.</p>
+  </header>
+
+  <section class="ds-section">
+    <h2>Four principles</h2>
+    <div class="ds-grid" style="grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));">
+      <div class="principle"><h3>Natural over mechanical</h3><p class="ds-note">Organic and relaxed, the way the products support rest. Ease in, build gently, slow naturally to a stop.</p><span class="g">Always easing curves (ease-in-out), never linear.</span></div>
+      <div class="principle"><h3>Purposeful movement</h3><p class="ds-note">Introduce content, highlight features, guide the eye. Support understanding, never distract from it.</p><span class="g">If it doesn't add clarity or hierarchy, it isn't needed.</span></div>
+      <div class="principle"><h3>Soft timing and restraint</h3><p class="ds-note">Unhurried. Elements arrive calmly and settle smoothly, mirroring better sleep and balance.</p><span class="g">Short, subtle animations over long or exaggerated ones.</span></div>
+      <div class="principle"><h3>Consistency across elements</h3><p class="ds-note">Text, feature chips and UI share one motion language so digital touchpoints feel cohesive.</p><span class="g">Same easing logic and timing everywhere.</span></div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <h2>Tokens</h2>
+    <p class="ds-note tbc">The guide gives principles, not numbers. These durations and curves are our proposal, flagged for confirmation.</p>
+    <table class="ds-table">
+      <tr><th>Token</th><th>Value</th><th>Use</th></tr>
+      <tr><td class="ds-code">--motion-ease</td><td class="ds-code">cubic-bezier(0.4, 0, 0.2, 1)</td><td>Default ease-in-out for state changes</td></tr>
+      <tr><td class="ds-code">--motion-ease-out</td><td class="ds-code">cubic-bezier(0, 0, 0.2, 1)</td><td>Entrances and reveals</td></tr>
+      <tr><td class="ds-code">--motion-duration-fast</td><td>150ms</td><td>Hover, focus, colour changes</td></tr>
+      <tr><td class="ds-code">--motion-duration-base</td><td>250ms</td><td>Buttons, pills, small layout shifts</td></tr>
+      <tr><td class="ds-code">--motion-duration-slow</td><td>400ms</td><td>Reveals, chips arriving, section transitions</td></tr>
+      <tr><td colspan="3" class="ds-note">Always honour <span class="ds-code">prefers-reduced-motion</span> (handled in base.css).</td></tr>
+    </table>
+  </section>
+
+  <section class="ds-section">
+    <h2>Feel the difference</h2>
+    <div class="ds-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      <div><p class="ds-note" style="margin-bottom: 6px">Linear (don't)</p><div class="track" data-ease="linear"><div class="dot" style="background:#B5B3AC"></div></div></div>
+      <div><p class="ds-note" style="margin-bottom: 6px">Brand ease (do)</p><div class="track" data-ease="brand"><div class="dot"></div></div></div>
+    </div>
+    <div class="ds-row" style="margin-top: var(--space-4)"><button class="btn btn-primary sm" id="play" type="button">Play</button></div>
+  </section>
+
+  <section class="ds-section">
+    <h2>Chips arriving</h2>
+    <div class="ds-stage ds-photo"><div class="chip-group stagger" id="stagger"><span class="chip">Cooling</span><span class="chip">Breathable</span><span class="chip">Organic Bamboo</span><span class="chip">Deep-Fit Corners</span><span class="chip">Pet Friendly</span></div></div>
+    <div class="ds-row" style="margin-top: var(--space-4)"><button class="btn btn-outline sm" id="replay" type="button" style="color: var(--color-deep-green)">Replay</button></div>
+  </section>
+</main>
+<script>
+  const tracks = document.querySelectorAll('.track');
+  document.getElementById('play').addEventListener('click', () => { tracks.forEach(t => t.classList.remove('go')); requestAnimationFrame(() => requestAnimationFrame(() => tracks.forEach(t => t.classList.add('go')))); });
+  const st = document.getElementById('stagger'); const chips = st.querySelectorAll('.chip');
+  const run = () => { st.classList.remove('in'); chips.forEach((c,i) => c.style.transitionDelay = (i*70)+'ms'); requestAnimationFrame(() => requestAnimationFrame(() => st.classList.add('in'))); };
+  document.getElementById('replay').addEventListener('click', run); setTimeout(run, 300);
+</script>
+</body>
+</html>

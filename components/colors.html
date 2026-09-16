@@ -1,0 +1,82 @@
+<!-- @dsCard group="Colors" name="Palette & pairings" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecoy · Colours</title>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="demo.css">
+<style>
+  .swatch { border-radius: var(--radius-card-sm); padding: var(--space-4); min-height: 150px; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; }
+  .swatch strong { font-family: var(--font-display); font-weight: 600; font-size: 18px; }
+  .swatch span { font-family: var(--font-text); font-size: 12px; opacity: .85; }
+  .swatch.light { border: 1px solid #E3DFD4; }
+  .pair { aspect-ratio: 1; border-radius: var(--radius-card-sm); position: relative; }
+  .pair .acc { position: absolute; right: 12px; width: 26%; aspect-ratio: 1; border-radius: 8px; }
+  .pair .acc:nth-child(1) { bottom: 12px; }
+  .pair .acc:nth-child(2) { bottom: calc(12px + 26% + 8px); }
+  .pair.light { border: 1px solid #E3DFD4; }
+</style>
+</head>
+<body>
+<main class="ds-page">
+  <header class="ds-head">
+    <span class="eyebrow">Colours · guide p17–p19</span>
+    <h1>Calm where it matters, expressive where it counts</h1>
+    <p>Ten colours. Grounded, natural tones paired with bolder expressive ones. Pair rich, deep tones with light neutrals for contrast; use bright colours as accents, never as foundations. Softer pairings lead in product, editorial and functional contexts; bolder combinations are for campaigns.</p>
+  </header>
+
+  <section class="ds-section">
+    <h2>Palette</h2>
+    <div class="ds-grid">
+      <div class="swatch bg-deep-green"><strong>Deep Green</strong><span>#004C39 · CMYK 100 0 35 57</span><span>Primary dark ground · headings · primary CTA · newness</span></div>
+      <div class="swatch bg-off-white light"><strong>Off White</strong><span>#F6F2E8 · CMYK 0 2 6 4</span><span>Primary light ground · text on dark</span></div>
+      <div class="swatch bg-bright-orange"><strong>Bright Orange</strong><span>#FF6301 · CMYK 0 61 100 0</span><span>Accent only, never a foundation · value tags · hand-drawn accents</span></div>
+      <div class="swatch bg-burgundy" style="color:#fff"><strong>Burgundy Red</strong><span>#A30042 · CMYK 0 86 54 32</span><span>Expressive · campaign · urgency tags</span></div>
+      <div class="swatch bg-light-green"><strong>Light Green</strong><span>#A3C2A7 · CMYK 16 0 14 24</span><span>Soft ground · pillar-shape fill</span></div>
+      <div class="swatch bg-light-blue"><strong>Light Blue</strong><span>#A5CAD9 · CMYK 24 2 0 14</span><span>Soft ground</span></div>
+      <div class="swatch bg-light-pink"><strong>Light Pink</strong><span>#FFBAB5 · CMYK 0 27 29 0</span><span>Soft ground · pillar-shape fill</span></div>
+      <div class="swatch bg-chocolate"><strong>Chocolate Brown</strong><span>#583200 · CMYK 0 43 100 65</span><span>Warm dark ground</span></div>
+      <div class="swatch bg-deep-blue"><strong>Deep Blue</strong><span>#0F6A91 · CMYK 90 27 0 43</span><span>Cool dark ground</span></div>
+      <div class="swatch bg-charcoal"><strong>Charcoal Black</strong><span>#1C1C1C · CMYK 0 0 0 89</span><span>Ink · monochrome ground</span></div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <h2>Approved pairings</h2>
+    <p class="ds-note">Ground with its accent(s), exactly as laid out on guide p18. Tokens: <span class="ds-code">--pair-&lt;id&gt;-ground</span>, <span class="ds-code">--pair-&lt;id&gt;-accent</span>, <span class="ds-code">-accent2</span>.</p>
+    <div class="ds-grid" style="grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));">
+      <div class="pair" style="background:var(--pair-green-lightgreen-ground)"><span class="acc" style="background:var(--pair-green-lightgreen-accent)"></span></div>
+      <div class="pair" style="background:var(--pair-burgundy-pink-orange-ground)"><span class="acc" style="background:var(--pair-burgundy-pink-orange-accent2)"></span><span class="acc" style="background:var(--pair-burgundy-pink-orange-accent)"></span></div>
+      <div class="pair" style="background:var(--pair-lightblue-deepblue-ground)"><span class="acc" style="background:var(--pair-lightblue-deepblue-accent)"></span></div>
+      <div class="pair" style="background:var(--pair-chocolate-pink-ground)"><span class="acc" style="background:var(--pair-chocolate-pink-accent)"></span></div>
+      <div class="pair" style="background:var(--pair-lightgreen-deepblue-green-ground)"><span class="acc" style="background:var(--pair-lightgreen-deepblue-green-accent2)"></span><span class="acc" style="background:var(--pair-lightgreen-deepblue-green-accent)"></span></div>
+      <div class="pair" style="background:var(--pair-orange-burgundy-ground)"><span class="acc" style="background:var(--pair-orange-burgundy-accent)"></span></div>
+      <div class="pair" style="background:var(--pair-deepblue-lightblue-ground)"><span class="acc" style="background:var(--pair-deepblue-lightblue-accent)"></span></div>
+      <div class="pair" style="background:var(--pair-pink-burgundy-chocolate-ground)"><span class="acc" style="background:var(--pair-pink-burgundy-chocolate-accent2)"></span><span class="acc" style="background:var(--pair-pink-burgundy-chocolate-accent)"></span></div>
+      <div class="pair light" style="background:var(--pair-offwhite-charcoal-ground)"><span class="acc" style="background:var(--pair-offwhite-charcoal-accent)"></span></div>
+      <div class="pair" style="background:var(--pair-charcoal-offwhite-ground)"><span class="acc" style="background:var(--pair-charcoal-offwhite-accent)"></span></div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <h2>Semantic roles</h2>
+    <table class="ds-table">
+      <tr><th>Token</th><th>Resolves to</th><th>Use</th></tr>
+      <tr><td class="ds-code">--color-ground</td><td>Off White</td><td>Page background</td></tr>
+      <tr><td class="ds-code">--color-ground-dark</td><td>Deep Green</td><td>Hero, footer, colour-blocked sections</td></tr>
+      <tr><td class="ds-code">--color-ink</td><td>Charcoal</td><td>Body text on light grounds</td></tr>
+      <tr><td class="ds-code">--color-heading</td><td>Deep Green</td><td>Headings on light grounds</td></tr>
+      <tr><td class="ds-code">--color-accent</td><td>Bright Orange</td><td>Eyebrows, hand-drawn accents, value tags</td></tr>
+      <tr><td class="ds-code">--color-primary</td><td>Deep Green</td><td>Primary CTA, active filter pill</td></tr>
+      <tr><td class="ds-code">--color-tag-urgency / -value / -newness</td><td>Burgundy / Orange / Deep Green</td><td>Tag taxonomy, one colour per job</td></tr>
+      <tr><td class="ds-code">--color-neutral-fill</td><td>#E9E5DB</td><td>Filter pill at rest. <strong style="color:var(--color-bright-orange)">TBC</strong>: proposed shade until the live-site value is confirmed</td></tr>
+    </table>
+  </section>
+</main>
+</body>
+</html>

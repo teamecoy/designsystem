@@ -1,0 +1,76 @@
+<!-- @dsCard group="Brand" name="Logo" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecoy · Logo</title>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="demo.css">
+<style>
+  .treat { aspect-ratio: 4/3; border-radius: var(--radius-card); display: grid; place-items: center; position: relative; }
+  .treat img { width: 52%; }
+  .treat .n { position: absolute; top: 14px; left: 14px; width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid currentColor; display: grid; place-items: center; font-family: var(--font-text); font-size: 12px; }
+  .clear { position: relative; display: inline-block; padding: 60px; outline: 1px dashed var(--color-bright-orange); }
+  .clear img { height: 60px; display: block; }
+  .clear::after { content: "clear space = 100% of logo height"; position: absolute; left: 0; right: 0; bottom: -24px; text-align: center; font-family: var(--font-text); font-size: 12px; color: var(--color-bright-orange); }
+  .dont li { margin-bottom: var(--space-2); }
+</style>
+</head>
+<body>
+<main class="ds-page">
+  <header class="ds-head">
+    <span class="eyebrow">Logo · guide p11–p15</span>
+    <h1>A word mark with room to breathe</h1>
+    <p>Bold, rounded forms that reflect softness, warmth and confidence. Always clear, uncluttered and given space. Dark logo on light grounds, light logo on dark grounds; black or white where contrast is limited. Over photography, place it in areas of low visual noise. Clarity comes first: if a colour reduces readability, don't use it.</p>
+  </header>
+
+  <section class="ds-section">
+    <h2>Colour treatments</h2>
+    <div class="ds-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+      <div class="treat bg-deep-green"><span class="n">1</span><img src="../logos/logo-white.svg" alt="Ecoy logo, white on deep green"></div>
+      <div class="treat bg-light-pink"><span class="n">2</span><img src="../logos/logo-deep-green.svg" alt="Ecoy logo, deep green on light pink" style="filter: none;"></div>
+      <div class="treat" style="background:#fff; border:1px solid #E3DFD4;"><span class="n">3</span><img src="../logos/logo-black.svg" alt="Ecoy logo, black on white"></div>
+      <div class="treat ds-photo" style="color:#fff"><span class="n">4</span><img src="../logos/logo-white.svg" alt="Ecoy logo, white over photography"></div>
+    </div>
+    <ol class="ds-note" style="margin-top: var(--space-4); padding-left: 1.2em;">
+      <li>Light logo on dark colour backgrounds</li>
+      <li>Dark logo on light colour backgrounds (Deep Green shown; Burgundy on Light Pink is also used on p14)</li>
+      <li>Monochrome (black or white) for high-contrast applications</li>
+      <li>Over photography, only where legibility is clearly maintained; apply a colour overlay or neutral treatment if needed</li>
+    </ol>
+  </section>
+
+  <section class="ds-section">
+    <h2>Clear space</h2>
+    <div class="clear"><img src="../logos/logo-deep-green.svg" alt="Ecoy logo with clear-space guide"></div>
+    <p class="ds-note" style="margin-top: var(--space-6);">Minimum clear space on every side is 100% of the logo height, for every configuration. Test at intended size in real use before shipping.</p>
+  </section>
+
+  <section class="ds-section">
+    <h2>Common errors</h2>
+    <ul class="dont ds-note" style="columns: 2; column-gap: var(--space-6); padding-left: 1.2em;">
+      <li>Never reduce opacity or add transparency</li>
+      <li>Never stretch or compress</li>
+      <li>No visual effects or shadows</li>
+      <li>Keep it horizontal, no rotation</li>
+      <li>Never outline the logo</li>
+      <li>Never re-set "Ecoy" in another typeface</li>
+    </ul>
+  </section>
+
+  <section class="ds-section">
+    <h2>Files</h2>
+    <table class="ds-table">
+      <tr><th>File</th><th>Use</th></tr>
+      <tr><td class="ds-code">logos/logo-deep-green.svg</td><td>Default on Off White and light grounds</td></tr>
+      <tr><td class="ds-code">logos/logo-white.svg</td><td>Dark grounds and photography</td></tr>
+      <tr><td class="ds-code">logos/logo-black.svg</td><td>Monochrome, high-contrast, print</td></tr>
+    </table>
+  </section>
+</main>
+</body>
+</html>

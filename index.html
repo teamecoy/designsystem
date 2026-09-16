@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecoy Design System</title>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="components/demo.css">
+<style>
+  .tile { display: block; background:#fff; border-radius: var(--radius-card-sm); padding: var(--space-4); text-decoration: none; color: inherit; transition: transform var(--motion-duration-base) var(--motion-ease), box-shadow var(--motion-duration-base) var(--motion-ease); }
+  .tile:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(28,28,28,.08); color: inherit; }
+  .tile .eyebrow { margin-bottom: 4px; } .tile h3 { margin-bottom: 4px; } .tile p { margin: 0; font-size: var(--text-small-size); color: #6B6A64; }
+</style>
+</head>
+<body>
+<main class="ds-page">
+  <header class="ds-head">
+    <img src="logos/logo-deep-green.svg" alt="Ecoy" style="height: 28px; width: auto; margin-bottom: var(--space-4)">
+    <h1>Ecoy Design System</h1>
+    <p>Colours, type, tags, buttons, shapes, logo and motion, as code. Sources: Rebrand 2026 V2 brand guide and Tag &amp; Chip Spec v0.1. Read <a href="README.md">README.md</a> for how to use it and <a href="CHANGELOG.md">CHANGELOG.md</a> for what is still marked TBC.</p>
+  </header>
+  <section class="ds-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+    <a class="tile" href="components/colors.html"><span class="eyebrow">Colors</span><h3>Palette &amp; pairings</h3><p>Ten colours, ten approved pairings, semantic roles.</p></a>
+    <a class="tile" href="components/type.html"><span class="eyebrow">Type</span><h3>Type system</h3><p>Malinton and Satoshi, site type scale, rules.</p></a>
+    <a class="tile" href="components/tags-badges.html"><span class="eyebrow">Tags</span><h3>Tags, badges &amp; filter pills</h3><p>Taxonomy, three placement specs, live contrast table.</p></a>
+    <a class="tile" href="components/feature-chips.html"><span class="eyebrow">Tags</span><h3>Feature chips</h3><p>Product-attribute chips over imagery.</p></a>
+    <a class="tile" href="components/buttons.html"><span class="eyebrow">Components</span><h3>Buttons</h3><p>Pill CTAs on light, dark and photographic grounds.</p></a>
+    <a class="tile" href="components/logo.html"><span class="eyebrow">Brand</span><h3>Logo</h3><p>Colour treatments, clear space, common errors.</p></a>
+    <a class="tile" href="components/pillar-shapes.html"><span class="eyebrow">Brand</span><h3>Pillar shapes</h3><p>The five blobs as fills, masks and patterns.</p></a>
+    <a class="tile" href="components/hand-drawn.html"><span class="eyebrow">Brand</span><h3>Hand-drawn accents</h3><p>Circled words, arrows, zzz. Attention, not decoration.</p></a>
+    <a class="tile" href="components/motion.html"><span class="eyebrow">Motion</span><h3>Motion principles</h3><p>Four principles, proposed tokens, a live comparison.</p></a>
+  </section>
+</main>
+</body>
+</html>

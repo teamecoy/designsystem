@@ -1,0 +1,12 @@
+/* Ecoy brand fonts. Malinton is the primary display face, Satoshi the supporting text face (guide p22).
+   Both are licensed fonts shipped in ../fonts/ for this private design system. Inter is the Google-safe
+   stand-in the guide names for Satoshi (mandatory in EDM). Fredoka is a reasonable rounded stand-in for
+   Malinton where the real file cannot load. Satoshi has no 600 cut: the spec's "Semi Bold" maps to Satoshi Bold (700). */
+
+@font-face { font-family: 'Malinton'; font-weight: 500; font-style: normal; font-display: swap; src: url('../fonts/Malinton-Medium.otf') format('opentype'); }
+@font-face { font-family: 'Malinton'; font-weight: 600; font-style: normal; font-display: swap; src: url('../fonts/Malinton-SemiBold.otf') format('opentype'); }
+@font-face { font-family: 'Malinton'; font-weight: 700; font-style: normal; font-display: swap; src: url('../fonts/Malinton-Bold.otf') format('opentype'); }
+
+@font-face { font-family: 'Satoshi'; font-weight: 400; font-style: normal; font-display: swap; src: url('../fonts/Satoshi-Regular.otf') format('opentype'); }
+@font-face { font-family: 'Satoshi'; font-weight: 500; font-style: normal; font-display: swap; src: url('../fonts/Satoshi-Medium.otf') format('opentype'); }
+@font-face { font-family: 'Satoshi'; font-weight: 600 700; font-style: normal; font-display: swap; src: url('../fonts/Satoshi-Bold.otf') format('opentype'); }

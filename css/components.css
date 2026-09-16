@@ -1,0 +1,101 @@
+/* Ecoy components. Built on css/tokens.css. Sources: Tag & Chip Spec v0.1 (tags, pills, type scale), brand guide p19/p24/p26 (buttons, chips, shapes, hand-drawn accents). */
+
+/* ============================================================ Tags (spec §01–§05)
+   Three placements, three specs. Every tag has exactly one category, and the category sets the colour.
+   Casing: sentence case everywhere (spec §03 proposal, TBC with Ecoy). Text is Satoshi, tracking -2%, line-height 100%. */
+
+.badge, .tag, .pill {
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  font-family: var(--font-text); letter-spacing: var(--letter-spacing); line-height: var(--line-height-tag);
+  white-space: nowrap; text-decoration: none; border: 0;
+}
+
+/* On-image badge: sits on product imagery and hero tiles. Highest-contrast job. 8px corners: reads as a label, not a button. */
+.badge { font-size: var(--tag-md-size); font-weight: var(--tag-md-weight); padding: var(--tag-badge-padding); border-radius: var(--radius-badge); }
+
+/* Inline tag: next to nav links, product names and prices. Smallest of the three. Full pill. Max one per item. */
+.tag { font-size: var(--tag-sm-size); font-weight: var(--tag-sm-weight); padding: var(--tag-inline-padding); border-radius: var(--radius-pill); }
+
+/* Category colours: one colour per job, no exceptions. */
+.badge.urgency, .tag.urgency { background: var(--color-tag-urgency); color: var(--color-white); }
+.badge.value,   .tag.value   { background: var(--color-tag-value);   color: var(--color-white); }   /* brand exception: 3.0:1, badges only, keep labels short */
+.badge.value.legible, .tag.value.legible { color: var(--color-charcoal); }                             /* 5.7:1 fallback where legibility is critical */
+.badge.newness, .tag.newness { background: var(--color-tag-newness); color: var(--color-white); }
+
+/* Filter pill: interactive. Neutral at rest, green when active. Never a badge, never carries urgency or value copy. */
+.pill {
+  font-size: var(--tag-lg-size); font-weight: var(--tag-lg-weight); padding: var(--tag-filter-padding); border-radius: var(--radius-pill);
+  background: var(--color-tag-filter); color: var(--color-ink); cursor: pointer; min-height: 40px;
+  transition: background-color var(--motion-duration-fast) var(--motion-ease), color var(--motion-duration-fast) var(--motion-ease);
+}
+.pill:hover { background: var(--color-tag-filter-hover); }                      /* TBC: fill darkened ~8% */
+.pill:focus-visible { outline: 2px solid var(--color-deep-green); outline-offset: 2px; }
+.pill.active, .pill[aria-pressed="true"] { background: var(--color-tag-filter-active); color: var(--color-white); }
+.pill.active:hover, .pill[aria-pressed="true"]:hover { background: var(--color-primary-hover); }
+.pill-group { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+/* Badge placement on a product card: top-left, one badge maximum (spec §07). */
+.media { position: relative; overflow: hidden; border-radius: var(--radius-card-sm); }
+.media > .badge { position: absolute; top: var(--space-3); left: var(--space-3); }
+
+/* ============================================================ Feature chips (guide p26)
+   Product-attribute chips (Cooling, Organic Bamboo, Deep-Fit Corners…) stacked over imagery or layouts.
+   Translucent light fill so they sit on photography without a hard box. Support the message, never dominate it. */
+.chip {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-family: var(--font-display); font-weight: var(--weight-medium); font-size: var(--tag-lg-size); letter-spacing: var(--letter-spacing); line-height: var(--line-height-tag);
+  padding: 10px 18px; border-radius: var(--radius-pill);
+  background: rgba(246, 242, 232, .82); color: var(--color-charcoal);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+.chip.solid { background: var(--color-off-white); }
+.chip.dark  { background: rgba(28, 28, 28, .72); color: var(--color-off-white); }
+.chip.green { background: var(--color-deep-green); color: var(--color-off-white); }
+.chip-group { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-3); }
+
+/* ============================================================ Buttons (guide p19, p26)
+   Fully rounded pills. Malinton, medium weight. 44px minimum hit target. Motion eases in and settles. */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  min-height: var(--button-min-height); padding: var(--button-padding); border-radius: var(--radius-button); border: 2px solid transparent;
+  font-family: var(--font-display); font-weight: var(--weight-medium); font-size: var(--text-body-size); letter-spacing: var(--letter-spacing); line-height: 1;
+  text-decoration: none; cursor: pointer; white-space: nowrap;
+  transition: background-color var(--motion-duration-base) var(--motion-ease), color var(--motion-duration-base) var(--motion-ease), border-color var(--motion-duration-base) var(--motion-ease), transform var(--motion-duration-base) var(--motion-ease);
+}
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.btn.sm { min-height: 36px; padding: var(--button-padding-sm); font-size: var(--text-small-size); }
+
+.btn-primary { background: var(--color-primary); color: var(--color-off-white); }             /* green CTA on light grounds */
+.btn-primary:hover { background: var(--color-primary-hover); }
+.btn-light { background: var(--color-off-white); color: var(--color-charcoal); }               /* light CTA on dark or photographic grounds */
+.btn-light:hover { background: var(--color-white); }
+.btn-accent { background: var(--color-accent); color: var(--color-off-white); }               /* orange: sparingly, campaign moments only */
+.btn-accent:hover { background: #E85900; }
+.btn-outline { background: transparent; color: currentColor; border-color: currentColor; }      /* secondary action on any ground */
+.btn-outline:hover { background: rgba(0, 0, 0, .06); }
+.ground-dark .btn-outline:hover, .bg-deep-green .btn-outline:hover { background: rgba(255, 255, 255, .1); }
+
+/* ============================================================ Pillar shapes (guide p24)
+   The five blob shapes in /shapes. Use as fills, image masks, or repeating patterns. Scale, crop, stack or gently distort,
+   but keep the core form recognisable. Set --shape to the SVG url. */
+.pillar { display: inline-block; width: 160px; aspect-ratio: 1; background: currentColor; -webkit-mask: var(--shape) center / contain no-repeat; mask: var(--shape) center / contain no-repeat; }
+.pillar-img { display: inline-block; width: 100%; aspect-ratio: 1; -webkit-mask: var(--shape) center / contain no-repeat; mask: var(--shape) center / contain no-repeat; }
+.pillar-img > img { width: 100%; height: 100%; object-fit: cover; }
+.pillar-pattern { background-color: var(--color-light-green); background-image: var(--shape); background-size: 88px 88px; background-repeat: repeat; }
+
+/* ============================================================ Hand-drawn accents (guide p26)
+   Circled words, arrows, zzz. Direct attention or guide flow only, never decoration. Consistent, subtle line weight. */
+.circled { position: relative; display: inline-block; padding: 0 .12em; }
+.circled > svg { position: absolute; inset: -.18em -.32em; width: calc(100% + .64em); height: calc(100% + .36em); overflow: visible; pointer-events: none; }
+.circled > svg ellipse { fill: none; stroke: var(--color-accent); stroke-width: 3; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+.hand-drawn { fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+
+/* ============================================================ Logo (guide p13, p14)
+   Clear space = 100% of logo height on every side. Light logo on dark grounds, dark on light, mono where contrast is limited. */
+.logo { display: inline-block; height: 28px; width: auto; padding: 28px; }
+.logo > svg, .logo > img { height: 100%; width: auto; }
+
+/* ============================================================ Motion demo helpers (guide p33) */
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity var(--motion-duration-slow) var(--motion-ease-out), transform var(--motion-duration-slow) var(--motion-ease-out); }
+.reveal.in { opacity: 1; transform: none; }

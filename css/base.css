@@ -1,0 +1,71 @@
+/* Ecoy base styles. Built entirely on css/tokens.css. Load order: fonts.css, tokens.css, base.css, components.css. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Dark ground sections invert ink and heading colour. */
+.ground-dark, .ground-dark body { background: var(--color-ground-dark); color: var(--color-ink-on-dark); }
+.ground-dark :is(h1, h2, h3, .text-h1, .text-h2, .text-h3) { color: inherit; }
+
+/* Type scale (spec §06). Same element = same token, everywhere. Mobile sizes swap in via tokens.css below 768px. */
+h1, .text-h1 { font-family: var(--text-h1-family); font-size: var(--text-h1-size); font-weight: var(--text-h1-weight); line-height: var(--line-height); letter-spacing: var(--letter-spacing); color: var(--color-heading); margin: 0 0 var(--space-4); text-wrap: pretty; }
+h2, .text-h2 { font-family: var(--text-h2-family); font-size: var(--text-h2-size); font-weight: var(--text-h2-weight); line-height: var(--line-height); letter-spacing: var(--letter-spacing); color: var(--color-heading); margin: 0 0 var(--space-3); text-wrap: pretty; }
+h3, .text-h3 { font-family: var(--text-h3-family); font-size: var(--text-h3-size); font-weight: var(--text-h3-weight); line-height: var(--line-height); letter-spacing: var(--letter-spacing); color: var(--color-heading); margin: 0 0 var(--space-2); text-wrap: pretty; }
+p, .text-body { font-family: var(--text-body-family); font-size: var(--text-body-size); font-weight: var(--text-body-weight); line-height: var(--line-height); margin: 0 0 var(--space-4); }
+.text-body-legible { line-height: var(--line-height-legible); }
+.text-price { font-family: var(--text-price-family); font-size: var(--text-price-size); font-weight: var(--text-price-weight); line-height: var(--line-height); }
+.text-price-was { font-family: var(--text-small-family); font-size: var(--text-small-size); font-weight: var(--text-small-weight); text-decoration: line-through; opacity: .7; }
+small, .text-small { font-family: var(--text-small-family); font-size: var(--text-small-size); font-weight: var(--text-small-weight); line-height: var(--line-height); }
+
+/* Malinton is the default; use .font-text to drop to Satoshi for small, dense or legibility-critical copy. */
+.font-display { font-family: var(--font-display); }
+.font-text { font-family: var(--font-text); }
+
+/* Eyebrow: short orange label above a heading, as seen throughout the guide's layouts. */
+.eyebrow { display: inline-block; font-family: var(--font-text); font-size: var(--text-small-size); font-weight: var(--weight-medium); letter-spacing: var(--letter-spacing); color: var(--color-accent); margin-bottom: var(--space-2); }
+
+a { color: var(--color-deep-green); text-decoration-thickness: 1px; text-underline-offset: 3px; transition: color var(--motion-duration-fast) var(--motion-ease); }
+a:hover { color: var(--color-deep-green-hover); }
+.ground-dark a { color: var(--color-light-green); }
+.ground-dark a:hover { color: var(--color-off-white); }
+
+img, svg, video { max-width: 100%; display: block; }
+
+/* Rounded cards and colour-blocked sections are the layout vocabulary (guide p18, p19, p24). */
+.card { background: var(--color-white); border-radius: var(--radius-card); padding: var(--space-5); }
+.card-sm { border-radius: var(--radius-card-sm); }
+.section { padding-block: var(--space-7); padding-inline: var(--space-4); border-radius: var(--radius-card); }
+@media (min-width: 768px) { .section { padding-block: var(--space-8); padding-inline: var(--space-6); } }
+
+/* Colour-block utilities: one per palette colour, each setting a legible ink. */
+.bg-deep-green    { background: var(--color-deep-green);    color: var(--color-off-white); }
+.bg-off-white     { background: var(--color-off-white);     color: var(--color-charcoal); }
+.bg-bright-orange { background: var(--color-bright-orange); color: var(--color-off-white); }
+.bg-burgundy      { background: var(--color-burgundy);      color: var(--color-light-pink); }
+.bg-light-green   { background: var(--color-light-green);   color: var(--color-deep-green); }
+.bg-light-blue    { background: var(--color-light-blue);    color: var(--color-deep-blue); }
+.bg-light-pink    { background: var(--color-light-pink);    color: var(--color-burgundy); }
+.bg-chocolate     { background: var(--color-chocolate);     color: var(--color-light-pink); }
+.bg-deep-blue     { background: var(--color-deep-blue);     color: var(--color-light-blue); }
+.bg-charcoal      { background: var(--color-charcoal);      color: var(--color-off-white); }
+:is(.bg-deep-green, .bg-bright-orange, .bg-burgundy, .bg-chocolate, .bg-deep-blue, .bg-charcoal) :is(h1, h2, h3) { color: inherit; }
+
+/* Motion: every transition uses the brand easing (guide p33). Respect reduced motion. */
+.motion { transition-timing-function: var(--motion-ease); transition-duration: var(--motion-duration-base); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
