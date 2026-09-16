@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.2 · 2026-09-16
+
+- `examples/`: ten real Klaviyo campaigns, images localised and compressed (4.8 MB total), indexed with performance data, brand status (on-brand vs pre-rebrand) and what to copy. Selection: top revenue, revenue per recipient, open rate and click rate over 12 months, plus product launches and colour drops. April Fools excluded on Sam's instruction.
+- Surfaced: Klaviyo shell font is Montserrat, not Inter; sale templates were still pre-rebrand in Feb 2026.
+
 ## v0.1 · 2026-09-16
 
 First conversion of the two PDFs into code.

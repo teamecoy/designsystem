@@ -19,7 +19,7 @@ Sources: **Ecoy Rebrand 2026 V2** brand guide (33 pages) and **Tag & Chip Spec v
 | `TAGS-AND-CHIPS.md` | The tag spec distilled: taxonomy, three placement specs, casing, contrast, do and don't. |
 | `logos/` `shapes/` `fonts/` | Logo SVGs, the five pillar-shape SVGs, the font files the CSS needs. |
 | `reference/` | Rendered pages from the brand guide and the spec, for visual context. |
-| `examples/` | Curated real creative (emails, ads) with an index explaining what each one gets right. See `examples/README.md`. |
+| `examples/` | Ten real Klaviyo emails that performed, images localised, indexed by brand status and what to copy. See `examples/README.md`. |
 
 ## Using it
 

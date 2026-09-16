@@ -1,0 +1,92 @@
+{
+ "edm-2026-02-bday26-sale-launch": {
+  "tid": "Y7uyMz",
+  "name": "BDAY26 - Sale launch",
+  "sent": "2026-02-25",
+  "subject": "Birthday Sale Now On 🎈 Up to 47% Off!",
+  "stats": "104k sent · 27.3% open · 1.25% CTR · $89.9k · #1 revenue",
+  "images": 14,
+  "bytes": 753742
+ },
+ "edm-2025-11-bfcm25-launch": {
+  "tid": "YpUeqi",
+  "name": "BFCM25 - Launch",
+  "sent": "2025-11-05",
+  "subject": "Black Friday 🔥 Up to 53% Off",
+  "stats": "73k sent · 26.7% open · 1.43% CTR · $79.2k · #1 revenue per recipient ($1.09)",
+  "images": 15,
+  "bytes": 1172909
+ },
+ "edm-2026-02-bday26-hype-3-sale-tomorrow": {
+  "tid": "V4yjWr",
+  "name": "BDAY26 - Hype 3/3 Sale Tomorrow",
+  "sent": "2026-02-25",
+  "subject": "Birthday Sale Starts Tomorrow ✨",
+  "stats": "45k sent · 37.8% open · 1.60% CTR · $40.7k · $0.90/recipient",
+  "images": 10,
+  "bytes": 747373
+ },
+ "edm-2025-11-bfcm25-hype-1-offer-reveal": {
+  "tid": "Vrw2DJ",
+  "name": "BFCM25 - Hype 1/3 offer reveal",
+  "sent": "2025-11-01",
+  "subject": "Black Friday Sneak Peek",
+  "stats": "32k sent · 56.7% open (highest of the year) · 2.70% CTR",
+  "images": 7,
+  "bytes": 1235464
+ },
+ "edm-2026-04-flannelette-launch": {
+  "tid": "YuG2Ad",
+  "name": "Flannelette - 2/6 Launch",
+  "sent": "2026-04-30",
+  "subject": "New drop: Winter flannelette ❄️",
+  "stats": "75k sent · 35.6% open · 0.71% CTR · $11.4k · #1 non-sale revenue",
+  "images": 20,
+  "bytes": 1636413
+ },
+ "edm-2026-08-ambi-v2-launch": {
+  "tid": "XxUJp4",
+  "name": "Ambi v2 Launch",
+  "sent": "2026-08-13",
+  "subject": "Meet 3 new Ambi colours 🎉",
+  "stats": "61k sent · 40.1% open · 0.63% CTR · $7.9k",
+  "images": 18,
+  "bytes": 1188908
+ },
+ "edm-2026-08-ambi-v2-teaser": {
+  "tid": "XSB2wm",
+  "name": "Ambi v2 Teaser",
+  "sent": "2026-08-12",
+  "subject": "New stripes incoming 🤫",
+  "stats": "52k sent · 40.5% open · 1.11% CTR · $8.1k",
+  "images": 9,
+  "bytes": 746100
+ },
+ "edm-2026-08-fathers-day-bundle-launch": {
+  "tid": "SC38gX",
+  "name": "[Z3] Father's Day Bundle Launch",
+  "sent": "2026-08-19",
+  "subject": "The Father's Day Bundle is here: 25% off 🎁",
+  "stats": "58k sent · 62.5% open (highest open rate) · 0.86% CTR · $8.2k",
+  "images": 16,
+  "bytes": 5405165
+ },
+ "edm-2026-03-cofounder-letter": {
+  "tid": "UvyrEF",
+  "name": "Customer Research - Email 1/3 - Cofounder Letter",
+  "sent": "2026-03-12",
+  "subject": "Giveaway $1,500 Bedroom Makeover ✨",
+  "stats": "24k sent · 39.4% open · 2.92% CTR · $10.3k · plain-text",
+  "images": 0,
+  "bytes": 0
+ },
+ "edm-2026-07-dusk-colour-launch": {
+  "tid": "U6CANw",
+  "name": "Dusk launch email - Variant 1 (90-Day)",
+  "sent": "2026-07-28",
+  "subject": "Meet Dusk 🌙",
+  "stats": "30k sent · 42.1% open · 1.11% CTR · $3.4k",
+  "images": 14,
+  "bytes": 585043
+ }
+}
