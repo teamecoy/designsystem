@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.4 · 2026-09-17
+
+- Added `assets/`: the photography naming grammar as code. `naming.json` (generated from the VA's filename spreadsheet, which stays the single source) carries 22 product tokens, 33 solid and 5 stripe colours, 7 camera angles, and the talent and real-or-AI flags. `ASSETS.md` explains how to compose a filename and locate it in Drive. `check_filenames.py` validates a name or a whole folder.
+- Stated explicitly that the repo holds no photography and that images in `examples/` and `reference/` are reference renders, never design assets.
+- Recorded the known gaps: Polka has no assets yet, combo colours have no dropdown, the spreadsheet's "How to use" tab says `Solo` where everything else says `NoTalent`, and Shopify media follows no convention.
+
 ## v0.3 · 2026-09-16
 
 - Added the opening rule to BRAND.md, README.md, index.html and the examples index: **sale or evergreen?** Evergreen follows this system exactly; each named sale gets its own creative identity from a Sale Identity Brief (Ecoy wordmark in the sale lockup, brand palette as sandbox, three switchable phases). Examples re-labelled from "pre-rebrand" to "sale identity" to match.

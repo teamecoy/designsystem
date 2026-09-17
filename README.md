@@ -21,6 +21,7 @@ Evergreen work (launches, colour drops, site, brand content, retention) follows 
 | `components/*.html` | One demo page per part of the system. Open any in a browser. Each starts with an `@dsCard` comment naming its group. |
 | `BRAND.md` | The brand guide distilled: character, voice, pillars, messaging, logo, colour, type, visual assets, motion. |
 | `TAGS-AND-CHIPS.md` | The tag spec distilled: taxonomy, three placement specs, casing, contrast, do and don't. |
+| `assets/` | Where photography lives and how to name it. The repo holds no photography; Drive is master. Read [ASSETS.md](assets/ASSETS.md) before using any image. |
 | `logos/` `shapes/` `fonts/` | Logo SVGs, the five pillar-shape SVGs, the font files the CSS needs. |
 | `reference/` | Rendered pages from the brand guide and the spec, for visual context. |
 | `examples/` | Ten real Klaviyo emails that performed, images localised, indexed by brand status and what to copy. See `examples/README.md`. |
@@ -43,6 +44,7 @@ Evergreen work (launches, colour drops, site, brand content, retention) follows 
 
 ## Rules that are not negotiable
 
+- Photography comes from Drive, named to the convention in `assets/ASSETS.md`. Images in `examples/` and `reference/` are compressed reference renders, never design assets.
 - Sale or evergreen is decided first. Evergreen follows this system; a sale follows its Sale Identity Brief.
 - Bright Orange is an accent, never a foundation.
 - One tag category per job: urgency Burgundy, value Orange, newness Deep Green, filter neutral to green.

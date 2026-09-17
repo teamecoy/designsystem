@@ -7,6 +7,8 @@ Ten Klaviyo campaigns from the last 12 months (Sep 2025 to Sep 2026), chosen by 
 - **Evergreen** emails follow the brand system (new ECOY wordmark, Malinton headings, Deep Green pill CTAs, pillar shapes, colour-blocked sections). Copy their styling for any evergreen work.
 - **Sale identity** emails belong to a named sale (BDAY26, BFCM25) and wear that sale's own look, as every Ecoy sale does. Their offer architecture, hype sequencing and proof devices are proven and reusable. Their look is not: it belongs to that sale only, is never reused for evergreen, and the next sale gets a fresh identity from its own brief. Both sale examples here also pre-date the February 2026 rebrand, so the wordmark in them is the old one; new sale lockups feature the current ECOY wordmark.
 
+> **These images are reference renders, not assets.** Every image here is capped at 900px and recompressed so you can see what the email looked like. Real photography comes from Drive: see [../assets/ASSETS.md](../assets/ASSETS.md).
+
 ## Index
 
 | Folder | Campaign · sent | Type | Why it's here | Copy this |
