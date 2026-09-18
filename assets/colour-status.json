@@ -1,0 +1,50 @@
+{
+ "$comment": "Which solid colourways are still for sale. The Cooling Bamboo Sheet Set is the north star: if a colour is not a live sheet set option it is retired, regardless of what lingers on accessories. Source: Shopify Admin API, active products only.",
+ "northStar": [
+  "Cooling Bamboo Sheet Set",
+  "Cooling Bamboo Sheet Set (New Colours)"
+ ],
+ "checked": "2026-09-18",
+ "live": [
+  "Black",
+  "BurntOrange",
+  "Butter",
+  "Caramel",
+  "Charcoal",
+  "Chocolate",
+  "Dune",
+  "Dusk",
+  "Eggplant",
+  "ForestGreen",
+  "Iceberg",
+  "Jacaranda",
+  "Lagoon",
+  "Matcha",
+  "Merlot",
+  "MidnightPine",
+  "Mulberry",
+  "Oatmeal",
+  "Ocean",
+  "ReefTeal",
+  "Sage",
+  "StormBlue",
+  "White"
+ ],
+ "retired": [
+  "Byron",
+  "Canyon",
+  "EucalyptusGreen",
+  "GreyGum",
+  "Honeycomb",
+  "Moss",
+  "Paprika",
+  "Rockmelon",
+  "Taupe",
+  "Wildberry"
+ ],
+ "liveButNotInVocabulary": [
+  "Burgundy",
+  "Sky"
+ ],
+ "note": "A few retired colours still appear on the Cooling Sleep Mask (Byron, Canyon, Honeycomb, Moss, Paprika, Rockmelon, Wildberry). They are retired for bedding design. Dusty Pink is retired and was never in the vocabulary."
+}

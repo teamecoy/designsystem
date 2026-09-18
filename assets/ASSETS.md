@@ -79,6 +79,14 @@ It reads the library from the Google Drive for Desktop mount, so Drive for Deskt
 
 **A filename is not a description.** The index tells you what someone typed, not what is in the frame. A file named `BambooPillowcase-Solid-Charcoal-Deepetch-NoTalent-Real-01.png` turned out to be a photo of a packaging box carrying the old logo. Always confirm the image before shipping it.
 
+## Is this colour still for sale?
+
+`colour-status.json` answers it. The **Cooling Bamboo Sheet Set is the north star**: if a colour is not a live sheet set option it is retired, whatever lingers on accessories. Twenty-three colours are live, ten are retired, and two live ones (Sky and Burgundy) have no vocabulary entry yet.
+
+This matters because 1,140 images in the library, about one in eight, shoot retired colours. Paprika alone accounts for 536 and Canyon 290. Never design bedding around a colour listed as retired.
+
+Refresh it by querying the Shopify Admin API for active products and reading the sheet set's Colour option values, then rewriting the file. Do not scrape the storefront: automated requests to ecoy.com.au trip bot protection for the whole office.
+
 ## Renaming work
 
 `rename-suggestions.csv` lists files whose names can be corrected without a judgement call, mostly stripe colourways recorded under half their pair name. Each row gives the folder, the current name and the name to use. It is regenerated whenever the index is rebuilt.
