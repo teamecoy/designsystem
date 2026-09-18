@@ -63,6 +63,21 @@ Folder names are written for humans and keep their spaces, so the `Burnt Orange`
 
 Never invent a colour. If it is not in `naming.json` it is not a live colourway, and someone has to confirm it before it is used. Never substitute a compressed reference image because the real one is not to hand.
 
+
+## The library index
+
+`library-index.json` is a structured index of all 9,233 files in the Drive library: 8,983 images and 250 videos. Every field is parsed from the filename, so building it opened no images and cost nothing but a directory walk.
+
+Use it to find assets without touching Drive. Each row carries the relative path plus whichever of product, pattern, colour, angle, people, source, orientation and sequence the filename declared. A row marked `"valid": false` has an `unknown` list naming the tokens that did not parse.
+
+```bash
+python3 assets/build_library_index.py      # rebuild after new shoots land
+```
+
+It reads the library from the Google Drive for Desktop mount, so Drive for Desktop must be running.
+
+**A filename is not a description.** The index tells you what someone typed, not what is in the frame. A file named `BambooPillowcase-Solid-Charcoal-Deepetch-NoTalent-Real-01.png` turned out to be a photo of a packaging box carrying the old logo. Always confirm the image before shipping it.
+
 ## Checking filenames
 
 For renaming work, this checks a single name or a whole folder and says exactly what is wrong:
