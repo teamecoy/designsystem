@@ -44,6 +44,29 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 
 The full vocabulary, including every product and colour token, is in `naming.json`.
 
+## Two trees: masters and web copies
+
+The library exists twice in the Ecoy shared drive.
+
+| | Masters | Web copies |
+|---|---|---|
+| Root | `Photography` | `Photography - Web` |
+| Extension | `.jpg .jpeg .png .tif .tiff` | `.webp` |
+| Size | ~24 MB | ~237 KB, up to ~900 KB for texture crops |
+| Longest edge | original | 2400px, aspect ratio exact |
+| Use for | print, retouching | everything on screen |
+
+**Resolving one to the other:** swap the root folder, replace the extension. The relative path and filename stem are byte-identical, so `Photography/Bamboo Sheet Set/Solid/Dusk/No Talent/…-01.jpg` becomes `Photography - Web/Bamboo Sheet Set/Solid/Dusk/No Talent/…-01.webp`. Colour profiles are preserved and rotation is baked in, so a web copy matches its master.
+
+```bash
+python3 assets/resolve_web.py "<library-relative path>"   # returns the best available file
+python3 assets/resolve_web.py --coverage                  # how much of the mirror exists
+```
+
+Four things to know. **A missing `.webp` means not generated yet, not absent**, so always fall back to the master rather than erroring. **Three folders are permanently excluded**: `NEW IMAGERY - to be renamed`, `Archive`, and `Founder BTS & OLD Content`. **HEIC files get no web copy**, since the conversion covers only the five extensions above. And **there is no CDN**: these are Drive files, so a web copy still cannot be referenced by URL from a published page. Getting hotlinkable URLs is a separate decision.
+
+Use the shared drive, not My Drive. A stale `Photography` folder with old year-based subfolders still exists there and should be ignored.
+
 ## Where it sits in Drive
 
 ```
