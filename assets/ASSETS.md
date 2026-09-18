@@ -71,12 +71,17 @@ Never invent a colour. If it is not in `naming.json` it is not a live colourway,
 Use it to find assets without touching Drive. Each row carries the relative path plus whichever of product, pattern, colour, angle, people, source, orientation and sequence the filename declared. A row marked `"valid": false` has an `unknown` list naming the tokens that did not parse.
 
 ```bash
-python3 assets/build_library_index.py      # rebuild after new shoots land
+python3 assets/build_library_index.py            # rebuild after new shoots land
+python3 assets/build_library_index.py --reparse  # re-derive fields after a vocabulary change, no re-walk
 ```
 
 It reads the library from the Google Drive for Desktop mount, so Drive for Desktop must be running.
 
 **A filename is not a description.** The index tells you what someone typed, not what is in the frame. A file named `BambooPillowcase-Solid-Charcoal-Deepetch-NoTalent-Real-01.png` turned out to be a photo of a packaging box carrying the old logo. Always confirm the image before shipping it.
+
+## Renaming work
+
+`rename-suggestions.csv` lists files whose names can be corrected without a judgement call, mostly stripe colourways recorded under half their pair name. Each row gives the folder, the current name and the name to use. It is regenerated whenever the index is rebuilt.
 
 ## Checking filenames
 

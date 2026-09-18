@@ -69,7 +69,34 @@ def parse(stem):
     return out
 
 
+def reparse():
+    """Re-derive fields for an existing index after the vocabulary changes."""
+    path = ROOT / "library-index.json"
+    doc = json.loads(path.read_text())
+    for r in doc["files"]:
+        fn = pathlib.Path(r["path"]).name
+        for k in ("product", "pattern", "colour", "angle", "people",
+                  "source", "orientation", "seq", "colourPair", "unknown", "valid"):
+            r.pop(k, None)
+        parsed = parse(pathlib.Path(fn).stem)
+        for k, v in parsed.items():
+            if k == "valid":
+                if not v:
+                    r["valid"] = False
+            elif v:
+                r[k] = v
+    imgs = [r for r in doc["files"] if r.get("kind") != "video"]
+    doc["counts"] = {"total": len(doc["files"]), "images": len(imgs),
+                     "videos": len(doc["files"]) - len(imgs),
+                     "validNames": sum(1 for r in doc["files"] if r.get("valid") is not False)}
+    path.write_text(json.dumps(doc, separators=(",", ":"), ensure_ascii=False) + "\n")
+    print(f"reparsed {doc['counts']['total']} rows; "
+          f"{doc['counts']['validNames']} names now parse cleanly", file=sys.stderr)
+
+
 def main():
+    if "--reparse" in sys.argv:
+        return reparse()
     limit = None
     if "--limit" in sys.argv:
         limit = int(sys.argv[sys.argv.index("--limit") + 1])

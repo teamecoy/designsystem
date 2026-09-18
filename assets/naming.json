@@ -324,6 +324,26 @@
       {
         "display": "Cherry Blossom Stripe",
         "token": "CherryBlossomStripe"
+      },
+      {
+        "display": "Iced Chocolate Stripe",
+        "token": "IcedChocolateStripe"
+      },
+      {
+        "display": "Sage Coconut Stripe",
+        "token": "SageCoconutStripe"
+      },
+      {
+        "display": "Strawberry Merlot Stripe",
+        "token": "StrawberryMerlotStripe"
+      },
+      {
+        "display": "Malt Caramel Stripe",
+        "token": "MaltCaramelStripe"
+      },
+      {
+        "display": "Cloudy Sky Stripe",
+        "token": "CloudySkyStripe"
       }
     ]
   },
