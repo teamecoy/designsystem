@@ -77,6 +77,14 @@ python3 assets/build_library_index.py --reparse  # re-derive fields after a voca
 
 It reads the library from the Google Drive for Desktop mount, so Drive for Desktop must be running.
 
+### What has been looked at
+
+336 images, one per unique combination of product, pattern, colour, angle and talent, have been viewed and carry a `seen` object recording what is genuinely in the frame: the subject, the colours actually visible, the setting, whether a person appears, whether the branding looks dated, and a quality grade of hero, solid or weak. Retired colourways were skipped.
+
+Of those: 110 grade hero, 207 solid, 19 weak. 22 carry the old lowercase wordmark. `flagged-images.csv` lists every image needing a look before reuse, with the reason.
+
+Prefer `seen.quality` of hero for anything leading a page, and never ship an image whose `seen.dated` is true without checking the branding.
+
 **A filename is not a description.** The index tells you what someone typed, not what is in the frame. A file named `BambooPillowcase-Solid-Charcoal-Deepetch-NoTalent-Real-01.png` turned out to be a photo of a packaging box carrying the old logo. Always confirm the image before shipping it.
 
 ## Is this colour still for sale?
