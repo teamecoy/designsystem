@@ -44,6 +44,19 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 
 The full vocabulary, including every product and colour token, is in `naming.json`.
 
+## The curated set in this repository
+
+`assets/library/` holds 42 photographs, and they are the only photographs in this repo. Everything else lives in Drive. They exist because Claude Design can read this repository and nothing else, so a design needing a real Ecoy photograph needs the pixels here.
+
+They come from the human-curated shortlist in Drive at `Photography - Web/Claude Photos`, downscaled to 1200px, 2.9 MB in total. `library-shortlist.json` is the manifest: each entry carries its slot, the master it came from, dimensions, and the parsed product metadata.
+
+```bash
+python3 assets/build_shortlist.py                  # rebuild after the shortlist changes
+python3 assets/build_shortlist.py --max-edge 1600  # larger, if a hero needs it
+```
+
+The build deliberately refuses two kinds of file, and records why in the manifest's `skipped` list. **A retired colourway is never copied**, so a design physically cannot show a dead SKU. **A filename that does not parse is never copied**, because it cannot be traced back to a master. Fix the name in Drive and rebuild to recover it.
+
 ## Two trees: masters and web copies
 
 The library exists twice in the Ecoy shared drive.
