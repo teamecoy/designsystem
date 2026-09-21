@@ -96,27 +96,36 @@ def main():
             if cand:
                 take(min(cand, key=rank), "stripe")
 
-    # depth, spread across products so one shoot cannot dominate
+    # Depth, spread across distinct SHOTS. Grouping only by product let one
+    # setup swallow a third of the budget: 21 consecutive frames of the same
+    # Dune overhead are a contact sheet, not a library. Bucket by the full
+    # combination and take at most PER_SHOT frames from any one of them.
+    PER_SHOT = 2
+
     def spread(pool, cap, slot):
-        by = {}
-        for r in sorted(pool, key=lambda r: (str(r.get("product")), r.get("seq") or "99")):
-            by.setdefault(r.get("product"), []).append(r)
-        i = 0
-        while len([1 for _, s in picked if s == slot]) < cap and any(by.values()):
-            for k in list(by):
-                if not by[k]:
-                    del by[k]; continue
-                if len([1 for _, s in picked if s == slot]) >= cap:
-                    break
-                take(by[k].pop(0), slot)
-            i += 1
-            if i > 400:
-                break
+        buckets = {}
+        for r in sorted(pool, key=lambda r: (str(r.get("product")), str(r.get("colour")),
+                                             str(r.get("angle")), r.get("seq") or "99")):
+            key = (r.get("product"), r.get("colour"), r.get("angle"), r.get("people"))
+            buckets.setdefault(key, []).append(r)
+        for k in buckets:
+            buckets[k] = buckets[k][:PER_SHOT]
+        order = sorted(buckets, key=lambda k: tuple(str(x) for x in k))
+        n = lambda: sum(1 for _, s in picked if s == slot)
+        depth = 0
+        while n() < cap and depth < PER_SHOT:
+            for k in order:
+                if depth < len(buckets[k]) and n() < cap:
+                    take(buckets[k][depth], slot)
+            depth += 1
 
     spread([r for r in img if r.get("angle") == "CloseUp"], CAPS["fabric-detail"], "fabric-detail")
     spread([r for r in img if r.get("angle") == "Deepetch"], 999, "cutout")
     spread([r for r in img if r.get("angle") == "Overhead"], CAPS["flat-lay"], "flat-lay")
-    spread([r for r in img if r.get("people") == "Talent" and r.get("angle") in PREF],
+    # Talent draws from any angle, Freestyle included: a person in a styled bed is
+    # what ad creative wants, and almost all talent shots are filed as Freestyle.
+    spread([r for r in img if r.get("people") == "Talent"
+            and r.get("angle") not in ("Deepetch", "CloseUp")],
            CAPS["talent"], "talent")
 
     if OUT.exists():
