@@ -12,8 +12,13 @@ Two kinds of file are deliberately NOT copied:
 
     python3 assets/build_shortlist.py [--max-edge 1200] [--quality 80]
 """
-import json, os, pathlib, shutil, sys
+import json, os, pathlib, re, shutil, sys
 from PIL import Image
+
+
+def slug(name):
+    """Slot folders become URL-safe, so a path can be used verbatim as a URL."""
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", name.lower())).strip("-")
 
 ROOT = pathlib.Path(__file__).resolve().parent
 SHORTLIST = pathlib.Path(os.path.expanduser(
@@ -57,14 +62,14 @@ def main():
                             "why": f"{row['colour']} is a retired colourway"})
             continue
 
-        dst = OUT / slot / src.name
+        dst = OUT / slug(slot) / src.name
         dst.parent.mkdir(parents=True, exist_ok=True)
         with Image.open(src) as im:
             im.thumbnail((max_edge, max_edge), Image.LANCZOS)
             im.save(dst, "WEBP", quality=quality, method=6)
             w, h = im.size
 
-        entry = {"file": f"library/{slot}/{src.name}", "slot": slot,
+        entry = {"file": f"library/{slug(slot)}/{src.name}", "slot": slot,
                  "master": row["path"], "width": w, "height": h,
                  "bytes": dst.stat().st_size}
         for k in ("product", "pattern", "colour", "angle", "people", "source"):
