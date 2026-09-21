@@ -44,6 +44,12 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 
 The full vocabulary, including every product and colour token, is in `naming.json`.
 
+## Which angle to reach for
+
+**High45 is the preferred angle for ads and hero creative.** When several frames of the same product and colour exist, rank High45 first, then Low45, then Side. `naming.json` records this under `library.anglePreference`.
+
+The library does not reflect that preference yet: High45 is only 3.4% of images while Freestyle is 47.9%. Freestyle is largely a catch-all covering packaging shots, product stacks, wide room shots and styled vignettes, not a bucket of mislabelled angles, so most of it is not recoverable by renaming. Where an image has been looked at, `seen.angle` records the angle actually observed, which is more reliable than the filename.
+
 ## The curated set in this repository
 
 `assets/library/` holds 42 photographs, and they are the only photographs in this repo. Everything else lives in Drive. They exist because Claude Design can read this repository and nothing else, so a design needing a real Ecoy photograph needs the pixels here.

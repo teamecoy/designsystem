@@ -7,6 +7,10 @@
     "rootFolderId": "18qRGqMBgXvmb-tKALvXgkPHhYuH6Setz",
     "rootUrl": "https://drive.google.com/drive/folders/18qRGqMBgXvmb-tKALvXgkPHhYuH6Setz",
     "note": "The repository never stores photography. Name the asset you need using the pattern below and pull it from Drive.",
+    "anglePreference": {
+      "heroAndAds": "High45",
+      "note": "High45 is the preferred angle for advertising and hero creative. When several frames of the same product and colour are available, rank High45 first, then Low45, then Side. Sam's rule, 2026-09-21."
+    },
     "web": {
       "root": "Photography - Web",
       "rule": "Same relative path and filename stem as the master; only the root folder and the extension change.",
