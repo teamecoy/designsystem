@@ -26,8 +26,16 @@ PREF = ["High45", "Low45", "Side", "Overhead"]
 CAPS = {"fabric-detail": 60, "flat-lay": 30, "talent": 60}
 
 
+# Emilie's folder names and the generated slot names mean the same things;
+# collapse them so the artifact sees one slot per job, not two.
+SLOT_ALIASES = {"cutouts-deepetch": "cutout", "fabric-detail-closeup": "fabric-detail",
+                "flat-lay-overhead": "flat-lay", "solid-colour-range": "product-colour",
+                "stripe-colour-range": "stripe", "wide-lifestyle": "lifestyle"}
+
+
 def slug(n):
-    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", n.lower())).strip("-")
+    s = re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", n.lower())).strip("-")
+    return SLOT_ALIASES.get(s, s)
 
 
 def rank(r):
