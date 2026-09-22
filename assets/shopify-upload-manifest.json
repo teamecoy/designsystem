@@ -1,6 +1,6 @@
 {
  "$comment": "Files to upload to Shopify Files. Live colourways only; retired colours, legacy folders, unparseable names and 5 files pending rename are excluded. Names are unique, so each becomes a predictable CDN url.",
- "shopDomain": "ecoy.myshopify.com",
+ "shopDomain": "happy-earth-australia.myshopify.com",
  "count": 6350,
  "cdnPattern": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/{name}",
  "files": [
