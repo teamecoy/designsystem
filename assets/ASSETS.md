@@ -52,7 +52,7 @@ The library does not reflect that preference yet: High45 is only 3.4% of images 
 
 ## The curated set in this repository
 
-`assets/library/` holds 42 photographs, and they are the only photographs in this repo. Everything else lives in Drive. They exist because Claude Design can read this repository and nothing else, so a design needing a real Ecoy photograph needs the pixels here.
+`assets/library/` holds 287 photographs, and they are the only photographs in this repo (16.5 MB total). Everything else lives in Drive. They exist because Claude Design can read this repository and nothing else, so a design needing a real Ecoy photograph needs the pixels here.
 
 They come from the human-curated shortlist in Drive at `Photography - Web/Claude Photos`, downscaled to 1200px, 2.9 MB in total. `library-shortlist.json` is the manifest: each entry carries its slot, the master it came from, dimensions, and the parsed product metadata.
 
@@ -82,7 +82,35 @@ python3 assets/resolve_web.py "<library-relative path>"   # returns the best ava
 python3 assets/resolve_web.py --coverage                  # how much of the mirror exists
 ```
 
-Four things to know. **A missing `.webp` means not generated yet, not absent**, so always fall back to the master rather than erroring. **Three folders are permanently excluded**: `NEW IMAGERY - to be renamed`, `Archive`, and `Founder BTS & OLD Content`. **HEIC files get no web copy**, since the conversion covers only the five extensions above. And **there is no CDN**: these are Drive files, so a web copy still cannot be referenced by URL from a published page. Getting hotlinkable URLs is a separate decision.
+Three things to know. **A missing `.webp` means not generated yet, not absent**, so always fall back to the master rather than erroring. **Three folders are permanently excluded**: `NEW IMAGERY - to be renamed`, `Archive`, and `Founder BTS & OLD Content`. **HEIC files get no web copy**, since the conversion covers only the five extensions above.
+
+## The images are also on a CDN
+
+As of 2026-09-22, 6,340 of the web copies above are additionally mirrored to the Shopify Files CDN, and every filename got there unchanged — Shopify renamed zero of the 6,340 uploads. That means a url is **derivable from the filename alone**, with no lookup table to maintain:
+
+```
+https://cdn.shopify.com/s/files/1/0498/6100/1367/files/<filename>.webp
+```
+
+These urls need no auth, are not rate-limited, and are correct to use in email, ads and any published web page — unlike a Drive path, which is not fetchable from outside Drive at all. `naming.json` records the pattern under `library.cdn`.
+
+**Use `assets/resolveImage.js` rather than composing that url by hand.** It looks up a real, uploaded image by product, colour and angle against `assets/cdn-catalog.json` (generated from `shopify-upload-manifest.json`, the confirmed-upload list), applying the High45-first angle preference automatically and returning `null` rather than a broken url when nothing matches:
+
+```js
+import catalog from './cdn-catalog.json'
+import { resolveImage } from './resolveImage.js'
+
+const hero = resolveImage(catalog, { product: 'BambooSheetSet', pattern: 'Solid', colour: 'Dusk' })
+// hero.url -> .../BambooSheetSet-Solid-Dusk-High45-NoTalent-Real-01.webp
+```
+
+Rebuild the catalog after any upload run:
+
+```bash
+python3 assets/build_cdn_catalog.py
+```
+
+Ten manifest entries are not yet confirmed live — 7 `Iceberg` files pending a notebook re-run, 3 `AllSeasonsQuilt` files pending re-compression — and `resolveImage` skips them by default (`notYetLive`). Only the shortlisted 287 in `assets/library/` are guaranteed to also exist as pixels in this repo; everything else on the CDN exists only as a url, which is enough for anything that renders in a browser or email client.
 
 Use the shared drive, not My Drive. A stale `Photography` folder with old year-based subfolders still exists there and should be ignored.
 
@@ -165,4 +193,5 @@ Never hand-edit `naming.json`.
 - **Combo colours have no dropdown** in the spreadsheet, so they are typed by hand and can drift. The checker validates them.
 - **The spreadsheet's "How to use" tab says `Solo`** where every other tab, and every real file, says `NoTalent`. The dropdowns are right, that one tab is stale.
 - **`NEW IMAGERY - to be renamed`** in Drive does not follow the convention yet.
-- **Shopify product media follows no convention** (`Image_1097.jpg`, `FOREST-GREEN-QC-1X1.jpg`) and cannot be resolved from a filename. Store CDN images are also compressed and limited to a few per variant, so treat them as thumbnails, not assets.
+- **Shopify product media follows no convention** (`Image_1097.jpg`, `FOREST-GREEN-QC-1X1.jpg`) and cannot be resolved from a filename. Store CDN images are also compressed and limited to a few per variant, so treat them as thumbnails, not assets. (This is unrelated to the Shopify Files CDN mirror above, which is our own upload and does follow the filename convention exactly.)
+- **7 `Iceberg` files and 3 `AllSeasonsQuilt` files** are in `shopify-upload-manifest.json` but not yet confirmed on the CDN — see the CDN section above. `resolveImage.js` already skips them.
