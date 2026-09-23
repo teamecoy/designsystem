@@ -1,0 +1,146 @@
+#!/usr/bin/env python3
+"""Generate ads/ad-naming.json from a snapshot of the ad naming sheet.
+
+The Google Sheet "Ecoy Naming Convention Generator"
+(file 1Hi0_UgLseaj4UphXm9ApcWh18AXYWKh_vwPcy2xsTYI) is the SINGLE SOURCE for
+the ad-name vocabulary. Always pull it fresh: read it through the Google Drive
+connector (read_file_content keeps the columns aligned), save it over
+ads/source/naming-sheet.md, then run:
+
+    python3 ads/build_ad_naming.py
+
+Never hand-edit ad-naming.json.
+"""
+import json, pathlib, re
+
+ROOT = pathlib.Path(__file__).resolve().parent
+SRC = ROOT / "source" / "naming-sheet.md"
+ASSETS = ROOT.parent / "assets"
+
+FIELD_ORDER = ["Year", "Month", "AssetType", "Source", "CreativeStrategist", "Concept",
+               "AwarenessStage", "Persona", "Angle", "Vehicle", "CampaignMoment",
+               "Fabric", "Product", "Colour", "Designer", "Variation", "JobID", "Dimensions"]
+REQUIRED = {"Year", "Month", "AssetType", "CreativeStrategist", "Concept", "AwarenessStage",
+            "Persona", "Angle", "Vehicle", "CampaignMoment", "Fabric", "Product", "Colour",
+            "Variation", "JobID", "Dimensions"}
+
+# Which campaign moments are sales. Agreed with Sam 2026-09-24. Sales get their
+# own Sale Identity Brief; promotions and evergreen follow the brand system.
+# The team reads this off the CampaignMoment name, so it lives here, not as a
+# sheet column. A moment not listed here comes out as "unknown" -- add it.
+MOMENT_TYPE = {
+    "sale": ["EOFY", "BFCM", "BlackFriday", "CyberMonday", "BoxingDay", "Christmas",
+             "SpringSale", "WinterSale", "SummerSale", "MidyearSale", "BirthdaySale"],
+    "promotion": ["MothersDay", "FathersDay", "Valentines", "Easter"],
+    "evergreen": ["Evergreen", "NewRelease", "Restock", "AmbiLaunch", "CordLaunch",
+                  "CollabPost", "PartneredAd", "Seeding"],
+}
+
+# Ad colour names that don't match a photo colour token directly (the photo
+# vocabulary lives in assets/naming.json). Anything not here is matched
+# exactly, or as <colour>Stripe.
+COLOUR_ALIASES = {
+    "CookiesAndCream": "CookiesCreamStripe",
+    "PeachStripe": "BurntPeachStripe",
+    "ChocolateIced": "IcedChocolateStripe",
+    "Coconut": "SageCoconutStripe",
+}
+MULTI_COLOUR = {"Mixed", "MixedColours"}
+
+
+def tables(md):
+    """Yield (heading, rows) for every markdown table, rows as lists of cells."""
+    heading, rows = None, []
+    for line in md.splitlines() + [""]:
+        if line.startswith("## "):
+            heading = line[3:].strip()
+        if line.startswith("|"):
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            if not all(re.fullmatch(r":?-+:?", c) for c in cells if c):
+                rows.append(cells)
+        elif rows:
+            yield heading, rows
+            rows = []
+
+
+def build():
+    md = SRC.read_text()
+    vocab, glossary = {}, {}
+    for heading, rows in tables(md):
+        if heading == "Reference":
+            header = [h.replace("Vehicle/Format", "Vehicle") for h in rows[0]]
+            for i, field in enumerate(header):
+                vocab[field] = [r[i] for r in rows[1:] if i < len(r) and r[i]]
+        elif heading == "Glossary":
+            for field, value, meaning in rows[1:]:
+                for v in (x.strip() for x in value.split("/")):
+                    glossary.setdefault(field, {})[v] = meaning
+
+    # Values the glossary defines but the dropdowns don't offer. Real names use
+    # them, so the parser must accept them; they're flagged so the sheet can be
+    # tidied.
+    glossary_only = {}
+    for field, entries in glossary.items():
+        extra = [v for v in entries if v not in vocab.get(field, [])]
+        if extra:
+            glossary_only[field] = extra
+            vocab.setdefault(field, []).extend(extra)
+
+    naming = json.loads((ASSETS / "naming.json").read_text())
+    status = json.loads((ASSETS / "colour-status.json").read_text())
+    photo = {c["token"] for group in naming["colours"].values() for c in group}
+    crosswalk = {}
+    for colour in vocab["Colour"]:
+        if colour in MULTI_COLOUR:
+            crosswalk[colour] = {"photo": None, "note": "several colours; no single photo colour"}
+            continue
+        token = (COLOUR_ALIASES.get(colour) or
+                 (colour if colour in photo else None) or
+                 (colour + "Stripe" if colour + "Stripe" in photo else None))
+        entry = {"photo": token}
+        if colour in COLOUR_ALIASES:
+            entry["note"] = "alias; confirm with the team"
+        if not token:
+            entry["note"] = "no photo colour matches"
+        base = token.replace("Stripe", "") if token else colour
+        if colour in status["retired"] or base in status["retired"]:
+            entry["retired"] = True
+        crosswalk[colour] = entry
+
+    moment_type = {m: t for t, ms in MOMENT_TYPE.items() for m in ms}
+    unmapped = [m for m in vocab["CampaignMoment"] if m not in moment_type]
+
+    doc = {
+        "$comment": ("GENERATED by ads/build_ad_naming.py from ads/source/naming-sheet.md, a "
+                     "snapshot of the 'Ecoy Naming Convention Generator' Google Sheet. Do not "
+                     "hand-edit; re-pull the sheet and re-run."),
+        "sheet": {"fileId": "1Hi0_UgLseaj4UphXm9ApcWh18AXYWKh_vwPcy2xsTYI",
+                  "version": "v2 (revised May 2026)",
+                  "rule": "Always pull the sheet fresh before relying on this file."},
+        "filename": {
+            "order": FIELD_ORDER,
+            "required": [f for f in FIELD_ORDER if f in REQUIRED],
+            "separator": "-",
+            "since": "2026-05",
+            "example": "2026-September-Static-EmilieCS-Untested-Problemaware-HomeInterior-USP-Static-Evergreen-Bamboo-Sheets-Eggplant-DanicaDesigner-V5-JOB-3318-4x5",
+            "legacy": "Ads dated before May 2026 use an older, shorter hyphen convention. Do not rename them; ads/parse_ad_name.py reads both.",
+            "creator": "Creator-program ads (real footage, managed by Emilie) are identified by an @handle and usually use underscores, e.g. 2026_July_@handle_Productaware_Lifestyle_CP-UGC_Bamboo_Sheets_CherryBlossom_9x16. The sheet doesn't cover them.",
+        },
+        "vocab": vocab,
+        "glossary": glossary,
+        "glossaryOnly": glossary_only,
+        "momentType": moment_type,
+        "momentTypeUnmapped": unmapped,
+        "momentRule": ("sale -> the sale's own Sale Identity Brief. promotion and evergreen -> "
+                       "the Ecoy brand system (BRAND.md)."),
+        "colourToPhoto": crosswalk,
+    }
+    out = ROOT / "ad-naming.json"
+    out.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n")
+    n = sum(len(v) for v in vocab.values())
+    print(f"wrote {out.name}: {len(vocab)} fields, {n} values; "
+          f"{len(unmapped)} campaign moments without a type: {', '.join(unmapped) or 'none'}")
+
+
+if __name__ == "__main__":
+    build()

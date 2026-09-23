@@ -8,7 +8,9 @@ This is the first question for any Ecoy design, before layout, colour or copy. T
 
 **Evergreen** (everything that is not a named sale: product launches, colour drops, brand content, site, packaging, retention emails, always-on ads) follows this design system exactly. Palette, Malinton and Satoshi, pillar shapes, pill buttons, tag taxonomy, motion. Consistency is the point: the brand should be instantly recognisable across every evergreen touchpoint.
 
-**Sales** (Black Friday, Birthday Sale, Mid Year Sale, EOFY, Spring Sale, flash sales) get their **own creative identity**, briefed per sale in a Sale Identity Brief. Each sale is an event with a name, theme, look and stamped sale logo, so the campaign cuts through and reads as one thing across paid, email, organic and site. The sale identity, not this system, is the source of truth for that sale's look. What stays constant inside a sale:
+**Promotions** (Mother's Day, Father's Day, Valentine's Day, Easter: gift- or bundle-led moments that are not a sitewide sale) are **not sales**. They follow this design system, like evergreen, with the moment carried by copy, product and styling rather than a sale identity. An ad's `CampaignMoment` says which of the three it is; see [ads/ADS.md](ads/ADS.md).
+
+**Sales** (Black Friday, Cyber Monday, Boxing Day, Christmas, Birthday Sale, Mid Year Sale, EOFY, Spring, Winter and Summer sales, flash sales) get their **own creative identity**, briefed per sale in a Sale Identity Brief. Each sale is an event with a name, theme, look and stamped sale logo, so the campaign cuts through and reads as one thing across paid, email, organic and site. The sale identity, not this system, is the source of truth for that sale's look. What stays constant inside a sale:
 
 - The Ecoy wordmark is featured in the sale logo lockup, so spend builds brand equity.
 - The brand palette is the sandbox the sale's designer works within; they define how many colours and how they are used per channel and per phase.

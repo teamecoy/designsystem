@@ -6,7 +6,7 @@ Sources: **Ecoy Rebrand 2026 V2** brand guide (33 pages) and **Tag & Chip Spec v
 
 ## Before you design anything: sale or evergreen?
 
-Evergreen work (launches, colour drops, site, brand content, retention) follows this system exactly. Named sales get their own creative identity from a Sale Identity Brief, with the Ecoy wordmark in the sale logo and the brand palette as the sandbox. Full rule in [BRAND.md](BRAND.md#start-here-is-this-sale-or-evergreen). Ask this first, every time.
+Evergreen work (launches, colour drops, site, brand content, retention) and promotions (Mother's Day, Father's Day, Valentine's, Easter) follow this system exactly. Named sales, Christmas included, get their own creative identity from a Sale Identity Brief, with the Ecoy wordmark in the sale logo and the brand palette as the sandbox. Full rule in [BRAND.md](BRAND.md#start-here-is-this-sale-or-evergreen). Ask this first, every time.
 
 ## What's here
 
@@ -24,6 +24,7 @@ Evergreen work (launches, colour drops, site, brand content, retention) follows 
 | `assets/library/` | **287 curated photographs — pixels physically in this repo.** 1200px WebP, every one a live colourway. Indexed in `assets/library-shortlist.json` with product, colour and angle. Use these when you need the actual image bytes (e.g. compositing), not just a url. |
 | `assets/cdn-catalog.json` + `assets/resolveImage.js` | **The full photography library, not just the 287 — 6,340 real Ecoy photos, addressable by product/colour/angle, no upload needed.** Every image in the Drive library is also mirrored on the Shopify Files CDN at a url derived from its filename (`naming.json` → `library.cdn`), so this is a lookup, not a copy. `resolveImage(catalog, { product, pattern, colour, angle })` returns a real, live `https://cdn.shopify.com/...` url — ranked High45 first per `library.anglePreference` — or `null` if nothing matches (never a guess). **Use this, not a hand-typed CDN url or an uploaded placeholder, for any product/colour photo not already in `assets/library/`.** Rebuild the catalog with `python3 assets/build_cdn_catalog.py` after any upload run. |
 | `assets/` | The rest of the photography layer: the naming grammar (`naming.json`), an index of all 9,233 files in Drive (`library-index.json`), the Shopify-upload manifest, and which colourways are still for sale (`colour-status.json`). Read [ASSETS.md](assets/ASSETS.md) first. |
+| `ads/` | **How to read an Ecoy Meta ad name, and what to do with a winner.** `parse_ad_name.py` reads all three naming styles (v2, pre-May legacy, creator `@handle`) into fields: campaign moment and whether that's a sale, promotion or evergreen; designed or creator ad; angle, format, persona, awareness stage; and the matching photo colour for `resolveImage.js`. Vocabulary in `ad-naming.json`, generated from a fresh pull of the team's naming sheet. Read [ADS.md](ads/ADS.md) first. |
 | `logos/` `shapes/` `fonts/` | Logo SVGs, the five pillar-shape SVGs, the font files the CSS needs. |
 | `reference/` | Rendered pages from the brand guide and the spec, for visual context. |
 | `examples/` | Ten real Klaviyo emails that performed, images localised, indexed by brand status and what to copy. See `examples/README.md`. |
@@ -54,7 +55,9 @@ Either way, never guess a filename or a colour — `naming.json` and `colour-sta
 - Design only with real Ecoy photographs — from `assets/library/` (287 in-repo) or resolved via `assets/resolveImage.js` against the CDN (6,340 more). Never invent, hand-type or upload a placeholder for a photo that's resolvable. Everything not yet on the CDN still lives in Drive, named to the convention in `assets/ASSETS.md`. Images in `examples/` and `reference/` are compressed reference renders, never design assets.
 - Never use a retired colourway. `assets/colour-status.json` is the list; 23 are live, 10 are retired. The curated library already excludes them.
 - High45 is the preferred angle for ads and hero creative, then Low45, then Side.
-- Sale or evergreen is decided first. Evergreen follows this system; a sale follows its Sale Identity Brief.
+- Sale, promotion or evergreen is decided first. Evergreen and promotions follow this system; a sale (Christmas included) follows its Sale Identity Brief.
+- Never learn from a sale ad as if it were evergreen. Check an ad's `CampaignMoment` (`ads/parse_ad_name.py`) before treating it as a model.
+- Every winning ad gets the question: **how do we turn this into another 5 ads?** Winning creator ads can't be reshot, but their hooks and concepts can be iterated into statics and briefed back to creators.
 - Bright Orange is an accent, never a foundation.
 - One tag category per job: urgency Burgundy, value Orange, newness Deep Green, filter neutral to green.
 - Max one on-image badge per card, max one inline tag per item.
