@@ -13,7 +13,7 @@
   ],
   "counts": {
     "totalEntries": 6350,
-    "flaggedNotYetLive": 25,
+    "flaggedNotYetLive": 10,
     "products": 18
   },
   "index": {
@@ -43,7 +43,8 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/AllSeasonsQuilt-CloseUp-NoTalent-Real-04.webp",
               "filename": "AllSeasonsQuilt-CloseUp-NoTalent-Real-04.webp",
               "people": "NoTalent",
-              "source": "Real"
+              "source": "Real",
+              "notYetLive": true
             },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/AllSeasonsQuilt-CloseUp-NoTalent-Real-05.webp",
@@ -97,7 +98,8 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/AllSeasonsQuilt-CloseUp-NoTalent-Real-13.webp",
               "filename": "AllSeasonsQuilt-CloseUp-NoTalent-Real-13.webp",
               "people": "NoTalent",
-              "source": "Real"
+              "source": "Real",
+              "notYetLive": true
             },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/AllSeasonsQuilt-CloseUp-NoTalent-Real-14.webp",
@@ -509,7 +511,8 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/AllSeasonsQuilt-Freestyle-NoTalent-Real-36.webp",
               "filename": "AllSeasonsQuilt-Freestyle-NoTalent-Real-36.webp",
               "people": "NoTalent",
-              "source": "Real"
+              "source": "Real",
+              "notYetLive": true
             },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/AllSeasonsQuilt-Freestyle-NoTalent-Real-37.webp",
@@ -837,8 +840,7 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Solid-Iceberg-CloseUp-NoTalent-Real-01.webp",
               "filename": "BambooFittedSheet-Solid-Iceberg-CloseUp-NoTalent-Real-01.webp",
               "people": "NoTalent",
-              "source": "Real",
-              "notYetLive": true
+              "source": "Real"
             }
           ],
           "Deepetch": [
@@ -846,8 +848,7 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
               "filename": "BambooFittedSheet-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
               "people": "NoTalent",
-              "source": "AI",
-              "notYetLive": true
+              "source": "AI"
             }
           ]
         },
@@ -1213,15 +1214,13 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFlatSheet-Solid-Iceberg-CloseUp-NoTalent-Real-01.webp",
               "filename": "BambooFlatSheet-Solid-Iceberg-CloseUp-NoTalent-Real-01.webp",
               "people": "NoTalent",
-              "source": "Real",
-              "notYetLive": true
+              "source": "Real"
             },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFlatSheet-Solid-Iceberg-CloseUp-NoTalent-Real-02.webp",
               "filename": "BambooFlatSheet-Solid-Iceberg-CloseUp-NoTalent-Real-02.webp",
               "people": "NoTalent",
-              "source": "Real",
-              "notYetLive": true
+              "source": "Real"
             }
           ]
         },
@@ -1653,8 +1652,7 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooPillowcase-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
               "filename": "BambooPillowcase-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
               "people": "NoTalent",
-              "source": "AI",
-              "notYetLive": true
+              "source": "AI"
             }
           ]
         },
@@ -5502,15 +5500,13 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
               "filename": "BambooQuiltCover-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
               "people": "NoTalent",
-              "source": "AI",
-              "notYetLive": true
+              "source": "AI"
             },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Iceberg-Deepetch-NoTalent-AI-02.webp",
               "filename": "BambooQuiltCover-Solid-Iceberg-Deepetch-NoTalent-AI-02.webp",
               "people": "NoTalent",
-              "source": "AI",
-              "notYetLive": true
+              "source": "AI"
             }
           ],
           "High45": [
@@ -5518,8 +5514,7 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Iceberg-High45-NoTalent-Real-01.webp",
               "filename": "BambooQuiltCover-Solid-Iceberg-High45-NoTalent-Real-01.webp",
               "people": "NoTalent",
-              "source": "Real",
-              "notYetLive": true
+              "source": "Real"
             }
           ],
           "Low45": [
@@ -5527,8 +5522,7 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Iceberg-Low45-NoTalent-AI-01.webp",
               "filename": "BambooQuiltCover-Solid-Iceberg-Low45-NoTalent-AI-01.webp",
               "people": "NoTalent",
-              "source": "AI",
-              "notYetLive": true
+              "source": "AI"
             }
           ],
           "Freestyle": [
@@ -5536,15 +5530,13 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Iceberg-Freestyle-Talent-AI-01.webp",
               "filename": "BambooQuiltCover-Solid-Iceberg-Freestyle-Talent-AI-01.webp",
               "people": "Talent",
-              "source": "AI",
-              "notYetLive": true
+              "source": "AI"
             },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Iceberg-Freestyle-Talent-AI-02.webp",
               "filename": "BambooQuiltCover-Solid-Iceberg-Freestyle-Talent-AI-02.webp",
               "people": "Talent",
-              "source": "AI",
-              "notYetLive": true
+              "source": "AI"
             }
           ]
         },
@@ -28899,22 +28891,19 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/SleepMask-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
               "filename": "SleepMask-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
               "people": "NoTalent",
-              "source": "AI",
-              "notYetLive": true
+              "source": "AI"
             },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/SleepMask-Solid-Iceberg-Deepetch-NoTalent-AI-02.webp",
               "filename": "SleepMask-Solid-Iceberg-Deepetch-NoTalent-AI-02.webp",
               "people": "NoTalent",
-              "source": "AI",
-              "notYetLive": true
+              "source": "AI"
             },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/SleepMask-Solid-Iceberg-Deepetch-NoTalent-Real-01.webp",
               "filename": "SleepMask-Solid-Iceberg-Deepetch-NoTalent-Real-01.webp",
               "people": "NoTalent",
-              "source": "Real",
-              "notYetLive": true
+              "source": "Real"
             }
           ],
           "Overhead": [
@@ -28922,29 +28911,25 @@
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/SleepMask-Solid-Iceberg-Overhead-NoTalent-Real-01.webp",
               "filename": "SleepMask-Solid-Iceberg-Overhead-NoTalent-Real-01.webp",
               "people": "NoTalent",
-              "source": "Real",
-              "notYetLive": true
+              "source": "Real"
             },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/SleepMask-Solid-Iceberg-Overhead-NoTalent-Real-02.webp",
               "filename": "SleepMask-Solid-Iceberg-Overhead-NoTalent-Real-02.webp",
               "people": "NoTalent",
-              "source": "Real",
-              "notYetLive": true
+              "source": "Real"
             },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/SleepMask-Solid-Iceberg-Overhead-NoTalent-Real-03.webp",
               "filename": "SleepMask-Solid-Iceberg-Overhead-NoTalent-Real-03.webp",
               "people": "NoTalent",
-              "source": "Real",
-              "notYetLive": true
+              "source": "Real"
             },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/SleepMask-Solid-Iceberg-Overhead-NoTalent-Real-04.webp",
               "filename": "SleepMask-Solid-Iceberg-Overhead-NoTalent-Real-04.webp",
               "people": "NoTalent",
-              "source": "Real",
-              "notYetLive": true
+              "source": "Real"
             }
           ]
         },

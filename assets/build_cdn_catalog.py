@@ -18,12 +18,29 @@ ASSETS = Path(__file__).parent
 
 ANGLE_PREFERENCE = ["High45", "Low45", "Side", "Overhead", "Freestyle", "CloseUp", "Deepetch"]
 
-# Known gaps as of 2026-09-23 (see memory: ecoy-photography-cdn-layer).
-# 7 Iceberg files were skipped by a path mismatch, now fixed in the manifest
-# but not yet re-run through the uploader. 3 AllSeasonsQuilt files were never
-# produced by the webp conversion and need re-compressing first.
+# Known gaps as of 2026-09-23 (see memory: ecoy-photography-cdn-layer),
+# confirmed by live HTTP HEAD checks against the CDN -- not a blanket
+# colour/product rule. Only these 10 filenames actually 404 today; every
+# other Iceberg and AllSeasonsQuilt file in the manifest is already live.
+# Re-verify with: for n in ...; do curl -sI https://cdn.shopify.com/s/files/1/0498/6100/1367/files/$n; done
 KNOWN_NOT_YET_LIVE = {
-    "colour": {"Iceberg"},  # broader than the exact 7; safe, small set
+    "filename": {
+        # 7 Iceberg BambooSheetSet frames -- web path fixed in the manifest,
+        # pending an uploader re-run (LIMIT=None).
+        "BambooSheetSet-Solid-Iceberg-CloseUp-NoTalent-Real-01.webp",
+        "BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
+        "BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-02.webp",
+        "BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-03.webp",
+        "BambooSheetSet-Solid-Iceberg-High45-NoTalent-AI-01.webp",
+        "BambooSheetSet-Solid-Iceberg-High45-NoTalent-Real-01.webp",
+        "BambooSheetSet-Solid-Iceberg-Low45-NoTalent-Real-01.webp",
+        # 3 AllSeasonsQuilt frames -- mirror fixed 2026-09-23 (all three were
+        # the same duplicated master under different names), pending the
+        # same uploader re-run.
+        "AllSeasonsQuilt-CloseUp-NoTalent-Real-04.webp",
+        "AllSeasonsQuilt-CloseUp-NoTalent-Real-13.webp",
+        "AllSeasonsQuilt-Freestyle-NoTalent-Real-36.webp",
+    }
 }
 
 
@@ -55,7 +72,7 @@ def main():
             "source": f.get("source"),
         }
 
-        not_yet_live = colour in KNOWN_NOT_YET_LIVE.get("colour", set())
+        not_yet_live = f["name"] in KNOWN_NOT_YET_LIVE.get("filename", set())
         if not_yet_live:
             entry["notYetLive"] = True
             flagged_not_yet_live += 1
