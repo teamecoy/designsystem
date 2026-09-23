@@ -1,5 +1,5 @@
 {
- "$comment": "Files to upload to Shopify Files. Live colourways only; retired colours, legacy folders, unparseable names and 5 files pending rename are excluded. Names are unique, so each becomes a predictable CDN url.",
+ "$comment": "Files to upload to Shopify Files. Live colourways only; retired colours, legacy folders, unparseable names and 5 files pending rename are excluded. Names are unique, so each becomes a predictable CDN url. Web paths are normalised where the mirror dropped a ' (N)' suffix from a duplicate-upload folder name.",
  "shopDomain": "happy-earth-australia.myshopify.com",
  "count": 6350,
  "cdnPattern": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/{name}",
@@ -37619,7 +37619,7 @@
    "source": "Real"
   },
   {
-   "web": "Bamboo Sheet Set/Solid/Iceberg (1)/No Talent/BambooSheetSet-Solid-Iceberg-CloseUp-NoTalent-Real-01.webp",
+   "web": "Bamboo Sheet Set/Solid/Iceberg/No Talent/BambooSheetSet-Solid-Iceberg-CloseUp-NoTalent-Real-01.webp",
    "name": "BambooSheetSet-Solid-Iceberg-CloseUp-NoTalent-Real-01.webp",
    "product": "BambooSheetSet",
    "pattern": "Solid",
@@ -37629,7 +37629,7 @@
    "source": "Real"
   },
   {
-   "web": "Bamboo Sheet Set/Solid/Iceberg (1)/No Talent/BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
+   "web": "Bamboo Sheet Set/Solid/Iceberg/No Talent/BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
    "name": "BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
    "product": "BambooSheetSet",
    "pattern": "Solid",
@@ -37639,7 +37639,7 @@
    "source": "AI"
   },
   {
-   "web": "Bamboo Sheet Set/Solid/Iceberg (1)/No Talent/BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-02.webp",
+   "web": "Bamboo Sheet Set/Solid/Iceberg/No Talent/BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-02.webp",
    "name": "BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-02.webp",
    "product": "BambooSheetSet",
    "pattern": "Solid",
@@ -37649,7 +37649,7 @@
    "source": "AI"
   },
   {
-   "web": "Bamboo Sheet Set/Solid/Iceberg (1)/No Talent/BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-03.webp",
+   "web": "Bamboo Sheet Set/Solid/Iceberg/No Talent/BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-03.webp",
    "name": "BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-03.webp",
    "product": "BambooSheetSet",
    "pattern": "Solid",
@@ -37659,7 +37659,7 @@
    "source": "AI"
   },
   {
-   "web": "Bamboo Sheet Set/Solid/Iceberg (1)/No Talent/BambooSheetSet-Solid-Iceberg-High45-NoTalent-AI-01.webp",
+   "web": "Bamboo Sheet Set/Solid/Iceberg/No Talent/BambooSheetSet-Solid-Iceberg-High45-NoTalent-AI-01.webp",
    "name": "BambooSheetSet-Solid-Iceberg-High45-NoTalent-AI-01.webp",
    "product": "BambooSheetSet",
    "pattern": "Solid",
@@ -37669,7 +37669,7 @@
    "source": "AI"
   },
   {
-   "web": "Bamboo Sheet Set/Solid/Iceberg (1)/No Talent/BambooSheetSet-Solid-Iceberg-High45-NoTalent-Real-01.webp",
+   "web": "Bamboo Sheet Set/Solid/Iceberg/No Talent/BambooSheetSet-Solid-Iceberg-High45-NoTalent-Real-01.webp",
    "name": "BambooSheetSet-Solid-Iceberg-High45-NoTalent-Real-01.webp",
    "product": "BambooSheetSet",
    "pattern": "Solid",
@@ -37679,7 +37679,7 @@
    "source": "Real"
   },
   {
-   "web": "Bamboo Sheet Set/Solid/Iceberg (1)/No Talent/BambooSheetSet-Solid-Iceberg-Low45-NoTalent-Real-01.webp",
+   "web": "Bamboo Sheet Set/Solid/Iceberg/No Talent/BambooSheetSet-Solid-Iceberg-Low45-NoTalent-Real-01.webp",
    "name": "BambooSheetSet-Solid-Iceberg-Low45-NoTalent-Real-01.webp",
    "product": "BambooSheetSet",
    "pattern": "Solid",
