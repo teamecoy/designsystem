@@ -1,3 +1,16 @@
+/*
+ * STATUS (2026-09-23): reconciled from the Ecoy Design System Claude Design
+ * artifact into this repo (was built there and never pushed back — see
+ * showcases/README.md). This file cannot run standalone: it references
+ * EIMG, CDN, Icon and cardProps as bare globals, all defined by the
+ * sibling Shell.jsx from the same artifact session (alongside Home.jsx,
+ * Collection.jsx, Product.jsx, App.jsx), and none of the five exist in
+ * this repo. It also needs `window.EcoyDesignSystem_9bc9f5`, the
+ * artifact's compiled component bundle, which is likewise not here.
+ * The bundle image tiles below (tile-*.jpg) are Claude Design upload
+ * hashes for staged bundle composites, not single-product photography —
+ * they are out of scope for assets/resolveImage.js and were left as-is.
+ */
 /* Lower home-page sections: range bands, bundle tabs, stats, founders, impact. */
 const { Button, FilterPill, ProductCard, Badge } = window.EcoyDesignSystem_9bc9f5;
 

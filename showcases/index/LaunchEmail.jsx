@@ -1,3 +1,13 @@
+/*
+ * STATUS (2026-09-23): reconciled from the Ecoy Design System Claude Design
+ * artifact into this repo (was built there and never pushed back — see
+ * showcases/README.md). Runs only inside that artifact today: it needs
+ * `window.EcoyDesignSystem_9bc9f5` (the artifact's compiled component
+ * bundle — Button/Logo/Eyebrow/ColourBlock/FeatureChip/Badge/PillarShape/
+ * ReviewPillar/Ticker/HandDrawn) and the sibling Shell.jsx it's normally
+ * loaded alongside, neither of which exist in this repo yet. Do not treat
+ * this as runnable in isolation until that bundle is exported here too.
+ */
 const { Button, Logo, Eyebrow, ColourBlock, FeatureChip, Badge, PillarShape, ReviewPillar, Ticker, HandDrawn } = window.EcoyDesignSystem_9bc9f5;
 const B = '../../';
 const IMG = B + 'assets/imagery/';
@@ -44,13 +54,20 @@ function BenefitsBlob() {
   );
 }
 
+/*
+ * Real Flannelette Sheet Set photography, resolved from the Shopify Files CDN
+ * (assets/resolveImage.js + assets/cdn-catalog.json) rather than pasted from
+ * opaque Claude Design upload hashes. This is the actual live 5-colour
+ * Flannelette range (assets/colour-status.json) — there is no sixth
+ * colourway ("Oat Milk" was never a real Ecoy colourway; it has been
+ * removed so the grid matches its own "Five colours" heading).
+ */
 const COLOURWAYS = [
-  { img: 'tile-52bb475893-a.jpg', name: 'Oatmeal' },
-  { img: 'tile-5921a53762-b.jpg', name: 'Forest' },
-  { img: 'tile-12c712b3b1-b.jpg', name: 'Jacaranda' },
-  { img: 'tile-de3ec98616-b.jpg', name: 'Eggplant' },
-  { img: 'tile-e93e6ca2fb-b.jpg', name: 'Sage' },
-  { img: 'tile-2a6cb18122-a.jpg', name: 'Oat Milk' }
+  { url: 'https://cdn.shopify.com/s/files/1/0498/6100/1367/files/FlannelSheetSet-Solid-Oatmeal-High45-NoTalent-Real-01.webp', name: 'Oatmeal' },
+  { url: 'https://cdn.shopify.com/s/files/1/0498/6100/1367/files/FlannelSheetSet-Solid-ForestGreen-High45-NoTalent-Real-01.webp', name: 'Forest' },
+  { url: 'https://cdn.shopify.com/s/files/1/0498/6100/1367/files/FlannelSheetSet-Solid-Jacaranda-High45-NoTalent-Real-01.webp', name: 'Jacaranda' },
+  { url: 'https://cdn.shopify.com/s/files/1/0498/6100/1367/files/FlannelSheetSet-Solid-Eggplant-High45-NoTalent-Real-01.webp', name: 'Eggplant' },
+  { url: 'https://cdn.shopify.com/s/files/1/0498/6100/1367/files/FlannelSheetSet-Solid-Sage-High45-NoTalent-Real-01.webp', name: 'Sage' }
 ];
 
 function ColourwayGrid() {
@@ -60,7 +77,7 @@ function ColourwayGrid() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
         {COLOURWAYS.map(c => (
           <div key={c.name} style={{ position: 'relative', borderRadius: 12, overflow: 'hidden', aspectRatio: '1' }}>
-            <img src={IMG + c.img} alt={c.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src={c.url} alt={c.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             <span style={{ position: 'absolute', left: 8, bottom: 8, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 14, letterSpacing: '-0.02em', color: 'var(--color-off-white)', textShadow: '0 1px 6px rgba(28,28,28,.5)' }}>{c.name}</span>
           </div>
         ))}
