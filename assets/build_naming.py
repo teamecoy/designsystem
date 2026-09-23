@@ -61,6 +61,15 @@ def build():
             "rootFolderId": "18qRGqMBgXvmb-tKALvXgkPHhYuH6Setz",
             "rootUrl": "https://drive.google.com/drive/folders/18qRGqMBgXvmb-tKALvXgkPHhYuH6Setz",
             "note": "The repository never stores photography. Name the asset you need using the pattern below and pull it from Drive.",
+            "cdn": {
+                "pattern": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/{filename}",
+                "note": ("Every image in library-index.json whose name appears in "
+                         "shopify-upload-manifest.json is on the Shopify CDN under this pattern. "
+                         "Shopify preserved filenames exactly (0 renames across 6,340 uploads), so "
+                         "the url is derivable from the filename - no lookup table needed. Use these "
+                         "urls in email, ads and web; they need no auth and are not rate limited."),
+                "uploaded": "2026-09-22, 6340 of 6350 files",
+            },
             "anglePreference": {
                 "heroAndAds": "High45",
                 "note": ("High45 is the preferred angle for advertising and hero creative. When "
