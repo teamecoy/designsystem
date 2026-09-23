@@ -14,8 +14,11 @@ N = json.loads((ROOT / "naming.json").read_text())
 
 PRODUCTS = {p["token"] for p in N["products"]}
 PATTERNS = {p["token"] for p in N["patterns"]}
-COLOURS = {c["token"] for c in N["colours"]["solid"]} | {c["token"] for c in N["colours"]["stripe"]}
+COLOURS = ({c["token"] for c in N["colours"]["solid"]}
+           | {c["token"] for c in N["colours"]["stripe"]}
+           | {c["token"] for c in N["colours"].get("polka", [])})
 ANGLES, PEOPLE, SOURCES = set(N["angles"]), set(N["people"]), set(N["sources"])
+ORIENTATIONS = set(N.get("orientations", []))
 EXTS = set(N["extensions"])
 IMAGE_EXTS = EXTS | {".jpeg", ".webp", ".tif", ".tiff", ".heic"}
 
@@ -35,9 +38,15 @@ def check(name):
     if len(parts) < 5:
         return bad + [f"only {len(parts)} parts; expected Product-[Pattern]-[Colour]-Angle-People-Source-NN"]
 
-    # Anchor from the right: seq, source, people, angle are always the last four.
-    seq, source, people, angle = parts[-1], parts[-2], parts[-3], parts[-4]
-    head = parts[:-4]
+    # Anchor from the right: seq, source, people are always the last three.
+    # Orientation is optional (added 2026-09-23, new shoots only) and sits
+    # between angle and people when present, so check for it before deciding
+    # where angle actually is.
+    seq, source, people = parts[-1], parts[-2], parts[-3]
+    if len(parts) >= 5 and parts[-4] in ORIENTATIONS:
+        angle, head = parts[-5], parts[:-5]
+    else:
+        angle, head = parts[-4], parts[:-4]
 
     if not re.fullmatch(r"\d{2}", seq):
         bad.append(f"sequence '{seq}' should be two digits, e.g. 01 (not {seq})")

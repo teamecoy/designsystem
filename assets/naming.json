@@ -42,10 +42,11 @@
     }
   },
   "filename": {
-    "pattern": "{product}-{pattern}-{colour}-{angle}-{people}-{source}-{seq}{ext}",
+    "pattern": "{product}-{pattern}-{colour}-{angle}-[{orientation}]-{people}-{source}-{seq}{ext}",
     "separator": "-",
     "example": "BambooSheetSet-Solid-Dusk-High45-NoTalent-Real-01.jpg",
     "exampleCombo": "BambooSheetSet-Solid-BurntOrangexWhite-High45-NoTalent-AI-01.jpg",
+    "exampleWithOrientation": "BambooQuiltCover-Stripe-CookiesCreamStripe-CloseUp-Horizontal-NoTalent-AI-01.jpg",
     "fields": {
       "product": {
         "required": true,
@@ -65,6 +66,12 @@
       "angle": {
         "required": true,
         "from": "angles"
+      },
+      "orientation": {
+        "required": false,
+        "from": "orientations",
+        "since": "2026-09-23",
+        "note": "Added to the spreadsheet 2026-09-23 for new shoots only. Existing library files predate it and have no orientation segment; treat it as absent, not invalid, on anything shot before that date."
       },
       "people": {
         "required": true,
@@ -378,6 +385,28 @@
         "display": "Cloudy Sky Stripe",
         "token": "CloudySkyStripe"
       }
+    ],
+    "polka": [
+      {
+        "display": "Burgundy Polka",
+        "token": "BurgundyPolka"
+      },
+      {
+        "display": "Caramel Polka",
+        "token": "CaramelPolka"
+      },
+      {
+        "display": "Chocolate Polka",
+        "token": "ChocolatePolka"
+      },
+      {
+        "display": "Eggplant Polka",
+        "token": "EggplantPolka"
+      },
+      {
+        "display": "Forest Polka",
+        "token": "ForestPolka"
+      }
     ]
   },
   "angles": [
@@ -388,6 +417,10 @@
     "CloseUp",
     "Deepetch",
     "Side"
+  ],
+  "orientations": [
+    "Vertical",
+    "Horizontal"
   ],
   "people": [
     "NoTalent",
@@ -411,10 +444,11 @@
     "Deepetch": "cut out on transparent or white, for compositing"
   },
   "knownGaps": [
-    "Polka is a valid pattern but has no Drive assets yet.",
+    "Polka is a valid pattern with colour vocabulary (BurgundyPolka, CaramelPolka, ChocolatePolka, EggplantPolka, ForestPolka, added 2026-09-23) but still no Drive assets.",
     "Combo colours have no dropdown entry in the spreadsheet, so they are typed by hand.",
     "The spreadsheet's 'How to use' tab says Solo where every other tab and every real file says NoTalent.",
     "Files under 'NEW IMAGERY - to be renamed' do not follow this convention yet.",
-    "Shopify product media uses no convention and cannot be resolved from a filename."
+    "Shopify product media uses no convention and cannot be resolved from a filename.",
+    "Orientation (Vertical/Horizontal) was added to the spreadsheet 2026-09-23, applies to new shoots only. None of the 9,233 indexed library files have it yet; a batch rewrite of old filenames to add it has been discussed but not scheduled. Parsers must treat a missing orientation as normal, not invalid."
   ]
 }

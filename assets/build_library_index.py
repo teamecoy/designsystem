@@ -20,9 +20,14 @@ N = json.loads((ROOT / "naming.json").read_text())
 
 PRODUCTS = {p["token"] for p in N["products"]}
 PATTERNS = {p["token"] for p in N["patterns"]}
-COLOURS = {c["token"] for c in N["colours"]["solid"]} | {c["token"] for c in N["colours"]["stripe"]}
+COLOURS = ({c["token"] for c in N["colours"]["solid"]}
+           | {c["token"] for c in N["colours"]["stripe"]}
+           | {c["token"] for c in N["colours"].get("polka", [])})
 ANGLES, PEOPLE, SOURCES = set(N["angles"]), set(N["people"]), set(N["sources"])
-ORIENTATIONS = {"Vertical", "Horizontal"}          # video only, not yet in the spreadsheet
+ORIENTATIONS = set(N.get("orientations", [])) or {"Vertical", "Horizontal"}
+# Orientation was added to the spreadsheet 2026-09-23 for new shoots only;
+# every file indexed before that has no orientation segment, which is
+# expected, not invalid (see naming.json knownGaps).
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".heic"}
 VIDEO_EXT = {".mov", ".mp4", ".m4v"}
 

@@ -32,8 +32,9 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 |---|---|---|
 | Product | 22 tokens, `BambooSheetSet`, `AmbiQuiltCover`, `FlannelSheetSet` … | Always first |
 | Pattern | `Solid`, `Stripe`, `Polka` | Omitted for quilts, pillows, protector |
-| Colour | 33 solid, 5 stripe | Omitted where the product has no colourway |
+| Colour | 33 solid, 10 stripe, 5 polka | Omitted where the product has no colourway |
 | Angle | `High45`, `Low45`, `Overhead`, `Side`, `CloseUp`, `Freestyle`, `Deepetch` | |
+| Orientation | `Vertical`, `Horizontal` | **New 2026-09-23, new shoots only** — see below. Omitted on everything shot before that date; that's normal, not a mistake. |
 | People | `NoTalent`, `Talent` | Whether a person is in shot |
 | Source | `Real`, `AI` | Camera photo or AI generated |
 | NN | `01`, `02`, … | Two digits, zero padded |
@@ -41,6 +42,10 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 **Two-colour shots** join both colours with a lowercase x and no spaces: `BurntOrangexWhite`, `ByronxLagoon`. Used for reversible Ambi pairs and any styled two-colour set.
 
 **Picking an angle.** `Deepetch` is cut out for compositing. `Overhead` is a flat lay. `Freestyle` is styled lifestyle. `CloseUp` is a fabric or detail crop. The rest are what they sound like.
+
+**Orientation is new.** Added to the spreadsheet 2026-09-23, sitting between Angle and People: `Product-Pattern-Colour-Angle-Orientation-People-Source-NN.ext`, e.g. `BambooQuiltCover-Stripe-CookiesCreamStripe-CloseUp-Horizontal-NoTalent-AI-01.jpg`. It exists so a design brief can ask for a widescreen vs. a portrait crop of the same shot. It applies to **new shoots only** — none of the 9,233 already-indexed library files have it, and a batch rewrite of old filenames to add it has been discussed but isn't scheduled. Every parser in this repo (`build_library_index.py`, `check_filenames.py`) treats a missing orientation as normal, not invalid — never flag an old file for lacking one.
+
+**Polka now has colour vocabulary**, added the same day: `BurgundyPolka`, `CaramelPolka`, `ChocolatePolka`, `EggplantPolka`, `ForestPolka`. There are still no Drive assets shot in it.
 
 The full vocabulary, including every product and colour token, is in `naming.json`.
 
