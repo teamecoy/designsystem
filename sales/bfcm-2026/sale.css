@@ -1,0 +1,116 @@
+/* BFCM 2026 sale identity. Scoped to .bf26 so none of it leaks into evergreen.
+   Read IDENTITY.md first. Every size is in container units (cqw) of the frame,
+   so one component works on a 9:16 story, a square, an email and a PDP banner.
+   Colour values were sampled from Nick's Figma renders on 2026-09-28; see IDENTITY.md §3. */
+
+@font-face { font-family: 'LED Display St'; font-weight: 400; font-style: normal; font-display: block; src: url('fonts/LedDisplaySt.ttf') format('truetype'); }
+@font-face { font-family: 'Clash Display'; font-weight: 500; font-style: normal; font-display: swap; src: url('fonts/ClashDisplay-Medium.woff2') format('woff2'); }
+@font-face { font-family: 'Clash Display'; font-weight: 600; font-style: normal; font-display: swap; src: url('fonts/ClashDisplay-Semibold.woff2') format('woff2'); }
+
+.bf26 {
+  /* Grounds */
+  --bf26-black: #080808;          /* sampled; the default ground */
+  --bf26-deep-green: #004C39;     /* = brand Deep Green */
+  --bf26-orange: #FF6301;         /* = brand Bright Orange; a ground in this sale, not just an accent */
+  /* Type colours */
+  --bf26-led-white: #FFFFFF;      /* headline, 100% */
+  --bf26-led-orange: #FF6301;     /* Cyber Monday headline, offer lines, stamps */
+  --bf26-led-green: #A3C2A7;      /* = brand Light Green; ticker value messages */
+  --bf26-secondary: rgba(255,255,255,.64);  /* "SALE", lockup wordmark, countdown digits: renders ≈ #A4A4A7 */
+  --bf26-muted: rgba(255,255,255,.45);      /* struck-out old offer, "DON'T MISS OUT" footer: ≈ #787878 */
+  --bf26-ticker-opacity: .8;      /* tickers sit back so the headline wins */
+  /* Glow */
+  --bf26-glow-white: 0 0 .05em rgba(255,255,255,.7), 0 0 .22em rgba(255,255,255,.28);
+  --bf26-glow-orange: 0 0 .05em rgba(255,99,1,.8), 0 0 .22em rgba(255,99,1,.35);
+  --bf26-glow-green: 0 0 .06em rgba(163,194,167,.6);
+  /* Type */
+  --bf26-font-led: 'LED Display St', 'Courier New', monospace;
+  --bf26-font-sub: 'Clash Display', 'Satoshi', Inter, system-ui, sans-serif;
+
+  container-type: inline-size;
+  position: relative;
+  overflow: hidden;
+  background: var(--bf26-black);
+  color: var(--bf26-led-white);
+  font-family: var(--bf26-font-sub);
+}
+
+/* Frames: the formats Nick designed. Width is set by the page; aspect ratio does the rest. */
+.bf26--story  { aspect-ratio: 9 / 16; }      /* 1080×1920 Meta/TikTok story, reel */
+.bf26--square { aspect-ratio: 1 / 1; }       /* 1080×1080 feed */
+.bf26--pdp    { aspect-ratio: 1360 / 464; }  /* JPEG below add-to-cart on PDPs */
+.bf26--email  { max-width: 600px; }          /* Klaviyo hero, height follows content */
+.bf26--hero   { aspect-ratio: 1920 / 780; }  /* desktop site hero; mobile uses .bf26--story */
+
+.bf26--green  { background: var(--bf26-deep-green); }
+.bf26--orange { background: var(--bf26-orange); }
+
+/* Full-bleed photo ground (crumpled sheets), darkened so LED type reads. */
+.bf26 .bf26-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.55) saturate(.9); }
+/* Deep-etched product stack, centred behind the lockup */
+.bf26 .bf26-stack { position: absolute; left: 50%; top: 50%; width: 92cqw; transform: translate(-50%, -50%); filter: drop-shadow(0 2cqw 4cqw rgba(0,0,0,.45)); }
+
+/* ---------- Lockup: wordmark / LED headline / SALE ---------- */
+.bf26 .bf26-lockup { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.2cqw; }
+.bf26 .bf26-lockup__logo { width: 10cqw; opacity: .64; }                /* ≈ 13.5% of headline width */
+.bf26 .bf26-headline { font-family: var(--bf26-font-led); font-weight: 400; font-size: 8.4cqw; line-height: 1; letter-spacing: 0; text-transform: uppercase; color: var(--bf26-led-white); text-shadow: var(--bf26-glow-white); margin: 0; }
+.bf26 .bf26-headline--orange { color: var(--bf26-led-orange); text-shadow: var(--bf26-glow-orange); }
+.bf26 .bf26-headline--green  { color: var(--bf26-led-green); text-shadow: var(--bf26-glow-green); }
+.bf26 .bf26-sub { font-family: var(--bf26-font-sub); font-weight: 600; font-size: 3.7cqw; line-height: 1.1; text-transform: uppercase; letter-spacing: .01em; color: var(--bf26-secondary); margin: 0; }
+.bf26 .bf26-sub--white { color: #fff; }
+
+/* Email and web heroes are wider than tall, so the lockup takes less of the width. */
+.bf26--email .bf26-headline { font-size: 8.9cqw; }        /* headline ≈ 78% of email width */
+.bf26--email .bf26-lockup__logo { width: 10.8cqw; }
+.bf26--hero  .bf26-headline { font-size: 5.4cqw; }        /* ≈ 48% of hero width */
+.bf26--hero  .bf26-lockup__logo { width: 6.8cqw; }
+.bf26--hero  .bf26-sub { font-size: 2.2cqw; }
+.bf26--pdp   .bf26-headline { font-size: 6cqw; }
+
+/* Standalone wordmark (ads only, top centre, when the lockup is not used) */
+.bf26 .bf26-logo-top { position: absolute; z-index: 3; top: 11.5cqh; left: 50%; transform: translateX(-50%); width: 14.8cqw; }
+.bf26--story, .bf26--square { container-type: size; }
+
+/* ---------- Ticker: LED marquee strips ---------- */
+.bf26 .bf26-ticker { position: relative; z-index: 2; display: flex; overflow: hidden; white-space: nowrap; opacity: var(--bf26-ticker-opacity); font-family: var(--bf26-font-led); font-size: 6cqw; line-height: 1; padding: 1.6cqw 0; }
+.bf26 .bf26-ticker--top { position: absolute; top: 0; left: 0; right: 0; }
+.bf26 .bf26-ticker--bottom { position: absolute; bottom: 0; left: 0; right: 0; }
+.bf26 .bf26-ticker--small { font-size: 3.2cqw; opacity: 1; }   /* the pair of strips that sandwich the headline */
+.bf26 .bf26-ticker__track { display: inline-flex; gap: 1em; padding-right: 1em; margin-left: -3.2em; }  /* starts mid-word, like Nick's */
+.bf26 .bf26-ticker__item--value   { color: var(--bf26-led-green);  text-shadow: var(--bf26-glow-green); }
+.bf26 .bf26-ticker__item--urgency { color: var(--bf26-led-orange); text-shadow: var(--bf26-glow-orange); }
+.bf26 .bf26-ticker__item--neutral { color: #E0E0E0; }
+.bf26--orange .bf26-ticker { opacity: .9; }
+.bf26--orange .bf26-ticker__item--value,
+.bf26--orange .bf26-ticker__item--urgency { color: #FFF3EC; text-shadow: none; }
+/* Moving version for web, email GIF and video. An LED sign scrolls at constant speed, so linear is right here. */
+.bf26 .bf26-ticker--live .bf26-ticker__track { animation: bf26-scroll 28s linear infinite; }
+@keyframes bf26-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .bf26 .bf26-ticker--live .bf26-ticker__track { animation: none; } }
+
+/* ---------- Offer escalation: ending phase only (Fri 27 Nov on), 54% → 60% ----------
+   Old offer small and struck through above, new offer big below. House pattern from past sales. */
+.bf26 .bf26-offer { font-family: var(--bf26-font-led); font-size: 8.4cqw; line-height: 1.05; color: var(--bf26-led-orange); text-shadow: var(--bf26-glow-orange); text-align: center; margin: 0; }
+.bf26 .bf26-offer__was { display: block; width: fit-content; margin: 0 auto .25em; font-size: .45em; color: var(--bf26-muted); text-shadow: none; text-decoration: line-through; text-decoration-color: var(--bf26-orange); text-decoration-thickness: .12em; }
+.bf26 .bf26-footer-led { font-family: var(--bf26-font-led); font-size: 3.4cqw; color: var(--bf26-muted); }
+
+/* ---------- Circular callout stamp ---------- */
+/* Live SVG text on a circle, so it can say anything: LOW STOCK, ENDING SOON, SELLING FAST, LAST CHANCE. */
+.bf26 .bf26-stamp { position: absolute; z-index: 4; width: 34cqw; aspect-ratio: 1; pointer-events: none; }
+.bf26 .bf26-stamp text { font-family: var(--bf26-font-led); font-size: 25px; fill: var(--bf26-led-orange); }
+.bf26 .bf26-stamp--white text { fill: #fff; }
+.bf26 .bf26-stamp--spin svg { animation: bf26-spin 18s linear infinite; }
+@keyframes bf26-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .bf26 .bf26-stamp--spin svg { animation: none; } }
+
+/* ---------- Supporting pieces ---------- */
+.bf26 .bf26-cta { display: inline-block; font-family: var(--bf26-font-sub); font-weight: 600; font-size: 2.6cqw; text-transform: uppercase; color: var(--bf26-deep-green); background: #fff; border-radius: 999px; padding: 1.3cqw 3.6cqw; text-decoration: none; }
+.bf26 .bf26-proof { text-align: center; font-family: var(--bf26-font-sub); font-weight: 500; font-size: 4.2cqw; line-height: 1.15; text-transform: uppercase; color: #fff; }
+.bf26 .bf26-proof__stars { display: block; font-size: .75em; letter-spacing: .15em; margin-bottom: .6em; }
+.bf26 .bf26-countdown { display: flex; justify-content: center; gap: 3cqw; }
+.bf26 .bf26-countdown__unit { text-align: center; font-family: var(--bf26-font-led); font-size: 6cqw; color: var(--bf26-secondary); }
+.bf26 .bf26-countdown__unit small { display: block; font-family: var(--bf26-font-sub); font-size: .22em; letter-spacing: .08em; margin-top: .4em; }
+.bf26 .bf26-countdown__unit + .bf26-countdown__unit { border-left: 1px solid rgba(255,255,255,.25); padding-left: 3cqw; }
+.bf26 .bf26-gwp { background: #fff; color: #1C1C1C; border-radius: 2.2cqw; padding: 2.2cqw 3cqw; font-family: var(--bf26-font-sub); text-transform: uppercase; }
+.bf26 .bf26-gwp__title { font-weight: 600; color: var(--bf26-deep-green); font-size: 3.2cqw; line-height: 1.05; margin: 0 0 .6em; }
+.bf26 .bf26-gwp__small { font-weight: 500; font-size: 2cqw; color: #555; margin: 0; }

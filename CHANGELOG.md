@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.6 · 2026-09-28
+
+**Sales**
+- Added `sales/`, one folder per named sale identity, kept apart from the evergreen system. See `sales/README.md`.
+- `sales/bfcm-2026/`: Black Friday + Cyber Monday 2026, codified from Nick's Figma (`xt3zyQMwBYDSJ5WofvTwJJ`, page `0:1`). Includes `IDENTITY.md` (LED Display St headlines, Clash Display caps sub-headlines, colours sampled for every type role, lockup and logo sizes for ads vs emails vs web, tickers, circular callouts, phases, and a PDP banner recommendation), a `sale.css` scoped to `.bf26` with container-unit sizing, two demo pages, fonts, and 25 reference renders.
+- `sales/bfcm-2026/stack-cutouts.json`: transparent folded-stack cut-outs checked by eye. The library's `Deepetch` angle mixes stacks with packaging, stool shots and opaque white-background files.
+- `sales/bfcm-2026/BRIEF.md`: offer by phase, GWP tiers and copy guardrails from James's Notion agency brief (Notion stays the source). Up to 54% main sale; Day 1 extra 10% via an earned code, never shown in public creative; ending phase steps to 60%, shown as a small struck-out old offer above a big new one; Cyber Monday is the last day of the one sale.
+- Ticker green is brand Light Green `#A3C2A7`, per Sam.
+- Open: LED Display St needs a commercial licence; James to confirm the 60% step; leftover EOFY/Birthday copy and placeholder offers in Nick's frames.
+
 ## v0.5 · 2026-09-24
 
 **Ads**

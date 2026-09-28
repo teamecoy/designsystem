@@ -1,0 +1,66 @@
+<!-- @dsCard group="Sale · BFCM 2026" name="LED type, tickers and circular callouts" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BFCM 2026 · Type and callouts</title>
+<link rel="stylesheet" href="../sale.css">
+<style>
+  body { margin: 0; background: #1E1E1E; color: #ddd; font-family: 'Clash Display', system-ui, sans-serif; }
+  .page { max-width: 1100px; margin: 0 auto; padding: 32px 16px 80px; }
+  h1 { font-weight: 600; font-size: 28px; margin: 0 0 6px; } h2 { font-weight: 600; font-size: 18px; margin: 44px 0 6px; color: #fff; }
+  p.note { font-size: 14px; color: #9a9a9a; max-width: 70ch; margin: 0 0 16px; }
+  .panel { padding: 5cqw; } .row { display: flex; flex-wrap: wrap; gap: 16px; }
+  .tile { width: 250px; aspect-ratio: 1; display: grid; place-items: center; }
+  .tile .bf26-stamp { position: static; width: 80cqw; }
+  table { border-collapse: collapse; font-size: 14px; width: 100%; } td, th { text-align: left; padding: 8px 10px; border-bottom: 1px solid #333; vertical-align: middle; }
+  .sw { display: inline-block; width: 18px; height: 18px; border-radius: 4px; vertical-align: middle; margin-right: 8px; border: 1px solid #444; }
+</style>
+</head>
+<body>
+<main class="page">
+  <h1>BFCM 2026 · type and callouts</h1>
+  <p class="note">Two typefaces. LED Display St for anything that shouts (headlines, tickers, offers, countdowns, stamps). Clash Display Semibold, all caps, for sub-headlines and supporting lines. Nothing else in this sale.</p>
+
+  <h2>Type colours</h2>
+  <table>
+    <tr><th>Role</th><th>Font</th><th>Colour</th></tr>
+    <tr><td>Headline (Black Friday)</td><td>LED, white glow</td><td><span class="sw" style="background:#fff"></span>#FFFFFF 100%</td></tr>
+    <tr><td>Headline (Cyber Monday, alternative)</td><td>LED, orange glow</td><td><span class="sw" style="background:#FF6301"></span>#FF6301</td></tr>
+    <tr><td>Offer line / new offer</td><td>LED, orange glow</td><td><span class="sw" style="background:#FF6301"></span>#FF6301</td></tr>
+    <tr><td>Ticker: value message (UP TO 54% OFF)</td><td>LED at 80%</td><td><span class="sw" style="background:#A3C2A7"></span>#A3C2A7 brand Light Green</td></tr>
+    <tr><td>Ticker: urgency or phase (SALE IS LIVE, LAST CHANCE)</td><td>LED at 80%</td><td><span class="sw" style="background:#FF6301"></span>#FF6301</td></tr>
+    <tr><td>Ticker: neutral (LIVE NOW)</td><td>LED at 80%</td><td><span class="sw" style="background:#E0E0E0"></span>#E0E0E0</td></tr>
+    <tr><td>Ticker on an orange ground</td><td>LED</td><td><span class="sw" style="background:#FFF3EC"></span>#FFF3EC, no glow</td></tr>
+    <tr><td>"SALE", lockup wordmark, countdown digits</td><td>Clash / logo / LED</td><td><span class="sw" style="background:#A4A4A7"></span>white at 64%</td></tr>
+    <tr><td>Struck-out old offer (ending phase)</td><td>LED, about 45% of the new offer's size</td><td><span class="sw" style="background:#787878"></span>white at 45%, strike line Bright Orange</td></tr>
+    <tr><td>"DON'T MISS OUT" footer</td><td>LED</td><td><span class="sw" style="background:#787878"></span>white at 45%</td></tr>
+    <tr><td>Sub-headline / proof line, CTA pill</td><td>Clash Semibold caps</td><td><span class="sw" style="background:#fff"></span>#FFFFFF; CTA text Deep Green #004C39 on white</td></tr>
+  </table>
+
+  <h2>Headline and sub-headline</h2>
+  <div class="bf26 panel"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline">Black Friday</p><p class="bf26-sub">Sale</p></div></div>
+  <div class="bf26 panel" style="margin-top:12px"><div class="bf26-lockup"><p class="bf26-headline bf26-headline--green">Never this<br>cheap again</p><p class="bf26-sub bf26-sub--white">Award-winning cooling sheets for hot sleepers</p></div></div>
+
+  <h2>Offer escalation · ending phase</h2>
+  <p class="note">From Fri 27 Nov only (never pre-announced). Old offer small and struck through on top, new offer big underneath.</p>
+  <div class="bf26 panel" style="max-width:520px"><p class="bf26-offer"><span class="bf26-offer__was">Up to 54% off</span>Now up to<br>60% off<br>storewide</p></div>
+
+  <h2>Tickers</h2>
+  <div class="bf26" style="padding:2cqw 0">
+    <div class="bf26-ticker bf26-ticker--live" style="font-size:4cqw"><span class="bf26-ticker__track"><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span></span></div>
+  </div>
+
+  <h2>Circular callouts</h2>
+  <p class="note">LED text set on a circle, the phrase repeated twice. Live text, so it can say anything short. Orange on dark grounds, white on orange. Keep one per piece. It can overlap a corner of the headline (Nick's PDP option 1) but never cover the offer.</p>
+  <svg width="0" height="0" style="position:absolute"><defs><path id="bf26-ring" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs></svg>
+  <div class="row">
+    <div class="bf26 tile"><div class="bf26-stamp"><svg viewBox="0 0 200 200"><text><textPath href="#bf26-ring" textLength="500">DON'T MISS OUT · DON'T MISS OUT ·</textPath></text></svg></div></div>
+    <div class="bf26 tile"><div class="bf26-stamp bf26-stamp--spin"><svg viewBox="0 0 200 200"><text><textPath href="#bf26-ring" textLength="500">LOW STOCK · LOW STOCK · LOW STOCK ·</textPath></text></svg></div></div>
+    <div class="bf26 tile"><div class="bf26-stamp bf26-stamp--white"><svg viewBox="0 0 200 200"><text><textPath href="#bf26-ring" textLength="500">ENDING SOON · ENDING SOON ·</textPath></text></svg></div></div>
+    <div class="bf26 bf26--orange tile"><div class="bf26-stamp bf26-stamp--white"><svg viewBox="0 0 200 200"><text><textPath href="#bf26-ring" textLength="500">LAST CHANCE · LAST CHANCE ·</textPath></text></svg></div></div>
+  </div>
+</main>
+</body>
+</html>

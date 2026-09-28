@@ -18,7 +18,7 @@ This is the first question for any Ecoy design, before layout, colour or copy. T
 - Voice and honesty rules. The offer architecture (headline discount, timed boost, code, proof tiles) is proven and reused.
 - Nothing from a sale identity carries into evergreen afterwards, and no two sales share a look.
 
-Rule of thumb: if the piece would still make sense with the discount removed, it is evergreen and this system applies. If it only exists because of the sale, the Sale Identity Brief applies. The brief is produced with the `ecoy-sale-identity` skill; past briefs are the reference for depth and house style.
+Rule of thumb: if the piece would still make sense with the discount removed, it is evergreen and this system applies. If it only exists because of the sale, the Sale Identity Brief applies. The brief is produced with the `ecoy-sale-identity` skill; past briefs are the reference for depth and house style. Once a sale's design is final it is codified in `sales/<sale>/` (e.g. [BFCM 2026](sales/bfcm-2026/IDENTITY.md)) so Claude can make new assets for it.
 
 ## Who we are (p3–p10)
 
