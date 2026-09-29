@@ -8,6 +8,7 @@ listed. Run after assets/build_library_index.py:
 
     python3 assets/build_upload_manifest.py            # update the repo copy
     python3 assets/build_upload_manifest.py --drive    # ...and the Drive copy the notebook reads
+    python3 assets/build_upload_manifest.py --prune --drive   # also drop entries renamed/removed in Drive
 
 A file is eligible when its name parses cleanly, it's an image the web mirror
 covers, it sits outside the excluded folders, its colour isn't retired, its
@@ -39,6 +40,21 @@ def held(row):
 
 def main():
     doc = json.loads(MANIFEST.read_text())
+    if "--prune" in sys.argv:
+        # Entries whose web copy is gone from Drive: renamed or removed since
+        # upload. They leave the manifest (so the catalog stops handing out their
+        # urls) and are listed for deletion from Shopify Files, which only Sam runs.
+        keep, gone = [], []
+        for f in doc["files"]:
+            (keep if (DRIVE / f["web"]).exists() else gone).append(f)
+        doc["files"] = keep
+        if gone:
+            (ROOT / "shopify-delete-list.json").write_text(json.dumps(
+                {"$comment": "Files to delete from Shopify Files once their replacements are live. "
+                             "Written by build_upload_manifest.py --prune; the notebook's last step "
+                             "deletes them, only when Sam sets CONFIRM_DELETE = True.",
+                 "created": time.strftime("%Y-%m-%d"), "files": [f["name"] for f in gone]}, indent=1) + "\n")
+        print(f"pruned {len(gone)} entries whose web copy is gone from Drive")
     listed = {f["name"].rsplit(".", 1)[0] for f in doc["files"]}
     rows = json.loads((ROOT / "library-index.json").read_text())["files"]
     stems = Counter(pathlib.Path(r["path"]).stem for r in rows)
@@ -78,6 +94,9 @@ def main():
         print(f"   {v:5}  {k}")
 
     if "--drive" in sys.argv:
+        dl = ROOT / "shopify-delete-list.json"
+        if dl.exists():
+            shutil.copy2(dl, DRIVE / dl.name)
         target = DRIVE / MANIFEST.name
         if target.exists():
             shutil.copy2(target, target.with_name(f"shopify-upload-manifest.{time.strftime('%Y%m%d-%H%M')}.bak.json"))

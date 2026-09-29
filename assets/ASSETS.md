@@ -45,7 +45,7 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 
 **Orientation is new.** Added to the spreadsheet 2026-09-23, sitting between Angle and People: `Product-Pattern-Colour-Angle-Orientation-People-Source-NN.ext`, e.g. `BambooQuiltCover-Stripe-CookiesCreamStripe-CloseUp-Horizontal-NoTalent-AI-01.jpg`. It exists so a design brief can ask for a widescreen vs. a portrait crop of the same shot. It applies to **new shoots only** — none of the 9,233 already-indexed library files have it, and a batch rewrite of old filenames to add it has been discussed but isn't scheduled. Every parser in this repo (`build_library_index.py`, `check_filenames.py`) treats a missing orientation as normal, not invalid — never flag an old file for lacking one.
 
-**Polka colourways are named after the dot colour on the fabric**: `EggplantPolka`, `BurgundyPolka`, `IcedChocolatePolka`, `ForestPolka`, `CaramelPolka` (folders "Eggplant Polka" and so on). The first shoot, 981 images across the Sheet Set and Quilt Cover, landed 2026-09-29 and sits in the standard layout: `Bamboo Quilt Cover Set / Polka / Eggplant Polka / Talent / Vertical /`. Naming by dot colour works while every Polka product has a different dot colour; a second colourway with the same dot would need its base colour in the name too.
+**Polka colourways are named after the dot colour on the fabric**: `EggplantPolka`, `BurgundyPolka`, `IcedChocolatePolka`, `ForestGreenPolka`, `CaramelPolka` (folders "Eggplant Polka" and so on). The first shoot, 981 images across the Sheet Set and Quilt Cover, landed 2026-09-29 and sits in the standard layout: `Bamboo Quilt Cover Set / Polka / Eggplant Polka / Talent / Vertical /`. Naming by dot colour works while every Polka product has a different dot colour; a second colourway with the same dot would need its base colour in the name too.
 
 The full vocabulary, including every product and colour token, is in `naming.json`.
 
@@ -128,6 +128,8 @@ Run these in order. Steps 1, 2 and 4 are local; step 3 is the Colab notebook, wh
 3. **Run the notebook** (`Photography - Web/ecoy_photography_to_shopify.ipynb`, `LIMIT = None`). It makes any missing web copies on Google's side (step 3b: 2400px, WebP quality 78, colour profile kept), then uploads everything not already in Shopify Files. It skips what's already there, so a re-run is safe.
 4. **Publish the lookup.** `python3 assets/build_cdn_catalog.py`, then commit. Do this after the upload, not before, or `resolveImage` will hand out urls that don't exist yet.
 
+**Renaming after upload.** A CDN file can't be renamed, only replaced. Rename it in Drive (master and web copy), rebuild the vocabulary and index, then run `build_upload_manifest.py --prune --drive`: the old entries leave the manifest and go on `shopify-delete-list.json`, and the new names are queued. The notebook uploads the new ones; its step 8 deletes the old ones only when Sam sets `CONFIRM_DELETE = True`, and only if that run was clean.
+
 **Sequence numbers** are two digits, zero padded; once a shoot passes 99 frames they carry on with three (`-100`, `-101`).
 
 ## The Polka shoot (September 2026)
@@ -138,15 +140,15 @@ Run these in order. Steps 1, 2 and 4 are local; step 3 is the Colab notebook, wh
 |---|---|---|---|
 | `EggplantPolka` | Eggplant Polka Dot / Eggplant Solid | eggplant dots on pink; solid eggplant reverse | 245 |
 | `BurgundyPolka` | Burgundy Polka Dot / Burgundy Solid | burgundy dots on cream; solid burgundy reverse | 162 |
-| `IcedChocolatePolka` | **Chocolate** Polka Dot / Chocolate Solid | chocolate dots on ice blue; solid chocolate reverse | 185 |
-| `ForestPolka` | **Forest Green** Polka Dot / Forest Green Solid | forest dots on mint; solid forest reverse | 183 |
+| `IcedChocolatePolka` | Chocolate Polka Dot / Chocolate Solid (the token stays IcedChocolatePolka on purpose) | chocolate dots on ice blue; solid chocolate reverse | 185 |
+| `ForestGreenPolka` | Forest Green Polka Dot / Forest Green Solid | forest dots on mint; solid forest reverse | 183 |
 | `CaramelPolka` | Caramel Polka Dot / Caramel Solid | caramel dots on cream; solid caramel reverse | 206 |
 
 ```js
 resolveImage(catalog, { product: 'BambooQuiltCover', pattern: 'Polka', colour: 'CaramelPolka', orientation: 'Vertical', people: 'Talent' })
 ```
 
-**Products.** Photographed as `BambooQuiltCover` (818) and `BambooSheetSet` (163). On Shopify, Polka is five new colour options on the existing "(New Colours)" products (Reversible Quilt Cover, Pillowcase Set, Fitted Sheet, Flat Sheet), not new products. The quilt cover sells as the *Reversible* Quilt Cover, polka one side and solid the other. A single draft product, "Cooling Bamboo Sheet Set | Forest Green Polka dot", also exists.
+**Products.** Photographed as `BambooQuiltCover` (818) and `BambooSheetSet` (163). On Shopify, Polka is five new colour options on the existing "(New Colours)" products (Reversible Quilt Cover, Pillowcase Set, Fitted Sheet, Flat Sheet), not new products. The quilt cover is reversible, polka on one side and solid on the other, and `BambooQuiltCover` is its correct token. `AmbiQuiltCover` is only the reversible *stripe*. A single draft product, "Cooling Bamboo Sheet Set | Forest Green Polka dot", also exists.
 
 **What was shot** (checked by eye 2026-09-29: every close-up, overhead, side and 45° frame, and a 1-in-9 sample of the lifestyle frames):
 - Styled beds from every angle, shown both ways up (polka face and solid face), including turn-backs that show the solid reverse.

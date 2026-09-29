@@ -141,7 +141,7 @@ def build():
         },
         "knownGaps": [
             "Polka colourways are named after the dot colour on the fabric (Sam, 2026-09-29): "
-            "EggplantPolka, BurgundyPolka, IcedChocolatePolka, ForestPolka, CaramelPolka. First "
+            "EggplantPolka, BurgundyPolka, IcedChocolatePolka, ForestGreenPolka, CaramelPolka. First "
             "shoot (981 images) landed in Drive 2026-09-29.",
             "Combo colours have no dropdown entry in the spreadsheet, so they are typed by hand.",
             "The spreadsheet's 'How to use' tab says Solo where every other tab and every real file says NoTalent.",
