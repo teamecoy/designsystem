@@ -28,6 +28,7 @@
  * @param {string} [query.pattern] - "Solid" | "Stripe" | "Polka"; omit for products with no pattern (quilts, pillows, protector)
  * @param {string} [query.colour] - e.g. "Dusk", or a two-colour pair like "BurntOrangexWhite"; omit for no-colourway products
  * @param {string} [query.angle] - a specific angle; omit to use the angle preference order (High45 first)
+ * @param {string} [query.orientation] - "Horizontal" (landscape) | "Vertical" (portrait); prefers it, falls back to either. Only shoots from 2026-09 onward carry one
  * @param {string} [query.people] - "NoTalent" | "Talent"; omit to accept either
  * @param {string} [query.source] - "Real" | "AI"; omit to prefer Real over AI
  * @param {boolean} [query.allowNotYetLive=false] - include images flagged notYetLive (see build_cdn_catalog.py)
@@ -39,6 +40,7 @@ export function resolveImage(catalog, query) {
     pattern = "_none",
     colour = "_none",
     angle,
+    orientation,
     people,
     source,
     allowNotYetLive = false,
@@ -53,20 +55,27 @@ export function resolveImage(catalog, query) {
   if (!byColour[colour]) return null;
 
   const anglesToTry = angle ? [angle] : catalog.anglePreference;
+  const usableAt = (a) => (byAngle[a] || []).filter((c) => allowNotYetLive || !c.notYetLive);
+  const wanted = { orientation, people, source };
 
-  for (const a of anglesToTry) {
-    const candidates = byAngle[a];
-    if (!candidates || candidates.length === 0) continue;
-
-    const usable = allowNotYetLive
-      ? candidates
-      : candidates.filter((c) => !c.notYetLive);
-    if (usable.length === 0) continue;
-
-    const filtered = pickBest(usable, { people, source });
-    if (filtered) {
-      return { ...filtered, product, pattern, colour, angle: a };
+  // What the caller asked for outranks the default angle ranking: first look
+  // across every angle for an exact match on orientation / people / source...
+  if (orientation || people || source) {
+    for (const a of anglesToTry) {
+      const exact = usableAt(a).filter((c) =>
+        Object.entries(wanted).every(([k, v]) => !v || c[k] === v));
+      if (exact.length) {
+        return { ...pickBest(exact, wanted), product, pattern, colour, angle: a };
+      }
     }
+  }
+
+  // ...and only then loosen them, taking the best-ranked angle that has anything.
+  for (const a of anglesToTry) {
+    const usable = usableAt(a);
+    if (!usable.length) continue;
+    const best = pickBest(usable, wanted);
+    if (best) return { ...best, product, pattern, colour, angle: a };
   }
 
   return null;
@@ -97,8 +106,12 @@ export function listImages(catalog, query) {
   return out;
 }
 
-function pickBest(candidates, { people, source }) {
+function pickBest(candidates, { orientation, people, source }) {
   let pool = candidates;
+  if (orientation) {
+    const withOrientation = pool.filter((c) => c.orientation === orientation);
+    if (withOrientation.length) pool = withOrientation;
+  }
   if (people) {
     const withPeople = pool.filter((c) => c.people === people);
     if (withPeople.length) pool = withPeople;

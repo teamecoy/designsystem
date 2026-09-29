@@ -91,7 +91,7 @@ Three things to know. **A missing `.webp` means not generated yet, not absent**,
 
 ## The images are also on a CDN
 
-As of 2026-09-22, 6,340 of the web copies above are additionally mirrored to the Shopify Files CDN, and every filename got there unchanged — Shopify renamed zero of the 6,340 uploads. That means a url is **derivable from the filename alone**, with no lookup table to maintain:
+As of 2026-09-29, 7,781 of the web copies above (every eligible one) are mirrored to the Shopify Files CDN, and every filename got there unchanged — Shopify has renamed zero of them across two runs. That means a url is **derivable from the filename alone**, with no lookup table to maintain:
 
 ```
 https://cdn.shopify.com/s/files/1/0498/6100/1367/files/<filename>.webp
@@ -115,7 +115,7 @@ Rebuild the catalog after any upload run:
 python3 assets/build_cdn_catalog.py
 ```
 
-Ten manifest entries are not yet confirmed live — 7 `Iceberg` files pending a notebook re-run, 3 `AllSeasonsQuilt` files pending re-compression — and `resolveImage` skips them by default (`notYetLive`). Only the shortlisted 287 in `assets/library/` are guaranteed to also exist as pixels in this repo; everything else on the CDN exists only as a url, which is enough for anything that renders in a browser or email client.
+Every manifest entry is live (checked by HTTP 2026-09-29). If a future run leaves gaps, list them in `KNOWN_NOT_YET_LIVE` in `build_cdn_catalog.py` so `resolveImage` skips them. Pass `orientation: "Horizontal"` or `"Vertical"` to prefer a landscape or portrait crop; only shoots from September 2026 on carry one, and older ones are returned when nothing matches. Only the 287 in `assets/library/` also exist as pixels in this repo; everything else on the CDN exists only as a url, which is enough for anything that renders in a browser or email client.
 
 Use the shared drive, not My Drive. A stale `Photography` folder with old year-based subfolders still exists there and should be ignored.
 
@@ -209,4 +209,3 @@ Never hand-edit `naming.json`.
 - **The spreadsheet's "How to use" tab says `Solo`** where every other tab, and every real file, says `NoTalent`. The dropdowns are right, that one tab is stale.
 - **`NEW IMAGERY - to be renamed`** in Drive does not follow the convention yet.
 - **Shopify product media follows no convention** (`Image_1097.jpg`, `FOREST-GREEN-QC-1X1.jpg`) and cannot be resolved from a filename. Store CDN images are also compressed and limited to a few per variant, so treat them as thumbnails, not assets. (This is unrelated to the Shopify Files CDN mirror above, which is our own upload and does follow the filename convention exactly.)
-- **7 `Iceberg` files and 3 `AllSeasonsQuilt` files** are in `shopify-upload-manifest.json` but not yet confirmed on the CDN — see the CDN section above. `resolveImage.js` already skips them.

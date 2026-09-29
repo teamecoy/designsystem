@@ -24,23 +24,9 @@ ANGLE_PREFERENCE = ["High45", "Low45", "Side", "Overhead", "Freestyle", "CloseUp
 # other Iceberg and AllSeasonsQuilt file in the manifest is already live.
 # Re-verify with: for n in ...; do curl -sI https://cdn.shopify.com/s/files/1/0498/6100/1367/files/$n; done
 KNOWN_NOT_YET_LIVE = {
-    "filename": {
-        # 7 Iceberg BambooSheetSet frames -- web path fixed in the manifest,
-        # pending an uploader re-run (LIMIT=None).
-        "BambooSheetSet-Solid-Iceberg-CloseUp-NoTalent-Real-01.webp",
-        "BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-01.webp",
-        "BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-02.webp",
-        "BambooSheetSet-Solid-Iceberg-Deepetch-NoTalent-AI-03.webp",
-        "BambooSheetSet-Solid-Iceberg-High45-NoTalent-AI-01.webp",
-        "BambooSheetSet-Solid-Iceberg-High45-NoTalent-Real-01.webp",
-        "BambooSheetSet-Solid-Iceberg-Low45-NoTalent-Real-01.webp",
-        # 3 AllSeasonsQuilt frames -- mirror fixed 2026-09-23 (all three were
-        # the same duplicated master under different names), pending the
-        # same uploader re-run.
-        "AllSeasonsQuilt-CloseUp-NoTalent-Real-04.webp",
-        "AllSeasonsQuilt-CloseUp-NoTalent-Real-13.webp",
-        "AllSeasonsQuilt-Freestyle-NoTalent-Real-36.webp",
-    }
+    # Filenames listed in the manifest but confirmed missing from the CDN by an
+    # HTTP check. Empty since the 2026-09-29 upload (1,441 files, 0 broken).
+    "filename": set(),
 }
 
 
@@ -71,6 +57,8 @@ def main():
             "people": f.get("people"),
             "source": f.get("source"),
         }
+        if f.get("orientation"):
+            entry["orientation"] = f["orientation"]
 
         not_yet_live = f["name"] in KNOWN_NOT_YET_LIVE.get("filename", set())
         if not_yet_live:
