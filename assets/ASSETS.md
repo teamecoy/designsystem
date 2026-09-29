@@ -130,6 +130,36 @@ Run these in order. Steps 1, 2 and 4 are local; step 3 is the Colab notebook, wh
 
 **Sequence numbers** are two digits, zero padded; once a shoot passes 99 frames they carry on with three (`-100`, `-101`).
 
+## The Polka shoot (September 2026)
+
+981 images, live on the CDN since 2026-09-29. Resolve them with `pattern: 'Polka'`:
+
+| Token (filenames, `resolveImage`) | Shopify colour option | What it looks like | Images |
+|---|---|---|---|
+| `EggplantPolka` | Eggplant Polka Dot / Eggplant Solid | eggplant dots on pink; solid eggplant reverse | 245 |
+| `BurgundyPolka` | Burgundy Polka Dot / Burgundy Solid | burgundy dots on cream; solid burgundy reverse | 162 |
+| `IcedChocolatePolka` | **Chocolate** Polka Dot / Chocolate Solid | chocolate dots on ice blue; solid chocolate reverse | 185 |
+| `ForestPolka` | **Forest Green** Polka Dot / Forest Green Solid | forest dots on mint; solid forest reverse | 183 |
+| `CaramelPolka` | Caramel Polka Dot / Caramel Solid | caramel dots on cream; solid caramel reverse | 206 |
+
+```js
+resolveImage(catalog, { product: 'BambooQuiltCover', pattern: 'Polka', colour: 'CaramelPolka', orientation: 'Vertical', people: 'Talent' })
+```
+
+**Products.** Photographed as `BambooQuiltCover` (818) and `BambooSheetSet` (163). On Shopify, Polka is five new colour options on the existing "(New Colours)" products (Reversible Quilt Cover, Pillowcase Set, Fitted Sheet, Flat Sheet), not new products. The quilt cover sells as the *Reversible* Quilt Cover, polka one side and solid the other. A single draft product, "Cooling Bamboo Sheet Set | Forest Green Polka dot", also exists.
+
+**What was shot** (checked by eye 2026-09-29: every close-up, overhead, side and 45° frame, and a 1-in-9 sample of the lifestyle frames):
+- Styled beds from every angle, shown both ways up (polka face and solid face), including turn-backs that show the solid reverse.
+- 548 quilt-cover lifestyle frames with talent (lying, reading, jumping, holding pillows, smoothing the quilt). The sheet set has no talent frames.
+- 15 close-ups, all fabric texture and drape. None for Eggplant or Burgundy on the quilt cover.
+
+**Not shot, so it's a gap for AI fill or a reshoot:**
+- Deep-etch cut-outs of any kind, including stacked sets (0 `Deepetch` frames).
+- Packaging (none seen).
+- Zip and loop details (none seen).
+- Hands fitting a fitted-sheet corner (not in any close-up or sampled lifestyle frame; the nearest is hands smoothing the quilt top).
+- A dedicated binding detail. Turn-backs show the solid reverse at bed scale, but no close-up shows the dot binding on the solid face.
+
 ## Where it sits in Drive
 
 ```
