@@ -48,8 +48,9 @@ def check(name):
     else:
         angle, head = parts[-4], parts[:-4]
 
-    if not re.fullmatch(r"\d{2}", seq):
-        bad.append(f"sequence '{seq}' should be two digits, e.g. 01 (not {seq})")
+    # Two digits, zero padded; a third digit only once a shoot passes 99 frames.
+    if not re.fullmatch(r"\d{2}|[1-9]\d{2}", seq):
+        bad.append(f"sequence '{seq}' should be two digits, e.g. 01, or three once past 99 (not {seq})")
     if source not in SOURCES:
         bad.append("source '%s' should be %s" % (source, " or ".join(sorted(SOURCES))))
     if people not in PEOPLE:

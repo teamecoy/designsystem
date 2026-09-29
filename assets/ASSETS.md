@@ -119,6 +119,17 @@ Ten manifest entries are not yet confirmed live — 7 `Iceberg` files pending a 
 
 Use the shared drive, not My Drive. A stale `Photography` folder with old year-based subfolders still exists there and should be ignored.
 
+## After a new shoot: getting it onto the CDN
+
+Run these in order. Steps 1, 2 and 4 are local; step 3 is the Colab notebook, which only Sam can run (it needs the Shopify secrets).
+
+1. **Check the names.** `python3 assets/check_filenames.py "<Drive folder>"`. Fix anything it flags in Drive before going further: a CDN file can't be renamed, only replaced, so a wrong name that reaches the CDN stays there.
+2. **Index and queue.** `python3 assets/build_library_index.py` re-walks Drive (keeping every `seen` description), then `python3 assets/build_upload_manifest.py --drive` adds the new, eligible files to the manifest and copies it to `Photography - Web/`, backing up the old copy. It never changes existing entries, and it skips excluded folders (including `NEW IMAGERY - to be renamed`, the placeholder folder for colours like Sky and Burgundy), retired colours, names that don't parse, and anything on `HOLD` in the script.
+3. **Run the notebook** (`Photography - Web/ecoy_photography_to_shopify.ipynb`, `LIMIT = None`). It makes any missing web copies on Google's side (step 3b: 2400px, WebP quality 78, colour profile kept), then uploads everything not already in Shopify Files. It skips what's already there, so a re-run is safe.
+4. **Publish the lookup.** `python3 assets/build_cdn_catalog.py`, then commit. Do this after the upload, not before, or `resolveImage` will hand out urls that don't exist yet.
+
+**Sequence numbers** are two digits, zero padded; once a shoot passes 99 frames they carry on with three (`-100`, `-101`).
+
 ## Where it sits in Drive
 
 ```
