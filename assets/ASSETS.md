@@ -45,7 +45,7 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 
 **Orientation is new.** Added to the spreadsheet 2026-09-23, sitting between Angle and People: `Product-Pattern-Colour-Angle-Orientation-People-Source-NN.ext`, e.g. `BambooQuiltCover-Stripe-CookiesCreamStripe-CloseUp-Horizontal-NoTalent-AI-01.jpg`. It exists so a design brief can ask for a widescreen vs. a portrait crop of the same shot. It applies to **new shoots only** — none of the 9,233 already-indexed library files have it, and a batch rewrite of old filenames to add it has been discussed but isn't scheduled. Every parser in this repo (`build_library_index.py`, `check_filenames.py`) treats a missing orientation as normal, not invalid — never flag an old file for lacking one.
 
-**Polka now has colour vocabulary**, added the same day: `BurgundyPolka`, `CaramelPolka`, `ChocolatePolka`, `EggplantPolka`, `ForestPolka`. There are still no Drive assets shot in it.
+**Polka colourways are named after the dot colour on the fabric**: `EggplantPolka`, `BurgundyPolka`, `IcedChocolatePolka`, `ForestPolka`, `CaramelPolka` (folders "Eggplant Polka" and so on). The first shoot, 981 images across the Sheet Set and Quilt Cover, landed 2026-09-29 and sits in the standard layout: `Bamboo Quilt Cover Set / Polka / Eggplant Polka / Talent / Vertical /`. Naming by dot colour works while every Polka product has a different dot colour; a second colourway with the same dot would need its base colour in the name too.
 
 The full vocabulary, including every product and colour token, is in `naming.json`.
 
@@ -175,7 +175,7 @@ Prefer `seen.quality` of hero for anything leading a page, and never ship an ima
 
 ## Is this colour still for sale?
 
-`colour-status.json` answers it. The **Cooling Bamboo Sheet Set is the north star**: if a colour is not a live sheet set option it is retired, whatever lingers on accessories. Twenty-three colours are live, ten are retired, and two live ones (Sky and Burgundy) have no vocabulary entry yet.
+`colour-status.json` answers it. The **Cooling Bamboo Sheet Set is the north star**: if a colour is not a live sheet set option it is retired, whatever lingers on accessories. Twenty-five colours are live and ten are retired. Sky and Burgundy got their vocabulary entries on 2026-09-29; their photos are still in `NEW IMAGERY - to be renamed`, waiting to be renamed.
 
 This matters because 1,140 images in the library, about one in eight, shoot retired colours. Paprika alone accounts for 536 and Canyon 290. Never design bedding around a colour listed as retired.
 
@@ -205,7 +205,6 @@ Never hand-edit `naming.json`.
 
 ## Known gaps
 
-- **Polka** is a valid pattern with no Drive assets yet.
 - **Combo colours have no dropdown** in the spreadsheet, so they are typed by hand and can drift. The checker validates them.
 - **The spreadsheet's "How to use" tab says `Solo`** where every other tab, and every real file, says `NoTalent`. The dropdowns are right, that one tab is stale.
 - **`NEW IMAGERY - to be renamed`** in Drive does not follow the convention yet.

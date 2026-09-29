@@ -140,8 +140,9 @@ def build():
             "Deepetch": "cut out on transparent or white, for compositing",
         },
         "knownGaps": [
-            "Polka is a valid pattern with colour vocabulary (BurgundyPolka, CaramelPolka, "
-            "ChocolatePolka, EggplantPolka, ForestPolka, added 2026-09-23) but still no Drive assets.",
+            "Polka colourways are named after the dot colour on the fabric (Sam, 2026-09-29): "
+            "EggplantPolka, BurgundyPolka, IcedChocolatePolka, ForestPolka, CaramelPolka. First "
+            "shoot (981 images) landed in Drive 2026-09-29.",
             "Combo colours have no dropdown entry in the spreadsheet, so they are typed by hand.",
             "The spreadsheet's 'How to use' tab says Solo where every other tab and every real file says NoTalent.",
             "Files under 'NEW IMAGERY - to be renamed' do not follow this convention yet.",

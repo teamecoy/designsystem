@@ -28,8 +28,7 @@ EXCLUDED = N["library"]["web"]["excludedFolders"]
 # Held back until their naming is settled, so a wrong name never reaches the
 # CDN (a CDN file can't be renamed, only replaced). Clear an entry to release it.
 HOLD = {
-    "pattern:Polka": "2026-09-29: colour names disagree with the vocabulary "
-                     "(BloomingPinkEggplantPolka etc.) and Malt Caramel is named MaltCaramelStripe.",
+    # "pattern:Polka": "why it's held",   # example; Polka was held 2026-09-29 until renamed
 }
 
 

@@ -54,7 +54,7 @@ Either way, never guess a filename or a colour — `naming.json` and `colour-sta
 ## Rules that are not negotiable
 
 - Design only with real Ecoy photographs — from `assets/library/` (287 in-repo) or resolved via `assets/resolveImage.js` against the CDN (6,340 more). Never invent, hand-type or upload a placeholder for a photo that's resolvable. Everything not yet on the CDN still lives in Drive, named to the convention in `assets/ASSETS.md`. Images in `examples/` and `reference/` are compressed reference renders, never design assets.
-- Never use a retired colourway. `assets/colour-status.json` is the list; 23 are live, 10 are retired. The curated library already excludes them.
+- Never use a retired colourway. `assets/colour-status.json` is the list; 25 are live, 10 are retired. The curated library already excludes them.
 - High45 is the preferred angle for ads and hero creative, then Low45, then Side.
 - Sale, promotion or evergreen is decided first. Evergreen and promotions follow this system; a sale (Christmas included) follows its Sale Identity Brief and, once codified, its `sales/<sale>/IDENTITY.md`.
 - Never learn from a sale ad as if it were evergreen. Check an ad's `CampaignMoment` (`ads/parse_ad_name.py`) before treating it as a model.

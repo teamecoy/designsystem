@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.6 · 2026-09-29
+
+- **Polka** is named after the dot colour on the fabric: EggplantPolka, BurgundyPolka, IcedChocolatePolka, ForestPolka, CaramelPolka. The first shoot (981 images) was renamed and moved into the standard `Product / Polka / Colour / Talent / Orientation` layout, and queued for the CDN.
+- **Sky and Burgundy** have vocabulary entries and count as live (25 live, 10 retired). Their photos are still in the "to be renamed" folder.
+- 450 new Solid shots queued: Butter and Burnt Orange quilt covers and sheet sets, Jacaranda fitted sheets.
+- The pipeline is complete in the repo: `build_upload_manifest.py` is new, the notebook now makes its own web copies, the library index keeps its descriptions on rebuild, and shot numbers can run past 99. See "After a new shoot" in ASSETS.md.
+
 ## v0.6 · 2026-09-28
 
 **Sales**
