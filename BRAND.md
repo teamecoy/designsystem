@@ -104,6 +104,8 @@ One typeface creates one clear voice. Type is a core brand asset, not decoration
 
 **UI vocabulary seen across the guide:** fully rounded pill buttons, big rounded cards (24px), colour-blocked sections, chips over hero imagery.
 
+**Award badges** (`awards/`, `components/awards.html`): Bedbuyer award winner 2023, 2024, 2025. The proof behind "award-winning". Third-party artwork, used exactly as supplied, one per piece, colour on light and white on dark. See [awards/AWARDS.md](awards/AWARDS.md).
+
 ## Motion (p33) · `components/motion.html`
 
 Quiet, confident, thoughtful. Natural over mechanical (always easing, never linear). Purposeful (if it doesn't add clarity or hierarchy it isn't needed). Soft timing and restraint (short and subtle beats long and exaggerated). Consistent across text, chips and UI. Durations in tokens are our proposal, see CHANGELOG.

@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.7 · 2026-10-05
+
+**Awards**
+- Added `awards/bedbuyer/`: five Bedbuyer award badges as transparent PNGs trimmed to the artwork. There are 3-year (2023–2025) stacked and framed versions in colour, and 2025 horizontal and stacked versions (horizontal in colour and white). The untrimmed originals are in `source/`.
+- `awards/AWARDS.md` covers when to use a badge (any "award-winning" claim or trust signal), which file goes on which ground, one badge per piece, never altering the artwork, and copy that matches the claim.
+- `components/awards.html` is a new demo card in the Brand group.
+- Open: award category TBC (don't name a winning product yet). There's no white 3-year version; ask Bedbuyer if one is needed.
+
 ## v0.6 · 2026-09-29
 
 - **Polka** is named after the dot colour on the fabric: EggplantPolka, BurgundyPolka, IcedChocolatePolka, ForestPolka, CaramelPolka. The first shoot (981 images) was renamed and moved into the standard `Product / Polka / Colour / Talent / Orientation` layout, and queued for the CDN.

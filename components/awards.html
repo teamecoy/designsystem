@@ -1,0 +1,57 @@
+<!-- @dsCard group="Brand" name="Awards" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecoy · Awards</title>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="demo.css">
+<style>
+  .award { aspect-ratio: 4/3; border-radius: var(--radius-card); display: grid; place-items: center; padding: var(--space-5); }
+  .award img { width: 80%; height: 80%; object-fit: contain; min-height: 0; }
+  .award--light { background: var(--color-off-white); border: 1px solid #E3DFD4; }
+  .award--dark { background: var(--color-deep-green); }
+  .award-cap { font-family: var(--font-text); font-size: var(--text-small-size); margin-top: var(--space-2); }
+  .strip { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); border-radius: var(--radius-card); padding: var(--space-3) var(--space-5); }
+  .strip img { height: 44px; }
+  .strip p { margin: 0; font-family: var(--font-text); }
+  .on-card { background: var(--color-off-white); border-radius: var(--radius-card); padding: var(--space-4); width: min(240px, 60%); }
+  .on-card img { width: 100%; display: block; }
+</style>
+</head>
+<body>
+<main class="ds-page">
+  <header class="ds-head">
+    <span class="eyebrow">Awards · proof badges</span>
+    <h1>Award-winning, with the badge to prove it</h1>
+    <p>Use these when creative says "award-winning" or needs a trust signal. They are Bedbuyer's artwork: use them exactly as supplied. Colour versions go on Off White, white or Light Pink. White versions go on dark grounds. Use one badge per piece. Full rules are in awards/AWARDS.md.</p>
+  </header>
+
+  <section class="ds-section">
+    <h2>Bedbuyer · 2023, 2024, 2025</h2>
+    <div class="ds-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+      <div><div class="award award--light"><img src="../awards/bedbuyer/bedbuyer-2023-2025-stacked-colour.png" alt="Bedbuyer award winner 2023, 2024, 2025"></div><p class="award-cap"><strong>Default.</strong> 3-year stacked, colour, light grounds</p></div>
+      <div><div class="award award--light"><img src="../awards/bedbuyer/bedbuyer-2023-2025-framed-colour.png" alt="Bedbuyer award winner 2023, 2024, 2025, framed layout"></div><p class="award-cap">3-year framed, colour, light grounds</p></div>
+      <div><div class="award award--light"><img src="../awards/bedbuyer/bedbuyer-2025-horizontal-colour.png" alt="Bedbuyer 2025 award winner"></div><p class="award-cap">2025 horizontal, colour, light grounds, thin strips</p></div>
+      <div><div class="award award--dark"><img src="../awards/bedbuyer/bedbuyer-2025-horizontal-white.png" alt="Bedbuyer 2025 award winner, white"></div><p class="award-cap">2025 horizontal, white, dark grounds, thin strips</p></div>
+      <div><div class="award award--dark"><img src="../awards/bedbuyer/bedbuyer-2025-stacked-white.png" alt="Bedbuyer 2025 award winner, white, stacked"></div><p class="award-cap">2025 stacked, white, dark grounds</p></div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <h2>In use</h2>
+    <div class="strip" style="background: var(--color-off-white); border: 1px solid #E3DFD4;"><p>Award-winning bamboo bedding</p><img src="../awards/bedbuyer/bedbuyer-2025-horizontal-colour.png" alt="Bedbuyer 2025 award winner"></div>
+    <div class="strip" style="background: var(--color-deep-green); color: var(--color-ink-on-dark); margin-top: var(--space-3);"><p>Award-winning bamboo bedding</p><img src="../awards/bedbuyer/bedbuyer-2025-horizontal-white.png" alt="Bedbuyer 2025 award winner, white"></div>
+    <div class="ds-stage" style="background: var(--color-deep-blue); margin-top: var(--space-3); display:flex; justify-content:center;">
+      <div class="on-card"><img src="../awards/bedbuyer/bedbuyer-2023-2025-stacked-colour.png" alt="Bedbuyer award winner 2023 to 2025 on an Off White card"></div>
+    </div>
+    <p class="ds-note" style="margin-top: var(--space-3);">There's no white 3-year version, so on a dark ground the colour badge sits on an Off White card. Never put a colour badge straight onto a dark colour, Light Green or Light Blue, because its teal blends into them.</p>
+    <p class="ds-note tbc">The award category hasn't been confirmed. Until it is, don't name a winning product or category.</p>
+  </section>
+</main>
+</body>
+</html>
