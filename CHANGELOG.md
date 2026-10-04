@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.8 · 2026-10-05
+
+**Voice of customer**
+- Added `voc/`: every published Judge.me review (5,600, Nov 2020 to 4 Oct 2026), tagged for copywriting. Each review carries 29 themes, 12 complaint types, naming-sheet Persona and Angle, product category and fabric, colours (with a retired-colour flag), Judge.me survey answers, a pull quote, a best sentence per theme and a 0–10 ad score.
+- `voc/INSIGHTS.md` is the copywriter's summary: 4.81★ across all products (4.84★ bedding), 90% of the 1,926 who answered say their sleep improved, 63% switched from cotton, theme and complaint counts, and 8 de-duplicated quotes per theme.
+- `voc/VOC.md` covers the fields, how to query with jq or Python, and the rules for using reviews in ads (word for word, first name + initial, survey stats with their base, no competitor names, no retired colours).
+- `voc/build_voc.py` rebuilds everything from a fresh export. It drops emails and IP addresses and shortens names. The raw export is never committed.
+
 ## v0.7 · 2026-10-05
 
 **Awards**

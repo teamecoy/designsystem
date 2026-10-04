@@ -1,0 +1,322 @@
+{
+ "$comment": "Tag dictionary for voc/reviews.jsonl. Patterns are case-insensitive regex over 'title. body'. Edit them in build_voc.py, not here.",
+ "themes": {
+  "cooling": {
+   "pattern": "\\bcool(?:er|est|ing|s)?\\b|hot sleeper|run(?:s|ning)? hot|night sweats?|sweat(?:y|ing|s)?\\b|temperature|breathab|\\bheat\\b|humid|stay(?:s|ed)? cool|\\bclammy|hot (?:nights?|summer|weather)|aussie summer|menopaus|hot flush",
+   "count": 2288
+  },
+  "pet": {
+   "pattern": "\\b(?:dogs?|cats?|pets?|pupp(?:y|ies)|pups?|kittens?|kitty|doggo|pooch|fur ?bab(?:y|ies)|furr(?:y|ies)|fur\\b|shed(?:s|ding|der)?\\b|pet hair|dog hair|cat hair|paws?|claws?|greyhound|labrador|retriever|husky|cavoodle|groodle|spoodle|kelpie|staffy)",
+   "count": 472
+  },
+  "style": {
+   "pattern": "colou?rs?\\b|gorgeous|beautiful(?:ly)?|stunning|aesthetic|\\bstyl(?:e|ish|ing)|vibrant|rich (?:colou?r|tone)|\\bhue|shade\\b|look(?:s|ed)? (?:so |really |absolutely )?(?:amazing|great|good|beautiful|lovely|stunning|luxe|luxurious|expensive|fab)|decor|interior|bedroom looks|compliments?|\\bpop\\b|statement|matches|\\bmoody\\b|earthy",
+   "count": 1689
+  },
+  "softness": {
+   "pattern": "\\bsoft(?:er|est|ness)?\\b|silky|buttery|smooth|like butter|cloud|\\bsilk\\b|feels? (?:amazing|incredible|divine|heavenly|luxurious)",
+   "count": 2318
+  },
+  "luxury": {
+   "pattern": "luxur(?:y|ious)|hotel|five star|5 star|5-star|resort|expensive (?:feel|look)|high end|premium|decadent|indulgen",
+   "count": 584
+  },
+  "quality": {
+   "pattern": "\\bquality\\b|well made|well-made|stitching|craftsmanship|sturdy|beautifully made",
+   "count": 866
+  },
+  "durability": {
+   "pattern": "(?:still|months?|years?) (?:later|on)|after (?:many|lots of|countless|several|months|years|\\d+) (?:washes|washing)|held up|holding up|lasted|last(?:s)? (?:well|forever)|(?:for|over) (?:\\d+|two|three|four|five|many) years|no pilling|hasn'?t pilled|doesn'?t pill|not pilled|wear(?:s)? well|durable|durability",
+   "count": 65
+  },
+  "sleep_better": {
+   "pattern": "(?:sleep(?:ing)?|slept) (?:so )?(?:better|well|soundly|deeply|through)|best sleep|better sleep|sleep quality|deeper sleep|wake (?:up )?(?:less|refreshed)|no longer wak|stopped waking|good night'?s sleep",
+   "count": 233
+  },
+  "skin": {
+   "pattern": "\\bskin\\b|eczema|psoriasis|dermat|\\brash(?:es)?\\b|\\bitch(?:y|ing|iness)?\\b|irritat|\\bacne\\b|breakouts?|sensitive",
+   "count": 261
+  },
+  "allergy": {
+   "pattern": "allerg|hay ?fever|asthma|dust mite|sneez|hypoallergenic|sinus",
+   "count": 32
+  },
+  "hair": {
+   "pattern": "(?:my|her|his|curly|frizz(?:y)?) hair|frizz|bed ?head|hair (?:breakage|tangle)",
+   "count": 22
+  },
+  "eco": {
+   "pattern": "sustainab|eco\\b|eco-friendly|environment|planet|bamboo is|natural fib|biodegrad|organic|plastic|green credentials|ethical|non-?toxic|chemical",
+   "count": 155
+  },
+  "value": {
+   "pattern": "\\bvalue\\b|worth (?:it|every|the)|price|cheap(?:er)?|afford|bargain|\\bsale\\b|discount|\\bdeal\\b(?! with)|money|for the cost|investment",
+   "count": 486
+  },
+  "gift": {
+   "pattern": "\\bgift(?:ed|s)?\\b|present\\b|birthday|christmas|xmas|mother'?s day|father'?s day|wedding|housewarming|bought (?:for|these for) (?:my|our) (?:mum|mom|dad|daughter|son|sister|brother|friend|parents|nan)",
+   "count": 162
+  },
+  "vs_cotton": {
+   "pattern": "cotton|egyptian|thread ?count|percale",
+   "count": 146
+  },
+  "vs_linen": {
+   "pattern": "\\blinen\\b",
+   "count": 141
+  },
+  "vs_other_brand": {
+   "pattern": "sheridan|ettitude|bed threads|bedthreads|adairs|kmart|target|bamboo village|sleep republic|koala|eva\\b|ecosa|cultiver|dusk store|myer|david jones|canningvale|other bamboo|other brands?|tried (?:many|lots of|so many|heaps of|other)|compared to (?:other|my old|previous)|previous (?:sheets|bamboo|brand)",
+   "count": 134
+  },
+  "wash_care": {
+   "pattern": "\\bwash(?:es|ed|ing)?\\b|dryer|tumble|laundry|iron(?:ing)?|line dry|cold wash",
+   "count": 353
+  },
+  "fit": {
+   "pattern": "deep pockets?|pocket depth|fits? (?:perfectly|well|snug|our|my|the)|fitted (?:well|perfectly)|elastic|stay(?:s)? (?:on|put|in place)|mattress (?:depth|height|is deep)|tall mattress|\\bfit\\b",
+   "count": 345
+  },
+  "customer_service": {
+   "pattern": "customer service|customer care|support team|the team|responsive|replied|refund|exchange|replace(?:d|ment)|helpful|reached out|emailed|contacted",
+   "count": 179
+  },
+  "delivery": {
+   "pattern": "deliver(?:y|ed)|shipping|shipped|arrived|postage|dispatch|courier|parcel|express|fast (?:delivery|shipping|postage)",
+   "count": 273
+  },
+  "packaging": {
+   "pattern": "packag|\\bbox\\b|wrapped|presentation|unbox|bag it came",
+   "count": 93
+  },
+  "repeat_buyer": {
+   "pattern": "(?:second|third|fourth|fifth|2nd|3rd|4th|5th|another|more) (?:set|sets|pair|purchase|order|colou?r|quilt cover)|bought (?:more|another|again)|ordered (?:more|another|again)|back for more|will be buying (?:more|again)|already ordered|buying (?:another|more)|repeat (?:customer|purchase|buyer)|every (?:bed|room)|whole house|collection",
+   "count": 436
+  },
+  "recommend": {
+   "pattern": "recommend|tell(?:ing)? (?:all )?(?:my |everyone|friends)|telling everyone|10/10|10 out of 10|highly rate|must have|must-have|can'?t (?:fault|recommend)",
+   "count": 733
+  },
+  "couple": {
+   "pattern": "\\bhusband|\\bwife\\b|partner|boyfriend|girlfriend|hubby|fianc|\\bwe both\\b|both of us|my other half",
+   "count": 323
+  },
+  "kids": {
+   "pattern": "\\bkids?\\b|children|child|son'?s|daughter'?s|toddler|baby|teen(?:ager)?s?|kid'?s room|bunk",
+   "count": 141
+  },
+  "winter_warmth": {
+   "pattern": "winter|warm(?:th|er)? in (?:winter|the cold)|cosy|cozy|toasty|cold (?:nights?|weather|months)|all year|year round|all seasons",
+   "count": 359
+  },
+  "sceptic_converted": {
+   "pattern": "sceptic|skeptic|hesita|unsure|wasn'?t sure|didn'?t believe|doubt|took a (?:chance|punt|gamble)|on the fence|was worried|wary|not convinced|didn'?t think|didn'?t expect|exceeded (?:my )?expectations|believe the hype|lives? up to the hype|worth the hype",
+   "count": 163
+  },
+  "superlative": {
+   "pattern": "best (?:sheets|bedding|purchase|quilt|investment|thing)|ever (?:owned|had|slept|bought)|never (?:going|go) back|life ?chang|game ?changer|obsessed|in love|absolutely love|can'?t live without|holy grail|10/10",
+   "count": 1156
+  }
+ },
+ "complaints": {
+  "pilling": {
+   "pattern": "(?<!every )(?<!sleeping )\\bpill(?:ing|ed|s|y)?\\b(?! possible)|bobbl|fuzz",
+   "count": 24
+  },
+  "fading_colour": {
+   "pattern": "\\bfad(?:e|ed|es|ing)\\b|discolou?r|colou?r (?:ran\\b|bleed|bled|wash(?:ed)? out)|lost (?:its|their) colou?r|dye (?:came|ran|bled)",
+   "count": 18
+  },
+  "staining": {
+   "pattern": "\\bstain(?:s|ed|ing)?\\b|marks? (?:from|on)|oil(?:y)? (?:marks|patches|stains)|sweat (?:marks|stains|patches)",
+   "count": 40
+  },
+  "colour_mismatch": {
+   "pattern": "(?:different|not the same|darker|lighter|brighter|duller) (?:colou?r|shade|than (?:the )?(?:picture|photo|website|online|image))|colou?r (?:is|was) (?:off|different|not)|doesn'?t match|don'?t match|didn'?t match",
+   "count": 2
+  },
+  "too_hot": {
+   "pattern": "too (?:hot|warm)|not (?:as )?cool(?:ing)?|didn'?t (?:keep me )?cool|still (?:hot|sweat)|sleep hot in them|hotter than",
+   "count": 13
+  },
+  "shrinkage": {
+   "pattern": "shr[iu]nk|shrank|shrinkage|smaller after",
+   "count": 5
+  },
+  "thin_tear": {
+   "pattern": "\\bthin\\b|see.?through|\\btear(?:s|ing)?\\b(?! (?:of joy|up))|\\btore\\b|\\btorn\\b|\\brip(?:ped|s)?\\b(?! ?off)|\\b(?:a|small|tiny|little|big) holes?\\b|snag|ladder|threadbare|worn through|seam (?:came|split|undone)",
+   "count": 38
+  },
+  "wrinkles": {
+   "pattern": "wrinkl|crease|crinkl|crumpl",
+   "count": 13
+  },
+  "fit_issue": {
+   "pattern": "too (?:small|big|short|tight|loose)|(?:doesn'?t|didn'?t|won'?t|does not) (?:fit|stay)|pops? off|slid(?:es?|ing)? off|elastic (?:broke|gone|went|failed)|not deep enough|too shallow",
+   "count": 28
+  },
+  "delivery_issue": {
+   "pattern": "late|delay|never (?:arrived|received)|lost (?:in the post|parcel)|wrong (?:item|size|colou?r|order)|missing|took (?:ages|forever|weeks)",
+   "count": 17
+  },
+  "static_lint": {
+   "pattern": "\\bstatic\\b|lint|cling",
+   "count": 4
+  },
+  "smell": {
+   "pattern": "smell|odou?r|chemical",
+   "count": 3
+  }
+ },
+ "personaMap": {
+  "survey": {
+   "I'm a hot sleeper": "HotSleeper",
+   "I have pets that shed": "PetHair",
+   "I love styling my space": "HomeInterior",
+   "I have sensitive skin or allergies": "SensitiveSkin",
+   "I'm focused on recovery": "FitnessRecovery"
+  },
+  "fromTheme": {
+   "cooling": "HotSleeper",
+   "pet": "PetHair",
+   "style": "HomeInterior",
+   "skin": "SensitiveSkin",
+   "allergy": "Allergies",
+   "couple": "Couple",
+   "eco": "Eco",
+   "hair": "Hair"
+  }
+ },
+ "angleMap": {
+  "vs_cotton": "ComparisonClaim",
+  "vs_linen": "ComparisonClaim",
+  "vs_other_brand": "ComparisonClaim",
+  "value": "PriceLed",
+  "sceptic_converted": "SocialProof",
+  "superlative": "SocialProof",
+  "recommend": "SocialProof",
+  "repeat_buyer": "SocialProof",
+  "cooling": "ProblemHighlight",
+  "pet": "ProblemHighlight",
+  "skin": "ProblemHighlight",
+  "allergy": "ProblemHighlight",
+  "sleep_better": "Aspiration",
+  "luxury": "Aspiration",
+  "style": "Aspiration",
+  "eco": "Origin",
+  "durability": "Trust",
+  "customer_service": "Trust"
+ },
+ "products": [
+  {
+   "pattern": "fur-friendly.*quilt",
+   "category": "quilt_cover",
+   "fabric": "bamboo_fur_friendly"
+  },
+  {
+   "pattern": "fur-friendly",
+   "category": "sheet_set",
+   "fabric": "bamboo_fur_friendly"
+  },
+  {
+   "pattern": "flannelette-quilt",
+   "category": "quilt_cover",
+   "fabric": "flannelette"
+  },
+  {
+   "pattern": "flannelette-fitted",
+   "category": "fitted_sheet",
+   "fabric": "flannelette"
+  },
+  {
+   "pattern": "flannelette-pillow",
+   "category": "pillowcase",
+   "fabric": "flannelette"
+  },
+  {
+   "pattern": "flannelette",
+   "category": "sheet_set",
+   "fabric": "flannelette"
+  },
+  {
+   "pattern": "corduroy",
+   "category": "quilt_cover",
+   "fabric": "corduroy"
+  },
+  {
+   "pattern": "linen-bamboo-blanket",
+   "category": "blanket",
+   "fabric": "linen_bamboo"
+  },
+  {
+   "pattern": "flip-quilt-cover|quilt-cover",
+   "category": "quilt_cover",
+   "fabric": "bamboo_sateen"
+  },
+  {
+   "pattern": "bundle|dream-box",
+   "category": "bundle",
+   "fabric": "bamboo_sateen"
+  },
+  {
+   "pattern": "fitted-sheet",
+   "category": "fitted_sheet",
+   "fabric": "bamboo_sateen"
+  },
+  {
+   "pattern": "flat-sheet",
+   "category": "flat_sheet",
+   "fabric": "bamboo_sateen"
+  },
+  {
+   "pattern": "sheet-set",
+   "category": "sheet_set",
+   "fabric": "bamboo_sateen"
+  },
+  {
+   "pattern": "pillowcase",
+   "category": "pillowcase",
+   "fabric": "bamboo_sateen"
+  },
+  {
+   "pattern": "mattress-protector",
+   "category": "mattress_protector",
+   "fabric": "bamboo"
+  },
+  {
+   "pattern": "mattress-topper",
+   "category": "mattress_topper",
+   "fabric": "bamboo"
+  },
+  {
+   "pattern": "cloud-quilt",
+   "category": "quilt",
+   "fabric": "cloud"
+  },
+  {
+   "pattern": "(all-seasons|summer|midseason)-bamboo-quilt",
+   "category": "quilt",
+   "fabric": "bamboo_fill"
+  },
+  {
+   "pattern": "pillow",
+   "category": "pillow",
+   "fabric": "bamboo"
+  },
+  {
+   "pattern": "sleep-mask|linen-spray|linen-care",
+   "category": "sleep_accessory",
+   "fabric": ""
+  },
+  {
+   "pattern": "shipping-insurance",
+   "category": "non_product",
+   "fabric": ""
+  },
+  {
+   "pattern": "toothbrush|straws|cutlery|cotton-buds|hair-brush|floss|water-bottle",
+   "category": "eco_lifestyle",
+   "fabric": ""
+  }
+ ]
+}

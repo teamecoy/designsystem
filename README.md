@@ -27,6 +27,7 @@ Evergreen work (launches, colour drops, site, brand content, retention) and prom
 | `ads/` | **How to read an Ecoy Meta ad name, and what to do with a winner.** `parse_ad_name.py` reads all three naming styles (v2, pre-May legacy, creator `@handle`) into fields: campaign moment and whether that's a sale, promotion or evergreen; designed or creator ad; angle, format, persona, awareness stage; and the matching photo colour for `resolveImage.js`. Vocabulary in `ad-naming.json`, generated from a fresh pull of the team's naming sheet. Read [ADS.md](ads/ADS.md) first. |
 | `sales/` | **Sale identities, one folder per named sale.** Each has an `IDENTITY.md` (type, colour, logo sizes, components, phases), a scoped `sale.css`, its own fonts, demo components and the designer's reference frames. Inside a sale, its `IDENTITY.md` overrides this system. Currently: [BFCM 2026](sales/bfcm-2026/IDENTITY.md). Read [sales/README.md](sales/README.md) first. |
 | `awards/` | **Third-party proof badges (Bedbuyer award winner 2023–2025).** Use one whenever creative says "award-winning" or needs a trust signal. Colour versions for light grounds, white for dark, one per piece, never altered. Read [AWARDS.md](awards/AWARDS.md) first; demo in `components/awards.html`. |
+| `voc/` | **Voice of customer: all 5,600 Judge.me reviews, tagged.** Each review has themes (cooling, pet, style, softness, sleep better, vs cotton…), complaints, naming-sheet Persona and Angle, product, colour, survey answers, a ready-made pull quote and an ad-readiness score. Use it for ad copy, headlines and proof in the customer's own words. Read [VOC.md](voc/VOC.md) for the rules, start with [INSIGHTS.md](voc/INSIGHTS.md). |
 | `logos/` `shapes/` `fonts/` | Logo SVGs, the five pillar-shape SVGs, the font files the CSS needs. |
 | `reference/` | Rendered pages from the brand guide and the spec, for visual context. |
 | `examples/` | Ten real Klaviyo emails that performed, images localised, indexed by brand status and what to copy. See `examples/README.md`. |
@@ -61,6 +62,7 @@ Either way, never guess a filename or a colour — `naming.json` and `colour-sta
 - Never learn from a sale ad as if it were evergreen. Check an ad's `CampaignMoment` (`ads/parse_ad_name.py`) before treating it as a model.
 - Every winning ad gets the question: **how do we turn this into another 5 ads?** Winning creator ads can't be reshot, but their hooks and concepts can be iterated into statics and briefed back to creators.
 - "Award-winning" in creative gets a real badge from `awards/`, used exactly as supplied. Never draw or recreate one.
+- Customer quotes come word for word from `voc/reviews.jsonl`, attributed as first name + initial, with the review `id` kept in the handoff. Never reword or invent a review.
 - Bright Orange is an accent, never a foundation.
 - One tag category per job: urgency Burgundy, value Orange, newness Deep Green, filter neutral to green.
 - Max one on-image badge per card, max one inline tag per item.
