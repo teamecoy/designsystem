@@ -147,7 +147,7 @@ def build():
             "The spreadsheet's 'How to use' tab says Solo where every other tab and every real file says NoTalent.",
             "Files under 'NEW IMAGERY - to be renamed' do not follow this convention yet.",
             "Shopify product media uses no convention and cannot be resolved from a filename.",
-            "Orientation (Vertical/Horizontal) was added to the spreadsheet 2026-09-23, applies to new shoots "
+            "Orientation (Vertical/Horizontal, plus Square from 2026-10-08) was added to the spreadsheet 2026-09-23, applies to new shoots "
             "only. None of the 9,233 indexed library files have it yet; a batch rewrite of old filenames to "
             "add it has been discussed but not scheduled. Parsers must treat a missing orientation as normal, "
             "not invalid.",

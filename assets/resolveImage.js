@@ -28,7 +28,7 @@
  * @param {string} [query.pattern] - "Solid" | "Stripe" | "Polka"; omit for products with no pattern (quilts, pillows, protector)
  * @param {string} [query.colour] - e.g. "Dusk", or a two-colour pair like "BurntOrangexWhite"; omit for no-colourway products
  * @param {string} [query.angle] - a specific angle; omit to use the angle preference order (High45 first)
- * @param {string} [query.orientation] - "Horizontal" (landscape) | "Vertical" (portrait); prefers it, falls back to either. Only shoots from 2026-09 onward carry one
+ * @param {string} [query.orientation] - "Horizontal" (landscape) | "Vertical" (portrait) | "Square" (1:1); prefers it, falls back to either. Only shoots from 2026-09 onward carry one
  * @param {string} [query.people] - "NoTalent" | "Talent"; omit to accept either
  * @param {string} [query.source] - "Real" | "AI"; omit to prefer Real over AI
  * @param {boolean} [query.allowNotYetLive=false] - include images flagged notYetLive (see build_cdn_catalog.py)

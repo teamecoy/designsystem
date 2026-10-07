@@ -1,7 +1,7 @@
 {
  "$comment": "Files to upload to Shopify Files. Live colourways only; retired colours, legacy folders, unparseable names and 5 files pending rename are excluded. Names are unique, so each becomes a predictable CDN url. Web paths are normalised where the mirror dropped a ' (N)' suffix from a duplicate-upload folder name.",
  "shopDomain": "happy-earth-australia.myshopify.com",
- "count": 8466,
+ "count": 8476,
  "cdnPattern": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/{name}",
  "files": [
   {
@@ -88055,8 +88055,128 @@
    "orientation": "Vertical",
    "people": "NoTalent",
    "source": "Real"
+  },
+  {
+   "web": "Bamboo Fitted Sheet/Polka/Burgundy Polka/No Talent/Square/BambooFittedSheet-Polka-BurgundyPolka-CloseUp-Square-NoTalent-AI-01.webp",
+   "name": "BambooFittedSheet-Polka-BurgundyPolka-CloseUp-Square-NoTalent-AI-01.webp",
+   "master": "Bamboo Fitted Sheet/Polka/Burgundy Polka/No Talent/Square/BambooFittedSheet-Polka-BurgundyPolka-CloseUp-Square-NoTalent-AI-01.jpg",
+   "product": "BambooFittedSheet",
+   "pattern": "Polka",
+   "colour": "BurgundyPolka",
+   "angle": "CloseUp",
+   "orientation": "Square",
+   "people": "NoTalent",
+   "source": "AI"
+  },
+  {
+   "web": "Bamboo Fitted Sheet/Polka/Burgundy Polka/Talent/Square/BambooFittedSheet-Polka-BurgundyPolka-CloseUp-Square-Talent-AI-01.webp",
+   "name": "BambooFittedSheet-Polka-BurgundyPolka-CloseUp-Square-Talent-AI-01.webp",
+   "master": "Bamboo Fitted Sheet/Polka/Burgundy Polka/Talent/Square/BambooFittedSheet-Polka-BurgundyPolka-CloseUp-Square-Talent-AI-01.jpg",
+   "product": "BambooFittedSheet",
+   "pattern": "Polka",
+   "colour": "BurgundyPolka",
+   "angle": "CloseUp",
+   "orientation": "Square",
+   "people": "Talent",
+   "source": "AI"
+  },
+  {
+   "web": "Bamboo Fitted Sheet/Polka/Caramel Polka/No Talent/Square/BambooFittedSheet-Polka-CaramelPolka-CloseUp-Square-NoTalent-AI-01.webp",
+   "name": "BambooFittedSheet-Polka-CaramelPolka-CloseUp-Square-NoTalent-AI-01.webp",
+   "master": "Bamboo Fitted Sheet/Polka/Caramel Polka/No Talent/Square/BambooFittedSheet-Polka-CaramelPolka-CloseUp-Square-NoTalent-AI-01.jpg",
+   "product": "BambooFittedSheet",
+   "pattern": "Polka",
+   "colour": "CaramelPolka",
+   "angle": "CloseUp",
+   "orientation": "Square",
+   "people": "NoTalent",
+   "source": "AI"
+  },
+  {
+   "web": "Bamboo Fitted Sheet/Polka/Caramel Polka/Talent/Square/BambooFittedSheet-Polka-CaramelPolka-CloseUp-Square-Talent-AI-01.webp",
+   "name": "BambooFittedSheet-Polka-CaramelPolka-CloseUp-Square-Talent-AI-01.webp",
+   "master": "Bamboo Fitted Sheet/Polka/Caramel Polka/Talent/Square/BambooFittedSheet-Polka-CaramelPolka-CloseUp-Square-Talent-AI-01.jpg",
+   "product": "BambooFittedSheet",
+   "pattern": "Polka",
+   "colour": "CaramelPolka",
+   "angle": "CloseUp",
+   "orientation": "Square",
+   "people": "Talent",
+   "source": "AI"
+  },
+  {
+   "web": "Bamboo Fitted Sheet/Polka/Eggplant Polka/No Talent/Square/BambooFittedSheet-Polka-EggplantPolka-CloseUp-Square-NoTalent-AI-01.webp",
+   "name": "BambooFittedSheet-Polka-EggplantPolka-CloseUp-Square-NoTalent-AI-01.webp",
+   "master": "Bamboo Fitted Sheet/Polka/Eggplant Polka/No Talent/Square/BambooFittedSheet-Polka-EggplantPolka-CloseUp-Square-NoTalent-AI-01.jpg",
+   "product": "BambooFittedSheet",
+   "pattern": "Polka",
+   "colour": "EggplantPolka",
+   "angle": "CloseUp",
+   "orientation": "Square",
+   "people": "NoTalent",
+   "source": "AI"
+  },
+  {
+   "web": "Bamboo Fitted Sheet/Polka/Eggplant Polka/Talent/Square/BambooFittedSheet-Polka-EggplantPolka-CloseUp-Square-Talent-AI-01.webp",
+   "name": "BambooFittedSheet-Polka-EggplantPolka-CloseUp-Square-Talent-AI-01.webp",
+   "master": "Bamboo Fitted Sheet/Polka/Eggplant Polka/Talent/Square/BambooFittedSheet-Polka-EggplantPolka-CloseUp-Square-Talent-AI-01.jpg",
+   "product": "BambooFittedSheet",
+   "pattern": "Polka",
+   "colour": "EggplantPolka",
+   "angle": "CloseUp",
+   "orientation": "Square",
+   "people": "Talent",
+   "source": "AI"
+  },
+  {
+   "web": "Bamboo Fitted Sheet/Polka/Forest Green Polka/No Talent/Square/BambooFittedSheet-Polka-ForestGreenPolka-CloseUp-Square-NoTalent-AI-01.webp",
+   "name": "BambooFittedSheet-Polka-ForestGreenPolka-CloseUp-Square-NoTalent-AI-01.webp",
+   "master": "Bamboo Fitted Sheet/Polka/Forest Green Polka/No Talent/Square/BambooFittedSheet-Polka-ForestGreenPolka-CloseUp-Square-NoTalent-AI-01.jpg",
+   "product": "BambooFittedSheet",
+   "pattern": "Polka",
+   "colour": "ForestGreenPolka",
+   "angle": "CloseUp",
+   "orientation": "Square",
+   "people": "NoTalent",
+   "source": "AI"
+  },
+  {
+   "web": "Bamboo Fitted Sheet/Polka/Forest Green Polka/Talent/Square/BambooFittedSheet-Polka-ForestGreenPolka-CloseUp-Square-Talent-AI-01.webp",
+   "name": "BambooFittedSheet-Polka-ForestGreenPolka-CloseUp-Square-Talent-AI-01.webp",
+   "master": "Bamboo Fitted Sheet/Polka/Forest Green Polka/Talent/Square/BambooFittedSheet-Polka-ForestGreenPolka-CloseUp-Square-Talent-AI-01.jpg",
+   "product": "BambooFittedSheet",
+   "pattern": "Polka",
+   "colour": "ForestGreenPolka",
+   "angle": "CloseUp",
+   "orientation": "Square",
+   "people": "Talent",
+   "source": "AI"
+  },
+  {
+   "web": "Bamboo Fitted Sheet/Polka/Iced Chocolate Polka/No Talent/Square/BambooFittedSheet-Polka-IcedChocolatePolka-CloseUp-Square-NoTalent-AI-01.webp",
+   "name": "BambooFittedSheet-Polka-IcedChocolatePolka-CloseUp-Square-NoTalent-AI-01.webp",
+   "master": "Bamboo Fitted Sheet/Polka/Iced Chocolate Polka/No Talent/Square/BambooFittedSheet-Polka-IcedChocolatePolka-CloseUp-Square-NoTalent-AI-01.jpg",
+   "product": "BambooFittedSheet",
+   "pattern": "Polka",
+   "colour": "IcedChocolatePolka",
+   "angle": "CloseUp",
+   "orientation": "Square",
+   "people": "NoTalent",
+   "source": "AI"
+  },
+  {
+   "web": "Bamboo Fitted Sheet/Polka/Iced Chocolate Polka/Talent/Square/BambooFittedSheet-Polka-IcedChocolatePolka-CloseUp-Square-Talent-AI-01.webp",
+   "name": "BambooFittedSheet-Polka-IcedChocolatePolka-CloseUp-Square-Talent-AI-01.webp",
+   "master": "Bamboo Fitted Sheet/Polka/Iced Chocolate Polka/Talent/Square/BambooFittedSheet-Polka-IcedChocolatePolka-CloseUp-Square-Talent-AI-01.jpg",
+   "product": "BambooFittedSheet",
+   "pattern": "Polka",
+   "colour": "IcedChocolatePolka",
+   "angle": "CloseUp",
+   "orientation": "Square",
+   "people": "Talent",
+   "source": "AI"
   }
  ],
- "updated": "2026-10-06",
+ "updated": "2026-10-08",
  "written": "2026-10-06T18:05"
 }

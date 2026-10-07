@@ -12,7 +12,7 @@
     "Deepetch"
   ],
   "counts": {
-    "totalEntries": 8466,
+    "totalEntries": 8476,
     "flaggedNotYetLive": 0,
     "products": 18
   },
@@ -1169,6 +1169,98 @@
               "filename": "BambooFittedSheet-Solid-White-CloseUp-NoTalent-Real-02.webp",
               "people": "NoTalent",
               "source": "Real"
+            }
+          ]
+        }
+      },
+      "Polka": {
+        "BurgundyPolka": {
+          "CloseUp": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Polka-BurgundyPolka-CloseUp-Square-NoTalent-AI-01.webp",
+              "filename": "BambooFittedSheet-Polka-BurgundyPolka-CloseUp-Square-NoTalent-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Square"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Polka-BurgundyPolka-CloseUp-Square-Talent-AI-01.webp",
+              "filename": "BambooFittedSheet-Polka-BurgundyPolka-CloseUp-Square-Talent-AI-01.webp",
+              "people": "Talent",
+              "source": "AI",
+              "orientation": "Square"
+            }
+          ]
+        },
+        "CaramelPolka": {
+          "CloseUp": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Polka-CaramelPolka-CloseUp-Square-NoTalent-AI-01.webp",
+              "filename": "BambooFittedSheet-Polka-CaramelPolka-CloseUp-Square-NoTalent-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Square"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Polka-CaramelPolka-CloseUp-Square-Talent-AI-01.webp",
+              "filename": "BambooFittedSheet-Polka-CaramelPolka-CloseUp-Square-Talent-AI-01.webp",
+              "people": "Talent",
+              "source": "AI",
+              "orientation": "Square"
+            }
+          ]
+        },
+        "EggplantPolka": {
+          "CloseUp": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Polka-EggplantPolka-CloseUp-Square-NoTalent-AI-01.webp",
+              "filename": "BambooFittedSheet-Polka-EggplantPolka-CloseUp-Square-NoTalent-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Square"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Polka-EggplantPolka-CloseUp-Square-Talent-AI-01.webp",
+              "filename": "BambooFittedSheet-Polka-EggplantPolka-CloseUp-Square-Talent-AI-01.webp",
+              "people": "Talent",
+              "source": "AI",
+              "orientation": "Square"
+            }
+          ]
+        },
+        "ForestGreenPolka": {
+          "CloseUp": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Polka-ForestGreenPolka-CloseUp-Square-NoTalent-AI-01.webp",
+              "filename": "BambooFittedSheet-Polka-ForestGreenPolka-CloseUp-Square-NoTalent-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Square"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Polka-ForestGreenPolka-CloseUp-Square-Talent-AI-01.webp",
+              "filename": "BambooFittedSheet-Polka-ForestGreenPolka-CloseUp-Square-Talent-AI-01.webp",
+              "people": "Talent",
+              "source": "AI",
+              "orientation": "Square"
+            }
+          ]
+        },
+        "IcedChocolatePolka": {
+          "CloseUp": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Polka-IcedChocolatePolka-CloseUp-Square-NoTalent-AI-01.webp",
+              "filename": "BambooFittedSheet-Polka-IcedChocolatePolka-CloseUp-Square-NoTalent-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Square"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Polka-IcedChocolatePolka-CloseUp-Square-Talent-AI-01.webp",
+              "filename": "BambooFittedSheet-Polka-IcedChocolatePolka-CloseUp-Square-Talent-AI-01.webp",
+              "people": "Talent",
+              "source": "AI",
+              "orientation": "Square"
             }
           ]
         }

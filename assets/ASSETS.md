@@ -34,7 +34,7 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 | Pattern | `Solid`, `Stripe`, `Polka` | Omitted for quilts, pillows, protector |
 | Colour | 33 solid, 10 stripe, 5 polka | Omitted where the product has no colourway |
 | Angle | `High45`, `Low45`, `Overhead`, `Side`, `CloseUp`, `Freestyle`, `Deepetch` | |
-| Orientation | `Vertical`, `Horizontal` | **New 2026-09-23, new shoots only** — see below. Omitted on everything shot before that date; that's normal, not a mistake. |
+| Orientation | `Vertical`, `Horizontal`, `Square` | **New 2026-09-23, new shoots only** (`Square` added 2026-10-08) — see below. Omitted on everything shot before that date; that's normal, not a mistake. |
 | People | `NoTalent`, `Talent` | Whether a person is in shot |
 | Source | `Real`, `AI` | Camera photo or AI generated |
 | NN | `01`, `02`, … | Two digits, zero padded |
@@ -91,7 +91,7 @@ Three things to know. **A missing `.webp` means not generated yet, not absent**,
 
 ## The images are also on a CDN
 
-As of 2026-09-29, 8,466 of the web copies above (every eligible one) are mirrored to the Shopify Files CDN, and every filename got there unchanged — Shopify has renamed zero of them across two runs. That means a url is **derivable from the filename alone**, with no lookup table to maintain:
+As of 2026-10-08, 8,476 of the web copies above (every eligible one) are mirrored to the Shopify Files CDN, and every filename got there unchanged — Shopify has renamed zero of them across two runs. That means a url is **derivable from the filename alone**, with no lookup table to maintain:
 
 ```
 https://cdn.shopify.com/s/files/1/0498/6100/1367/files/<filename>.webp
@@ -115,7 +115,7 @@ Rebuild the catalog after any upload run:
 python3 assets/build_cdn_catalog.py
 ```
 
-Every manifest entry is live (checked by HTTP 2026-09-29). If a future run leaves gaps, list them in `KNOWN_NOT_YET_LIVE` in `build_cdn_catalog.py` so `resolveImage` skips them. Pass `orientation: "Horizontal"` or `"Vertical"` to prefer a landscape or portrait crop; only shoots from September 2026 on carry one, and older ones are returned when nothing matches. Only the 287 in `assets/library/` also exist as pixels in this repo; everything else on the CDN exists only as a url, which is enough for anything that renders in a browser or email client.
+Every manifest entry is live (checked by HTTP 2026-09-29). If a future run leaves gaps, list them in `KNOWN_NOT_YET_LIVE` in `build_cdn_catalog.py` so `resolveImage` skips them. Pass `orientation: "Horizontal"`, `"Vertical"` or `"Square"` to prefer a landscape, portrait or 1:1 crop; only shoots from September 2026 on carry one, and older ones are returned when nothing matches. Only the 287 in `assets/library/` also exist as pixels in this repo; everything else on the CDN exists only as a url, which is enough for anything that renders in a browser or email client.
 
 Use the shared drive, not My Drive. A stale `Photography` folder with old year-based subfolders still exists there and should be ignored.
 
