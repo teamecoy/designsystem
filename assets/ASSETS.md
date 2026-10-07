@@ -91,7 +91,7 @@ Three things to know. **A missing `.webp` means not generated yet, not absent**,
 
 ## The images are also on a CDN
 
-As of 2026-09-29, 7,781 of the web copies above (every eligible one) are mirrored to the Shopify Files CDN, and every filename got there unchanged — Shopify has renamed zero of them across two runs. That means a url is **derivable from the filename alone**, with no lookup table to maintain:
+As of 2026-09-29, 8,466 of the web copies above (every eligible one) are mirrored to the Shopify Files CDN, and every filename got there unchanged — Shopify has renamed zero of them across two runs. That means a url is **derivable from the filename alone**, with no lookup table to maintain:
 
 ```
 https://cdn.shopify.com/s/files/1/0498/6100/1367/files/<filename>.webp

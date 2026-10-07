@@ -14,7 +14,7 @@ A file is eligible when its name parses cleanly, it's an image the web mirror
 covers, it sits outside the excluded folders, its colour isn't retired, its
 name is unique in the library, and it isn't on HOLD below.
 """
-import json, pathlib, shutil, sys, time
+import json, pathlib, re, shutil, sys, time
 from collections import Counter
 
 ROOT = pathlib.Path(__file__).resolve().parent
@@ -31,6 +31,17 @@ EXCLUDED = N["library"]["web"]["excludedFolders"]
 HOLD = {
     # "pattern:Polka": "why it's held",   # example; Polka was held 2026-09-29 until renamed
 }
+
+
+def cloud_path(rel):
+    """The path as Google's cloud (and so Colab) sees it.
+
+    When Drive for Desktop meets two same-named folders, or a stale record of
+    one, it shows the newer as "No Talent (1)" on this Mac only. The cloud
+    folder is still "No Talent", so Colab can't find the "(1)" path. Our own
+    folders never carry a " (N)" suffix on purpose, so strip it.
+    """
+    return re.sub(r" \(\d+\)(?=/|$)", "", str(rel))
 
 
 def held(row):
@@ -55,6 +66,12 @@ def main():
                              "deletes them, only when Sam sets CONFIRM_DELETE = True.",
                  "created": time.strftime("%Y-%m-%d"), "files": [f["name"] for f in gone]}, indent=1) + "\n")
         print(f"pruned {len(gone)} entries whose web copy is gone from Drive")
+    fixed = 0
+    for f in doc["files"]:
+        if f.get("master") and cloud_path(f["master"]) != f["master"]:
+            f["master"], f["web"] = cloud_path(f["master"]), cloud_path(f["web"]); fixed += 1
+    if fixed:
+        print(f"repaired {fixed} entries whose folder had a local-only ' (N)' suffix")
     listed = {f["name"].rsplit(".", 1)[0] for f in doc["files"]}
     rows = json.loads((ROOT / "library-index.json").read_text())["files"]
     stems = Counter(pathlib.Path(r["path"]).stem for r in rows)
@@ -75,7 +92,8 @@ def main():
         if why:
             skipped[why] += 1
             continue
-        entry = {"web": str(path.with_suffix(".webp")), "name": stem + ".webp", "master": r["path"]}
+        entry = {"web": cloud_path(path.with_suffix(".webp")), "name": stem + ".webp",
+                 "master": cloud_path(r["path"])}
         entry.update({k: r[k] for k in ("product", "pattern", "colour", "angle", "orientation",
                                         "people", "source") if r.get(k)})
         added.append(entry)
