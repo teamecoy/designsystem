@@ -1,7 +1,7 @@
 {
  "$comment": "Files to upload to Shopify Files. Live colourways only; retired colours, legacy folders, unparseable names and 5 files pending rename are excluded. Names are unique, so each becomes a predictable CDN url. Web paths are normalised where the mirror dropped a ' (N)' suffix from a duplicate-upload folder name.",
  "shopDomain": "happy-earth-australia.myshopify.com",
- "count": 8476,
+ "count": 8479,
  "cdnPattern": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/{name}",
  "files": [
   {
@@ -88175,8 +88175,35 @@
    "orientation": "Square",
    "people": "Talent",
    "source": "AI"
+  },
+  {
+   "web": "Waterproof Bamboo Mattress Protector/MattressProtector-CloseUp-NoTalent-Real-01.webp",
+   "name": "MattressProtector-CloseUp-NoTalent-Real-01.webp",
+   "master": "Waterproof Bamboo Mattress Protector/MattressProtector-CloseUp-NoTalent-Real-01.jpg",
+   "product": "MattressProtector",
+   "angle": "CloseUp",
+   "people": "NoTalent",
+   "source": "Real"
+  },
+  {
+   "web": "Waterproof Bamboo Mattress Protector/MattressProtector-Freestyle-NoTalent-Real-02.webp",
+   "name": "MattressProtector-Freestyle-NoTalent-Real-02.webp",
+   "master": "Waterproof Bamboo Mattress Protector/MattressProtector-Freestyle-NoTalent-Real-02.jpg",
+   "product": "MattressProtector",
+   "angle": "Freestyle",
+   "people": "NoTalent",
+   "source": "Real"
+  },
+  {
+   "web": "Waterproof Bamboo Mattress Protector/MattressProtector-High45-NoTalent-Real-01.webp",
+   "name": "MattressProtector-High45-NoTalent-Real-01.webp",
+   "master": "Waterproof Bamboo Mattress Protector/MattressProtector-High45-NoTalent-Real-01.jpg",
+   "product": "MattressProtector",
+   "angle": "High45",
+   "people": "NoTalent",
+   "source": "Real"
   }
  ],
- "updated": "2026-10-08",
+ "updated": "2026-10-12",
  "written": "2026-10-06T18:05"
 }

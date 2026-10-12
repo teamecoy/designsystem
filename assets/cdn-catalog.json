@@ -12,7 +12,7 @@
     "Deepetch"
   ],
   "counts": {
-    "totalEntries": 8476,
+    "totalEntries": 8479,
     "flaggedNotYetLive": 0,
     "products": 18
   },
@@ -54760,9 +54760,31 @@
               "source": "Real"
             },
             {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/MattressProtector-Freestyle-NoTalent-Real-02.webp",
+              "filename": "MattressProtector-Freestyle-NoTalent-Real-02.webp",
+              "people": "NoTalent",
+              "source": "Real"
+            },
+            {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/MattressProtector-Freestyle-Talent-Real-01.webp",
               "filename": "MattressProtector-Freestyle-Talent-Real-01.webp",
               "people": "Talent",
+              "source": "Real"
+            }
+          ],
+          "CloseUp": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/MattressProtector-CloseUp-NoTalent-Real-01.webp",
+              "filename": "MattressProtector-CloseUp-NoTalent-Real-01.webp",
+              "people": "NoTalent",
+              "source": "Real"
+            }
+          ],
+          "High45": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/MattressProtector-High45-NoTalent-Real-01.webp",
+              "filename": "MattressProtector-High45-NoTalent-Real-01.webp",
+              "people": "NoTalent",
               "source": "Real"
             }
           ]
