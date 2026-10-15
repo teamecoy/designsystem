@@ -1,5 +1,7 @@
 # Changelog
 
+- 2026-10-15 — Photography README: CDN routes that work without the repo (Shopify Files query, public CDN url); not-live-on-site colours are still on the CDN; Drive is last resort; no third-party brands; ad counts must match photo.
+
 ## v0.8 · 2026-10-05
 
 **Voice of customer**
