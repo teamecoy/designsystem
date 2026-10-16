@@ -10,7 +10,7 @@
   white-space: nowrap; text-decoration: none; border: 0;
 }
 
-/* On-image badge: sits on product imagery and hero tiles. Highest-contrast job. 8px corners: reads as a label, not a button. */
+/* On-image badge: sits on product imagery and hero tiles. Highest-contrast job. 7px corners: reads as a label, not a button. */
 .badge { font-size: var(--tag-md-size); font-weight: var(--tag-md-weight); padding: var(--tag-badge-padding); border-radius: var(--radius-badge); }
 
 /* Inline tag: next to nav links, product names and prices. Smallest of the three. Full pill. Max one per item. */

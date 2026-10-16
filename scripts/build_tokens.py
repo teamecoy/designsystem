@@ -61,16 +61,16 @@ TYPE_SCALE = {  # token: (desktop px, mobile px, weight, family key, use)
     "price": (16, 15, 600, "text",    "Prices"),
     "small": (13, 13, 400, "text",    "Meta, captions, strikethrough prices"),
 }
-TAG_SCALE = {  # fixed across breakpoints (spec §04)
+TAG_SCALE = {  # fixed across breakpoints (spec §04). md and sm reduced ~12% from the spec (Sam, 2026-10-16)
     "lg": (14, 500, "Filter pills"),
-    "md": (13, 600, "On-image badges"),
-    "sm": (12, 600, "Inline tags (nav, price)"),
+    "md": (11.5, 600, "On-image badges"),
+    "sm": (10.5, 600, "Inline tags (nav, price)"),
 }
 WEIGHTS = {"regular": 400, "medium": 500, "semibold": 600, "bold": 700}
 
 # ---------------------------------------------------------------- shape + spacing (spec §02, §05; guide visuals)
-RADIUS = {"badge": "8px", "pill": "999px", "card": "24px", "card-sm": "16px", "button": "999px"}
-TAG_PADDING = {"badge": "6px 14px", "inline": "4px 10px", "filter": "10px 20px"}
+RADIUS = {"badge": "7px", "pill": "999px", "card": "24px", "card-sm": "16px", "button": "999px"}
+TAG_PADDING = {"badge": "5px 12px", "inline": "3.5px 9px", "filter": "10px 20px"}
 BUTTON = {"padding": "14px 28px", "padding-sm": "10px 20px", "min-height": "44px"}
 SPACE = {"1": "4px", "2": "8px", "3": "12px", "4": "16px", "5": "24px", "6": "32px", "7": "48px", "8": "64px", "9": "96px"}
 

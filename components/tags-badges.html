@@ -44,14 +44,14 @@
   <section class="ds-section" style="display:grid; gap: var(--space-4);">
     <h2 style="margin:0">02 · Anatomy per placement</h2>
     <div class="spec">
-      <div><h3>On-image badge</h3><p class="ds-note">Sits on product imagery and hero tiles. Highest-contrast job. 8px corners so it reads as a label on the photo, not a button.</p>
+      <div><h3>On-image badge</h3><p class="ds-note">Sits on product imagery and hero tiles. Highest-contrast job. 7px corners so it reads as a label on the photo, not a button.</p>
         <div class="card-demo"><div class="media ds-photo"><span class="badge urgency">Last chance</span></div></div></div>
-      <dl><dt>Token</dt><dd class="ds-code">.badge · tag/md</dd><dt>Font</dt><dd>13px Semi Bold</dd><dt>Padding</dt><dd>14px x · 6px y</dd><dt>Radius</dt><dd>8px</dd><dt>Case</dt><dd>Sentence case</dd><dt>Min contrast</dt><dd>4.5:1 on any image</dd><dt>Limit</dt><dd>One badge per card</dd></dl>
+      <dl><dt>Token</dt><dd class="ds-code">.badge · tag/md</dd><dt>Font</dt><dd>11.5px Semi Bold</dd><dt>Padding</dt><dd>12px x · 5px y</dd><dt>Radius</dt><dd>7px</dd><dt>Case</dt><dd>Sentence case</dd><dt>Min contrast</dt><dd>4.5:1 on any image</dd><dt>Limit</dt><dd>One badge per card</dd></dl>
     </div>
     <div class="spec">
       <div><h3>Inline tag</h3><p class="ds-note">Sits next to nav links, product names and prices. Smallest of the three. Full pill. Sentence case (nav currently uses caps; pick one rule).</p>
         <div class="card-demo"><p class="text-h3" style="margin:0 0 4px">Bamboo Sheet Set</p><div class="ds-row" style="gap: var(--space-2)"><span class="text-price">$190.00</span><span class="text-price-was">$240.00</span><span class="tag value">Best seller</span></div></div></div>
-      <dl><dt>Token</dt><dd class="ds-code">.tag · tag/sm</dd><dt>Font</dt><dd>12px Semi Bold</dd><dt>Padding</dt><dd>10px x · 4px y</dd><dt>Radius</dt><dd>Full pill</dd><dt>Case</dt><dd>Sentence case</dd><dt>Limit</dt><dd>One tag per item</dd></dl>
+      <dl><dt>Token</dt><dd class="ds-code">.tag · tag/sm</dd><dt>Font</dt><dd>10.5px Semi Bold</dd><dt>Padding</dt><dd>9px x · 3.5px y</dd><dt>Radius</dt><dd>Full pill</dd><dt>Case</dt><dd>Sentence case</dd><dt>Limit</dt><dd>One tag per item</dd></dl>
     </div>
     <div class="spec">
       <div><h3>Filter pill</h3><p class="ds-note">Interactive. Neutral at rest, green fill when active. Never carries urgency or value messaging. Hover and focus below.</p>
@@ -62,7 +62,7 @@
 
   <section class="ds-section">
     <h2>05 · Readability</h2>
-    <p class="ds-note">Functional text on chips targets 4.5:1. White on Bright Orange is the one accepted brand exception (badges only, labels short, minimum 12px Semi Bold, never for functional or body text). Ratios below are computed live from the tokens.</p>
+    <p class="ds-note">Functional text on chips targets 4.5:1. White on Bright Orange is the one accepted brand exception (badges only, labels short, minimum 10.5px Semi Bold, never for functional or body text). Ratios below are computed live from the tokens.</p>
     <table class="ds-table" id="contrast">
       <tr><th>Example</th><th>Pairing</th><th>Ratio</th><th>Verdict</th><th>Use</th></tr>
       <tr data-bg="--color-burgundy" data-fg="--color-white"><td><span class="badge" style="background:var(--color-burgundy);color:#fff">Aa tag</span></td><td>Burgundy + white</td><td class="r"></td><td class="v"></td><td>Default for urgency badges</td></tr>

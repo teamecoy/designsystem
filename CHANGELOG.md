@@ -1,5 +1,6 @@
 # Changelog
 
+- 2026-10-16 — Tags: on-image badges and inline tags are about 12% smaller (Sam, after the nav review). `tag/md` 13px → 11.5px, badge padding 6×14 → 5×12, badge radius 8px → 7px. `tag/sm` 12px → 10.5px, inline padding 4×10 → 3.5×9. Filter pills unchanged. The minimum size for white-on-orange is now 10.5px. Changed in `scripts/build_tokens.py`; tokens regenerated; TAGS-AND-CHIPS.md and the tags-badges demo updated.
 - 2026-10-15 — Photography README: CDN routes that work without the repo (Shopify Files query, public CDN url); not-live-on-site colours are still on the CDN; Drive is last resort; no third-party brands; ad counts must match photo.
 
 ## v0.8 · 2026-10-05

@@ -89,18 +89,18 @@
   /* Type: tag scale, fixed across breakpoints (spec §04) */
   --tag-lg-size: 14px;
   --tag-lg-weight: 500;
-  --tag-md-size: 13px;
+  --tag-md-size: 11.5px;
   --tag-md-weight: 600;
-  --tag-sm-size: 12px;
+  --tag-sm-size: 10.5px;
   --tag-sm-weight: 600;
   /* Shape (spec §02, §05) */
-  --radius-badge: 8px;
+  --radius-badge: 7px;
   --radius-pill: 999px;
   --radius-card: 24px;
   --radius-card-sm: 16px;
   --radius-button: 999px;
-  --tag-badge-padding: 6px 14px;
-  --tag-inline-padding: 4px 10px;
+  --tag-badge-padding: 5px 12px;
+  --tag-inline-padding: 3.5px 9px;
   --tag-filter-padding: 10px 20px;
   --button-padding: 14px 28px;
   --button-padding-sm: 10px 20px;
