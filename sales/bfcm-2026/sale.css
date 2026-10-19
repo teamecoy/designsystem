@@ -1,7 +1,8 @@
 /* BFCM 2026 sale identity. Scoped to .bf26 so none of it leaks into evergreen.
    Read IDENTITY.md first. Every size is in container units (cqw) of the frame,
    so one component works on a 9:16 story, a square, an email and a PDP banner.
-   Colour values were sampled from Nick's Figma renders on 2026-09-28; see IDENTITY.md §3. */
+   Colour values were sampled from Nick's Figma renders on 2026-09-28 and updated from the
+   PGS phase pages on 2026-10-19 (LED colour follows the phase); see IDENTITY.md §3. */
 
 @font-face { font-family: 'LED Display St'; font-weight: 400; font-style: normal; font-display: block; src: url('fonts/LedDisplaySt.ttf') format('truetype'); }
 @font-face { font-family: 'Clash Display'; font-weight: 500; font-style: normal; font-display: swap; src: url('fonts/ClashDisplay-Medium.woff2') format('woff2'); }
@@ -14,15 +15,21 @@
   --bf26-orange: #FF6301;         /* = brand Bright Orange; a ground in this sale, not just an accent */
   /* Type colours */
   --bf26-led-white: #FFFFFF;      /* headline, 100% */
-  --bf26-led-orange: #FF6301;     /* Cyber Monday headline, offer lines, stamps */
-  --bf26-led-green: #A3C2A7;      /* = brand Light Green; ticker value messages */
+  --bf26-led-orange: #FF6301;     /* End phase LED on dark grounds (FOMO colour TBA, orange holds until confirmed) */
+  --bf26-led-green: #77D686;      /* Live phase LED (Sam, 2026-10-19; sampled exactly in the PGS frames) */
+  --bf26-led-ink: #0A0A0B;        /* End phase LED on an orange ground */
   --bf26-secondary: rgba(255,255,255,.64);  /* "SALE", lockup wordmark, countdown digits: renders ≈ #A4A4A7 */
   --bf26-muted: rgba(255,255,255,.45);      /* struck-out old offer, "DON'T MISS OUT" footer: ≈ #787878 */
   --bf26-ticker-opacity: .8;      /* tickers sit back so the headline wins */
   /* Glow */
   --bf26-glow-white: 0 0 .05em rgba(255,255,255,.7), 0 0 .22em rgba(255,255,255,.28);
   --bf26-glow-orange: 0 0 .05em rgba(255,99,1,.8), 0 0 .22em rgba(255,99,1,.35);
-  --bf26-glow-green: 0 0 .06em rgba(163,194,167,.6);
+  --bf26-glow-green: 0 0 .05em rgba(119,214,134,.75), 0 0 .22em rgba(119,214,134,.3);
+  /* Phase accent: the LED colour of headline, accent offer, value tickers and stamps.
+     Defaults to Hype (white); set the phase with .bf26--hype / --live / --end on the frame. */
+  --bf26-accent: var(--bf26-led-white);
+  --bf26-accent-glow: var(--bf26-glow-white);
+  --bf26-label: var(--bf26-led-white);     /* ticker phase labels: COMING SOON, SALE LIVE */
   /* Type */
   --bf26-font-led: 'LED Display St', 'Courier New', monospace;
   --bf26-font-sub: 'Clash Display', 'Satoshi', Inter, system-ui, sans-serif;
@@ -45,6 +52,16 @@
 .bf26--green  { background: var(--bf26-deep-green); }
 .bf26--orange { background: var(--bf26-orange); }
 
+/* ---------- Phase colour (2026-10-19) ----------
+   One rule: the LED accent tells you which phase you are in.
+   Hype = white. Live (Day 1, main sale, win-back, GWP 2) = green. End (27 to 30 Nov) = FOMO colour, TBA;
+   Bright Orange holds until it is confirmed, so only these lines change when it lands. */
+.bf26--hype { --bf26-accent: var(--bf26-led-white); --bf26-accent-glow: var(--bf26-glow-white); --bf26-label: var(--bf26-led-white); }
+.bf26--live { --bf26-accent: var(--bf26-led-green); --bf26-accent-glow: var(--bf26-glow-green); --bf26-label: var(--bf26-led-white); }
+.bf26--end  { --bf26-accent: var(--bf26-led-orange); --bf26-accent-glow: var(--bf26-glow-orange); --bf26-label: var(--bf26-led-orange); }
+/* End on an orange ground: LED turns ink, the offer stays white. */
+.bf26--end.bf26--orange { --bf26-accent: var(--bf26-led-ink); --bf26-accent-glow: none; --bf26-label: var(--bf26-led-ink); }
+
 /* Full-bleed photo ground (crumpled sheets), darkened so LED type reads. */
 .bf26 .bf26-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.55) saturate(.9); }
 /* Deep-etched product stack, centred behind the lockup */
@@ -53,7 +70,11 @@
 /* ---------- Lockup: wordmark / LED headline / SALE ---------- */
 .bf26 .bf26-lockup { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.2cqw; }
 .bf26 .bf26-lockup__logo { width: 10cqw; opacity: .64; }                /* ≈ 13.5% of headline width */
-.bf26 .bf26-headline { font-family: var(--bf26-font-led); font-weight: 400; font-size: 8.4cqw; line-height: 1; letter-spacing: 0; text-transform: uppercase; color: var(--bf26-led-white); text-shadow: var(--bf26-glow-white); margin: 0; }
+.bf26 .bf26-headline { font-family: var(--bf26-font-led); font-weight: 400; font-size: 8.4cqw; line-height: 1; letter-spacing: 0; text-transform: uppercase; color: var(--bf26-accent); text-shadow: var(--bf26-accent-glow); margin: 0; }
+/* When the offer is the hero (most statics), BLACK FRIDAY steps back to a quiet silver line. */
+.bf26 .bf26-headline--quiet { color: var(--bf26-secondary); text-shadow: var(--bf26-glow-white); font-size: 6cqw; }
+.bf26--orange .bf26-headline--quiet { color: rgba(10,10,11,.7); text-shadow: none; }
+.bf26 .bf26-headline--white  { color: var(--bf26-led-white); text-shadow: var(--bf26-glow-white); }
 .bf26 .bf26-headline--orange { color: var(--bf26-led-orange); text-shadow: var(--bf26-glow-orange); }
 .bf26 .bf26-headline--green  { color: var(--bf26-led-green); text-shadow: var(--bf26-glow-green); }
 .bf26 .bf26-sub { font-family: var(--bf26-font-sub); font-weight: 600; font-size: 3.7cqw; line-height: 1.1; text-transform: uppercase; letter-spacing: .01em; color: var(--bf26-secondary); margin: 0; }
@@ -77,12 +98,19 @@
 .bf26 .bf26-ticker--bottom { position: absolute; bottom: 0; left: 0; right: 0; }
 .bf26 .bf26-ticker--small { font-size: 3.2cqw; opacity: 1; }   /* the pair of strips that sandwich the headline */
 .bf26 .bf26-ticker__track { display: inline-flex; gap: 1em; padding-right: 1em; margin-left: -3.2em; }  /* starts mid-word, like Nick's */
-.bf26 .bf26-ticker__item--value   { color: var(--bf26-led-green);  text-shadow: var(--bf26-glow-green); }
-.bf26 .bf26-ticker__item--urgency { color: var(--bf26-led-orange); text-shadow: var(--bf26-glow-orange); }
+/* Value messages (UP TO 54% OFF) take the phase accent; phase labels (SALE LIVE, COMING SOON, LAST CHANCE) take --bf26-label. */
+.bf26 .bf26-ticker__item--value   { color: var(--bf26-accent); text-shadow: var(--bf26-accent-glow); }
+.bf26 .bf26-ticker__item--urgency { color: var(--bf26-label); }
 .bf26 .bf26-ticker__item--neutral { color: #E0E0E0; }
-.bf26--orange .bf26-ticker { opacity: .9; }
-.bf26--orange .bf26-ticker__item--value,
-.bf26--orange .bf26-ticker__item--urgency { color: #FFF3EC; text-shadow: none; }
+.bf26--orange .bf26-ticker { opacity: 1; }
+.bf26--orange:not(.bf26--end) .bf26-ticker__item--value,
+.bf26--orange:not(.bf26--end) .bf26-ticker__item--urgency { color: #FFF3EC; text-shadow: none; }
+/* Frame ticker: a ticker runs round all four edges and the content sits in rounded panels (hype and ending statics). */
+.bf26 .bf26-ticker--side { position: absolute; top: 0; bottom: 0; writing-mode: vertical-rl; font-size: 3cqw; padding: 0 1cqw; opacity: 1; }
+.bf26 .bf26-ticker--side .bf26-ticker__track { margin-left: 0; margin-top: -3.2em; padding-right: 0; padding-bottom: 1em; }
+.bf26 .bf26-ticker--left  { left: 0; transform: rotate(180deg); }
+.bf26 .bf26-ticker--right { right: 0; }
+.bf26 .bf26-panel { position: absolute; overflow: hidden; border-radius: 3cqw; }
 /* Moving version for web, email GIF and video. An LED sign scrolls at constant speed, so linear is right here. */
 .bf26 .bf26-ticker--live .bf26-ticker__track { animation: bf26-scroll 28s linear infinite; }
 @keyframes bf26-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -90,21 +118,31 @@
 
 /* ---------- Offer escalation: ending phase only (Fri 27 Nov on), 54% → 60% ----------
    Old offer small and struck through above, new offer big below. House pattern from past sales. */
-.bf26 .bf26-offer { font-family: var(--bf26-font-led); font-size: 8.4cqw; line-height: 1.05; color: var(--bf26-led-orange); text-shadow: var(--bf26-glow-orange); text-align: center; margin: 0; }
-.bf26 .bf26-offer__was { display: block; width: fit-content; margin: 0 auto .25em; font-size: .45em; color: var(--bf26-muted); text-shadow: none; text-decoration: line-through; text-decoration-color: var(--bf26-orange); text-decoration-thickness: .12em; }
+.bf26 .bf26-offer { font-family: var(--bf26-font-led); font-size: 8.4cqw; line-height: 1.05; color: var(--bf26-led-white); text-shadow: var(--bf26-glow-white); text-align: center; margin: 0; }
+/* The offer is white in every phase; use --accent for the phase-coloured line (e.g. green "UP TO 54% OFF" under "EVERY COLOUR"). */
+.bf26 .bf26-offer--accent { color: var(--bf26-accent); text-shadow: var(--bf26-accent-glow); }
+.bf26--orange .bf26-offer__was { color: #fff; }
+.bf26 .bf26-offer__was { display: block; width: fit-content; margin: 0 auto .25em; font-size: .45em; color: var(--bf26-muted); text-shadow: none; text-decoration: line-through; text-decoration-color: currentColor; text-decoration-thickness: .12em; }
 .bf26 .bf26-footer-led { font-family: var(--bf26-font-led); font-size: 3.4cqw; color: var(--bf26-muted); }
 
 /* ---------- Circular callout stamp ---------- */
 /* Live SVG text on a circle, so it can say anything: LOW STOCK, ENDING SOON, SELLING FAST, LAST CHANCE. */
 .bf26 .bf26-stamp { position: absolute; z-index: 4; width: 34cqw; aspect-ratio: 1; pointer-events: none; }
-.bf26 .bf26-stamp text { font-family: var(--bf26-font-led); font-size: 25px; fill: var(--bf26-led-orange); }
+.bf26 .bf26-stamp text { font-family: var(--bf26-font-led); font-size: 25px; fill: var(--bf26-accent); }
 .bf26 .bf26-stamp--white text { fill: #fff; }
 .bf26 .bf26-stamp--spin svg { animation: bf26-spin 18s linear infinite; }
 @keyframes bf26-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .bf26 .bf26-stamp--spin svg { animation: none; } }
 
 /* ---------- Supporting pieces ---------- */
+/* Starburst sticker (FREE GIFTS, +10% DAY 1, feature callouts). Black, white or Live green; Clash caps inside. */
+.bf26 .bf26-burst { position: absolute; z-index: 4; width: 16cqw; aspect-ratio: 1; display: grid; place-items: center; text-align: center; font-family: var(--bf26-font-sub); font-weight: 600; font-size: 2.6cqw; line-height: 1; text-transform: uppercase; background: var(--bf26-led-ink); color: #fff; transform: rotate(-12deg);
+  clip-path: polygon(50.0% 0.0%, 59.3% 9.1%, 71.7% 5.0%, 76.2% 17.2%, 89.1% 18.8%, 87.8% 31.8%, 98.7% 38.9%, 92.0% 50.0%, 98.7% 61.1%, 87.8% 68.2%, 89.1% 81.2%, 76.2% 82.8%, 71.7% 95.0%, 59.3% 90.9%, 50.0% 100.0%, 40.7% 90.9%, 28.3% 95.0%, 23.8% 82.8%, 10.9% 81.2%, 12.2% 68.2%, 1.3% 61.1%, 8.0% 50.0%, 1.3% 38.9%, 12.2% 31.8%, 10.9% 18.8%, 23.8% 17.2%, 28.3% 5.0%, 40.7% 9.1%); }
+.bf26 .bf26-burst--white { background: #fff; color: var(--bf26-led-ink); }
+.bf26 .bf26-burst--green { background: var(--bf26-led-green); color: var(--bf26-led-ink); }
 .bf26 .bf26-cta { display: inline-block; font-family: var(--bf26-font-sub); font-weight: 600; font-size: 2.6cqw; text-transform: uppercase; color: var(--bf26-deep-green); background: #fff; border-radius: 999px; padding: 1.3cqw 3.6cqw; text-decoration: none; }
+/* Statics set the pill in LED ("TAP TO REVEAL CODE"); ink text on white. */
+.bf26 .bf26-cta--led { font-family: var(--bf26-font-led); font-weight: 400; color: var(--bf26-led-ink); }
 .bf26 .bf26-proof { text-align: center; font-family: var(--bf26-font-sub); font-weight: 500; font-size: 4.2cqw; line-height: 1.15; text-transform: uppercase; color: #fff; }
 .bf26 .bf26-proof__stars { display: block; font-size: .75em; letter-spacing: .15em; margin-bottom: .6em; }
 .bf26 .bf26-countdown { display: flex; justify-content: center; gap: 3cqw; }
