@@ -26,7 +26,7 @@ Discounts are tiered by product grade (A, B, C, Sale Bait), from 15% to 54% (60%
 
 The 60% step is marked confirmed in the Notion brief. Sam described it on 2026-09-28 as available "if we need to push", so check with James before briefing ending-phase creative.
 
-**Phase colour:** Hype creative is white LED, Live (5 to 26 Nov) is green, and Ending (27 to 30 Nov) is the FOMO colour, still TBA. See IDENTITY.md §3.1.
+**Phase colour:** Hype creative is white LED on black fabric, Live (5 to 26 Nov) is green with colourways, and Ending (27 to 30 Nov) is orange `#FF6301` (confirmed 20 Oct), back on black fabric. Badges follow the phase too. See IDENTITY.md §3.1 and §3.3.
 
 ## Gift with purchase (tiers stack)
 

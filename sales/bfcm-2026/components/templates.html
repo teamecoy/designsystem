@@ -16,6 +16,7 @@
   .story { width: 270px; } .square { width: 360px; } .pdp { width: min(100%, 680px); } .email { width: min(100%, 400px); } .hero { width: 100%; }
   .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4cqw; z-index: 2; }
   .label { font-size: 12px; color: #8a8a8a; margin-top: 6px; }
+  .story + .label { max-width: 270px; } .square + .label { max-width: 360px; }
 </style>
 </head>
 <body>
@@ -24,14 +25,14 @@
   <p class="note">Built from Nick's Figma (file xt3zyQMwBYDSJ5WofvTwJJ, page 0:1) and the PGS phase pages (file NEP7LWbP6wf89uKLcqKWxO, 19 Oct) with live text in the real fonts, so every headline, ticker and stamp can be rewritten. Photos come from the Ecoy library, not Nick's placeholders. Rules are in <code>IDENTITY.md</code>; Nick's originals are in <code>reference/</code>.</p>
 
   <h2>Phase colour: the one rule</h2>
-  <p class="note">Put one phase class on every frame: <code>.bf26--hype</code> (LED white), <code>.bf26--live</code> (LED green #77D686; Day 1, main sale, win-back, GWP 2) or <code>.bf26--end</code> (FOMO colour, <b>TBA</b>; Bright Orange holds). The class recolours the headline, the accent offer line, the value tickers and the stamps. Offers stay white. From the PGS phase pages and Nick's draft statics (19 Oct); the statics are work in progress and get a resync.</p>
+  <p class="note">Put one phase class on every frame: <code>.bf26--hype</code> (LED white), <code>.bf26--live</code> (LED green #77D686; Day 1, main sale, win-back, GWP 2) or <code>.bf26--end</code> (LED orange #FF6301, back on black fabric). The class recolours the headline, the accent offer line, the value tickers, the stamps and the badges. Offers stay white. From the PGS phase system (Figma 2005:2) and Nick's draft statics, which are work in progress and get a resync.</p>
 
   <h2>9:16 stories · Black Friday</h2>
   <p class="note">Hype → Day 1 → main sale → ending. In statics the offer is the hero and BLACK FRIDAY steps back to a quiet silver line; on web heroes the lockup leads in the phase colour.</p>
   <div class="row">
     <div>
       <div class="bf26 bf26--story bf26--hype story">
-        <img class="bf26-photo" style="inset:auto;top:6cqw;left:6cqw;width:calc(100% - 12cqw);height:calc(100% - 12cqw);border-radius:3cqw;filter:brightness(.7)" src="../../../assets/library/fabric-detail/BambooFlatSheet-Solid-Ocean-CloseUp-NoTalent-Real-01.webp" alt="">
+        <img class="bf26-photo" style="inset:auto;top:6cqw;left:6cqw;width:calc(100% - 12cqw);height:calc(100% - 12cqw);border-radius:3cqw;filter:brightness(.7)" src="../../../assets/library/fabric-detail/BambooFlatSheet-Solid-Black-CloseUp-NoTalent-Real-01.webp" alt="">
         <div class="bf26-ticker bf26-ticker--top" style="font-size:3cqw;padding:1cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span></span></div>
         <div class="bf26-ticker bf26-ticker--bottom" style="font-size:3cqw;padding:1cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span></span></div>
         <div class="bf26-ticker bf26-ticker--side bf26-ticker--left"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span></span></div>
@@ -39,7 +40,7 @@
         <div class="center" style="gap:3cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet">Black Friday</p></div>
           <p class="bf26-offer" style="font-size:9cqw">An extra<br>10% off<br>launch day</p>
           <a class="bf26-cta bf26-cta--led" href="#">Tap to get your code</a></div>
-      </div><div class="label">Hype (2–4 Nov) · white LED, frame ticker. Leads to the hidden hype page; no code on the ad</div>
+      </div><div class="label">Hype (2–4 Nov) · white LED, black fabric only, frame ticker. Leads to the hidden hype page; no code on the ad</div>
     </div>
     <div>
       <div class="bf26 bf26--story bf26--live story">
@@ -49,7 +50,7 @@
           <p class="bf26-offer" style="font-size:17cqw;line-height:.95">54%<br>off</p>
           <p class="bf26-sub bf26-sub--white" style="font-size:3.6cqw;text-transform:none;font-weight:500">+ extra 10% off, Day 1 only</p>
           <a class="bf26-cta bf26-cta--led" href="#" style="margin-top:3cqw">Shop the sale</a></div>
-        <div class="bf26-burst bf26-burst--green" style="top:42cqh;right:8cqw">Free<br>gifts</div>
+        <div class="bf26-burst" style="top:42cqh;right:8cqw">Free<br>gifts</div>
         <div class="bf26-ticker bf26-ticker--bottom" style="font-size:3.4cqw"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">DAY 1 ONLY</span><span class="bf26-ticker__item--value">EXTRA 10% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div>
       </div><div class="label">Launch · Day 1 (Thu 5 Nov) · green LED. No code in public creative</div>
     </div>
@@ -81,7 +82,7 @@
         <div class="bf26-ticker bf26-ticker--bottom" style="font-size:3cqw;padding:1cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span></span></div>
         <div class="bf26-ticker bf26-ticker--side bf26-ticker--left"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span></span></div>
         <div class="bf26-ticker bf26-ticker--side bf26-ticker--right"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span></span></div>
-      </div><div class="label">Ending (27–29 Nov) · orange frame, ink LED ticker. FOMO colour TBA</div>
+      </div><div class="label">Ending alternative for paid statics · orange frame, ink LED ticker</div>
     </div>
     <div>
       <div class="bf26 bf26--story bf26--end bf26--orange story">
@@ -91,27 +92,35 @@
           <p class="bf26-offer" style="font-size:15cqw;margin-top:4cqw"><span class="bf26-offer__was">Up to 54%</span>60% off</p></div>
         <div class="bf26-burst" style="bottom:8cqh;left:10cqw;width:20cqw">Cooling for<br>hot sleepers</div>
         <div class="bf26-burst bf26-burst--white" style="bottom:12cqh;right:10cqw;width:18cqw">Silky<br>soft</div>
-      </div><div class="label">Ending · orange ground: ink LED headline, white offer</div>
+      </div><div class="label">Ending alternative · orange ground: ink LED, white offer, ink and white badges</div>
     </div>
     <div>
       <div class="bf26 bf26--story bf26--end story">
         <img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooFlatSheet-Solid-Charcoal-CloseUp-NoTalent-Real-01.webp" alt="">
         <div class="center"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet">Black Friday</p></div><p class="bf26-headline" style="font-size:16cqw;margin-top:4cqw">Final<br>hours</p></div>
         <div class="bf26-footer-led" style="position:absolute;bottom:12cqh;left:0;right:0;text-align:center;z-index:2">DON'T MISS OUT</div>
-      </div><div class="label">Ending · dark ground: LED in the FOMO colour (orange until confirmed)</div>
+      </div><div class="label">Ending default · black fabric, orange LED</div>
     </div>
   </div>
 
   <h2>9:16 stories · Cyber Monday (Mon 30 Nov, final day)</h2>
-  <p class="note">Still the End phase: same FOMO colour rules, Cyber Monday headline.</p>
+  <p class="note">Still the End phase. The default is PGS's: CYBER MONDAY in orange LED on black fabric, with a white Clash offer line underneath. The orange ground is the paid-statics alternative.</p>
   <div class="row">
+    <div>
+      <div class="bf26 bf26--story bf26--end story">
+        <img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooFlatSheet-Solid-Black-CloseUp-NoTalent-Real-01.webp" alt="">
+        <div class="bf26-ticker bf26-ticker--top"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span></span></div>
+        <div class="center" style="gap:3cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline" style="font-size:13cqw">Cyber<br>Monday</p></div><p class="bf26-sub bf26-sub--white" style="font-size:5.6cqw">Up to 60% off<br>storewide</p></div>
+        <div class="bf26-ticker bf26-ticker--bottom"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span></span></div>
+      </div><div class="label">Default · black fabric, orange LED, white Clash offer line (PGS 2005:2)</div>
+    </div>
     <div>
       <div class="bf26 bf26--story bf26--end bf26--orange story">
         <div class="bf26-ticker bf26-ticker--top"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">ENDS TONIGHT</span><span class="bf26-ticker__item--value">UP TO 60% OFF</span><span class="bf26-ticker__item--urgency">ENDS TONIGHT</span></span></div>
         <img class="bf26-stack" src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Merlot-Deepetch-NoTalent-AI-01.webp" alt="Merlot bamboo sheet set, folded stack">
         <div class="center"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--white">Cyber Monday</p><p class="bf26-sub bf26-sub--white">Sale</p></div></div>
         <div class="bf26-ticker bf26-ticker--bottom"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">ENDS TONIGHT</span><span class="bf26-ticker__item--value">UP TO 60% OFF</span><span class="bf26-ticker__item--urgency">ENDS TONIGHT</span></span></div>
-      </div><div class="label">Orange ground · ink LED tickers; headline white where it crosses the stack</div>
+      </div><div class="label">Alternative · orange ground, ink LED tickers; headline white where it crosses the stack</div>
     </div>
     <div>
       <div class="bf26 bf26--story bf26--end story">
@@ -123,6 +132,69 @@
     </div>
   </div>
 
+  <h2>9:16 stories · more formats from Nick and PGS</h2>
+  <p class="note">The rest of Nick's draft statics (Static Ads, Figma 2016:1141) and PGS's phase examples (2005:2), rebuilt with live text and library photos. Copy is Nick's except where marked; the statics are drafts and get a resync.</p>
+  <div class="row">
+    <div>
+      <div class="bf26 bf26--story bf26--live story">
+        <img class="bf26-photo" src="../../../assets/library/talent/BambooSheetSet-Stripe-MatchaForestStripe-Freestyle-Talent-Real-01.webp" alt="">
+        <div style="position:absolute;top:7cqh;left:0;right:0;z-index:2"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet">Black Friday</p></div>
+          <p class="bf26-offer" style="font-size:8.4cqw;line-height:1.1;margin-top:3cqw">Hot sleepers<br><span style="color:var(--bf26-accent);text-shadow:var(--bf26-accent-glow)">won't shut up</span><br>about these</p></div>
+        <div style="position:absolute;left:5cqw;right:5cqw;top:45cqh;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:3cqw"><div class="bf26-review" style="transform:rotate(-3deg)"><div class="bf26-review__stars">★★★★★</div><p class="bf26-review__title">A good nights sleep</p><p class="bf26-review__quote">“I also no longer get night sweats.”</p><p class="bf26-review__name">Sarah W.</p></div><div class="bf26-review" style="transform:rotate(2.5deg)"><div class="bf26-review__stars">★★★★★</div><p class="bf26-review__title">Best night sleep ever!!!</p><p class="bf26-review__quote">“Nothing beats getting into a nice cool bed, especially one that stays cool.”</p><p class="bf26-review__name">Shona</p></div><div class="bf26-review" style="transform:rotate(2deg)"><div class="bf26-review__stars">★★★★★</div><p class="bf26-review__title">Best sheets!</p><p class="bf26-review__quote">“They are so soft and cooling, plus they look so good on my bed!!”</p><p class="bf26-review__name">Maddy F.</p></div><div class="bf26-review" style="transform:rotate(-2.5deg)"><div class="bf26-review__stars">★★★★★</div><p class="bf26-review__title">Best purchase</p><p class="bf26-review__quote">“Sheets are nice and cooling and pet friendly for our dog.”</p><p class="bf26-review__name">Marina C.</p></div></div>
+        <div class="bf26-band" style="position:absolute;left:0;right:0;bottom:6cqh;z-index:2">Up to 54% off + free gifts</div>
+      </div><div class="label">Hot sleepers review static · real 5-star reviews from voc/ (ids in IDENTITY §7)</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--story bf26--live story">
+        <div style="position:absolute;top:6cqh;left:0;right:0;z-index:2"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet" style="line-height:1.05">Black<br>Friday</p></div></div>
+        <div class="bf26-vs" style="position:absolute;left:5cqw;right:5cqw;top:24cqh;z-index:2">
+          <div class="bf26-vs__col bf26-vs__col--us"><h3>Ecoy</h3><div class="bf26-vs__img" style="background:var(--bf26-deep-green)"><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ForestGreen-Deepetch-NoTalent-AI-01.webp" alt="Forest Green bamboo sheet set" style="object-fit:contain"></div><ul><li>Cooling for hot sleepers</li><li>Keeps you dry by pulling moisture</li><li>Pet hair just swipes off</li></ul></div>
+          <div class="bf26-vs__col bf26-vs__col--them"><h3>Dumb<br>bedding</h3><div class="bf26-vs__img" style="background:#D9CDB5"></div><ul><li>Traps heat and doesn't breathe</li><li>Rough and sticky against your skin</li><li>Fur clings and doesn't leave</li></ul></div>
+          <div class="bf26-vs__badge">VS</div>
+        </div>
+        <p class="bf26-offer" style="position:absolute;left:0;right:0;bottom:7cqh;font-size:8cqw;z-index:2">Now up to 54% off</p>
+      </div><div class="label">Ecoy vs Dumb Bedding · Nick's comparison static (no competitor named)</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--story bf26--live bf26--green story">
+        <div class="bf26-split">
+          <div style="background:var(--bf26-deep-green);gap:2cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet" style="font-size:4.6cqw">Black Friday</p></div><p class="bf26-sub bf26-sub--white" style="font-size:3.4cqw;margin-top:3cqw">Up to</p><p class="bf26-offer" style="font-size:13cqw;line-height:.95">54%<br>off</p><p class="bf26-sub bf26-sub--white" style="font-size:3cqw">Storewide</p></div>
+          <div><img src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-01.webp" alt=""><div class="bf26-repeat" style="font-size:4.4cqw">Cooling sheets<br>Cooling sheets<br>Cooling sheets<br>Cooling sheets<br>Cooling sheets<br>Cooling sheets<br>Cooling sheets</div></div>
+          <div><img src="../../../assets/library/talent/BambooQuiltCover-Stripe-StrawberryMerlotStripe-Freestyle-Talent-Real-01.webp" alt="" style="filter:brightness(.75)"><div class="bf26-repeat" style="font-size:4.4cqw">Free gifts<br>Free gifts<br>Free gifts<br>Free gifts<br>Free gifts<br>Free gifts<br>Free gifts</div></div>
+          <div style="background:var(--bf26-deep-green);gap:4cqw"><div class="bf26-burst" style="position:static;width:24cqw;font-size:4cqw">Free<br>gifts</div><p class="bf26-offer" style="font-size:6.4cqw">From<br>$150+</p></div>
+        </div>
+      </div><div class="label">Split grid · Nick's old-winner layout. "Worth $320" replaced with the real tier until the gift value is confirmed</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--story bf26--live bf26--green story">
+        <div style="position:absolute;top:5cqh;left:0;right:0;z-index:2"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet" style="line-height:1.05;font-size:5.4cqw">Black<br>Friday</p></div>
+          <p class="bf26-offer" style="font-size:8.6cqw;margin-top:2.4cqw">Every colour</p><p class="bf26-offer bf26-offer--accent" style="font-size:8.6cqw">Up to 54% off</p></div>
+        <div class="bf26-burst" style="top:29cqh;left:7cqw;width:21cqw;font-size:2.7cqw">Naturally<br>cooling</div>
+        <div class="bf26-burst bf26-burst--merlot" style="top:30.5cqh;left:39.5cqw;width:21cqw;font-size:2.9cqw;transform:rotate(8deg)">Fur<br>resistant</div>
+        <div class="bf26-burst" style="top:29cqh;right:7cqw;width:21cqw;font-size:2.6cqw">90 night<br>risk-free<br>trial</div>
+        <div class="bf26-swatches" style="position:absolute;left:5cqw;right:5cqw;top:44cqh;z-index:2"><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-BurntOrange-Deepetch-NoTalent-AI-04.webp" alt="BurntOrange sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Chocolate-Deepetch-NoTalent-AI-01.webp" alt="Chocolate sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Merlot-Deepetch-NoTalent-AI-01.webp" alt="Merlot sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Black-Deepetch-NoTalent-AI-02.webp" alt="Black sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Mulberry-Deepetch-NoTalent-AI-01.webp" alt="Mulberry sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ForestGreen-Deepetch-NoTalent-AI-01.webp" alt="ForestGreen sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Eggplant-Deepetch-NoTalent-AI-02.webp" alt="Eggplant sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Charcoal-Deepetch-NoTalent-AI-07.webp" alt="Charcoal sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Ocean-Deepetch-NoTalent-AI-11.webp" alt="Ocean sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ReefTeal-Deepetch-NoTalent-AI-02.webp" alt="ReefTeal sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-StormBlue-Deepetch-NoTalent-AI-02.webp" alt="StormBlue sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-MidnightPine-Deepetch-NoTalent-AI-01.webp" alt="MidnightPine sheet set"></figure></div>
+      </div><div class="label">Every colour · stack grid, one live colourway per tile, never dimmed</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--story bf26--live story">
+        <img class="bf26-photo" src="../../../assets/library/talent/BambooSheetSet-Solid-Ocean-Overhead-Talent-Real-01.webp" alt="">
+        <div class="bf26-ticker bf26-ticker--top"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div>
+        <div class="center" style="gap:1cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"></div>
+          <p class="bf26-headline" style="font-size:8.4cqw;line-height:1.05">Black Friday<br><span style="opacity:.75">Black Friday</span><br><span style="opacity:.55">Black Friday</span><br><span style="opacity:.38">Black Friday</span></p>
+          <p class="bf26-sub bf26-sub--white" style="margin-top:2cqw">Sale now live</p></div>
+        <div class="bf26-ticker bf26-ticker--bottom"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div>
+      </div><div class="label">Talent hero · repeated headline (PGS live, frame 3)</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--story bf26--hype story">
+        <img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooSheetSet-Solid-Black-CloseUp-NoTalent-Real-01.webp" alt="">
+        <div class="bf26-ticker bf26-ticker--top"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--urgency">COMING SOON</span></span></div>
+        <div class="center" style="gap:2cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline" style="font-size:13cqw;line-height:1">Black<br>Friday</p></div><p class="bf26-sub bf26-sub--white" style="font-size:4.6cqw">22 : 34 : 30 hours</p></div>
+        <div class="bf26-ticker bf26-ticker--bottom"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--urgency">COMING SOON</span></span></div>
+      </div><div class="label">Hype countdown story (PGS hype) · black fabric only</div>
+    </div>
+  </div>
+
   <h2>1:1 feed</h2>
   <div class="row">
     <div class="bf26 bf26--square bf26--live square">
@@ -131,6 +203,18 @@
         <div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline" style="font-size:9.6cqw">Black Friday</p><p class="bf26-sub" style="font-size:5cqw">Sale</p></div>
         <div class="bf26-proof" style="margin-top:6cqw"><span class="bf26-proof__stars">★★★★★</span>Love award winning<br>cooling sheets?</div>
       </div>
+    </div>
+  </div>
+
+  <h2>1:1 feed · Every Colour (live) with badges</h2>
+  <p class="note">Nick's "Every colour, up to 54% off" static. Badges carry the benefits; their colour follows the phase (IDENTITY §3.3). Live default is green; merlot is the alternate. Nick's orange badges are left out because PGS keeps orange for the ending.</p>
+  <div class="row">
+    <div class="bf26 bf26--square bf26--live bf26--green square">
+      <div style="position:absolute;top:7cqw;left:0;right:0;z-index:2"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet" style="font-size:5cqw">Black Friday</p></div></div>
+      <div style="position:absolute;top:26cqw;left:0;right:0;z-index:2"><p class="bf26-offer" style="font-size:9cqw">Every colour</p><p class="bf26-offer bf26-offer--accent" style="font-size:9cqw">Up to 54% off</p></div>
+      <div class="bf26-burst" style="top:54cqw;left:5cqw;width:27cqw;font-size:3cqw">Naturally<br>cooling</div>
+      <div class="bf26-burst bf26-burst--merlot" style="top:58cqw;left:36.5cqw;width:27cqw;font-size:3.2cqw;transform:rotate(8deg)">Fur<br>resistant</div>
+      <div class="bf26-burst" style="top:54cqw;right:5cqw;width:27cqw;font-size:2.9cqw">90 night<br>risk-free<br>trial</div>
     </div>
   </div>
 
@@ -164,6 +248,83 @@
       <div class="bf26-countdown" style="font-size:.5em"><div class="bf26-countdown__unit" style="font-size:3cqw">06<small>DAYS</small></div><div class="bf26-countdown__unit" style="font-size:3cqw">14<small>HOURS</small></div><div class="bf26-countdown__unit" style="font-size:3cqw">56<small>MINUTES</small></div><div class="bf26-countdown__unit" style="font-size:3cqw">31<small>SECONDS</small></div></div>
     </div>
   </div>
+  <h2>Website pieces (PGS web skeleton)</h2>
+  <p class="note">From PGS's phase pages (Hype 1:15, Launch 1:66, Main Sale 1:151). Hype changes nothing on the public site, so hype pieces live only on the hidden landing pages. Sizes are PGS's. Product tiles stay un-dimmed.</p>
+
+  <h2 style="font-size:15px">Announcement bar and shipping notice</h2>
+  <div style="display:grid;gap:10px;max-width:1100px">
+    <div class="bf26 bf26--live bf26-mod"><div class="bf26-ticker bf26-annbar"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div></div>
+    <div class="bf26 bf26--end bf26-mod"><div class="bf26-ticker bf26-annbar"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span></span></div></div>
+    <div class="bf26 bf26-mod"><div class="bf26-shipnote"><span class="bf26-ticker__track"><span><b>●</b> HEADS UP</span><span>ORDERS CAN TAKE 3 TO 5 BUSINESS DAYS TO SHIP</span><span><b>●</b> HEADS UP</span><span>ORDERS CAN TAKE 3 TO 5 BUSINESS DAYS TO SHIP</span><span><b>●</b> HEADS UP</span></span></div></div>
+  </div>
+  <div class="label">Live · End · shipping delay notice (inverted, ink on off-white, so it reads as info next to the dark bar)</div>
+
+  <h2 style="font-size:15px">Homepage and sale landing hero (1440×720, mobile 390×680)</h2>
+  <div class="row">
+    <div style="flex:1 1 640px;max-width:820px"><div class="bf26 bf26--home bf26--live" style="width:100%"><img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-01.webp" alt=""><div class="bf26-ticker bf26-ticker--top" style="font-size:2.2cqw;padding:.9cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div><div class="center" style="gap:1.4cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" style="width:6cqw" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline" style="font-size:7.4cqw">Black Friday</p><p class="bf26-sub bf26-sub--white" style="font-size:2.3cqw">Sale now live</p></div><p class="bf26-sub bf26-sub--white" style="font-size:1.3cqw;text-transform:none;font-weight:500">Up to 54% off, plus free gifts when you spend $150+</p><a class="bf26-cta" href="#" style="font-size:1.2cqw;padding:.9cqw 2.2cqw">Shop the sale</a></div><div class="bf26-ticker bf26-ticker--bottom" style="font-size:2.2cqw;padding:.9cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div></div><div class="label">Live · desktop</div></div>
+    <div style="width:220px"><div class="bf26 bf26--home-m bf26--live" style="width:100%"><img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-01.webp" alt=""><div class="bf26-ticker bf26-ticker--top" style="font-size:5cqw"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div><div class="center" style="gap:3cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline" style="font-size:16cqw;line-height:1">Black<br>Friday</p><p class="bf26-sub bf26-sub--white" style="font-size:5cqw">Sale now live</p></div><a class="bf26-cta" href="#" style="font-size:4cqw;padding:2.4cqw 5cqw">Shop the sale</a></div><div class="bf26-ticker bf26-ticker--bottom" style="font-size:5cqw"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div></div><div class="label">Live · mobile</div></div>
+    <div style="flex:1 1 640px;max-width:820px"><div class="bf26 bf26--home bf26--end" style="width:100%"><img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooFlatSheet-Solid-Black-CloseUp-NoTalent-Real-01.webp" alt=""><div class="bf26-ticker bf26-ticker--top" style="font-size:2.2cqw;padding:.9cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span></span></div><div class="center" style="gap:1.4cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" style="width:6cqw" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline" style="font-size:7.4cqw">Cyber Monday</p><p class="bf26-sub bf26-sub--white" style="font-size:2.3cqw">Up to 60% off storewide</p></div><a class="bf26-cta" href="#" style="font-size:1.2cqw;padding:.9cqw 2.2cqw">Shop before midnight</a></div><div class="bf26-ticker bf26-ticker--bottom" style="font-size:2.2cqw;padding:.9cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span><span class="bf26-ticker__item--urgency">DON'T MISS OUT</span><span class="bf26-ticker__item--value">ENDING SOON</span></span></div></div><div class="label">End · Cyber Monday, black fabric (offer per BRIEF.md; PGS's example says 54%, check with James)</div></div>
+  </div>
+
+  <h2 style="font-size:15px">Collection banner (1440×360, mobile 390×280) and mega-menu tile (360×420)</h2>
+  <div class="row">
+    <div style="flex:1 1 640px;max-width:820px"><div class="bf26 bf26--banner bf26--live" style="width:100%">
+      <img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-01.webp" alt="">
+      <div class="bf26-ticker bf26-ticker--top" style="font-size:1.8cqw;padding:.7cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div>
+      <div class="center" style="gap:.6cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" style="width:4.4cqw" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline" style="font-size:5.6cqw">Black Friday</p><p class="bf26-sub bf26-sub--white" style="font-size:1.6cqw">Sale now live</p></div></div>
+      <div class="bf26-ticker bf26-ticker--bottom" style="font-size:1.8cqw;padding:.7cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div>
+    </div><div class="label">Collection banner · desktop</div></div>
+    <div style="width:240px"><div class="bf26 bf26--banner-m bf26--live" style="width:100%"><img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-01.webp" alt=""><div class="bf26-ticker bf26-ticker--top" style="font-size:4.4cqw"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div><div class="center" style="gap:3cqw"><div class="bf26-lockup"><p class="bf26-headline" style="font-size:13cqw;line-height:1">Black<br>Friday</p><p class="bf26-sub bf26-sub--white" style="font-size:5cqw">Sale now live</p></div></div><div class="bf26-ticker bf26-ticker--bottom" style="font-size:4.4cqw"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div></div><div class="label">Collection banner · mobile</div></div>
+    <div style="width:220px"><div class="bf26 bf26--menu bf26--live" style="width:100%"><img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-01.webp" alt=""><div class="bf26-ticker bf26-ticker--top" style="font-size:4.6cqw"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div><div class="center" style="gap:3cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline" style="font-size:17cqw;line-height:1">Black<br>Friday</p><p class="bf26-sub bf26-sub--white" style="font-size:5cqw">Sale now live</p></div><a class="bf26-cta" href="#" style="font-size:4cqw;padding:2.4cqw 5cqw">Shop the sale</a></div><div class="bf26-ticker bf26-ticker--bottom" style="font-size:4.6cqw"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span><span class="bf26-ticker__item--urgency">SALE LIVE</span><span class="bf26-ticker__item--value">UP TO 54% OFF</span></span></div></div><div class="label">Mega-menu tile</div></div>
+  </div>
+
+  <h2 style="font-size:15px">Homepage secondary tiles</h2>
+  <div class="bf26 bf26--live bf26-mod" style="background:#F6F2E8;padding:16px;border-radius:8px;max-width:820px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+    <div class="bf26-tile"><img src="../../../assets/library/product-colour/BambooSheetSet-Solid-Merlot-High45-NoTalent-Real-01.webp" alt="Merlot bamboo sheet set"><div class="bf26-tile__label">Bamboo bed linen<small>Up to 54% off</small></div></div>
+    <div class="bf26-tile"><img src="../../../assets/library/product-colour/BambooQuiltCover-Solid-ForestGreen-High45-NoTalent-Real-01.webp" alt="Forest Green quilt cover"><div class="bf26-tile__label">Bundles<small>Up to 54% off</small></div></div>
+    <div class="bf26-tile"><img src="../../../assets/library/product-colour/BambooQuiltCover-Solid-Eggplant-High45-NoTalent-Real-01.webp" alt="Eggplant quilt cover"><div class="bf26-tile__label">Quilts and pillows<small>Up to 54% off</small></div></div>
+  </div>
+  <div class="label">Real colour, no overlay (PGS rule: product tiles and swatches stay un-dimmed)</div>
+
+  <h2 style="font-size:15px">PDP: sale badge, price, gift callout</h2>
+  <div class="bf26 bf26--live bf26-mod" style="background:#F6F2E8;padding:20px;border-radius:8px;max-width:820px;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start">
+    <div style="display:grid;gap:12px;justify-items:start"><span class="bf26-pdpbadge">Black Friday</span>
+      <div><div class="bf26-price"><span class="bf26-price__now">$101.20</span><span class="bf26-price__was">$220.00</span><span class="bf26-price__save">Save $118.80</span></div><p>Black Friday price. Sale ends Mon 30 Nov.</p></div></div>
+    <div class="bf26-card" style="flex:1;min-width:300px;padding:16px 18px"><p class="bf26-card__title" style="font-size:14px;margin-bottom:12px">Free gifts with your order</p><div class="bf26-tiers"><div><svg viewBox="0 0 24 24"><path d="M2 6h11v9H2zM13 9h4l3 3v3h-7"/><circle cx="6" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg><b>$150+</b><span>Free shipping</span></div><div><svg viewBox="0 0 24 24"><path d="M3 9c3-2 15-2 18 0v4c-2 3-6 3-8 1-.6-.5-1.4-.5-2 0-2 2-6 2-8-1z"/></svg><b>$250+</b><span>Free Sleep Mask</span></div><div><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="3"/><path d="M8 9v6"/></svg><b>$350+</b><span>Free Flip Cooling Pillow</span></div></div></div>
+  </div>
+  <div class="label">Compare-at plus sale price (PGS's example numbers). The gift callout swaps Sleep Mask for Tote Bag from Thu 19 Nov.</div>
+
+  <h2 style="font-size:15px">Cart drawer gift progress (one state per spend level)</h2>
+  <div class="row">
+    <div class="bf26 bf26--live bf26-mod bf26-card bf26-progress" style="width:300px;padding:16px 18px"><p>$40 to free shipping.</p><div class="bf26-progress__track"><div class="bf26-progress__fill" style="width:22%"></div><div class="bf26-progress__node" style="left:30%"><span>Shipping</span></div><div class="bf26-progress__node" style="left:60%"><span>Sleep mask</span></div><div class="bf26-progress__node" style="left:100%"><span>Pillow</span></div></div></div>
+    <div class="bf26 bf26--live bf26-mod bf26-card bf26-progress" style="width:300px;padding:16px 18px"><p>Free shipping unlocked. $60 to a free Sleep Mask.</p><div class="bf26-progress__track"><div class="bf26-progress__fill" style="width:45%"></div><div class="bf26-progress__node bf26-progress__node--on" style="left:30%"><span>Shipping</span></div><div class="bf26-progress__node" style="left:60%"><span>Sleep mask</span></div><div class="bf26-progress__node" style="left:100%"><span>Pillow</span></div></div></div>
+    <div class="bf26 bf26--live bf26-mod bf26-card bf26-progress" style="width:300px;padding:16px 18px"><p>Sleep Mask unlocked. $50 to a free Pillow.</p><div class="bf26-progress__track"><div class="bf26-progress__fill" style="width:75%"></div><div class="bf26-progress__node bf26-progress__node--on" style="left:30%"><span>Shipping</span></div><div class="bf26-progress__node bf26-progress__node--on" style="left:60%"><span>Sleep mask</span></div><div class="bf26-progress__node" style="left:100%"><span>Pillow</span></div></div></div>
+    <div class="bf26 bf26--live bf26-mod bf26-card bf26-progress" style="width:300px;padding:16px 18px"><p>All unlocked: free shipping, Sleep Mask and Pillow.</p><div class="bf26-progress__track"><div class="bf26-progress__fill" style="width:100%"></div><div class="bf26-progress__node bf26-progress__node--on" style="left:30%"><span>Shipping</span></div><div class="bf26-progress__node bf26-progress__node--on" style="left:60%"><span>Sleep mask</span></div><div class="bf26-progress__node bf26-progress__node--on" style="left:100%"><span>Pillow</span></div></div></div>
+  </div>
+
+  <h2 style="font-size:15px">Gift block: hype and live</h2>
+  <div class="row">
+    <div class="bf26 bf26--hype bf26-mod" style="background:#F6F2E8;padding:16px;border-radius:8px;flex:1;min-width:320px"><div class="bf26-card"><p class="bf26-card__title">Free gifts from Thursday 5 Nov</p><div class="bf26-tiers"><div><svg viewBox="0 0 24 24"><path d="M2 6h11v9H2zM13 9h4l3 3v3h-7"/><circle cx="6" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg><b>$150+</b><span>Free shipping</span></div><div><svg viewBox="0 0 24 24"><path d="M3 9c3-2 15-2 18 0v4c-2 3-6 3-8 1-.6-.5-1.4-.5-2 0-2 2-6 2-8-1z"/></svg><b>$250+</b><span>Free Sleep Mask</span></div><div><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="3"/><path d="M8 9v6"/></svg><b>$350+</b><span>Free Flip Cooling Pillow</span></div></div><a class="bf26-card__link" href="#">These gifts stack, tap to learn more</a></div></div>
+    <div class="bf26 bf26--live bf26-mod" style="background:#F6F2E8;padding:16px;border-radius:8px;flex:1;min-width:320px"><div class="bf26-card"><p class="bf26-card__title">Free gifts with your order</p><div class="bf26-tiers"><div><svg viewBox="0 0 24 24"><path d="M2 6h11v9H2zM13 9h4l3 3v3h-7"/><circle cx="6" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg><b>$150+</b><span>Free shipping</span></div><div><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6zM9 8a3 3 0 0 1 6 0"/></svg><b>$250+</b><span>Free Tote Bag</span></div><div><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="3"/><path d="M8 9v6"/></svg><b>$350+</b><span>Free Flip Cooling Pillow</span></div></div><a class="bf26-card__link" href="#">These gifts stack, tap to learn more</a></div></div>
+  </div>
+  <div class="label">Hype version (white, "from Thursday 5 Nov") · live version from Thu 19 Nov with the Tote Bag. Icons are simple placeholders until PGS's set is exported.</div>
+
+  <h2 style="font-size:15px">Hidden hype landing page: code, countdown, sign-up</h2>
+  <p class="note">Only on the noindex hype pages (2 to 4 Nov). The code shows openly on the page; the sign-up form is for sale updates and its success state never shows a code (PGS page note; the form frame disagrees, see IDENTITY §9).</p>
+  <div class="row">
+    <div class="bf26 bf26--hype bf26-mod" style="background:#F6F2E8;padding:16px;border-radius:8px;flex:2;min-width:440px">
+      <div class="bf26-card" style="display:grid;grid-template-columns:1.4fr 1fr;gap:22px;align-items:center">
+        <div><p class="bf26-card__eyebrow">Your early access code</p><p class="bf26-headline" style="font-size:30px;line-height:1.05;text-align:left">An extra 10% off<br>on launch day</p><p style="font-size:13px;color:rgba(255,255,255,.75);margin:10px 0 0">You're early. Use this code at checkout on Thursday 5 November for an extra 10% off on top of the sale prices.</p></div>
+        <div class="bf26-codebox"><p class="bf26-codebox__code">BFEXTRA10</p><a class="bf26-cta" href="#">Copy code</a><small>Valid Thu 5 Nov only</small></div>
+      </div></div>
+    <div class="bf26 bf26--hype bf26-mod" style="flex:1;min-width:300px;display:grid;gap:12px;align-content:start">
+      <div class="bf26-card"><p class="bf26-card__eyebrow" style="text-align:center">Sale starts in</p><div class="bf26-clock"><div>02<small>DAYS</small></div><i>:</i><div>14<small>HRS</small></div><i>:</i><div>36<small>MINS</small></div><i>:</i><div>09<small>SECS</small></div></div></div>
+      <div class="bf26-card" style="text-align:center"><p class="bf26-card__eyebrow">Black Friday</p><p class="bf26-headline" style="font-size:24px">Be first when<br>it drops</p><p style="font-size:12px;color:rgba(255,255,255,.75)">Get a heads-up the moment the Black Friday sale goes live on Thursday 5 November.</p><div style="display:grid;gap:8px;margin:12px 0"><div style="border:1px solid rgba(255,255,255,.3);border-radius:4px;padding:9px;font-size:12px;text-align:left;color:rgba(255,255,255,.5)">Email address</div><div style="border:1px solid rgba(255,255,255,.3);border-radius:4px;padding:9px;font-size:12px;text-align:left;color:rgba(255,255,255,.5)">Mobile (optional)</div></div><a class="bf26-cta" href="#" style="display:block;font-size:12px;padding:10px;color:var(--bf26-led-ink)">Keep me posted</a></div>
+      <div class="bf26-card" style="text-align:center"><p class="bf26-headline" style="font-size:24px">You're in</p><p style="font-size:12px;color:rgba(255,255,255,.75);margin:8px 0 0">We'll let you know the moment the sale goes live. Your Day 1 code is on this page.</p></div>
+    </div>
+  </div>
+  <div class="label">Direct-mail variant: same design, code BFCMEXTRA10.</div>
+
 </main>
 </body>
 </html>

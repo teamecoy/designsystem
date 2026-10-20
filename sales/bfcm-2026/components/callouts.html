@@ -24,12 +24,12 @@
   <p class="note">Two typefaces. LED Display St for anything that shouts (headlines, tickers, offers, countdowns, stamps). Clash Display Semibold, all caps, for sub-headlines and supporting lines. Nothing else in this sale.</p>
 
   <h2>Phase colour</h2>
-  <p class="note">The LED accent follows the phase (19 Oct). Put <code>.bf26--hype</code>, <code>.bf26--live</code> or <code>.bf26--end</code> on the frame; the headline, accent offer, value tickers and stamps follow. The End/FOMO colour is <b>TBA</b>; Bright Orange holds until it is confirmed.</p>
+  <p class="note">The LED accent follows the phase (19 Oct). Put <code>.bf26--hype</code>, <code>.bf26--live</code> or <code>.bf26--end</code> on the frame; the headline, accent offer, value tickers, stamps and badges follow. End is orange #FF6301 (confirmed 20 Oct), on black fabric by default.</p>
   <div class="row">
     <div class="bf26 bf26--hype panel" style="flex:1;min-width:240px"><div class="bf26-lockup"><p class="bf26-sub">Hype · 2–4 Nov</p><p class="bf26-headline">Black Friday</p></div></div>
     <div class="bf26 bf26--live panel" style="flex:1;min-width:240px"><div class="bf26-lockup"><p class="bf26-sub">Live · 5–26 Nov</p><p class="bf26-headline">Black Friday</p></div></div>
-    <div class="bf26 bf26--end panel" style="flex:1;min-width:240px"><div class="bf26-lockup"><p class="bf26-sub">End, dark ground · TBA</p><p class="bf26-headline">Black Friday</p></div></div>
-    <div class="bf26 bf26--end bf26--orange panel" style="flex:1;min-width:240px"><div class="bf26-lockup"><p class="bf26-sub bf26-sub--white">End, orange ground</p><p class="bf26-headline">Black Friday</p></div></div>
+    <div class="bf26 bf26--end panel" style="flex:1;min-width:240px"><div class="bf26-lockup"><p class="bf26-sub">End · 27–30 Nov, black fabric</p><p class="bf26-headline">Black Friday</p></div></div>
+    <div class="bf26 bf26--end bf26--orange panel" style="flex:1;min-width:240px"><div class="bf26-lockup"><p class="bf26-sub bf26-sub--white">End, orange ground (paid statics)</p><p class="bf26-headline">Black Friday</p></div></div>
   </div>
 
   <h2>Type colours</h2>
@@ -37,7 +37,7 @@
     <tr><th>Role</th><th>Font</th><th>Colour</th></tr>
     <tr><td>Phase accent: Hype</td><td>LED, white glow</td><td><span class="sw" style="background:#fff"></span>#FFFFFF</td></tr>
     <tr><td>Phase accent: Live (Day 1, main sale, win-back, GWP 2)</td><td>LED, green glow</td><td><span class="sw" style="background:#77D686"></span>#77D686</td></tr>
-    <tr><td>Phase accent: End (27–30 Nov), dark ground</td><td>LED, orange glow</td><td><span class="sw" style="background:#FF6301"></span>#FF6301 · FOMO colour TBA</td></tr>
+    <tr><td>Phase accent: End (27–30 Nov), dark ground</td><td>LED, orange glow</td><td><span class="sw" style="background:#FF6301"></span>#FF6301 (confirmed)</td></tr>
     <tr><td>Phase accent: End, orange ground</td><td>LED, no glow</td><td><span class="sw" style="background:#0A0A0B"></span>#0A0A0B ink</td></tr>
     <tr><td>Offer (54% OFF, 60% OFF)</td><td>LED, white glow</td><td><span class="sw" style="background:#fff"></span>#FFFFFF in every phase; <code>.bf26-offer--accent</code> for the phase-coloured line</td></tr>
     <tr><td>Quiet headline (BLACK FRIDAY above a big offer)</td><td>LED</td><td><span class="sw" style="background:#A4A4A7"></span>white at 64%; ink at 70% on orange</td></tr>
@@ -45,7 +45,7 @@
     <tr><td>Ticker: phase label (COMING SOON, SALE LIVE, LAST CHANCE)</td><td>LED</td><td>white in Hype and Live; phase accent in End</td></tr>
     <tr><td>"SALE", lockup wordmark, countdown digits</td><td>Clash / logo / LED</td><td><span class="sw" style="background:#A4A4A7"></span>white at 64%</td></tr>
     <tr><td>Struck-out old offer (ending phase)</td><td>LED, about 45% of the new offer's size</td><td>white at 45% (white on orange), strike in the same colour</td></tr>
-    <tr><td>Starburst sticker</td><td>Clash Semibold caps</td><td>ink, white or Live green ground</td></tr>
+    <tr><td>Badge (starburst)</td><td>Clash Semibold caps</td><td>follows the phase: hype ink · live green (merlot #6B1E2E alternate) · end orange on black fabric, ink or white on orange</td></tr>
     <tr><td>CTA pill</td><td>LED in statics, Clash on web</td><td>ink #0A0A0B or Deep Green #004C39 on white</td></tr>
   </table>
 
@@ -72,13 +72,17 @@
     <div class="bf26 bf26--orange tile"><div class="bf26-stamp bf26-stamp--white"><svg viewBox="0 0 200 200"><text><textPath href="#bf26-ring" textLength="500">LAST CHANCE · LAST CHANCE ·</textPath></text></svg></div></div>
   </div>
 
-  <h2>Starburst stickers</h2>
-  <p class="note">From the draft statics: FREE GIFTS, +10% DAY 1 and feature callouts (Cooling for hot sleepers, Silky soft, Fur friendly). Clash caps, tilted, overlapping a corner of the offer or product. Ink, white or Live green.</p>
+  <h2>Badges · colour follows the phase</h2>
+  <p class="note">Nick's starburst badges are the callout device for benefits and offers. <code>.bf26-burst</code> takes its colour from the phase class; <code>--merlot</code>, <code>--white</code>, <code>--ink</code>, <code>--green</code> and <code>--orange</code> pick an alternate. Clash caps, two or three short lines, tilted. Mix at most two colours in one piece.</p>
   <div class="row">
-    <div class="bf26 bf26--live tile"><div class="bf26-burst bf26-burst--green" style="position:static;width:50cqw;font-size:8cqw">Free<br>gifts</div></div>
-    <div class="bf26 bf26--live tile" style="background:#3a3a3a"><div class="bf26-burst" style="position:static;width:50cqw;font-size:8cqw">+10%<br>Day 1</div></div>
-    <div class="bf26 bf26--end bf26--orange tile"><div class="bf26-burst bf26-burst--white" style="position:static;width:50cqw;font-size:7cqw">Silky<br>soft</div></div>
+    <div class="bf26 bf26--hype tile"><div class="bf26-burst" style="position:static;width:56cqw;font-size:8cqw;outline:1px solid #333">Free<br>gifts</div></div>
+    <div class="bf26 bf26--live bf26--green tile"><div class="bf26-burst" style="position:static;width:56cqw;font-size:7cqw">Naturally<br>cooling</div></div>
+    <div class="bf26 bf26--live bf26--green tile"><div class="bf26-burst bf26-burst--merlot" style="position:static;width:56cqw;font-size:7cqw">Fur<br>resistant</div></div>
+    <div class="bf26 bf26--end tile"><div class="bf26-burst" style="position:static;width:56cqw;font-size:6.4cqw">90 night<br>risk-free<br>trial</div></div>
+    <div class="bf26 bf26--end bf26--orange tile"><div class="bf26-burst" style="position:static;width:56cqw;font-size:6.4cqw">Cooling for<br>hot sleepers</div></div>
+    <div class="bf26 bf26--end bf26--orange tile"><div class="bf26-burst bf26-burst--white" style="position:static;width:56cqw;font-size:8cqw">Silky<br>soft</div></div>
   </div>
+  <p class="note" style="margin-top:8px">Hype · Live (default green, merlot alternate) · End on black fabric · End on orange (ink, white). The ink badge on black is barely visible, so in hype set it over a photo or use <code>--white</code>.</p>
 </main>
 </body>
 </html>
