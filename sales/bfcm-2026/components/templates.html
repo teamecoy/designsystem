@@ -13,19 +13,19 @@
   h2 { font-weight: 600; font-size: 18px; margin: 48px 0 6px; color: #fff; }
   p.note { font-size: 14px; color: #9a9a9a; max-width: 70ch; margin: 0 0 16px; }
   .row { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
-  .story { width: 270px; } .square { width: 360px; } .pdp { width: min(100%, 680px); } .email { width: min(100%, 400px); } .hero { width: 100%; }
+  .story { width: 270px; } .feed { width: 300px; } .square { width: 360px; } .pdp { width: min(100%, 680px); } .email { width: min(100%, 400px); } .hero { width: 100%; }
   .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4cqw; z-index: 2; }
   .label { font-size: 12px; color: #8a8a8a; margin-top: 6px; }
-  .story + .label { max-width: 270px; } .square + .label { max-width: 360px; }
+  .story + .label { max-width: 270px; } .feed + .label { max-width: 300px; } .square + .label { max-width: 360px; }
 </style>
 </head>
 <body>
 <main class="page">
   <h1>BFCM 2026 · templates</h1>
-  <p class="note">Built from Nick's Figma (file xt3zyQMwBYDSJ5WofvTwJJ, page 0:1) and the PGS phase pages (file NEP7LWbP6wf89uKLcqKWxO, 19 Oct) with live text in the real fonts, so every headline, ticker and stamp can be rewritten. Photos come from the Ecoy library, not Nick's placeholders. Rules are in <code>IDENTITY.md</code>; Nick's originals are in <code>reference/</code>.</p>
+  <p class="note">Built from Nick's Figma (file xt3zyQMwBYDSJ5WofvTwJJ, page 0:1), the PGS phase pages (file NEP7LWbP6wf89uKLcqKWxO, 19 Oct) and the final statics (file q8VGTz4nTuVSd52p4RqO3i, page 2016:1141, 26 Oct) with live text in the real fonts, so every headline, ticker and stamp can be rewritten. Photos come from the Ecoy library, not Nick's placeholders. Rules are in <code>IDENTITY.md</code>; Nick's originals are in <code>reference/</code>.</p>
 
   <h2>Phase colour: the one rule</h2>
-  <p class="note">Put one phase class on every frame: <code>.bf26--hype</code> (LED white), <code>.bf26--live</code> (LED green #77D686; Day 1, main sale, win-back, GWP 2) or <code>.bf26--end</code> (LED orange #FF6301, back on black fabric). The class recolours the headline, the accent offer line, the value tickers, the stamps and the badges. Offers stay white. From the PGS phase system (Figma 2005:2) and Nick's draft statics, which are work in progress and get a resync.</p>
+  <p class="note">Put one phase class on every frame: <code>.bf26--hype</code> (LED white), <code>.bf26--live</code> (LED green #77D686; Day 1, main sale, win-back, GWP 2) or <code>.bf26--end</code> (LED orange #FF6301, back on black fabric). The class recolours the headline, the accent offer line, the value tickers, the stamps and the badges. Offers stay white. Locked on 26 Oct: the PGS colour breakdown (Figma 2005:2) and Nick's final statics agree on all three.</p>
 
   <h2>9:16 stories · Black Friday</h2>
   <p class="note">Hype → Day 1 → main sale → ending. In statics the offer is the hero and BLACK FRIDAY steps back to a quiet silver line; on web heroes the lockup leads in the phase colour.</p>
@@ -170,7 +170,7 @@
         <div style="position:absolute;top:5cqh;left:0;right:0;z-index:2"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet" style="line-height:1.05;font-size:5.4cqw">Black<br>Friday</p></div>
           <p class="bf26-offer" style="font-size:8.6cqw;margin-top:2.4cqw">Every colour</p><p class="bf26-offer bf26-offer--accent" style="font-size:8.6cqw">Up to 54% off</p></div>
         <div class="bf26-burst" style="top:29cqh;left:7cqw;width:21cqw;font-size:2.7cqw">Naturally<br>cooling</div>
-        <div class="bf26-burst bf26-burst--merlot" style="top:30.5cqh;left:39.5cqw;width:21cqw;font-size:2.9cqw;transform:rotate(8deg)">Fur<br>resistant</div>
+        <div class="bf26-burst bf26-burst--ink" style="top:30.5cqh;left:39.5cqw;width:21cqw;font-size:2.9cqw;transform:rotate(8deg)">Fur<br>resistant</div>
         <div class="bf26-burst" style="top:29cqh;right:7cqw;width:21cqw;font-size:2.6cqw">90 night<br>risk-free<br>trial</div>
         <div class="bf26-swatches" style="position:absolute;left:5cqw;right:5cqw;top:44cqh;z-index:2"><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-BurntOrange-Deepetch-NoTalent-AI-04.webp" alt="BurntOrange sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Chocolate-Deepetch-NoTalent-AI-01.webp" alt="Chocolate sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Merlot-Deepetch-NoTalent-AI-01.webp" alt="Merlot sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Black-Deepetch-NoTalent-AI-02.webp" alt="Black sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Mulberry-Deepetch-NoTalent-AI-01.webp" alt="Mulberry sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ForestGreen-Deepetch-NoTalent-AI-01.webp" alt="ForestGreen sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Eggplant-Deepetch-NoTalent-AI-02.webp" alt="Eggplant sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Charcoal-Deepetch-NoTalent-AI-07.webp" alt="Charcoal sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Ocean-Deepetch-NoTalent-AI-11.webp" alt="Ocean sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ReefTeal-Deepetch-NoTalent-AI-02.webp" alt="ReefTeal sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-StormBlue-Deepetch-NoTalent-AI-02.webp" alt="StormBlue sheet set"></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-MidnightPine-Deepetch-NoTalent-AI-01.webp" alt="MidnightPine sheet set"></figure></div>
       </div><div class="label">Every colour · stack grid, one live colourway per tile, never dimmed</div>
@@ -195,6 +195,200 @@
     </div>
   </div>
 
+  <h2>Final statics (Nick, 26 Oct) · 4:5 feed, each also a 9:16 story</h2>
+  <p class="note">Nick's signed-off statics page (Figma <code>q8VGTz4nTuVSd52p4RqO3i</code>, page <code>2016:1141</code>): four sets, every piece as a 1080×1350 feed and a 1080×1920 story. The feed versions are built here with <code>.bf26--feed</code>; the story is the same layout with more air top and bottom. Hype is white LED with ink badges, hot sleepers and old winners are green with green, white or ink badges, the ending is orange on black fabric or an orange ground with ink and white badges. Offers follow BRIEF.md where Nick's wording differs; each label says where. Originals: <code>reference/static-final-*.webp</code>.</p>
+  <div class="row">
+    <div>
+      <div class="bf26 bf26--feed bf26--hype feed">
+        <img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-01.webp" alt="">
+        <div class="center" style="gap:1.6cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet ">Black Friday</p></div>
+          <p class="bf26-sub bf26-sub--white" style="font-size:4.4cqw;margin-top:7cqw">Up to</p>
+          <p class="bf26-offer" style="font-size:19cqw;line-height:.9">54% off</p>
+          <p class="bf26-sub bf26-sub--white" style="font-size:3.4cqw">+ extra 10% off, Day 1 only</p>
+          <a class="bf26-cta bf26-cta--led" href="#" style="margin-top:8cqw;font-size:2.8cqw">Tap to reveal code</a></div>
+        <div class="bf26-burst" style="top:22cqh;right:9cqw;width:17cqw;font-size:2.6cqw;transform:rotate(12deg)">Free<br>gifts</div>
+      </div><div class="label">Hype 01 · offer on a colourway ground, white LED, ink badge. Nick shows "54% off" before launch and a stripe ground in hype: both flagged in IDENTITY §7</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--hype feed">
+        <img class="bf26-photo" style="inset:auto;top:6cqw;left:6cqw;width:calc(100% - 12cqw);height:calc(100% - 12cqw);border-radius:3cqw;filter:brightness(.6)" src="../../../assets/library/fabric-detail/BambooFlatSheet-Solid-Black-CloseUp-NoTalent-Real-01.webp" alt="">
+        <div class="bf26-ticker bf26-ticker--side bf26-ticker--left"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span></span></div><div class="bf26-ticker bf26-ticker--side bf26-ticker--right"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span></span></div><div class="bf26-ticker bf26-ticker--top" style="font-size:3cqw;padding:1cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span></span></div><div class="bf26-ticker bf26-ticker--bottom" style="font-size:3cqw;padding:1cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span><span class="bf26-ticker__item--urgency">COMING SOON</span><span class="bf26-ticker__item--value">DAY 1 CODE INSIDE</span></span></div>
+        <div class="center" style="gap:1.6cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet ">Black Friday</p></div>
+          <p class="bf26-sub bf26-sub--white" style="font-size:4.4cqw;margin-top:6cqw">Up to</p>
+          <p class="bf26-offer" style="font-size:17cqw;line-height:.9">54% off</p>
+          <p class="bf26-sub bf26-sub--white" style="font-size:4cqw">Sitewide</p>
+          <a class="bf26-cta bf26-cta--led" href="#" style="margin-top:7cqw;font-size:2.8cqw">Tap for extra 10% off</a></div>
+        <div class="bf26-burst" style="top:30cqh;right:12cqw;width:15cqw;font-size:2.4cqw;transform:rotate(12deg)">+10%<br>Day 1</div>
+      </div><div class="label">Hype 02 · frame ticker, black fabric only (the PGS hype rule), ink badge. Nick also drew a motion version that starts on the empty frame (reference/static-final-hype-02-motion-start-story.webp)</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--hype feed">
+        <img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-12.webp" alt="" style="filter:brightness(.6) saturate(.9)">
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;padding:7cqw 6cqw 5cqw">
+          <p class="bf26-lock__date">Thursday 5 November</p><p class="bf26-lock__time">11:59</p>
+          <div style="display:grid;gap:2.4cqw;margin-top:12cqw">
+            <div class="bf26-notif"><div class="bf26-notif__app"><img src="../../../logos/logo-white.svg" alt=""></div><div><p class="bf26-notif__kicker">Ecoy · Now</p><p class="bf26-notif__title">Black Friday is live</p><p class="bf26-notif__body">Up to 54% off sitewide, plus free gifts. Your extra 10% Day 1 code is inside.</p></div></div>
+            <div class="bf26-notif"><div class="bf26-notif__app"><img src="../../../logos/logo-white.svg" alt=""></div><div><p class="bf26-notif__kicker">Ecoy · Reminder</p><p class="bf26-notif__title">Don't sleep on it</p><p class="bf26-notif__body">Extra 10% off is Day 1 only.</p></div></div>
+          </div>
+          <div class="bf26-lockup" style="margin-top:auto"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet ">Black Friday</p></div>
+        </div>
+      </div><div class="label">Hype 03 · lock screen: phone date, time and two notifications in system sans (the one place the sale uses it). Dated Thu 5 Nov, so it is a Day 1 ad in hype colours; the code is mentioned, never shown</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--live feed">
+        <img class="bf26-photo" src="../../../assets/library/talent/BambooQuiltCover-Solid-MidnightPine-Freestyle-Talent-Real-01.webp" alt="" style="filter:brightness(.6)">
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;padding:5cqw 5cqw 0"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet " style="font-size:4.4cqw">Black Friday</p></div>
+          <p class="bf26-offer" style="font-size:7.4cqw;margin-top:3cqw;line-height:1">Hot sleepers<br><span class="bf26-offer--accent">won't shut up</span><br>about these</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.4cqw;margin-top:4cqw;width:100%"><div class="bf26-review bf26-review--dark"><div class="bf26-review__stars">★★★★★</div><p class="bf26-review__title">A good nights sleep</p><p class="bf26-review__quote">“I also no longer get night sweats.”</p><p class="bf26-review__name">Sarah W.</p></div><div class="bf26-review bf26-review--dark"><div class="bf26-review__stars">★★★★★</div><p class="bf26-review__title">Best night sleep ever!!!</p><p class="bf26-review__quote">“Nothing beats getting into a nice cool bed, especially one that stays cool.”</p><p class="bf26-review__name">Shona</p></div><div class="bf26-review bf26-review--dark"><div class="bf26-review__stars">★★★★★</div><p class="bf26-review__title">Best sheets!</p><p class="bf26-review__quote">“They are so soft and cooling, plus they look so good on my bed!!”</p><p class="bf26-review__name">Maddy F.</p></div><div class="bf26-review bf26-review--dark"><div class="bf26-review__stars">★★★★★</div><p class="bf26-review__title">Best purchase</p><p class="bf26-review__quote">“Sheets are nice and cooling and pet friendly for our dog.”</p><p class="bf26-review__name">Marina C.</p></div></div>
+        </div>
+        <div class="bf26-band" style="position:absolute;left:0;right:0;bottom:0;z-index:3;font-size:3cqw">Up to 54% off + free gifts + 90 night trial</div>
+      </div><div class="label">Hot sleepers 01 · reviews: green accent line inside a white Doto headline, four real VoC reviews on dark glass cards, green value band</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--live feed">
+        <img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooFlatSheet-Solid-MidnightPine-CloseUp-NoTalent-Real-01.webp" alt="">
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;padding:5cqw 4cqw 5cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet " style="font-size:4.4cqw">Black Friday</p></div>
+          <p class="bf26-offer" style="font-size:7.2cqw;margin-top:4cqw;line-height:1"><span class="bf26-offer--accent">Ecoy</span><br>vs dumb bedding</p>
+          <div class="bf26-table" style="width:100%;margin-top:3cqw">
+            <div class="bf26-table__row bf26-table__row--head"><span></span><span class="bf26-table__head bf26-table__head--us">Ecoy</span><span class="bf26-table__head bf26-table__head--them">Dumb</span></div><div class="bf26-table__row"><span>Cooling for hot sleepers</span><span class="bf26-table__yes">✓</span><span class="bf26-table__no">✕</span></div><div class="bf26-table__row"><span>Pulls moisture away</span><span class="bf26-table__yes">✓</span><span class="bf26-table__no">✕</span></div><div class="bf26-table__row"><span>Pet hair swipes off</span><span class="bf26-table__yes">✓</span><span class="bf26-table__no">✕</span></div><div class="bf26-table__row"><span>Silky, not sticky</span><span class="bf26-table__yes">✓</span><span class="bf26-table__no">✕</span></div>
+            <div class="bf26-table__row"><span>Price</span><span class="bf26-table__price bf26-table__price--us">54% off</span><span class="bf26-table__price bf26-table__price--them">Full</span></div>
+          </div>
+          <p class="bf26-offer" style="font-size:5cqw;margin-top:auto">Up to 54% off + free gifts</p>
+        </div>
+      </div><div class="label">Hot sleepers 02 · Ecoy vs Dumb Bedding, final version: one glass table (replaces the two-panel draft), no competitor named</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--live feed">
+        <img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooFlatSheet-Solid-Black-CloseUp-NoTalent-Real-01.webp" alt="">
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;padding:6cqw 6cqw 7cqw"><div class="bf26-lockup" style="align-self:center"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet " style="font-size:4.4cqw">Black Friday</p></div>
+          <div style="display:grid;gap:7cqw;margin:auto 0">
+            <div class="bf26-stat"><span class="bf26-stat__num">0%</span><span class="bf26-stat__label">Night<br>sweats</span></div>
+            <div class="bf26-stat"><span class="bf26-stat__num">0%</span><span class="bf26-stat__label">Pillow<br>flipping</span></div>
+            <div class="bf26-stat"><span class="bf26-stat__num">100%</span><span class="bf26-stat__label">Cool side<br>all night</span></div>
+          </div>
+          <p class="bf26-offer" style="font-size:7cqw;text-align:left">Up to 54% off</p>
+        </div>
+      </div><div class="label">Hot sleepers 03 · stats: green Doto numbers, white Clash labels, black fabric</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--live feed">
+        <img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-01.webp" alt="">
+        <div class="center" style="gap:2.4cqw;padding:0 6cqw">
+          <p class="bf26-sub bf26-sub--white" style="font-size:6cqw;line-height:1.05">Still awake<br>and sweating?</p>
+          <p class="bf26-sub bf26-sub--white bf26-sub--sentence" style="font-size:3.4cqw;font-weight:500">It's not the heat. It's your sheets.</p>
+          <p class="bf26-offer bf26-offer--accent" style="font-size:16cqw;margin-top:8cqw">03:00 AM</p>
+          <span class="bf26-pill">Up to 54% off cooling sheets</span></div>
+        <div style="position:absolute;left:0;right:0;bottom:6cqw;z-index:2"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet " style="font-size:4.4cqw">Black Friday</p></div></div>
+      </div><div class="label">Hot sleepers 04 · 3AM: Clash question in caps, a sentence-case line, a huge green Doto time, green pill</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--live feed">
+        <img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooFlatSheet-Solid-Black-CloseUp-NoTalent-Real-01.webp" alt="">
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;padding:6cqw 6cqw 0">
+          <p class="bf26-offer" style="font-size:8cqw;text-align:left">A night on Ecoy</p>
+          <div class="bf26-timeline" style="margin-top:6cqw"><div class="bf26-timeline__row"><span class="bf26-timeline__time">10PM</span><span class="bf26-timeline__dot"></span><div><p class="bf26-timeline__title">Cool to the touch</p><p class="bf26-timeline__sub">Bamboo pulls heat off your skin</p></div></div><div class="bf26-timeline__row"><span class="bf26-timeline__time">1AM</span><span class="bf26-timeline__dot"></span><div><p class="bf26-timeline__title">Still dry</p><p class="bf26-timeline__sub">Moisture wicks away, not into you</p></div></div><div class="bf26-timeline__row"><span class="bf26-timeline__time">3AM</span><span class="bf26-timeline__dot"></span><div><p class="bf26-timeline__title">No pillow flipping</p><p class="bf26-timeline__sub">The cool side stays cool</p></div></div><div class="bf26-timeline__row"><span class="bf26-timeline__time">6AM</span><span class="bf26-timeline__dot"></span><div><p class="bf26-timeline__title">Up rested</p><p class="bf26-timeline__sub">Zero night sweats</p></div></div></div>
+        </div>
+        <div class="bf26-band" style="position:absolute;left:0;right:0;bottom:17cqw;z-index:3;font-size:3.6cqw">Up to 54% off + free gifts</div>
+        <div style="position:absolute;left:0;right:0;bottom:3cqw;z-index:2"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet " style="font-size:4.4cqw">Black Friday</p></div></div>
+      </div><div class="label">Hot sleepers 05 · a night on Ecoy: timeline of four moments, green times, Clash titles and grey sub-lines, green band</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--live feed">
+        <img class="bf26-photo" src="../../../assets/library/talent/BambooQuiltCover-Solid-MidnightPine-Freestyle-Talent-Real-01.webp" alt="" style="filter:brightness(.7)">
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;padding:6cqw">
+          <div class="bf26-quote"><span class="bf26-quote__stars">★★★★★</span><p class="bf26-quote__text">“So smooth, cool, I no longer have night sweats!”</p><p class="bf26-quote__name">Santi I.</p></div>
+          <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end">
+            <p class="bf26-offer" style="font-size:7cqw;text-align:left;line-height:1">Up to<br>54% off</p>
+            <div class="bf26-lockup" style="align-items:flex-end"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy" style="width:7cqw"><p class="bf26-headline bf26-headline--quiet" style="font-size:3.4cqw;text-align:right;line-height:1.05">Black<br>Friday</p></div>
+          </div>
+        </div>
+      </div><div class="label">Hot sleepers 06 · photo quote: a real review (voc review-8975c8da-eab7-4731-b140-9bb5fe27e9cc, Santi I.; Nick wrote "Santi B."), green stars, offer bottom-left, lockup bottom-right</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--live feed">
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;padding:6cqw 6cqw 4cqw">
+          <p class="bf26-offer" style="font-size:9.4cqw;line-height:1">Don't buy<br><span style="font-size:.78em">these sheets*</span></p>
+          <div style="position:relative;width:80cqw;height:80cqw;flex:none;margin-top:3cqw"><img src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-01.webp" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:3cqw;display:block">
+            <div class="bf26-tape" style="top:34%;transform:rotate(-9deg)">Hot sleepers only · Hot sleepers only · Hot sleepers only · Hot sleepers only · Hot sleepers only</div>
+            <div class="bf26-tape" style="top:52%;transform:rotate(6deg)">Hot sleepers only · Hot sleepers only · Hot sleepers only · Hot sleepers only · Hot sleepers only</div>
+            <div class="bf26-burst" style="top:-9cqw;right:-6cqw;width:19cqw;font-size:2.8cqw;transform:rotate(12deg)">Now<br>54%<br>off</div>
+          </div>
+          <p class="bf26-sub bf26-sub--sentence" style="font-size:2.8cqw;font-weight:500;color:rgba(255,255,255,.7);margin-top:3cqw">*at full price</p>
+          <div class="bf26-lockup" style="margin-top:auto"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet " style="font-size:4.4cqw">Black Friday</p></div>
+        </div>
+      </div><div class="label">Hot sleepers 07 · "Don't buy these sheets*": green tape over an un-dimmed colourway panel, green badge, "*at full price" in sentence case</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--live bf26--green feed">
+        <div class="bf26-split">
+          <div style="background:var(--bf26-deep-green);gap:1.6cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet " style="font-size:4.2cqw">Black Friday</p></div><p class="bf26-sub bf26-sub--white" style="font-size:3cqw;margin-top:2cqw">Up to</p><p class="bf26-offer" style="font-size:12cqw;line-height:.95">54%<br>off</p><p class="bf26-sub bf26-sub--white" style="font-size:2.8cqw">Storewide</p></div>
+          <div><img src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-01.webp" alt=""><div class="bf26-repeat" style="font-size:4.2cqw">Cooling sheets<br>Cooling sheets<br>Cooling sheets<br>Cooling sheets<br>Cooling sheets<br>Cooling sheets<br>Cooling sheets</div></div>
+          <div><img src="../../../assets/library/talent/BambooQuiltCover-Stripe-StrawberryMerlotStripe-Freestyle-Talent-Real-01.webp" alt="" style="filter:brightness(.75)"><div class="bf26-repeat" style="font-size:4.2cqw">Free gifts<br>Free gifts<br>Free gifts<br>Free gifts<br>Free gifts<br>Free gifts<br>Free gifts</div></div>
+          <div style="background:var(--bf26-deep-green);gap:3cqw"><img src="../../../assets/library/cutout/FlipPillow-Deepetch-NoTalent-AI-02.webp" alt="Flip Cooling Pillow" style="position:static;width:70%;height:auto;object-fit:contain;filter:drop-shadow(0 1cqw 2cqw rgba(0,0,0,.4))"><p class="bf26-offer" style="font-size:6cqw;line-height:1">Free gifts<br>from $150+</p></div>
+        </div>
+      </div><div class="label">Old winners 01 · split grid. Flip Cooling Pillow cut-out (the $350+ gift); Nick still shows "Worth $320", so this uses the brief's tier until the gift value is confirmed</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--live bf26--green feed">
+        <div style="position:absolute;top:5cqw;left:0;right:0;z-index:2"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet " style="font-size:4.4cqw">Black Friday</p></div>
+          <p class="bf26-offer" style="font-size:8.4cqw;margin-top:2.4cqw;line-height:1">Every colour<br><span class="bf26-offer--accent">Up to 54% off</span></p></div>
+        <div class="bf26-burst bf26-burst--white" style="top:27cqh;left:6cqw;width:21cqw;font-size:2.6cqw">Naturally<br>cooling</div>
+        <div class="bf26-burst bf26-burst--ink" style="top:28cqh;left:39.5cqw;width:21cqw;font-size:2.8cqw;transform:rotate(8deg)">Fur<br>resistant</div>
+        <div class="bf26-burst bf26-burst--white" style="top:27cqh;right:6cqw;width:21cqw;font-size:2.5cqw">90 night<br>risk-free<br>trial</div>
+        <div class="bf26-swatches" style="position:absolute;left:5cqw;right:5cqw;bottom:4cqw;z-index:1"><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Black-Deepetch-NoTalent-AI-02.webp" alt=""></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-BurntOrange-Deepetch-NoTalent-AI-04.webp" alt=""></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Charcoal-Deepetch-NoTalent-AI-07.webp" alt=""></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Chocolate-Deepetch-NoTalent-AI-01.webp" alt=""></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Eggplant-Deepetch-NoTalent-AI-02.webp" alt=""></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ForestGreen-Deepetch-NoTalent-AI-01.webp" alt=""></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Merlot-Deepetch-NoTalent-AI-01.webp" alt=""></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Mulberry-Deepetch-NoTalent-AI-01.webp" alt=""></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Ocean-Deepetch-NoTalent-AI-11.webp" alt=""></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ReefTeal-Deepetch-NoTalent-AI-02.webp" alt=""></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-StormBlue-Deepetch-NoTalent-AI-02.webp" alt=""></figure><figure><img src="https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-MidnightPine-Deepetch-NoTalent-AI-01.webp" alt=""></figure></div>
+      </div><div class="label">Old winners 02 · Every Colour, final: white and ink badges (the draft's orange and merlot are gone), 12 un-dimmed stacks from stack-cutouts.json</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--end bf26--orange feed">
+        <div class="bf26-panel" style="inset:6cqw 6cqw 66cqh"><img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-01.webp" alt=""><div class="center"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet bf26-headline--white">Black Friday</p></div></div></div>
+        <div class="bf26-panel" style="inset:36cqh 6cqw 36cqh"><img class="bf26-photo" src="../../../assets/library/talent/BambooQuiltCover-Stripe-StrawberryMerlotStripe-Freestyle-Talent-Real-01.webp" alt="" style="filter:brightness(.5)"><div class="center" style="gap:1.6cqw"><p class="bf26-offer" style="font-size:11cqw"><span class="bf26-offer__was" style="color:rgba(255,255,255,.7)">Up to 54%</span>60% off</p><p class="bf26-sub bf26-sub--white" style="font-size:3.4cqw">Everything</p></div></div>
+        <div class="bf26-panel" style="inset:66cqh 6cqw 6cqw;background:var(--bf26-black)"><div class="center"><p class="bf26-offer" style="font-size:9cqw;color:var(--bf26-led-orange);text-shadow:var(--bf26-glow-orange)">Final hours</p></div></div>
+        <div class="bf26-ticker bf26-ticker--side bf26-ticker--left"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span></span></div><div class="bf26-ticker bf26-ticker--side bf26-ticker--right"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span></span></div><div class="bf26-ticker bf26-ticker--top" style="font-size:3cqw;padding:1cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span></span></div><div class="bf26-ticker bf26-ticker--bottom" style="font-size:3cqw;padding:1cqw 0"><span class="bf26-ticker__track"><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span><span class="bf26-ticker__item--urgency">LAST CHANCE</span></span></div>
+      </div><div class="label">Ending 01 · LAST CHANCE frame: three rounded panels; white lockup, white escalated offer, orange FINAL HOURS on black. Nick says "everything"; BRIEF says "up to"</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--end bf26--orange feed">
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;padding:6cqw 6cqw 6cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet " style="font-size:4.4cqw">Black Friday</p></div>
+          <p class="bf26-offer" style="font-size:7.6cqw;margin-top:2cqw;color:var(--bf26-led-ink);text-shadow:none">Last chance<br>to save</p>
+          <div style="position:relative;width:76cqw;height:46cqw;flex:none;margin-top:5cqw"><img src="../../../assets/library/fabric-detail/BambooQuiltCover-Stripe-StrawberryMerlotStripe-CloseUp-NoTalent-Real-12.webp" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:3cqw;display:block">
+            <div class="bf26-burst" style="top:-6cqw;left:-4cqw;width:19cqw;font-size:2.4cqw">Cooling for<br>hot sleepers</div>
+            <div class="bf26-burst bf26-burst--white" style="top:30%;right:-9cqw;width:17cqw;font-size:2.4cqw;transform:rotate(10deg)">Moisture<br>wicking</div>
+            <div class="bf26-burst bf26-burst--white" style="bottom:-4cqw;left:-7cqw;width:16cqw;font-size:2.4cqw;transform:rotate(-8deg)">Fur<br>friendly</div>
+            <div class="bf26-burst" style="bottom:-7cqw;right:-3cqw;width:16cqw;font-size:2.4cqw;transform:rotate(12deg)">Silky<br>soft</div>
+          </div>
+          <p class="bf26-offer" style="font-size:13cqw;margin-top:auto;line-height:1"><span class="bf26-offer__was">Up to 54%</span>60% off</p>
+        </div>
+      </div><div class="label">Ending 02 · orange ground: ink LED lockup and lead line, a colourway panel with ink and white badges, white escalated offer</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--end bf26--orange feed">
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;padding:7cqw 6cqw 5cqw">
+          <p class="bf26-offer" style="font-size:12cqw;color:var(--bf26-led-ink);text-shadow:none">Last call</p>
+          <div class="bf26-receipt" style="margin-top:5cqw">
+            <p class="bf26-receipt__title">Ecoy Black Friday</p><p class="bf26-receipt__meta">Order #BF-2026</p><hr>
+            <p class="bf26-receipt__line"><span>Cooling sheet set</span><span>$XXX</span></p>
+            <p class="bf26-receipt__line"><span>Black Friday</span><span>-60%</span></p>
+            <p class="bf26-receipt__line"><span>Free gift</span><span>$0.00</span></p><hr>
+            <p class="bf26-receipt__line bf26-receipt__total"><span>You save</span><span>$XXX</span></p><hr>
+            <p class="bf26-receipt__foot">Sale ends 30 Nov 11pm</p>
+          </div>
+          <div class="bf26-lockup" style="margin-top:auto"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy" style="opacity:1"><p class="bf26-headline bf26-headline--quiet bf26-headline--white">Black Friday</p></div>
+        </div>
+      </div><div class="label">Ending 03 · LAST CALL receipt: ink Doto headline, a tilted white till receipt in Doto Medium, white lockup. The $XXX lines need a real grade-A order before use</div>
+    </div>
+    <div>
+      <div class="bf26 bf26--feed bf26--end feed">
+        <img class="bf26-photo" src="../../../assets/library/fabric-detail/BambooFlatSheet-Solid-MidnightPine-CloseUp-NoTalent-Real-01.webp" alt="">
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;padding:6cqw"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet " style="font-size:4.4cqw">Black Friday</p></div>
+          <p class="bf26-offer bf26-offer--accent" style="font-size:9cqw;margin-top:9cqw">Sale at 1%</p>
+          <div class="bf26-battery" style="margin-top:3cqw"><div class="bf26-battery__fill"></div></div>
+          <p class="bf26-offer" style="font-size:8.4cqw;margin-top:9cqw;line-height:1">Up to 60% off<br>storewide</p>
+          <p class="bf26-sub bf26-sub--white bf26-sub--sentence" style="font-size:3cqw;font-weight:500;margin-top:2cqw">Ends tonight, 11pm AEDT</p>
+        </div>
+      </div><div class="label">Ending 04 · battery: black fabric, white lockup, orange SALE AT 1% and battery sliver, white offer. Nick says "60% off everything"; this says "up to 60% off storewide" per BRIEF</div>
+    </div>
+  </div>
+
   <h2>1:1 feed</h2>
   <div class="row">
     <div class="bf26 bf26--square bf26--live square">
@@ -207,13 +401,13 @@
   </div>
 
   <h2>1:1 feed · Every Colour (live) with badges</h2>
-  <p class="note">Nick's "Every colour, up to 54% off" static. Badges carry the benefits; their colour follows the phase (IDENTITY §3.3). Live default is green; merlot is the alternate. Nick's orange badges are left out because PGS keeps orange for the ending.</p>
+  <p class="note">The 1:1 version of Nick's "Every colour, up to 54% off" static (his final is 4:5, above). Badges carry the benefits; their colour follows the phase (IDENTITY §3.3). Live uses green, white or ink; the draft's orange and merlot badges were dropped in the final.</p>
   <div class="row">
     <div class="bf26 bf26--square bf26--live bf26--green square">
       <div style="position:absolute;top:7cqw;left:0;right:0;z-index:2"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline bf26-headline--quiet" style="font-size:5cqw">Black Friday</p></div></div>
       <div style="position:absolute;top:26cqw;left:0;right:0;z-index:2"><p class="bf26-offer" style="font-size:9cqw">Every colour</p><p class="bf26-offer bf26-offer--accent" style="font-size:9cqw">Up to 54% off</p></div>
       <div class="bf26-burst" style="top:54cqw;left:5cqw;width:27cqw;font-size:3cqw">Naturally<br>cooling</div>
-      <div class="bf26-burst bf26-burst--merlot" style="top:58cqw;left:36.5cqw;width:27cqw;font-size:3.2cqw;transform:rotate(8deg)">Fur<br>resistant</div>
+      <div class="bf26-burst bf26-burst--ink" style="top:58cqw;left:36.5cqw;width:27cqw;font-size:3.2cqw;transform:rotate(8deg)">Fur<br>resistant</div>
       <div class="bf26-burst" style="top:54cqw;right:5cqw;width:27cqw;font-size:2.9cqw">90 night<br>risk-free<br>trial</div>
     </div>
   </div>

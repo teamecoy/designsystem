@@ -28,6 +28,8 @@ The 60% step is marked confirmed in the Notion brief. Sam described it on 2026-0
 
 **Phase colour:** Hype creative is white LED on black fabric, Live (5 to 26 Nov) is green with colourways, and Ending (27 to 30 Nov) is orange `#FF6301` (confirmed 20 Oct), back on black fabric. Badges follow the phase too. See IDENTITY.md §3.1 and §3.3.
 
+**Nick's final statics (26 Oct) vs this brief:** the hype set shows "up to 54% off" before launch, the ending set says "60% off everything", and the lock-screen static is a Day 1 ad in hype colours. The templates follow this brief ("up to", no public offer in hype); the conflicts are listed in IDENTITY.md §7 and still need James's call.
+
 ## Gift with purchase (tiers stack)
 
 | Phase | $150+ | $250+ | $350+ |

@@ -4,7 +4,7 @@ One folder per named sale, each with its own look. Evergreen and promotions neve
 
 | Folder | Sale | Status |
 |---|---|---|
-| [`bfcm-2026/`](bfcm-2026/IDENTITY.md) | Black Friday + Cyber Monday 2026 | Codified from Nick's Figma 2026-09-28; phase colours from the PGS pages 2026-10-19 (statics are drafts, resync due); open items in §9 |
+| [`bfcm-2026/`](bfcm-2026/IDENTITY.md) | Black Friday + Cyber Monday 2026 | Codified from Nick's Figma 2026-09-28; phase colours from the PGS pages 2026-10-19, locked 2026-10-26; final statics (33 frames, 4:5 + 9:16) resynced 2026-10-26; open items in §9 |
 
 **Designing for a sale:** read that sale's `IDENTITY.md` first, load its `sale.css`, and wrap the piece in its scope class (e.g. `.bf26`). Photos still come from the main library (`assets/resolveImage.js`), filtered by the sale's own rules.
 

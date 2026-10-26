@@ -5,6 +5,7 @@
    PGS phase pages on 2026-10-19 (LED colour follows the phase); see IDENTITY.md §3. */
 
 @font-face { font-family: 'LED Display St'; font-weight: 400; font-style: normal; font-display: block; src: url('fonts/LedDisplaySt.ttf') format('truetype'); }
+@font-face { font-family: 'Doto'; font-weight: 100 900; font-style: normal; font-display: block; src: url('fonts/Doto-Variable.ttf') format('truetype'); }
 @font-face { font-family: 'Clash Display'; font-weight: 500; font-style: normal; font-display: swap; src: url('fonts/ClashDisplay-Medium.woff2') format('woff2'); }
 @font-face { font-family: 'Clash Display'; font-weight: 600; font-style: normal; font-display: swap; src: url('fonts/ClashDisplay-Semibold.woff2') format('woff2'); }
 
@@ -33,7 +34,10 @@
   --bf26-burst-bg: var(--bf26-led-ink);    /* badge colour; the phase classes override it */
   --bf26-burst-ink: #fff;
   /* Type */
+  /* Two dot-matrix faces (Nick, 23 Oct): LED Display St is the event name only ("BLACK FRIDAY", "CYBER MONDAY");
+     Doto, square dots, Bold by default, is every other dot-matrix line: offers, tickers, stamps, countdowns. */
   --bf26-font-led: 'LED Display St', 'Courier New', monospace;
+  --bf26-font-dot: 'Doto', 'Courier New', monospace;
   --bf26-font-sub: 'Clash Display', 'Satoshi', Inter, system-ui, sans-serif;
 
   container-type: inline-size;
@@ -46,7 +50,8 @@
 
 /* Frames: the formats Nick designed. Width is set by the page; aspect ratio does the rest. */
 .bf26--story  { aspect-ratio: 9 / 16; }      /* 1080×1920 Meta/TikTok story, reel */
-.bf26--square { aspect-ratio: 1 / 1; }       /* 1080×1080 feed */
+.bf26--feed   { aspect-ratio: 4 / 5; }       /* 1080×1350 feed: every final static ships as feed + story (Nick, 26 Oct) */
+.bf26--square { aspect-ratio: 1 / 1; }       /* 1080×1080 feed, older frames only */
 .bf26--pdp    { aspect-ratio: 1360 / 464; }  /* JPEG below add-to-cart on PDPs */
 .bf26--email  { max-width: 600px; }          /* Klaviyo hero, height follows content */
 .bf26--hero   { aspect-ratio: 1920 / 780; }  /* desktop site hero; mobile uses .bf26--story */
@@ -84,11 +89,16 @@
 .bf26 .bf26-lockup__logo { width: 10cqw; opacity: .64; }                /* ≈ 13.5% of headline width */
 .bf26 .bf26-headline { font-family: var(--bf26-font-led); font-weight: 400; font-size: 8.4cqw; line-height: 1; letter-spacing: 0; text-transform: uppercase; color: var(--bf26-accent); text-shadow: var(--bf26-accent-glow); margin: 0; }
 /* When the offer is the hero (most statics), BLACK FRIDAY steps back to a quiet silver line. */
-.bf26 .bf26-headline--quiet { color: var(--bf26-secondary); text-shadow: var(--bf26-glow-white); font-size: 6cqw; }
+.bf26 .bf26-headline--quiet { font-size: 6cqw; }                                   /* small lockup above an offer: phase accent at full strength (final statics, 26 Oct; was 64% white) */
+.bf26--end .bf26-headline--quiet { color: var(--bf26-led-white); text-shadow: var(--bf26-glow-white); }  /* End statics keep the lockup white; orange is for the urgency line */
 .bf26--orange .bf26-headline--quiet { color: rgba(10,10,11,.7); text-shadow: none; }
 .bf26 .bf26-headline--white  { color: var(--bf26-led-white); text-shadow: var(--bf26-glow-white); }
 .bf26 .bf26-headline--orange { color: var(--bf26-led-orange); text-shadow: var(--bf26-glow-orange); }
 .bf26 .bf26-headline--green  { color: var(--bf26-led-green); text-shadow: var(--bf26-glow-green); }
+/* Doto weight steps: Nick sets the lead-in and tail ("UP TO", "SITEWIDE") lighter than the number,
+   and big review headlines ("HOT SLEEPERS WON'T SHUT UP") heavier. Bold (700) is the default. */
+.bf26 .bf26-dot--light { font-weight: 500; }
+.bf26 .bf26-dot--heavy { font-weight: 900; }
 .bf26 .bf26-sub { font-family: var(--bf26-font-sub); font-weight: 600; font-size: 3.7cqw; line-height: 1.1; text-transform: uppercase; letter-spacing: .01em; color: var(--bf26-secondary); margin: 0; }
 .bf26 .bf26-sub--white { color: #fff; }
 
@@ -102,10 +112,10 @@
 
 /* Standalone wordmark (ads only, top centre, when the lockup is not used) */
 .bf26 .bf26-logo-top { position: absolute; z-index: 3; top: 11.5cqh; left: 50%; transform: translateX(-50%); width: 14.8cqw; }
-.bf26--story, .bf26--square, .bf26--home, .bf26--home-m, .bf26--banner, .bf26--banner-m, .bf26--menu { container-type: size; }
+.bf26--story, .bf26--feed, .bf26--square, .bf26--home, .bf26--home-m, .bf26--banner, .bf26--banner-m, .bf26--menu { container-type: size; }
 
 /* ---------- Ticker: LED marquee strips ---------- */
-.bf26 .bf26-ticker { position: relative; z-index: 2; display: flex; overflow: hidden; white-space: nowrap; opacity: var(--bf26-ticker-opacity); font-family: var(--bf26-font-led); font-size: 6cqw; line-height: 1; padding: 1.6cqw 0; }
+.bf26 .bf26-ticker { position: relative; z-index: 2; display: flex; overflow: hidden; white-space: nowrap; opacity: var(--bf26-ticker-opacity); font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 6cqw; line-height: 1; padding: 1.6cqw 0; }
 .bf26 .bf26-ticker--top { position: absolute; top: 0; left: 0; right: 0; }
 .bf26 .bf26-ticker--bottom { position: absolute; bottom: 0; left: 0; right: 0; }
 .bf26 .bf26-ticker--small { font-size: 3.2cqw; opacity: 1; }   /* the pair of strips that sandwich the headline */
@@ -131,25 +141,27 @@
 
 /* ---------- Offer escalation: ending phase only (Fri 27 Nov on), 54% → 60% ----------
    Old offer small and struck through above, new offer big below. House pattern from past sales. */
-.bf26 .bf26-offer { font-family: var(--bf26-font-led); font-size: 8.4cqw; line-height: 1.05; color: var(--bf26-led-white); text-shadow: var(--bf26-glow-white); text-align: center; margin: 0; }
+.bf26 .bf26-offer { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 8.4cqw; line-height: 1.05; color: var(--bf26-led-white); text-shadow: var(--bf26-glow-white); text-align: center; margin: 0; }
 /* The offer is white in every phase; use --accent for the phase-coloured line (e.g. green "UP TO 54% OFF" under "EVERY COLOUR"). */
 .bf26 .bf26-offer--accent { color: var(--bf26-accent); text-shadow: var(--bf26-accent-glow); }
 .bf26--orange .bf26-offer__was { color: #fff; }
 .bf26 .bf26-offer__was { display: block; width: fit-content; margin: 0 auto .25em; font-size: .45em; color: var(--bf26-muted); text-shadow: none; text-decoration: line-through; text-decoration-color: currentColor; text-decoration-thickness: .12em; }
-.bf26 .bf26-footer-led { font-family: var(--bf26-font-led); font-size: 3.4cqw; color: var(--bf26-muted); }
+.bf26 .bf26-footer-led { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 3.4cqw; color: var(--bf26-muted); }
 
 /* ---------- Circular callout stamp ---------- */
 /* Live SVG text on a circle, so it can say anything: LOW STOCK, ENDING SOON, SELLING FAST, LAST CHANCE. */
 .bf26 .bf26-stamp { position: absolute; z-index: 4; width: 34cqw; aspect-ratio: 1; pointer-events: none; }
-.bf26 .bf26-stamp text { font-family: var(--bf26-font-led); font-size: 25px; fill: var(--bf26-accent); }
+.bf26 .bf26-stamp text { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 25px; fill: var(--bf26-accent); }
 .bf26 .bf26-stamp--white text { fill: #fff; }
 .bf26 .bf26-stamp--spin svg { animation: bf26-spin 18s linear infinite; }
 @keyframes bf26-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .bf26 .bf26-stamp--spin svg { animation: none; } }
 
 /* ---------- Supporting pieces ---------- */
-/* Starburst badge (FREE GIFTS, +10% DAY 1, NATURALLY COOLING, FUR RESISTANT, 90 NIGHT RISK-FREE TRIAL).
-   Its colour follows the phase (--bf26-burst-bg / --bf26-burst-ink); the modifiers pick an alternate. Clash caps inside. */
+/* Starburst badge (FREE GIFTS, +10% DAY 1, NOW 54% OFF, NATURALLY COOLING, FUR RESISTANT, 90 NIGHT RISK-FREE TRIAL).
+   Its colour follows the phase (--bf26-burst-bg / --bf26-burst-ink); the modifiers pick an alternate. Clash caps inside.
+   Final palette (Nick, 26 Oct): hype ink; live green (default), white or ink; End on orange ground ink or white; End on black orange.
+   --merlot and --orange are kept for older renders only: neither appears in the final statics. */
 .bf26 .bf26-burst { position: absolute; z-index: 4; width: 16cqw; aspect-ratio: 1; display: grid; place-items: center; text-align: center; font-family: var(--bf26-font-sub); font-weight: 600; font-size: 2.6cqw; line-height: 1; text-transform: uppercase; background: var(--bf26-burst-bg); color: var(--bf26-burst-ink); transform: rotate(-12deg);
   clip-path: polygon(50.0% 0.0%, 59.3% 9.1%, 71.7% 5.0%, 76.2% 17.2%, 89.1% 18.8%, 87.8% 31.8%, 98.7% 38.9%, 92.0% 50.0%, 98.7% 61.1%, 87.8% 68.2%, 89.1% 81.2%, 76.2% 82.8%, 71.7% 95.0%, 59.3% 90.9%, 50.0% 100.0%, 40.7% 90.9%, 28.3% 95.0%, 23.8% 82.8%, 10.9% 81.2%, 12.2% 68.2%, 1.3% 61.1%, 8.0% 50.0%, 1.3% 38.9%, 12.2% 31.8%, 10.9% 18.8%, 23.8% 17.2%, 28.3% 5.0%, 40.7% 9.1%); }
 .bf26 .bf26-burst--white  { background: #fff; color: var(--bf26-led-ink); }
@@ -158,12 +170,12 @@
 .bf26 .bf26-burst--merlot { background: #6B1E2E; color: #fff; }   /* sampled from Nick's live statics; sale-only, not a brand token */
 .bf26 .bf26-burst--orange { background: var(--bf26-orange); color: #fff; }
 .bf26 .bf26-cta { display: inline-block; font-family: var(--bf26-font-sub); font-weight: 600; font-size: 2.6cqw; text-transform: uppercase; color: var(--bf26-deep-green); background: #fff; border-radius: 999px; padding: 1.3cqw 3.6cqw; text-decoration: none; }
-/* Statics set the pill in LED ("TAP TO REVEAL CODE"); ink text on white. */
-.bf26 .bf26-cta--led { font-family: var(--bf26-font-led); font-weight: 400; color: var(--bf26-led-ink); }
+/* Statics set the pill in dot-matrix (Doto) ("TAP TO REVEAL CODE"); ink text on white. */
+.bf26 .bf26-cta--led { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; color: var(--bf26-led-ink); }
 .bf26 .bf26-proof { text-align: center; font-family: var(--bf26-font-sub); font-weight: 500; font-size: 4.2cqw; line-height: 1.15; text-transform: uppercase; color: #fff; }
 .bf26 .bf26-proof__stars { display: block; font-size: .75em; letter-spacing: .15em; margin-bottom: .6em; }
 .bf26 .bf26-countdown { display: flex; justify-content: center; gap: 3cqw; }
-.bf26 .bf26-countdown__unit { text-align: center; font-family: var(--bf26-font-led); font-size: 6cqw; color: var(--bf26-secondary); }
+.bf26 .bf26-countdown__unit { text-align: center; font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 6cqw; color: var(--bf26-secondary); }
 .bf26 .bf26-countdown__unit small { display: block; font-family: var(--bf26-font-sub); font-size: .22em; letter-spacing: .08em; margin-top: .4em; }
 .bf26 .bf26-countdown__unit + .bf26-countdown__unit { border-left: 1px solid rgba(255,255,255,.25); padding-left: 3cqw; }
 .bf26 .bf26-gwp { background: #fff; color: #1C1C1C; border-radius: 2.2cqw; padding: 2.2cqw 3cqw; font-family: var(--bf26-font-sub); text-transform: uppercase; }
@@ -174,12 +186,12 @@
    These sit on the normal site, so they are fixed-size pieces on the off-white page ground,
    not container-scaled frames. Set .bf26 plus a phase class on each one. */
 .bf26.bf26-mod { container-type: normal; overflow: visible; }
-.bf26 .bf26-annbar { display: flex; overflow: hidden; white-space: nowrap; background: var(--bf26-black); font-family: var(--bf26-font-led); font-size: 13px; line-height: 1; padding: 9px 0; }
+.bf26 .bf26-annbar { display: flex; overflow: hidden; white-space: nowrap; background: var(--bf26-black); font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 13px; line-height: 1; padding: 9px 0; }
 .bf26 .bf26-annbar .bf26-ticker__track { gap: 2.4em; margin-left: -2em; }
 /* Shipping delay notice: an inverted ticker (ink on off-white), so it reads as info, not promo */
-.bf26 .bf26-shipnote { display: flex; overflow: hidden; white-space: nowrap; background: #F6F2E8; color: var(--bf26-led-ink); border-block: 1px solid #DDD6C6; font-family: var(--bf26-font-led); font-size: 12px; padding: 8px 0; }
+.bf26 .bf26-shipnote { display: flex; overflow: hidden; white-space: nowrap; background: #F6F2E8; color: var(--bf26-led-ink); border-block: 1px solid #DDD6C6; font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 12px; padding: 8px 0; }
 .bf26 .bf26-shipnote .bf26-ticker__track { gap: 2em; }
-.bf26 .bf26-shipnote b { font-weight: 400; opacity: .55; }
+.bf26 .bf26-shipnote b { font-weight: 700; opacity: .55; }
 /* Homepage secondary tile: un-dimmed product photo, white Clash label bottom-left */
 .bf26 .bf26-tile { position: relative; overflow: hidden; border-radius: 6px; aspect-ratio: 4 / 5; }
 .bf26 .bf26-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -187,29 +199,29 @@
 .bf26 .bf26-tile__label { position: absolute; z-index: 1; left: 14px; bottom: 12px; color: #fff; font-family: var(--bf26-font-sub); font-weight: 600; text-transform: uppercase; font-size: 15px; line-height: 1.1; }
 .bf26 .bf26-tile__label small { display: block; font-weight: 500; text-transform: none; font-size: 12px; opacity: .85; margin-top: 3px; }
 /* PDP sale badge and price */
-.bf26 .bf26-pdpbadge { display: inline-block; background: var(--bf26-black); color: var(--bf26-accent); text-shadow: var(--bf26-accent-glow); font-family: var(--bf26-font-led); font-size: 12px; padding: 6px 10px; border-radius: 4px; }
+.bf26 .bf26-pdpbadge { display: inline-block; background: var(--bf26-black); color: var(--bf26-accent); text-shadow: var(--bf26-accent-glow); font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 12px; padding: 6px 10px; border-radius: 4px; }
 .bf26 .bf26-price { display: flex; align-items: baseline; gap: 10px; font-family: var(--bf26-font-sub); color: var(--bf26-led-ink); }
 .bf26 .bf26-price__now { font-weight: 600; font-size: 26px; }
 .bf26 .bf26-price__was { font-size: 15px; color: #8a857a; text-decoration: line-through; }
-.bf26 .bf26-price__save { background: var(--bf26-black); color: #fff; font-family: var(--bf26-font-led); font-size: 12px; padding: 4px 8px; border-radius: 3px; align-self: center; }
+.bf26 .bf26-price__save { background: var(--bf26-black); color: #fff; font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 12px; padding: 4px 8px; border-radius: 3px; align-self: center; }
 .bf26 .bf26-price + p { font-size: 13px; color: #6d685e; margin: 6px 0 0; font-family: var(--bf26-font-sub); }
 /* Black card: GWP block, PDP GWP callout, code module, countdown module, cart progress */
 .bf26 .bf26-card { background: var(--bf26-black); color: #fff; border-radius: 8px; padding: 22px 26px; font-family: var(--bf26-font-sub); }
-.bf26 .bf26-card__title { font-family: var(--bf26-font-led); font-size: 20px; letter-spacing: .06em; text-align: center; margin: 0 0 18px; }
-.bf26 .bf26-card__eyebrow { font-family: var(--bf26-font-led); font-size: 11px; letter-spacing: .1em; color: var(--bf26-secondary); margin: 0 0 8px; }
+.bf26 .bf26-card__title { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 20px; letter-spacing: .06em; text-align: center; margin: 0 0 18px; }
+.bf26 .bf26-card__eyebrow { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: .1em; color: var(--bf26-secondary); margin: 0 0 8px; }
 .bf26 .bf26-tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; text-align: center; }
 .bf26 .bf26-tiers svg { width: 26px; height: 26px; stroke: var(--bf26-accent); fill: none; stroke-width: 1.6; }
-.bf26 .bf26-tiers b { display: block; font-family: var(--bf26-font-led); font-weight: 400; font-size: 18px; margin: 6px 0 2px; }
+.bf26 .bf26-tiers b { display: block; font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 18px; margin: 6px 0 2px; }
 .bf26 .bf26-tiers span { font-size: 12px; color: rgba(255,255,255,.75); }
-.bf26 .bf26-card__link { display: block; text-align: center; margin-top: 16px; font-family: var(--bf26-font-led); font-size: 14px; color: var(--bf26-accent); text-decoration: underline; text-underline-offset: 3px; }
+.bf26 .bf26-card__link { display: block; text-align: center; margin-top: 16px; font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 14px; color: var(--bf26-accent); text-decoration: underline; text-underline-offset: 3px; }
 .bf26 .bf26-codebox { border: 1.5px dashed rgba(255,255,255,.55); border-radius: 6px; padding: 16px; text-align: center; }
-.bf26 .bf26-codebox__code { font-family: var(--bf26-font-led); font-size: 26px; letter-spacing: .04em; margin: 0 0 10px; }
+.bf26 .bf26-codebox__code { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 26px; letter-spacing: .04em; margin: 0 0 10px; }
 .bf26 .bf26-codebox .bf26-cta { font-size: 12px; padding: 8px 16px; color: var(--bf26-led-ink); }
 .bf26 .bf26-codebox small { display: block; font-size: 11px; color: rgba(255,255,255,.6); margin-top: 8px; }
 .bf26 .bf26-clock { display: flex; justify-content: center; align-items: flex-start; gap: 14px; }
-.bf26 .bf26-clock div { text-align: center; font-family: var(--bf26-font-led); font-size: 40px; line-height: 1; }
+.bf26 .bf26-clock div { text-align: center; font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 40px; line-height: 1; }
 .bf26 .bf26-clock div small { display: block; font-family: var(--bf26-font-sub); font-size: 10px; letter-spacing: .1em; color: var(--bf26-secondary); margin-top: 6px; }
-.bf26 .bf26-clock i { font-style: normal; font-family: var(--bf26-font-led); font-size: 26px; color: var(--bf26-secondary); padding-top: 6px; }
+.bf26 .bf26-clock i { font-style: normal; font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 26px; color: var(--bf26-secondary); padding-top: 6px; }
 .bf26 .bf26-progress p { margin: 0 0 14px; font-size: 13px; }
 .bf26 .bf26-progress__track { position: relative; height: 4px; background: rgba(255,255,255,.18); border-radius: 2px; margin: 0 8px 26px; }
 .bf26 .bf26-progress__fill { position: absolute; inset: 0 auto 0 0; background: var(--bf26-accent); border-radius: 2px; }
@@ -228,11 +240,11 @@
 .bf26 .bf26-review--dark .bf26-review__name { color: rgba(255,255,255,.7); }
 .bf26 .bf26-review--dark .bf26-review__stars { color: var(--bf26-led-green); }
 /* Value band: a full-width green bar with ink LED text */
-.bf26 .bf26-band { background: var(--bf26-accent); color: var(--bf26-led-ink); font-family: var(--bf26-font-led); text-align: center; font-size: 3.6cqw; padding: 2cqw 0; }
+.bf26 .bf26-band { background: var(--bf26-accent); color: var(--bf26-led-ink); font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; text-align: center; font-size: 3.6cqw; padding: 2cqw 0; }
 /* Comparison: ECOY (green) vs DUMB BEDDING (grey) panels */
 .bf26 .bf26-vs { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4cqw; position: relative; }
 .bf26 .bf26-vs__col { border-radius: 2.6cqw; padding: 3cqw; font-family: var(--bf26-font-sub); font-size: 2.6cqw; line-height: 1.25; }
-.bf26 .bf26-vs__col h3 { font-family: var(--bf26-font-led); font-weight: 400; font-size: 8cqw; line-height: .95; margin: 0 0 3cqw; }
+.bf26 .bf26-vs__col h3 { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 8cqw; line-height: .95; margin: 0 0 3cqw; }
 .bf26 .bf26-vs__col--us { background: var(--bf26-led-green); color: var(--bf26-led-ink); }
 .bf26 .bf26-vs__col--them { background: #3A3A3C; color: rgba(255,255,255,.75); }
 .bf26 .bf26-vs__col--them h3 { color: rgba(255,255,255,.6); font-size: 6.4cqw; }
@@ -241,14 +253,84 @@
 .bf26 .bf26-vs ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.6cqw; }
 .bf26 .bf26-vs__col--us li::before { content: "✓ "; font-weight: 600; }
 .bf26 .bf26-vs__col--them li::before { content: "✕ "; }
-.bf26 .bf26-vs__badge { position: absolute; left: 50%; top: 22%; transform: translate(-50%, -50%); width: 10cqw; aspect-ratio: 1; border-radius: 50%; background: #fff; color: var(--bf26-led-ink); display: grid; place-items: center; font-family: var(--bf26-font-led); font-size: 3.6cqw; }
+.bf26 .bf26-vs__badge { position: absolute; left: 50%; top: 22%; transform: translate(-50%, -50%); width: 10cqw; aspect-ratio: 1; border-radius: 50%; background: #fff; color: var(--bf26-led-ink); display: grid; place-items: center; font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 3.6cqw; }
 /* Split grid: four quadrants of colour blocks and photos */
 .bf26 .bf26-split { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
 .bf26 .bf26-split > * { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 .bf26 .bf26-split img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 /* Repeated LED line ("COOLING SHEETS" × 8) over a photo */
-.bf26 .bf26-repeat { position: relative; z-index: 1; font-family: var(--bf26-font-led); color: #fff; line-height: 1.32; font-size: 5.6cqw; text-align: left; padding-left: 3cqw; align-self: stretch; }
+.bf26 .bf26-repeat { position: relative; z-index: 1; font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; color: #fff; line-height: 1.32; font-size: 5.6cqw; text-align: left; padding-left: 3cqw; align-self: stretch; }
 /* Colour grid: un-dimmed stack tiles, one per live colourway */
 .bf26 .bf26-swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2cqw; }
 .bf26 .bf26-swatches figure { margin: 0; border-radius: 1.8cqw; background: rgba(255,255,255,.08); aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; }
 .bf26 .bf26-swatches img { width: 120%; max-width: none; filter: drop-shadow(0 1cqw 1.6cqw rgba(0,0,0,.35)); }
+
+/* ---------- Final statics (Nick, 26 Oct 2026; Figma q8VGTz4nTuVSd52p4RqO3i, page 2016:1141) ----------
+   Four sets (hype, hot sleepers, old winners, sale ending), each piece as a 4:5 feed and a 9:16 story. */
+
+/* Stat line: a big accent Doto number with a white Clash label on the right (0% NIGHT SWEATS, 100% COOL SIDE ALL NIGHT) */
+.bf26 .bf26-stat { display: flex; align-items: center; justify-content: space-between; gap: 4cqw; }
+.bf26 .bf26-stat__num { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 14cqw; line-height: 1; color: var(--bf26-accent); text-shadow: var(--bf26-accent-glow); }
+.bf26 .bf26-stat__label { font-family: var(--bf26-font-sub); font-weight: 600; text-transform: uppercase; font-size: 4.2cqw; line-height: 1.05; text-align: right; color: #fff; }
+
+/* Night timeline (A NIGHT ON ECOY): 10PM / 1AM / 3AM / 6AM in accent Doto, dots on a faint line, Clash titles, grey sub-lines */
+.bf26 .bf26-timeline { display: grid; gap: 6cqw; }
+.bf26 .bf26-timeline__row { display: grid; grid-template-columns: 19cqw 5cqw 1fr; align-items: start; }
+.bf26 .bf26-timeline__time { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 6.2cqw; line-height: 1; color: var(--bf26-accent); text-shadow: var(--bf26-accent-glow); }
+.bf26 .bf26-timeline__dot { position: relative; width: 2.8cqw; height: 2.8cqw; border-radius: 50%; background: var(--bf26-accent); margin-top: 1.2cqw; }
+.bf26 .bf26-timeline__row:not(:last-child) .bf26-timeline__dot::after { content: ""; position: absolute; left: 50%; top: 100%; width: 2px; height: 11cqw; background: rgba(255,255,255,.22); transform: translateX(-50%); }
+.bf26 .bf26-timeline__title { font-family: var(--bf26-font-sub); font-weight: 600; text-transform: uppercase; font-size: 4.2cqw; line-height: 1.1; color: #fff; margin: 0; }
+.bf26 .bf26-timeline__sub { font-family: var(--bf26-font-sub); font-weight: 500; font-size: 2.8cqw; line-height: 1.2; color: rgba(255,255,255,.62); margin: .6cqw 0 0; text-transform: none; }
+
+/* Comparison table (the final ECOY vs DUMB BEDDING): one glass card, Clash rows in sentence case, accent ticks, grey crosses */
+.bf26 .bf26-table { position: relative; z-index: 2; background: rgba(14,16,18,.72); backdrop-filter: blur(8px); border-radius: 3cqw; padding: 1cqw 3.6cqw; font-family: var(--bf26-font-sub); color: #fff; }
+.bf26 .bf26-table__row { display: grid; grid-template-columns: 1fr 17cqw 17cqw; align-items: center; padding: 3cqw 0; border-bottom: 1px solid rgba(255,255,255,.12); font-weight: 600; font-size: 3.3cqw; }
+.bf26 .bf26-table__row:last-child { border-bottom: 0; }
+.bf26 .bf26-table__row--head { padding: 2cqw 0 1cqw; border-bottom: 0; }
+.bf26 .bf26-table__head { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 3.2cqw; text-align: center; }
+.bf26 .bf26-table__head--us { color: var(--bf26-accent); } .bf26 .bf26-table__head--them { color: rgba(255,255,255,.45); }
+.bf26 .bf26-table__yes, .bf26 .bf26-table__no { width: 6cqw; height: 6cqw; border-radius: 50%; display: grid; place-items: center; margin: 0 auto; font-size: 3.2cqw; line-height: 1; }
+.bf26 .bf26-table__yes { background: var(--bf26-accent); color: var(--bf26-led-ink); }
+.bf26 .bf26-table__no { border: 1px solid rgba(255,255,255,.45); color: rgba(255,255,255,.55); }
+.bf26 .bf26-table__price { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; text-align: center; font-size: 3.3cqw; }
+.bf26 .bf26-table__price--us { color: var(--bf26-accent); } .bf26 .bf26-table__price--them { color: rgba(255,255,255,.45); }
+
+/* Tape: diagonal accent strips of repeated ink Doto text (HOT SLEEPERS ONLY) across a photo panel */
+.bf26 .bf26-tape { position: absolute; z-index: 4; left: -12cqw; right: -12cqw; background: var(--bf26-accent); color: var(--bf26-led-ink); font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 3cqw; line-height: 1; letter-spacing: .04em; padding: 1.3cqw 0; white-space: nowrap; overflow: hidden; text-align: center; }
+
+/* Receipt (LAST CALL): a white till receipt tilted on the orange ground. Doto Medium, ink, dashed rules. */
+.bf26 .bf26-receipt { position: relative; z-index: 2; background: #fff; color: var(--bf26-led-ink); width: 68cqw; padding: 5cqw 4cqw 4cqw; font-family: var(--bf26-font-dot); font-weight: 500; text-transform: uppercase; font-size: 3.1cqw; line-height: 1.3; transform: rotate(-4deg); box-shadow: 0 2cqw 5cqw rgba(0,0,0,.25); text-align: left; }
+.bf26 .bf26-receipt__title { font-weight: 700; font-size: 3.8cqw; margin: 0; }
+.bf26 .bf26-receipt__meta { color: rgba(10,10,11,.45); font-size: 2.3cqw; margin: .4cqw 0 0; }
+.bf26 .bf26-receipt hr { border: 0; border-top: 2px dashed rgba(10,10,11,.3); margin: 2.4cqw 0; }
+.bf26 .bf26-receipt__line { display: flex; justify-content: space-between; gap: 2cqw; margin: 0; }
+.bf26 .bf26-receipt__total { font-weight: 700; font-size: 4cqw; }
+.bf26 .bf26-receipt__foot { font-size: 2.3cqw; margin: 0; }
+
+/* Battery (SALE AT 1%): a phone battery outline with a sliver of orange */
+.bf26 .bf26-battery { position: relative; width: 78cqw; height: 29cqw; border: 1cqw solid #fff; border-radius: 6cqw; margin: 0 auto; box-sizing: border-box; }
+.bf26 .bf26-battery::after { content: ""; position: absolute; right: -3.6cqw; top: 50%; width: 2cqw; height: 10cqw; background: #fff; border-radius: 0 1.2cqw 1.2cqw 0; transform: translateY(-50%); }
+.bf26 .bf26-battery__fill { position: absolute; left: 1.6cqw; top: 1.6cqw; bottom: 1.6cqw; width: 5cqw; background: var(--bf26-orange); border-radius: 2.4cqw; }
+
+/* Lock screen (THURSDAY 5 NOVEMBER · 11:59): a phone lock screen over a darkened colourway.
+   System sans (Inter) on purpose: it mimics the phone, and is the only place the sale uses it. */
+.bf26 .bf26-lock__date { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: 2.8cqw; color: rgba(255,255,255,.78); text-align: center; margin: 0; }
+.bf26 .bf26-lock__time { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 22cqw; line-height: 1; letter-spacing: -.03em; color: rgba(255,255,255,.55); text-align: center; margin: 0; }
+.bf26 .bf26-notif { display: grid; grid-template-columns: 8cqw 1fr; gap: 2.4cqw; align-items: start; background: rgba(10,10,11,.58); backdrop-filter: blur(10px); border-radius: 3cqw; padding: 2.6cqw 3cqw; font-family: 'Inter', system-ui, -apple-system, sans-serif; color: #fff; text-align: left; }
+.bf26 .bf26-notif__app { width: 8cqw; height: 8cqw; border-radius: 1.8cqw; background: var(--bf26-led-ink); display: grid; place-items: center; }
+.bf26 .bf26-notif__app img { width: 70%; }
+.bf26 .bf26-notif__kicker { font-size: 2.2cqw; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.75); margin: 0 0 .4cqw; }
+.bf26 .bf26-notif__title { font-weight: 600; font-size: 3.4cqw; margin: 0 0 .4cqw; }
+.bf26 .bf26-notif__body { font-size: 2.7cqw; line-height: 1.3; color: rgba(255,255,255,.85); margin: 0; }
+
+/* Photo quote: accent stars, a Clash sentence-case quote and reviewer over a talent photo (VoC rules apply) */
+.bf26 .bf26-quote { position: relative; z-index: 2; font-family: var(--bf26-font-sub); color: #fff; text-align: left; }
+.bf26 .bf26-quote__stars { color: var(--bf26-accent); font-size: 4cqw; letter-spacing: .08em; }
+.bf26 .bf26-quote__text { font-weight: 600; font-size: 6.2cqw; line-height: 1.08; margin: 1cqw 0 1.6cqw; text-transform: none; }
+.bf26 .bf26-quote__name { font-weight: 500; font-size: 3.2cqw; color: rgba(255,255,255,.75); margin: 0; }
+
+/* Pill: ink Doto on the phase accent (UP TO 54% OFF COOLING SHEETS) */
+.bf26 .bf26-pill { display: inline-block; background: var(--bf26-accent); color: var(--bf26-led-ink); border-radius: 999px; font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 3cqw; line-height: 1; padding: 1.6cqw 4cqw; }
+
+/* Clash in sentence case: the hot-sleeper set uses it for conversational lines ("Still awake and sweating?", review quotes) */
+.bf26 .bf26-sub--sentence { text-transform: none; letter-spacing: 0; }
