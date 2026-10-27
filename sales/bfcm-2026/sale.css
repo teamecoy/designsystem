@@ -146,6 +146,46 @@
 .bf26 .bf26-offer--accent { color: var(--bf26-accent); text-shadow: var(--bf26-accent-glow); }
 .bf26--orange .bf26-offer__was { color: #fff; }
 .bf26 .bf26-offer__was { display: block; width: fit-content; margin: 0 auto .25em; font-size: .45em; color: var(--bf26-muted); text-shadow: none; text-decoration: line-through; text-decoration-color: currentColor; text-decoration-thickness: .12em; }
+/* ---------- Offer stack: lead-in / offer / tail (27 Oct) ----------
+   Nick's rule: every gap in the stack is the same, and it equals the cap height of the small lines.
+   That holds above and below the offer, and between "54%" and "OFF" when the offer stacks in two rows.
+   Measured on his final hype statics at 648px wide: feed gaps 31 and 32px against small caps of 28 to 32px;
+   story gaps 24, 23 and 24px against small caps of 25 to 27px.
+   Every line is trimmed to its capitals, so the fonts' built-in padding never adds to the gap.
+   Set sizes only, through the three custom properties. Never add margins or line-heights inside the stack.
+   In Figma: vertical auto layout, item spacing = the small line's cap height, and every text layer on
+   Vertical trim "Cap height to baseline". */
+.bf26 .bf26-offerstack {
+  --bf26-offer-size: 17cqw;                                   /* the big line */
+  --bf26-offer-lead: calc(var(--bf26-offer-size) * .33);      /* "UP TO" */
+  --bf26-offer-tail: var(--bf26-offer-lead);                  /* "SITEWIDE", "+ extra 10% off, Day 1 only" */
+  --bf26-offer-gap: calc(var(--bf26-offer-lead) * .7);        /* cap height of the small line (Doto caps are .70em) */
+  position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: var(--bf26-offer-gap);
+  margin: 0; text-align: center; text-transform: uppercase; color: var(--bf26-led-white);
+}
+.bf26 .bf26-offerstack > * { margin: 0; }
+.bf26 .bf26-offerstack__offer {
+  font-family: var(--bf26-font-dot); font-weight: 700; font-size: var(--bf26-offer-size);
+  line-height: calc(var(--bf26-offer-size) * .7 + var(--bf26-offer-gap));   /* two rows keep the same gap */
+  text-shadow: var(--bf26-glow-white);
+}
+.bf26 .bf26-offerstack__offer--accent { color: var(--bf26-accent); text-shadow: var(--bf26-accent-glow); }
+.bf26 .bf26-offerstack__lead, .bf26 .bf26-offerstack__tail { font-family: var(--bf26-font-dot); font-weight: 500; line-height: 1; text-shadow: var(--bf26-glow-white); }
+.bf26 .bf26-offerstack__lead { font-size: var(--bf26-offer-lead); }
+.bf26 .bf26-offerstack__tail { font-size: var(--bf26-offer-tail); }
+/* Nick's final hype statics set the small lines in Clash: spaced caps for "UP TO", sentence case for the Day 1 line. */
+.bf26 .bf26-offerstack__lead--clash, .bf26 .bf26-offerstack__tail--clash { font-family: var(--bf26-font-sub); font-weight: 600; letter-spacing: .12em; padding-inline-start: .12em; text-shadow: none; }
+.bf26 .bf26-offerstack__tail--sentence { text-transform: none; letter-spacing: 0; padding-inline-start: 0; font-weight: 500; }
+@supports (text-box: trim-both cap alphabetic) {
+  .bf26 .bf26-offerstack > * { text-box: trim-both cap alphabetic; }
+}
+@supports not (text-box: trim-both cap alphabetic) {
+  /* Older browsers: cut the same padding by hand. At line-height 1, Doto sits .15em proud of its caps top and bottom;
+     Clash sits .15em above and .18em below. The offer's own leading is half the gap on each side. */
+  .bf26 .bf26-offerstack__lead, .bf26 .bf26-offerstack__tail { margin-block: -.15em; }
+  .bf26 .bf26-offerstack__lead--clash, .bf26 .bf26-offerstack__tail--clash { margin-block: -.15em -.18em; }
+  .bf26 .bf26-offerstack__offer { margin-block: calc(var(--bf26-offer-gap) * -.5); }
+}
 .bf26 .bf26-footer-led { font-family: var(--bf26-font-dot); font-weight: 700; text-transform: uppercase; font-size: 3.4cqw; color: var(--bf26-muted); }
 
 /* ---------- Circular callout stamp ---------- */

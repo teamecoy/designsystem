@@ -53,6 +53,14 @@
   <div class="bf26 bf26--live panel"><div class="bf26-lockup"><img class="bf26-lockup__logo" src="../../../logos/logo-white.svg" alt="Ecoy"><p class="bf26-headline">Black Friday</p><p class="bf26-sub">Sale</p></div></div>
   <div class="bf26 panel" style="margin-top:12px"><div class="bf26-lockup"><p class="bf26-headline" style="color:var(--bf26-led-green);text-shadow:var(--bf26-glow-green)">Never this<br>cheap again</p><p class="bf26-sub bf26-sub--white">Award-winning cooling sheets for hot sleepers</p></div></div>
 
+  <h2>Offer stack · lead-in, offer, tail</h2>
+  <p class="note">Nick's spacing rule: every gap in the stack is the same, and it equals the cap height of the small lines. That includes the gap between "54%" and "OFF" when the offer runs in two rows. Use <code>.bf26-offerstack</code> and set only <code>--bf26-offer-size</code>, <code>--bf26-offer-lead</code> and <code>--bf26-offer-tail</code>. Never build the stack from separate paragraphs with their own margins or line-heights; that is what put the extra space under "54% OFF" in the 27 Oct hype round. In Figma, use vertical auto layout with item spacing equal to the small line's cap height, and set every text layer's vertical trim to "Cap height to baseline".</p>
+  <div class="row">
+    <div class="bf26 bf26--hype panel" style="flex:1;min-width:240px;max-width:340px;display:grid;place-items:center"><div class="bf26-offerstack" style="--bf26-offer-size:21cqw;--bf26-offer-lead:9cqw"><p class="bf26-offerstack__lead">Up to</p><p class="bf26-offerstack__offer">54% off</p><p class="bf26-offerstack__tail">Sitewide</p></div></div>
+    <div class="bf26 bf26--hype panel" style="flex:1;min-width:240px;max-width:340px;display:grid;place-items:center"><div class="bf26-offerstack" style="--bf26-offer-size:19cqw;--bf26-offer-lead:5.4cqw;--bf26-offer-tail:5cqw"><p class="bf26-offerstack__lead bf26-offerstack__lead--clash">Up to</p><p class="bf26-offerstack__offer">54% off</p><p class="bf26-offerstack__tail bf26-offerstack__tail--clash bf26-offerstack__tail--sentence">+ extra 10% off, Day 1 only</p></div></div>
+    <div class="bf26 bf26--hype panel" style="flex:1;min-width:200px;max-width:260px;display:grid;place-items:center"><div class="bf26-offerstack" style="--bf26-offer-size:40cqw;--bf26-offer-lead:8cqw;--bf26-offer-tail:7cqw"><p class="bf26-offerstack__lead bf26-offerstack__lead--clash">Up to</p><p class="bf26-offerstack__offer">54%<br>off</p><p class="bf26-offerstack__tail bf26-offerstack__tail--clash bf26-offerstack__tail--sentence">+ extra 10% off, Day 1 only</p></div></div>
+  </div>
+
   <h2>Offer escalation · ending phase</h2>
   <p class="note">From Fri 27 Nov only (never pre-announced). Old offer small and struck through on top, new offer big underneath.</p>
   <div class="bf26 bf26--end panel" style="max-width:520px"><p class="bf26-offer"><span class="bf26-offer__was">Up to 54% off</span>Now up to<br>60% off<br>storewide</p></div>
