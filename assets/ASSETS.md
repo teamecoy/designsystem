@@ -91,7 +91,7 @@ Three things to know. **A missing `.webp` means not generated yet, not absent**,
 
 ## The images are also on a CDN
 
-As of 2026-10-12, 8,479 of the web copies above (every eligible one) are mirrored to the Shopify Files CDN, and every filename got there unchanged — Shopify has renamed zero of them across two runs. That means a url is **derivable from the filename alone**, with no lookup table to maintain:
+As of 2026-10-28, 8,542 of the web copies above (every eligible one) are mirrored to the Shopify Files CDN, and every filename got there unchanged — Shopify has renamed zero of them across five runs. That means a url is **derivable from the filename alone**, with no lookup table to maintain:
 
 ```
 https://cdn.shopify.com/s/files/1/0498/6100/1367/files/<filename>.webp
@@ -131,6 +131,22 @@ Run these in order. Steps 1, 2 and 4 are local; step 3 is the Colab notebook, wh
 **Renaming after upload.** A CDN file can't be renamed, only replaced. Rename it in Drive (master and web copy), rebuild the vocabulary and index, then run `build_upload_manifest.py --prune --drive`: the old entries leave the manifest and go on `shopify-delete-list.json`, and the new names are queued. The notebook uploads the new ones; its step 8 deletes the old ones only when Sam sets `CONFIRM_DELETE = True`, and only if that run was clean.
 
 **Sequence numbers** are two digits, zero padded; once a shoot passes 99 frames they carry on with three (`-100`, `-101`).
+
+## The Tote Bag shoot (October 2026)
+
+57 frames shot 23 Oct 2026, live on the CDN since 2026-10-28. Product token `ToteBag` (Shopify "Tote Bag"); no pattern segment. Colour tokens follow the photographer's labels, not Shopify's option order: `EggplantPink` (Pink / Eggplant), `MatchaForest` (Matcha / Forest), `IcedChocolate` (Iced / Chocolate, labelled "Choc blue" on set), `OatmealCharcoal` (Oatmeal / Charcoal). Angles: `Side` (front), `High45`, `CloseUp` (zip and logo details; a hand in shot makes it `Talent`), `Overhead` (flat-lay details), `Freestyle` (stool, lifestyle and gift-with-purchase frames).
+
+Two naming rules settled on this shoot:
+
+- **Three or more colourways in one frame** use the colour token `AllColours` (display "All Colours", folder `All Colours`). The four-tote group shots are `ToteBag-AllColours-…`; a sleep-mask cut-out already used it ad hoc.
+- **Two products in one frame** (a tote with polka packaging) keep the hero product as the product token and record the second product's colourway with the existing combo syntax: `ToteBag-MatchaForestxCaramelPolka-Freestyle-…`, filed in `Tote Bag/Matcha Forest x Caramel Polka/`. The index records both halves as `colourPair`; `resolveImage` matches the whole token only. Frames with only the polka packaging in them were filed under the polka product instead (`BambooSheetSet-Polka-CaramelPolka-Freestyle-…`, `BambooQuiltCover-Polka-CaramelPolka-Freestyle-…`).
+
+Also uploaded in the same run: the five stacked Polka deep-etch cut-outs, now `BambooQuiltCover-Polka-<colour>Polka-Deepetch-Horizontal-NoTalent-Real-01.png` (real, not AI; "Stacked" dropped because it is not an angle word). The earlier AI-named jpgs sit in each colour's `Horizontal/Old/` folder and are still on the CDN under their AI names.
+
+```js
+resolveImage(catalog, { product: 'ToteBag', colour: 'OatmealCharcoal', people: 'Talent' })
+resolveImage(catalog, { product: 'ToteBag', colour: 'AllColours' })
+```
 
 ## The Polka shoot (September 2026)
 

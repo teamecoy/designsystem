@@ -193,6 +193,10 @@
     {
       "display": "Waterproof Bamboo Mattress Protector",
       "token": "MattressProtector"
+    },
+    {
+      "display": "Tote Bag",
+      "token": "ToteBag"
     }
   ],
   "patterns": [
@@ -350,6 +354,26 @@
       {
         "display": "Burgundy",
         "token": "Burgundy"
+      },
+      {
+        "display": "Eggplant Pink",
+        "token": "EggplantPink"
+      },
+      {
+        "display": "Matcha Forest",
+        "token": "MatchaForest"
+      },
+      {
+        "display": "Iced Chocolate",
+        "token": "IcedChocolate"
+      },
+      {
+        "display": "Oatmeal Charcoal",
+        "token": "OatmealCharcoal"
+      },
+      {
+        "display": "All Colours",
+        "token": "AllColours"
       }
     ],
     "stripe": [
