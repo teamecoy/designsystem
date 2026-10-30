@@ -114,6 +114,8 @@ Notes: Nick sets ink text on the green badge in the final (the draft's white-on-
 
 The wordmark is the real Ecoy logo, not "ECOY" typed in the LED font. It is always about the same width as "SALE", and about **13.5% of the headline's width**, in every format.
 
+**Files (30 Oct 2026):** the lockup and the event name exist as assets in [`logo/`](logo/README.md): `bfcm-2026-black-friday-<colour>.svg|png`, `bfcm-2026-lockup-black-friday-<colour>.svg|png`, and the Cyber Monday pair, in white, green, orange and ink. Outlined glyphs with the LED glow, 2400px PNGs on transparent. Use them when the sale name must be dropped in as an image (email, Figma, other tools); inside `sale.css` templates it stays live type.
+
 **Logo size by channel:**
 
 | Channel | Lockup wordmark | Standalone wordmark |
