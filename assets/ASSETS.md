@@ -36,6 +36,7 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 | Angle | `High45`, `Low45`, `Overhead`, `Side`, `CloseUp`, `Freestyle`, `Deepetch` | |
 | Orientation | `Vertical`, `Horizontal`, `Square` | **New 2026-09-23, new shoots only** (`Square` added 2026-10-08) — see below. Omitted on everything shot before that date; that's normal, not a mistake. |
 | People | `NoTalent`, `Talent` | Whether a person is in shot |
+| Pet | `Dog`, `Cat`, `DogxCat` | **Optional, new 2026-11-03.** Sits between People and Source, only when an animal is in shot: `BambooSheetSet-Solid-Oatmeal-Freestyle-Vertical-Talent-Dog-Creator-01.jpg`. Omitted otherwise. Files named before that date carry no pet even if one is in frame. `resolveImage` only returns a pet frame when you pass `pet: "Dog"` (or `"Cat"`, `"DogxCat"`), or when nothing else exists. |
 | Source | `Real`, `Creator`, `AI` | `Real` = our own pro shoot. `Creator` = shot by a creator or influencer (UGC, Creator Program), whatever the camera. `AI` = generated. `Creator` added 2026-11-03; everything named `Real` before then is a pro shoot. |
 | NN | `01`, `02`, … | Two digits, zero padded |
 

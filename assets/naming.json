@@ -42,11 +42,12 @@
     }
   },
   "filename": {
-    "pattern": "{product}-{pattern}-{colour}-{angle}-[{orientation}]-{people}-{source}-{seq}{ext}",
+    "pattern": "{product}-{pattern}-{colour}-{angle}-[{orientation}]-{people}-[{pet}]-{source}-{seq}{ext}",
     "separator": "-",
     "example": "BambooSheetSet-Solid-Dusk-High45-NoTalent-Real-01.jpg",
     "exampleCombo": "BambooSheetSet-Solid-BurntOrangexWhite-High45-NoTalent-AI-01.jpg",
     "exampleWithOrientation": "BambooQuiltCover-Stripe-CookiesCreamStripe-CloseUp-Horizontal-NoTalent-AI-01.jpg",
+    "exampleWithPet": "BambooSheetSet-Solid-Oatmeal-Freestyle-Vertical-Talent-Dog-Creator-01.jpg",
     "fields": {
       "product": {
         "required": true,
@@ -76,6 +77,13 @@
       "people": {
         "required": true,
         "from": "people"
+      },
+      "pet": {
+        "required": false,
+        "from": "pets",
+        "since": "2026-11-03",
+        "omitWhen": "no animal in shot",
+        "note": "Dog, Cat, or DogxCat when both are in frame. Absent on every file named before 2026-11-03; that means no pet was recorded, not that none is in shot."
       },
       "source": {
         "required": true,
@@ -458,6 +466,11 @@
   "people": [
     "NoTalent",
     "Talent"
+  ],
+  "pets": [
+    "Dog",
+    "Cat",
+    "DogxCat"
   ],
   "sources": [
     "Real",

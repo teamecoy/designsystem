@@ -23,6 +23,7 @@ COLS = {
     "ext":     (13, None),
     "pattern": (15, 16),
     "orientation": (17, None),
+    "pet":     (19, None),
 }
 NA = {"(no colour / na)", "(none / na)", ""}
 
@@ -94,11 +95,12 @@ def build():
             },
         },
         "filename": {
-            "pattern": "{product}-{pattern}-{colour}-{angle}-[{orientation}]-{people}-{source}-{seq}{ext}",
+            "pattern": "{product}-{pattern}-{colour}-{angle}-[{orientation}]-{people}-[{pet}]-{source}-{seq}{ext}",
             "separator": "-",
             "example": "BambooSheetSet-Solid-Dusk-High45-NoTalent-Real-01.jpg",
             "exampleCombo": "BambooSheetSet-Solid-BurntOrangexWhite-High45-NoTalent-AI-01.jpg",
             "exampleWithOrientation": "BambooQuiltCover-Stripe-CookiesCreamStripe-CloseUp-Horizontal-NoTalent-AI-01.jpg",
+            "exampleWithPet": "BambooSheetSet-Solid-Oatmeal-Freestyle-Vertical-Talent-Dog-Creator-01.jpg",
             "fields": {
                 "product":  {"required": True,  "from": "products"},
                 "pattern":  {"required": False, "from": "patterns", "omitWhen": "the product has no pattern (quilts, pillows, protector)"},
@@ -106,6 +108,7 @@ def build():
                 "angle":    {"required": True,  "from": "angles"},
                 "orientation": {"required": False, "from": "orientations", "since": "2026-09-23", "note": "Added to the spreadsheet 2026-09-23 for new shoots only. Existing library files predate it and have no orientation segment; treat it as absent, not invalid, on anything shot before that date."},
                 "people":   {"required": True,  "from": "people"},
+                "pet":      {"required": False, "from": "pets", "since": "2026-11-03", "omitWhen": "no animal in shot", "note": "Dog, Cat, or DogxCat when both are in frame. Absent on every file named before 2026-11-03; that means no pet was recorded, not that none is in shot."},
                 "source":   {"required": True,  "from": "sources"},
                 "seq":      {"required": True,  "format": "two digits, zero padded, 01 upward"},
                 "ext":      {"required": True,  "from": "extensions"},
@@ -128,6 +131,7 @@ def build():
         "angles": L["angle"],
         "orientations": L["orientation"],
         "people": L["people"],
+        "pets": L["pet"],
         "sources": L["source"],
         "extensions": L["ext"],
         "angleMeanings": {

@@ -19,6 +19,7 @@ COLOURS = ({c["token"] for c in N["colours"]["solid"]}
            | {c["token"] for c in N["colours"].get("polka", [])})
 ANGLES, PEOPLE, SOURCES = set(N["angles"]), set(N["people"]), set(N["sources"])
 ORIENTATIONS = set(N.get("orientations", []))
+PETS = set(N.get("pets", []))
 EXTS = set(N["extensions"])
 IMAGE_EXTS = EXTS | {".jpeg", ".webp", ".tif", ".tiff", ".heic"}
 
@@ -36,14 +37,20 @@ def check(name):
 
     parts = stem.split("-")
     if len(parts) < 5:
-        return bad + [f"only {len(parts)} parts; expected Product-[Pattern]-[Colour]-Angle-People-Source-NN"]
+        return bad + [f"only {len(parts)} parts; expected Product-[Pattern]-[Colour]-Angle-People-[Pet]-Source-NN"]
 
     # Anchor from the right: seq, source, people are always the last three.
     # Orientation is optional (added 2026-09-23, new shoots only) and sits
     # between angle and people when present, so check for it before deciding
     # where angle actually is.
-    seq, source, people = parts[-1], parts[-2], parts[-3]
-    if len(parts) >= 5 and parts[-4] in ORIENTATIONS:
+    # Pet is optional too (added 2026-11-03) and sits between people and source.
+    seq, source = parts[-1], parts[-2]
+    if parts[-3] in PETS:
+        parts = parts[:-3] + parts[-2:]
+    people = parts[-3]
+    if len(parts) < 5:
+        return bad + ["too few parts after the pet; expected Product-[Pattern]-[Colour]-Angle-People-[Pet]-Source-NN"]
+    if parts[-4] in ORIENTATIONS:
         angle, head = parts[-5], parts[:-5]
     else:
         angle, head = parts[-4], parts[:-4]

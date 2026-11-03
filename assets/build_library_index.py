@@ -25,6 +25,7 @@ COLOURS = ({c["token"] for c in N["colours"]["solid"]}
            | {c["token"] for c in N["colours"].get("polka", [])})
 ANGLES, PEOPLE, SOURCES = set(N["angles"]), set(N["people"]), set(N["sources"])
 ORIENTATIONS = set(N.get("orientations", [])) or {"Vertical", "Horizontal"}
+PETS = set(N.get("pets", []))  # optional, added 2026-11-03
 # Orientation was added to the spreadsheet 2026-09-23 for new shoots only;
 # every file indexed before that has no orientation segment, which is
 # expected, not invalid (see naming.json knownGaps).
@@ -35,7 +36,7 @@ VIDEO_EXT = {".mov", ".mp4", ".m4v"}
 def parse(stem):
     """Parse a filename stem into fields. Unknown tokens are kept, not dropped."""
     out = {"product": None, "pattern": None, "colour": None, "angle": None,
-           "people": None, "source": None, "orientation": None, "seq": None,
+           "people": None, "source": None, "orientation": None, "pet": None, "seq": None,
            "unknown": [], "valid": False}
     parts = stem.split("-")
     if len(parts) < 4:
@@ -55,6 +56,8 @@ def parse(stem):
             out["angle"] = p; parts.remove(p)
         elif p in ORIENTATIONS and not out["orientation"]:
             out["orientation"] = p; parts.remove(p)
+        elif p in PETS and not out["pet"]:
+            out["pet"] = p; parts.remove(p)
         elif p in PATTERNS and not out["pattern"]:
             out["pattern"] = p; parts.remove(p)
         elif p in PRODUCTS and not out["product"]:
@@ -81,7 +84,7 @@ def reparse():
     for r in doc["files"]:
         fn = pathlib.Path(r["path"]).name
         for k in ("product", "pattern", "colour", "angle", "people",
-                  "source", "orientation", "seq", "colourPair", "unknown", "valid"):
+                  "source", "orientation", "pet", "seq", "colourPair", "unknown", "valid"):
             r.pop(k, None)
         parsed = parse(pathlib.Path(fn).stem)
         for k, v in parsed.items():
@@ -158,7 +161,7 @@ def main():
     slim = []
     for r in doc["files"]:
         row = {"path": r["path"]}
-        for k in ("product", "pattern", "colour", "angle", "people", "source", "orientation", "seq"):
+        for k in ("product", "pattern", "colour", "angle", "people", "source", "orientation", "pet", "seq"):
             if r.get(k):
                 row[k] = r[k]
         if r.get("colourPair"):

@@ -59,6 +59,8 @@ def main():
         }
         if f.get("orientation"):
             entry["orientation"] = f["orientation"]
+        if f.get("pet"):
+            entry["pet"] = f["pet"]
 
         not_yet_live = f["name"] in KNOWN_NOT_YET_LIVE.get("filename", set())
         if not_yet_live:

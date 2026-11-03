@@ -95,7 +95,7 @@ def main():
         entry = {"web": cloud_path(path.with_suffix(".webp")), "name": stem + ".webp",
                  "master": cloud_path(r["path"])}
         entry.update({k: r[k] for k in ("product", "pattern", "colour", "angle", "orientation",
-                                        "people", "source") if r.get(k)})
+                                        "people", "pet", "source") if r.get(k)})
         added.append(entry)
         listed.add(stem)
 

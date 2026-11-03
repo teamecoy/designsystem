@@ -30,9 +30,10 @@
  * @param {string} [query.angle] - a specific angle; omit to use the angle preference order (High45 first)
  * @param {string} [query.orientation] - "Horizontal" (landscape) | "Vertical" (portrait) | "Square" (1:1); prefers it, falls back to either. Only shoots from 2026-09 onward carry one
  * @param {string} [query.people] - "NoTalent" | "Talent"; omit to accept either
+ * @param {string} [query.pet] - "Dog" | "Cat" | "DogxCat"; omit to prefer frames with no pet recorded
  * @param {string} [query.source] - "Real" (pro shoot) | "Creator" (creator/UGC) | "AI"; omit to prefer Real, then Creator, then AI
  * @param {boolean} [query.allowNotYetLive=false] - include images flagged notYetLive (see build_cdn_catalog.py)
- * @returns {object|null} { url, filename, angle, people, source, product, pattern, colour } or null
+ * @returns {object|null} { url, filename, angle, people, pet, source, product, pattern, colour } or null
  */
 export function resolveImage(catalog, query) {
   const {
@@ -42,6 +43,7 @@ export function resolveImage(catalog, query) {
     angle,
     orientation,
     people,
+    pet,
     source,
     allowNotYetLive = false,
   } = query;
@@ -56,11 +58,11 @@ export function resolveImage(catalog, query) {
 
   const anglesToTry = angle ? [angle] : catalog.anglePreference;
   const usableAt = (a) => (byAngle[a] || []).filter((c) => allowNotYetLive || !c.notYetLive);
-  const wanted = { orientation, people, source };
+  const wanted = { orientation, people, pet, source };
 
   // What the caller asked for outranks the default angle ranking: first look
-  // across every angle for an exact match on orientation / people / source...
-  if (orientation || people || source) {
+  // across every angle for an exact match on orientation / people / pet / source...
+  if (orientation || people || pet || source) {
     for (const a of anglesToTry) {
       const exact = usableAt(a).filter((c) =>
         Object.entries(wanted).every(([k, v]) => !v || c[k] === v));
@@ -106,7 +108,7 @@ export function listImages(catalog, query) {
   return out;
 }
 
-function pickBest(candidates, { orientation, people, source }) {
+function pickBest(candidates, { orientation, people, pet, source }) {
   let pool = candidates;
   if (orientation) {
     const withOrientation = pool.filter((c) => c.orientation === orientation);
@@ -116,6 +118,9 @@ function pickBest(candidates, { orientation, people, source }) {
     const withPeople = pool.filter((c) => c.people === people);
     if (withPeople.length) pool = withPeople;
   }
+  // A pet frame only comes back when asked for, or when it is all there is.
+  const withPet = pool.filter((c) => (pet ? c.pet === pet : !c.pet));
+  if (withPet.length) pool = withPet;
   if (source) {
     const withSource = pool.filter((c) => c.source === source);
     if (withSource.length) pool = withSource;
