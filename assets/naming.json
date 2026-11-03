@@ -34,7 +34,9 @@
       "excludedFolders": [
         "NEW IMAGERY - to be renamed",
         "Archive",
-        "Founder BTS & OLD Content"
+        "Founder BTS & OLD Content",
+        "Amazon Agency Asset Request",
+        "_Previous packaging"
       ],
       "useFor": "screen work, mockups, anything on the web. Masters stay the source of truth for print and retouching.",
       "missingMeans": "not generated yet, not absent. Fall back to the master rather than erroring.",
@@ -424,6 +426,66 @@
       {
         "display": "Cloudy Sky Stripe",
         "token": "CloudySkyStripe"
+      },
+      {
+        "display": "Black Stripe",
+        "token": "BlackStripe"
+      },
+      {
+        "display": "Blooming Pink Stripe",
+        "token": "BloomingPinkStripe"
+      },
+      {
+        "display": "Burnt Orange Stripe",
+        "token": "BurntOrangeStripe"
+      },
+      {
+        "display": "Caramel Malt Stripe",
+        "token": "CaramelMaltStripe"
+      },
+      {
+        "display": "Chocolate Iced Stripe",
+        "token": "ChocolateIcedStripe"
+      },
+      {
+        "display": "Coconut Sage Stripe",
+        "token": "CoconutSageStripe"
+      },
+      {
+        "display": "Cookie Stripe",
+        "token": "CookieStripe"
+      },
+      {
+        "display": "Eggplant Stripe",
+        "token": "EggplantStripe"
+      },
+      {
+        "display": "Forest Green Stripe",
+        "token": "ForestGreenStripe"
+      },
+      {
+        "display": "Matcha Stripe",
+        "token": "MatchaStripe"
+      },
+      {
+        "display": "Merlot Strawberry Stripe",
+        "token": "MerlotStrawberryStripe"
+      },
+      {
+        "display": "Peach Stripe",
+        "token": "PeachStripe"
+      },
+      {
+        "display": "Reef Teal Stripe",
+        "token": "ReefTealStripe"
+      },
+      {
+        "display": "Sand Stripe",
+        "token": "SandStripe"
+      },
+      {
+        "display": "Sky Cloudy Stripe",
+        "token": "SkyCloudyStripe"
       }
     ],
     "polka": [
@@ -456,7 +518,10 @@
     "Freestyle",
     "CloseUp",
     "Deepetch",
-    "Side"
+    "Side",
+    "Packshot",
+    "Stacked",
+    "Floating"
   ],
   "orientations": [
     "Vertical",
@@ -488,7 +553,10 @@
     "Side": "straight on from the side",
     "CloseUp": "fabric or detail crop",
     "Freestyle": "lifestyle or styled composition",
-    "Deepetch": "cut out on transparent or white, for compositing"
+    "Deepetch": "cut out on transparent or white, for compositing",
+    "Packshot": "product in its retail packaging on the bench (Pack Shots folder)",
+    "Stacked": "folded pieces stacked, on a stool or cut out on white (Pack Shots folder)",
+    "Floating": "single piece cut out mid-air on white (Pack Shots folder)"
   },
   "knownGaps": [
     "Polka colourways are named after the dot colour on the fabric (Sam, 2026-09-29): EggplantPolka, BurgundyPolka, IcedChocolatePolka, ForestGreenPolka, CaramelPolka. First shoot (981 images) landed in Drive 2026-09-29.",

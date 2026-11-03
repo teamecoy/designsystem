@@ -33,7 +33,7 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 | Product | 22 tokens, `BambooSheetSet`, `AmbiQuiltCover`, `FlannelSheetSet` … | Always first |
 | Pattern | `Solid`, `Stripe`, `Polka` | Omitted for quilts, pillows, protector |
 | Colour | 33 solid, 10 stripe, 5 polka | Omitted where the product has no colourway |
-| Angle | `High45`, `Low45`, `Overhead`, `Side`, `CloseUp`, `Freestyle`, `Deepetch` | |
+| Angle | `High45`, `Low45`, `Overhead`, `Side`, `CloseUp`, `Freestyle`, `Deepetch`, `Packshot`, `Stacked`, `Floating` | The last three are the Pack Shots folder only |
 | Orientation | `Vertical`, `Horizontal`, `Square` | **New 2026-09-23, new shoots only** (`Square` added 2026-10-08) — see below. Omitted on everything shot before that date; that's normal, not a mistake. |
 | People | `NoTalent`, `Talent` | Whether a person is in shot |
 | Pet | `Dog`, `Cat`, `DogxCat` | **Optional, new 2026-11-03.** Sits between People and Source, only when an animal is in shot: `BambooSheetSet-Solid-Oatmeal-Freestyle-Vertical-Talent-Dog-Creator-01.jpg`. Omitted otherwise. Files named before that date carry no pet even if one is in frame. `resolveImage` only returns a pet frame when you pass `pet: "Dog"` (or `"Cat"`, `"DogxCat"`), or when nothing else exists. |
@@ -42,7 +42,7 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 
 **Two-colour shots** join both colours with a lowercase x and no spaces: `BurntOrangexWhite`, `ByronxLagoon`. Used for reversible Ambi pairs and any styled two-colour set.
 
-**Picking an angle.** `Deepetch` is cut out for compositing. `Overhead` is a flat lay. `Freestyle` is styled lifestyle. `CloseUp` is a fabric or detail crop. The rest are what they sound like.
+**Picking an angle.** `Deepetch` is cut out for compositing. `Overhead` is a flat lay. `Freestyle` is styled lifestyle. `CloseUp` is a fabric or detail crop. The rest are what they sound like. `Packshot`, `Stacked` and `Floating` (added 3 Nov 2026) belong to `Photography/Pack Shots`: retail packaging on the bench, folded stacks, and single pieces cut out mid-air. Most are AI recolours of real frames. They are left out of the default angle order, so `resolveImage` returns them only when you ask for that angle; a default lookup still prefers real High45 photography.
 
 **Orientation is new.** Added to the spreadsheet 2026-09-23, sitting between Angle and People: `Product-Pattern-Colour-Angle-Orientation-People-Source-NN.ext`, e.g. `BambooQuiltCover-Stripe-CookiesCreamStripe-CloseUp-Horizontal-NoTalent-AI-01.jpg`. It exists so a design brief can ask for a widescreen vs. a portrait crop of the same shot. It applies to **new shoots only** — none of the 9,233 already-indexed library files have it, and a batch rewrite of old filenames to add it has been discussed but isn't scheduled. Every parser in this repo (`build_library_index.py`, `check_filenames.py`) treats a missing orientation as normal, not invalid — never flag an old file for lacking one.
 
@@ -88,7 +88,7 @@ python3 assets/resolve_web.py "<library-relative path>"   # returns the best ava
 python3 assets/resolve_web.py --coverage                  # how much of the mirror exists
 ```
 
-Three things to know. **A missing `.webp` means not generated yet, not absent**, so always fall back to the master rather than erroring. **Three folders are permanently excluded**: `NEW IMAGERY - to be renamed`, `Archive`, and `Founder BTS & OLD Content`. **HEIC files get no web copy**, since the conversion covers only the five extensions above.
+Three things to know. **A missing `.webp` means not generated yet, not absent**, so always fall back to the master rather than erroring. **Five folders are permanently excluded**: `NEW IMAGERY - to be renamed`, `Archive`, `Founder BTS & OLD Content`, `Amazon Agency Asset Request` (a share-out copy of Pack Shots with the same filenames) and `_Previous packaging` (pre-2026 packaging, reference only). Copies inside excluded folders don't count against the unique-name rule. **HEIC files get no web copy**, since the conversion covers only the five extensions above.
 
 ## The images are also on a CDN
 

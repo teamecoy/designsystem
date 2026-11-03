@@ -88,7 +88,8 @@ def build():
                 "typicalSize": "~237 KB, up to ~900 KB for texture-heavy close-ups, versus ~24 MB for a master",
                 "preserves": "aspect ratio exactly, ICC colour profile, EXIF rotation baked in",
                 "sourceExtensions": [".jpg", ".jpeg", ".png", ".tif", ".tiff"],
-                "excludedFolders": ["NEW IMAGERY - to be renamed", "Archive", "Founder BTS & OLD Content"],
+                "excludedFolders": ["NEW IMAGERY - to be renamed", "Archive", "Founder BTS & OLD Content",
+                                    "Amazon Agency Asset Request", "_Previous packaging"],
                 "useFor": "screen work, mockups, anything on the web. Masters stay the source of truth for print and retouching.",
                 "missingMeans": "not generated yet, not absent. Fall back to the master rather than erroring.",
                 "hotlinking": "none. These are Drive files with no CDN in front of them, so they still cannot be referenced by URL from a published page.",
@@ -142,6 +143,9 @@ def build():
             "CloseUp": "fabric or detail crop",
             "Freestyle": "lifestyle or styled composition",
             "Deepetch": "cut out on transparent or white, for compositing",
+            "Packshot": "product in its retail packaging on the bench (Pack Shots folder)",
+            "Stacked": "folded pieces stacked, on a stool or cut out on white (Pack Shots folder)",
+            "Floating": "single piece cut out mid-air on white (Pack Shots folder)",
         },
         "knownGaps": [
             "Polka colourways are named after the dot colour on the fabric (Sam, 2026-09-29): "

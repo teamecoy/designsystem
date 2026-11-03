@@ -74,7 +74,9 @@ def main():
         print(f"repaired {fixed} entries whose folder had a local-only ' (N)' suffix")
     listed = {f["name"].rsplit(".", 1)[0] for f in doc["files"]}
     rows = json.loads((ROOT / "library-index.json").read_text())["files"]
-    stems = Counter(pathlib.Path(r["path"]).stem for r in rows)
+    # copies in excluded folders (e.g. a share-out duplicate) don't make a name "not unique"
+    stems = Counter(pathlib.Path(r["path"]).stem for r in rows
+                    if not any(x in r["path"] for x in EXCLUDED))
 
     added, skipped = [], Counter()
     for r in rows:

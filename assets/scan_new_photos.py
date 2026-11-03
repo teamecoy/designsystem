@@ -34,7 +34,9 @@ def main():
     cutoff = time.mktime(time.strptime(since, "%Y-%m-%d"))
     listed = {f["name"].rsplit(".", 1)[0] for f in manifest["files"]}
     stems = Counter()
-    for _, _, fs in os.walk(LIB):
+    for d, _, fs in os.walk(LIB):
+        if any(x in d for x in EXCLUDED):   # share-out copies don't make a name "not unique"
+            continue
         stems.update(pathlib.Path(f).stem for f in fs)
 
     queued, skipped = Counter(), defaultdict(list)
