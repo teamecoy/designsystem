@@ -30,7 +30,7 @@
  * @param {string} [query.angle] - a specific angle; omit to use the angle preference order (High45 first)
  * @param {string} [query.orientation] - "Horizontal" (landscape) | "Vertical" (portrait) | "Square" (1:1); prefers it, falls back to either. Only shoots from 2026-09 onward carry one
  * @param {string} [query.people] - "NoTalent" | "Talent"; omit to accept either
- * @param {string} [query.source] - "Real" | "AI"; omit to prefer Real over AI
+ * @param {string} [query.source] - "Real" (pro shoot) | "Creator" (creator/UGC) | "AI"; omit to prefer Real, then Creator, then AI
  * @param {boolean} [query.allowNotYetLive=false] - include images flagged notYetLive (see build_cdn_catalog.py)
  * @returns {object|null} { url, filename, angle, people, source, product, pattern, colour } or null
  */
@@ -120,9 +120,11 @@ function pickBest(candidates, { orientation, people, source }) {
     const withSource = pool.filter((c) => c.source === source);
     if (withSource.length) pool = withSource;
   } else {
-    // Prefer real photography over AI when the caller didn't specify.
-    const real = pool.filter((c) => c.source === "Real");
-    if (real.length) pool = real;
+    // Prefer pro shoots, then creator shots, then AI when the caller didn't specify.
+    for (const s of ["Real", "Creator"]) {
+      const match = pool.filter((c) => c.source === s);
+      if (match.length) { pool = match; break; }
+    }
   }
   return pool[0] || null;
 }

@@ -461,7 +461,8 @@
   ],
   "sources": [
     "Real",
-    "AI"
+    "AI",
+    "Creator"
   ],
   "extensions": [
     ".jpg",

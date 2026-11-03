@@ -36,7 +36,7 @@ CloudQuilt-Overhead-NoTalent-Real-02.jpg
 | Angle | `High45`, `Low45`, `Overhead`, `Side`, `CloseUp`, `Freestyle`, `Deepetch` | |
 | Orientation | `Vertical`, `Horizontal`, `Square` | **New 2026-09-23, new shoots only** (`Square` added 2026-10-08) — see below. Omitted on everything shot before that date; that's normal, not a mistake. |
 | People | `NoTalent`, `Talent` | Whether a person is in shot |
-| Source | `Real`, `AI` | Camera photo or AI generated |
+| Source | `Real`, `Creator`, `AI` | `Real` = our own pro shoot. `Creator` = shot by a creator or influencer (UGC, Creator Program), whatever the camera. `AI` = generated. `Creator` added 2026-11-03; everything named `Real` before then is a pro shoot. |
 | NN | `01`, `02`, … | Two digits, zero padded |
 
 **Two-colour shots** join both colours with a lowercase x and no spaces: `BurntOrangexWhite`, `ByronxLagoon`. Used for reversible Ambi pairs and any styled two-colour set.

@@ -2,7 +2,7 @@
 
 ## Rules
 
-**Filenames are structured**, so you can read an image without opening it: `Product-Pattern-Colour-Angle-Talent-Source-NN.webp` for the files here; CDN files also carry an orientation after the angle (`BambooSheetSet-Solid-Burgundy-High45-Vertical-NoTalent-Real-01.webp`). `Real` is a photograph; `AI` is generated. `NoTalent` has no person in frame.
+**Filenames are structured**, so you can read an image without opening it: `Product-Pattern-Colour-Angle-Talent-Source-NN.webp` for the files here; CDN files also carry an orientation after the angle (`BambooSheetSet-Solid-Burgundy-High45-Vertical-NoTalent-Real-01.webp`). `Real` is a pro-shoot photograph; `Creator` is a creator or UGC photo; `AI` is generated. `NoTalent` has no person in frame.
 
 **No third-party brands in shot** (Oct 2026). Crop or swap any frame showing another brand's logo or product (e.g. a designer bag on a shelf).
 
