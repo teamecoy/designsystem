@@ -12,7 +12,7 @@
     "Deepetch"
   ],
   "counts": {
-    "totalEntries": 8907,
+    "totalEntries": 9005,
     "flaggedNotYetLive": 0,
     "products": 19
   },
@@ -784,6 +784,32 @@
               "filename": "BambooFittedSheet-Solid-Butter-Packshot-NoTalent-AI-01.webp",
               "people": "NoTalent",
               "source": "AI"
+            }
+          ],
+          "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooFittedSheet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "filename": "BambooFittedSheet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "filename": "BambooFittedSheet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
             }
           ]
         },
@@ -2087,6 +2113,18 @@
               "source": "AI"
             }
           ]
+        },
+        "SandyReefStripe": {
+          "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooFittedSheet-Stripe-SandyReefStripe-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "filename": "BambooFittedSheet-Stripe-SandyReefStripe-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            }
+          ]
         }
       }
     },
@@ -3146,6 +3184,16 @@
               "filename": "BambooPillowcase-Solid-Charcoal-Packshot-NoTalent-AI-01.webp",
               "people": "NoTalent",
               "source": "AI"
+            }
+          ],
+          "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooPillowcase-Solid-Charcoal-Freestyle-Vertical-NoTalent-DogxCat-Creator-01.webp",
+              "filename": "BambooPillowcase-Solid-Charcoal-Freestyle-Vertical-NoTalent-DogxCat-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "DogxCat"
             }
           ]
         },
@@ -5257,6 +5305,62 @@
           ],
           "Freestyle": [
             {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "filename": "BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-AI-02.webp",
+              "filename": "BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-AI-02.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-AI-03.webp",
+              "filename": "BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-AI-03.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-AI-04.webp",
+              "filename": "BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-AI-04.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "filename": "BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "filename": "BambooQuiltCover-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-BurntOrange-Freestyle-Talent-AI-01.webp",
               "filename": "BambooQuiltCover-Solid-BurntOrange-Freestyle-Talent-AI-01.webp",
               "people": "Talent",
@@ -6145,6 +6249,14 @@
             }
           ],
           "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooQuiltCover-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Butter-Freestyle-Talent-AI-01.webp",
               "filename": "BambooQuiltCover-Solid-Butter-Freestyle-Talent-AI-01.webp",
@@ -8040,6 +8152,86 @@
           ],
           "Freestyle": [
             {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "filename": "BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Cat-Creator-02.webp",
+              "filename": "BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Cat-Creator-02.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Cat-Creator-03.webp",
+              "filename": "BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Cat-Creator-03.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "filename": "BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "filename": "BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-04.webp",
+              "filename": "BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-04.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-05.webp",
+              "filename": "BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-05.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-06.webp",
+              "filename": "BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-06.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-07.webp",
+              "filename": "BambooQuiltCover-Solid-Caramel-Freestyle-Vertical-NoTalent-Dog-Creator-07.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Caramel-Freestyle-Talent-Real-01.webp",
               "filename": "BambooQuiltCover-Solid-Caramel-Freestyle-Talent-Real-01.webp",
               "people": "Talent",
@@ -8403,6 +8595,30 @@
             }
           ],
           "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Charcoal-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "filename": "BambooQuiltCover-Solid-Charcoal-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Charcoal-Freestyle-Horizontal-NoTalent-Dog-Real-01.webp",
+              "filename": "BambooQuiltCover-Solid-Charcoal-Freestyle-Horizontal-NoTalent-Dog-Real-01.webp",
+              "people": "NoTalent",
+              "source": "Real",
+              "orientation": "Horizontal",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Charcoal-Freestyle-Horizontal-NoTalent-Dog-Real-02.webp",
+              "filename": "BambooQuiltCover-Solid-Charcoal-Freestyle-Horizontal-NoTalent-Dog-Real-02.webp",
+              "people": "NoTalent",
+              "source": "Real",
+              "orientation": "Horizontal",
+              "pet": "Dog"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Charcoal-Freestyle-Talent-AI-01.webp",
               "filename": "BambooQuiltCover-Solid-Charcoal-Freestyle-Talent-AI-01.webp",
@@ -10638,6 +10854,14 @@
           ],
           "Freestyle": [
             {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Jacaranda-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "filename": "BambooQuiltCover-Solid-Jacaranda-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Jacaranda-Freestyle-Talent-AI-01.webp",
               "filename": "BambooQuiltCover-Solid-Jacaranda-Freestyle-Talent-AI-01.webp",
               "people": "Talent",
@@ -11105,6 +11329,78 @@
           ],
           "Freestyle": [
             {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "filename": "BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "filename": "BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-04.webp",
+              "filename": "BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-04.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-05.webp",
+              "filename": "BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-05.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-06.webp",
+              "filename": "BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-06.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-07.webp",
+              "filename": "BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-07.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-08.webp",
+              "filename": "BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-08.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-09.webp",
+              "filename": "BambooQuiltCover-Solid-Matcha-Freestyle-Vertical-NoTalent-Dog-Creator-09.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Matcha-Freestyle-Talent-Real-01.webp",
               "filename": "BambooQuiltCover-Solid-Matcha-Freestyle-Talent-Real-01.webp",
               "people": "Talent",
@@ -11548,6 +11844,14 @@
             }
           ],
           "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Merlot-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "filename": "BambooQuiltCover-Solid-Merlot-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Merlot-Freestyle-Talent-AI-01.webp",
               "filename": "BambooQuiltCover-Solid-Merlot-Freestyle-Talent-AI-01.webp",
@@ -13263,6 +13567,14 @@
           ],
           "Freestyle": [
             {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Oatmeal-Freestyle-Horizontal-NoTalent-Cat-Creator-01.webp",
+              "filename": "BambooQuiltCover-Solid-Oatmeal-Freestyle-Horizontal-NoTalent-Cat-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Horizontal",
+              "pet": "Cat"
+            },
+            {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Oatmeal-Freestyle-Talent-AI-01.webp",
               "filename": "BambooQuiltCover-Solid-Oatmeal-Freestyle-Talent-AI-01.webp",
               "people": "Talent",
@@ -13342,6 +13654,22 @@
             }
           ],
           "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Ocean-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "filename": "BambooQuiltCover-Solid-Ocean-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Ocean-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "filename": "BambooQuiltCover-Solid-Ocean-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Ocean-Freestyle-Talent-AI-01.webp",
               "filename": "BambooQuiltCover-Solid-Ocean-Freestyle-Talent-AI-01.webp",
@@ -13959,6 +14287,16 @@
               "filename": "BambooQuiltCover-Solid-White-Stacked-NoTalent-AI-01.webp",
               "people": "NoTalent",
               "source": "AI"
+            }
+          ],
+          "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-White-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "filename": "BambooQuiltCover-Solid-White-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Cat"
             }
           ]
         },
@@ -17622,11 +17960,67 @@
               "source": "AI"
             }
           ]
+        },
+        "MatchaxDune": {
+          "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-MatchaxDune-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooQuiltCover-Solid-MatchaxDune-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-MatchaxDune-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "filename": "BambooQuiltCover-Solid-MatchaxDune-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-MatchaxDune-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "filename": "BambooQuiltCover-Solid-MatchaxDune-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-MatchaxDune-Freestyle-Vertical-NoTalent-Dog-Creator-04.webp",
+              "filename": "BambooQuiltCover-Solid-MatchaxDune-Freestyle-Vertical-NoTalent-Dog-Creator-04.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            }
+          ]
+        },
+        "OceanxIceberg": {
+          "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-OceanxIceberg-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "filename": "BambooQuiltCover-Solid-OceanxIceberg-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            }
+          ]
         }
       },
       "Stripe": {
         "BurntPeachStripe": {
           "High45": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-High45-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-High45-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-High45-NoTalent-Real-01.webp",
               "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-High45-NoTalent-Real-01.webp",
@@ -17661,6 +18055,14 @@
             }
           ],
           "Overhead": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Overhead-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Overhead-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Overhead-NoTalent-Real-01.webp",
               "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Overhead-NoTalent-Real-01.webp",
@@ -17983,6 +18385,126 @@
             }
           ],
           "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-04.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-04.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-05.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-05.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-06.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-06.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-07.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-07.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-08.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-08.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-09.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-NoTalent-Dog-Creator-09.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-Talent-Dog-Creator-01.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-Talent-Dog-Creator-01.webp",
+              "people": "Talent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-Talent-Dog-Creator-02.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-Talent-Dog-Creator-02.webp",
+              "people": "Talent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-Talent-Dog-Creator-03.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-Talent-Dog-Creator-03.webp",
+              "people": "Talent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-Talent-Dog-Creator-04.webp",
+              "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Vertical-Talent-Dog-Creator-04.webp",
+              "people": "Talent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Talent-Real-01.webp",
               "filename": "BambooQuiltCover-Stripe-BurntPeachStripe-Freestyle-Talent-Real-01.webp",
@@ -18963,6 +19485,22 @@
         },
         "CherryBlossomStripe": {
           "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-CherryBlossomStripe-Freestyle-Square-NoTalent-Cat-AI-01.webp",
+              "filename": "BambooQuiltCover-Stripe-CherryBlossomStripe-Freestyle-Square-NoTalent-Cat-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Square",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-CherryBlossomStripe-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "filename": "BambooQuiltCover-Stripe-CherryBlossomStripe-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-CherryBlossomStripe-Freestyle-NoTalent-Real-01.webp",
               "filename": "BambooQuiltCover-Stripe-CherryBlossomStripe-Freestyle-NoTalent-Real-01.webp",
@@ -20797,6 +21335,14 @@
             }
           ],
           "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-CookiesCreamStripe-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "filename": "BambooQuiltCover-Stripe-CookiesCreamStripe-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-CookiesCreamStripe-Freestyle-Talent-Real-01.webp",
               "filename": "BambooQuiltCover-Stripe-CookiesCreamStripe-Freestyle-Talent-Real-01.webp",
@@ -26983,6 +27529,14 @@
             }
           ],
           "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-SandyReefStripe-Freestyle-Vertical-Talent-Dog-AI-01.webp",
+              "filename": "BambooQuiltCover-Stripe-SandyReefStripe-Freestyle-Vertical-Talent-Dog-AI-01.webp",
+              "people": "Talent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-SandyReefStripe-Freestyle-Talent-Real-01.webp",
               "filename": "BambooQuiltCover-Stripe-SandyReefStripe-Freestyle-Talent-Real-01.webp",
@@ -35858,6 +36412,38 @@
           ],
           "Freestyle": [
             {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "filename": "BambooSheetSet-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "filename": "BambooSheetSet-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-BurntOrange-Freestyle-Square-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooSheetSet-Solid-BurntOrange-Freestyle-Square-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Square",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "filename": "BambooSheetSet-Solid-BurntOrange-Freestyle-Vertical-NoTalent-Cat-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-BurntOrange-Freestyle-Talent-AI-01.webp",
               "filename": "BambooSheetSet-Solid-BurntOrange-Freestyle-Talent-AI-01.webp",
               "people": "Talent",
@@ -36117,6 +36703,22 @@
           ],
           "High45": [
             {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-High45-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooSheetSet-Solid-Butter-High45-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-High45-Vertical-NoTalent-Dog-Creator-02.webp",
+              "filename": "BambooSheetSet-Solid-Butter-High45-Vertical-NoTalent-Dog-Creator-02.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-High45-Horizontal-NoTalent-Real-01.webp",
               "filename": "BambooSheetSet-Solid-Butter-High45-Horizontal-NoTalent-Real-01.webp",
               "people": "NoTalent",
@@ -36371,6 +36973,80 @@
               "filename": "BambooSheetSet-Solid-Butter-Stacked-NoTalent-AI-01.webp",
               "people": "NoTalent",
               "source": "AI"
+            }
+          ],
+          "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "filename": "BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "filename": "BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-03.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-04.webp",
+              "filename": "BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-04.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-05.webp",
+              "filename": "BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-05.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-06.webp",
+              "filename": "BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-06.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-07.webp",
+              "filename": "BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-07.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-08.webp",
+              "filename": "BambooSheetSet-Solid-Butter-Freestyle-Vertical-NoTalent-Dog-Creator-08.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Butter-Freestyle-Vertical-Talent-Dog-Creator-01.webp",
+              "filename": "BambooSheetSet-Solid-Butter-Freestyle-Vertical-Talent-Dog-Creator-01.webp",
+              "people": "Talent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
             }
           ]
         },
@@ -37535,6 +38211,24 @@
               "filename": "BambooSheetSet-Solid-Chocolate-Stacked-NoTalent-AI-01.webp",
               "people": "NoTalent",
               "source": "AI"
+            }
+          ],
+          "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Chocolate-Freestyle-Vertical-Talent-Dog-Creator-01.webp",
+              "filename": "BambooSheetSet-Solid-Chocolate-Freestyle-Vertical-Talent-Dog-Creator-01.webp",
+              "people": "Talent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Chocolate-Freestyle-Vertical-Talent-Dog-Creator-02.webp",
+              "filename": "BambooSheetSet-Solid-Chocolate-Freestyle-Vertical-Talent-Dog-Creator-02.webp",
+              "people": "Talent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
             }
           ]
         },
@@ -38956,6 +39650,24 @@
               "people": "NoTalent",
               "source": "AI"
             }
+          ],
+          "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Eggplant-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "filename": "BambooSheetSet-Solid-Eggplant-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Eggplant-Freestyle-Vertical-NoTalent-Dog-AI-02.webp",
+              "filename": "BambooSheetSet-Solid-Eggplant-Freestyle-Vertical-NoTalent-Dog-AI-02.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            }
           ]
         },
         "ForestGreenxSage": {
@@ -39331,6 +40043,38 @@
           ],
           "Freestyle": [
             {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ForestGreen-Freestyle-Square-NoTalent-Dog-AI-01.webp",
+              "filename": "BambooSheetSet-Solid-ForestGreen-Freestyle-Square-NoTalent-Dog-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Square",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ForestGreen-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "filename": "BambooSheetSet-Solid-ForestGreen-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ForestGreen-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "filename": "BambooSheetSet-Solid-ForestGreen-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ForestGreen-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooSheetSet-Solid-ForestGreen-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ForestGreen-Freestyle-Talent-AI-01.webp",
               "filename": "BambooSheetSet-Solid-ForestGreen-Freestyle-Talent-AI-01.webp",
               "people": "Talent",
@@ -39602,6 +40346,32 @@
               "filename": "BambooSheetSet-Solid-Jacaranda-Stacked-NoTalent-Real-01.webp",
               "people": "NoTalent",
               "source": "Real"
+            }
+          ],
+          "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Jacaranda-Freestyle-Horizontal-NoTalent-Dog-AI-01.webp",
+              "filename": "BambooSheetSet-Solid-Jacaranda-Freestyle-Horizontal-NoTalent-Dog-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Horizontal",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Jacaranda-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "filename": "BambooSheetSet-Solid-Jacaranda-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Jacaranda-Freestyle-Vertical-NoTalent-Dog-AI-02.webp",
+              "filename": "BambooSheetSet-Solid-Jacaranda-Freestyle-Vertical-NoTalent-Dog-AI-02.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
             }
           ]
         },
@@ -40640,6 +41410,14 @@
           ],
           "Freestyle": [
             {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-MidnightPine-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooSheetSet-Solid-MidnightPine-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-MidnightPine-Freestyle-Talent-Real-01.webp",
               "filename": "BambooSheetSet-Solid-MidnightPine-Freestyle-Talent-Real-01.webp",
               "people": "Talent",
@@ -40797,6 +41575,22 @@
             }
           ],
           "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Oatmeal-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "filename": "BambooSheetSet-Solid-Oatmeal-Freestyle-Vertical-NoTalent-Dog-Creator-01.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Oatmeal-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "filename": "BambooSheetSet-Solid-Oatmeal-Freestyle-Vertical-NoTalent-Dog-Creator-02.webp",
+              "people": "NoTalent",
+              "source": "Creator",
+              "orientation": "Vertical",
+              "pet": "Dog"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-Oatmeal-Freestyle-NoTalent-Real-01.webp",
               "filename": "BambooSheetSet-Solid-Oatmeal-Freestyle-NoTalent-Real-01.webp",
@@ -41296,6 +42090,16 @@
               "filename": "BambooSheetSet-Solid-ReefTeal-Stacked-NoTalent-AI-01.webp",
               "people": "NoTalent",
               "source": "AI"
+            }
+          ],
+          "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ReefTeal-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "filename": "BambooSheetSet-Solid-ReefTeal-Freestyle-Vertical-NoTalent-Dog-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Dog"
             }
           ]
         },
@@ -44788,6 +45592,14 @@
             }
           ],
           "Freestyle": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Stripe-MatchaForestStripe-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "filename": "BambooSheetSet-Stripe-MatchaForestStripe-Freestyle-Vertical-NoTalent-Cat-AI-01.webp",
+              "people": "NoTalent",
+              "source": "AI",
+              "orientation": "Vertical",
+              "pet": "Cat"
+            },
             {
               "url": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Stripe-MatchaForestStripe-Freestyle-Talent-Real-01.webp",
               "filename": "BambooSheetSet-Stripe-MatchaForestStripe-Freestyle-Talent-Real-01.webp",
