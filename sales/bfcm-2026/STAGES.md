@@ -17,6 +17,7 @@ This file was written on 4 Nov, after the work, as the first worked example of t
 | flannelette | 54 | 5 Nov | clearance, whole range | Up to 54% off |
 | quilts-pillows-mattress-protectors | 54 | 5 Nov | legacy LW/MW quilts until sold out (about 40 without them) | Up to 54% off |
 | quilts (megamenu tile) | 54 | 5 Nov | same | Up to 54% off quilts |
+| all-products (Bed linen, 85 products) | 54 | 5 Nov | bamboo Phase 1 colours, flannelette, legacy quilts | Up to 54% off (`image_hero_EUj4ky` tag `tag_NhzAp3`, was a disabled "Up to 51% off") |
 
 Checked against the pricing artifact, not the imported prices. Re-check after the import.
 
@@ -40,7 +41,7 @@ All three verified by `checksumMd5`; checked visually on the Launch preview, des
 | Nav | Black Friday item first, LED pill (`#77D686` on `#080808`); Last chance removed; reordered | menu above; `header-group.json` `menu`; sale.css "BF NAV PILL" |
 | Megamenu (Bedding) | Black Friday tag, "Up to 54% off quilts", Shop quilts → `/collections/quilts`, LightweightQuilt-High45-Square-NoTalent-Real-01, bottom fade | `header-group.json` block `full_width_meganav_fDKnE9`; sale.css "BF MEGANAV PROMO TAG" |
 | Homepage | quilt bundles hidden; Bamboo + Quilts & pillows video banners back; video accents "Up to 54% off" pills; creators + stats + review wall replace the reviews carousel; 30px section spacing + divider above creators | `index.json`; sale.css "BF HOMEPAGE VIDEO ACCENT", "BF HOMEPAGE SPACING" |
-| Collection banners | "Up to X% off" pills per the table | `collection.bamboo-sheets/flannelette/quilts-pillows/solid-collection/polka-collection/ambi-collection.json`; `sections/main-collection-banner.liquid` `sale_tag`; sale.css "BF COLLECTION HERO TAG", "BF COLLECTION PATTERN TAGS" |
+| Collection banners | "Up to X% off" pills per the table | `collection.bamboo-sheets/flannelette/quilts-pillows/solid-collection/polka-collection/ambi-collection/all-products.json`; `sections/main-collection-banner.liquid` `sale_tag`; sale.css "BF COLLECTION HERO TAG", "BF COLLECTION PATTERN TAGS" |
 | Flannelette banner | "LAST CHANCE" accent hidden | `accent_JGTFjD` disabled |
 | Sale badge | "Black Friday" replaces "Sale" (cards + PDP) and shows on cards | `snippets/product-badges.liquid`; `assets/local.js` `updateDesktopBadge`; sale.css "BF SALE BADGE", "BF CARD BADGE" |
 | Hype tile badge | "ON SALE 5.11" removed | sale.css (block replaced by a comment) |
