@@ -1,0 +1,47 @@
+{
+ "$comment": "Christmas 2026 assets, 4 Nov 2026. photos: shoot photos used on the board, by board name, mapped to their Shopify CDN originals (load these; never copy them into the repo). renders: campaign cut-outs that live only in this folder until published to the CDN. Every render was checked at 5x on red.",
+ "photos": {
+  "photo-burgundy-polka": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Polka-BurgundyPolka-High45-Horizontal-NoTalent-Real-01.webp",
+  "photo-burgundy-qc": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-Burgundy-Freestyle-Horizontal-Talent-Real-01.webp",
+  "photo-jump-green": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Polka-ForestGreenPolka-Freestyle-Vertical-Talent-Real-46.webp",
+  "photo-mug-burgundy": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Polka-BurgundyPolka-Freestyle-Vertical-Talent-Real-58.webp",
+  "photo-mug-pine": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Solid-MidnightPine-Freestyle-Talent-Real-17.webp",
+  "photo-sleep-green": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Solid-ForestGreen-Overhead-Talent-Real-01.webp",
+  "photo-tote": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/ToteBag-AllColours-Freestyle-Vertical-NoTalent-Real-01.webp",
+  "tote-allcolours-talent": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/ToteBag-AllColours-Freestyle-Vertical-Talent-Real-01.webp",
+  "tote-matcha-high45": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/ToteBag-MatchaForest-High45-Vertical-NoTalent-Real-01.webp",
+  "tote-matcha-overhead": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/ToteBag-MatchaForest-Overhead-Horizontal-NoTalent-Real-01.webp",
+  "tote-matcha-stool": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/ToteBag-MatchaForest-Freestyle-Vertical-NoTalent-Real-01.webp",
+  "tote-oatmeal-closeup": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/ToteBag-OatmealCharcoal-CloseUp-Vertical-Talent-Real-01.webp",
+  "tote-oatmeal-high45": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/ToteBag-OatmealCharcoal-High45-Vertical-NoTalent-Real-01.webp",
+  "tote-oatmeal-talent": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/ToteBag-OatmealCharcoal-Freestyle-Vertical-Talent-Real-03.webp",
+  "tote-pink-talent": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/ToteBag-EggplantPink-Freestyle-Vertical-Talent-Real-01.webp",
+  "tote-pink-high45": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/ToteBag-EggplantPink-High45-Vertical-NoTalent-Real-01.webp",
+  "pack-bloomingpink-stripe": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Stripe-BloomingPinkStripe-Packshot-NoTalent-AI-01.webp",
+  "pack-icedchoc-polka": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooSheetSet-Polka-IcedChocolatePolka-Packshot-NoTalent-AI-01.webp",
+  "pack-maltcaramel-stripe": "https://cdn.shopify.com/s/files/1/0498/6100/1367/files/BambooQuiltCover-Stripe-MaltCaramelStripe-Packshot-NoTalent-Real-01.webp"
+ },
+ "renders": {
+  "hf-w-forest.webp": "Forest Green quilt cover stack, white ribbon",
+  "hf-w-burgundy.webp": "Burgundy quilt cover stack, white ribbon",
+  "hf-w-pine.webp": "Midnight Pine quilt cover stack, white ribbon",
+  "hf-w-caramel.webp": "Caramel quilt cover stack, white ribbon",
+  "hf-w-sky.webp": "Sky quilt cover stack, cream ribbon",
+  "hf-w-sage.webp": "Sage stack, white ribbon",
+  "hf-w-jacaranda.webp": "Jacaranda quilt cover stack, white ribbon",
+  "hf-w-strawberrymerlot.webp": "Strawberry Merlot Stripe sheet set, light face, white ribbon (AI stripe edit: Sam to sign off)",
+  "hf-stack-burgundy.webp": "Burgundy sheet set stack, white ribbon",
+  "hf-pc-green.webp": "Forest Green pillowcases, cream ribbon",
+  "hf-box-closed.webp": "Deep Green linen gift box, closed, white ribbon",
+  "hf-box-open.webp": "Deep Green gift box, open, white sheet set rising out",
+  "hf-box-open-icedchoc.webp": "Deep Green gift box, open, Iced Chocolate Stripe sheets (AI stripe edit: Sam to sign off)",
+  "cut-tote-matcha.webp": "Matcha and Forest Tote, real High45 photo cut out"
+ },
+ "paper": {
+  "wrap-offwhite.svg": "Launch paper: Off White with Deep Green and Burgundy pillar shapes",
+  "wrap-burgundy.svg": "Last-chance paper: Burgundy with Deep Green and Off White shapes",
+  "wrap-dark.svg": "Dark announcement bar (launch): Deep Green with red shapes",
+  "wrap-pink.svg": "Pink announcement bar (last chance): Light Pink with Burgundy shapes"
+ },
+ "symbols": "symbols.svg: #ecoy wordmark, #blob and #blob-lobed callout shapes, #i-truck #i-bag #i-gift #i-clock icons"
+}

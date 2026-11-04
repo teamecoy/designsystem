@@ -5,7 +5,7 @@ One folder per named sale, each with its own look. Evergreen and promotions neve
 | Folder | Sale | Status |
 |---|---|---|
 | [`bfcm-2026/`](bfcm-2026/IDENTITY.md) | Black Friday + Cyber Monday 2026 | Codified from Nick's Figma 2026-09-28; phase colours from the PGS pages 2026-10-19, locked 2026-10-26; final statics (33 frames, 4:5 + 9:16) resynced 2026-10-26; open items in §9 |
-| [`christmas-2026/`](christmas-2026/FLOATING-RIBBON-PROMPT.md) | Christmas BOGO 50% 2026 (1–21 Dec) | Not codified yet (concept board in progress). Has the approved prompt for floating gift shots with a ribbon in any new colour or pattern |
+| [`christmas-2026/`](christmas-2026/IDENTITY.md) | Christmas BOGO 50% 2026 (1–21 Dec) | Codified 2026-11-04 from Sam's concept board (artifact JvFQ3ir24nmFMRg89NzHTu, v84); brand fonts and colours only, scope class `.xm26`; launch and last-chance phases; ribbon prompt for new colours in `FLOATING-RIBBON-PROMPT.md`; open items in IDENTITY §9 |
 
 **Designing for a sale:** read that sale's `IDENTITY.md` first, load its `sale.css`, and wrap the piece in its scope class (e.g. `.bf26`). Photos still come from the main library (`assets/resolveImage.js`), filtered by the sale's own rules.
 
